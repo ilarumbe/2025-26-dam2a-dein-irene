@@ -1,0 +1,30 @@
+﻿<Window x:Class="_1._6_Window_y_Paneles_Irene_Larumbe.Window3"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_1._6_Window_y_Paneles_Irene_Larumbe"
+        mc:Ignorable="d"
+        Title="Ventana4" Height="450" Width="800">
+    <Grid>
+        <Border Background="White">
+            <StackPanel Margin="20">
+                <Label Foreground="Black" FontSize="25" HorizontalAlignment="Center">
+                    <Bold>Login</Bold>
+                </Label>
+                <Separator Background="Black" Height="2" Margin="0,10"/>
+                <Label Foreground="Black">
+                    <Bold>Usuario</Bold>
+                </Label>
+                <TextBox Name="txtUsuario" Foreground="Black" FontSize="18"/>
+                <Label Foreground="Black">
+                    <Bold>Contraseña</Bold>
+                </Label>
+                <PasswordBox Name="txtPassword" Foreground="Black" FontSize="18"/>
+                <Button Name="btnEntrar" Margin="60,30"
+                    Background="Orange" Foreground="Black" Height="50"
+                    Click="btnEntrar_Click">Entrar</Button>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

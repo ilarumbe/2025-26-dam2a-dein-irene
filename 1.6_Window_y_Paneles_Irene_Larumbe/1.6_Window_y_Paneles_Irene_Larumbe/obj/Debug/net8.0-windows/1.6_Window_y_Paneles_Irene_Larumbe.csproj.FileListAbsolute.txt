@@ -19,3 +19,11 @@ C:\Users\Irene\DAM2\DEIN\WPF\2025-26-dam2-dein-irene\1.6_Window_y_Paneles_Irene_
 C:\Users\Irene\DAM2\DEIN\WPF\2025-26-dam2-dein-irene\1.6_Window_y_Paneles_Irene_Larumbe\1.6_Window_y_Paneles_Irene_Larumbe\obj\Debug\net8.0-windows\1.6_Window_y_Paneles_Irene_Larumbe.pdb
 C:\Users\Irene\DAM2\DEIN\WPF\2025-26-dam2-dein-irene\1.6_Window_y_Paneles_Irene_Larumbe\1.6_Window_y_Paneles_Irene_Larumbe\obj\Debug\net8.0-windows\1.6_Window_y_Paneles_Irene_Larumbe.genruntimeconfig.cache
 C:\Users\Irene\DAM2\DEIN\WPF\2025-26-dam2-dein-irene\1.6_Window_y_Paneles_Irene_Larumbe\1.6_Window_y_Paneles_Irene_Larumbe\obj\Debug\net8.0-windows\ref\1.6_Window_y_Paneles_Irene_Larumbe.dll
+C:\Users\Irene\DAM2\DEIN\WPF\2025-26-dam2-dein-irene\1.6_Window_y_Paneles_Irene_Larumbe\1.6_Window_y_Paneles_Irene_Larumbe\obj\Debug\net8.0-windows\Window1.g.cs
+C:\Users\Irene\DAM2\DEIN\WPF\2025-26-dam2-dein-irene\1.6_Window_y_Paneles_Irene_Larumbe\1.6_Window_y_Paneles_Irene_Larumbe\obj\Debug\net8.0-windows\Window2.g.cs
+C:\Users\Irene\DAM2\DEIN\WPF\2025-26-dam2-dein-irene\1.6_Window_y_Paneles_Irene_Larumbe\1.6_Window_y_Paneles_Irene_Larumbe\obj\Debug\net8.0-windows\Window3.g.cs
+C:\Users\Irene\DAM2\DEIN\WPF\2025-26-dam2-dein-irene\1.6_Window_y_Paneles_Irene_Larumbe\1.6_Window_y_Paneles_Irene_Larumbe\obj\Debug\net8.0-windows\Window4.g.cs
+C:\Users\Irene\DAM2\DEIN\WPF\2025-26-dam2-dein-irene\1.6_Window_y_Paneles_Irene_Larumbe\1.6_Window_y_Paneles_Irene_Larumbe\obj\Debug\net8.0-windows\Window1.baml
+C:\Users\Irene\DAM2\DEIN\WPF\2025-26-dam2-dein-irene\1.6_Window_y_Paneles_Irene_Larumbe\1.6_Window_y_Paneles_Irene_Larumbe\obj\Debug\net8.0-windows\Window2.baml
+C:\Users\Irene\DAM2\DEIN\WPF\2025-26-dam2-dein-irene\1.6_Window_y_Paneles_Irene_Larumbe\1.6_Window_y_Paneles_Irene_Larumbe\obj\Debug\net8.0-windows\Window3.baml
+C:\Users\Irene\DAM2\DEIN\WPF\2025-26-dam2-dein-irene\1.6_Window_y_Paneles_Irene_Larumbe\1.6_Window_y_Paneles_Irene_Larumbe\obj\Debug\net8.0-windows\Window4.baml

@@ -1,0 +1,17 @@
+﻿<Window x:Class="_1._6_Window_y_Paneles_Irene_Larumbe.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_1._6_Window_y_Paneles_Irene_Larumbe"
+        mc:Ignorable="d"
+        Title="Ventana2" Height="450" Width="800">
+    <Grid>
+        <DockPanel>
+            <TextBox DockPanel.Dock="Top" Background="White">Panel superior</TextBox>
+            <TextBox DockPanel.Dock="Bottom" Background="White">Panel inferior</TextBox>
+            <TextBox DockPanel.Dock="Left" Background="White">Panel izquierda</TextBox>
+            <TextBox Background="White">Textbox que ocupa el resto del espacio</TextBox>
+        </DockPanel>
+    </Grid>
+</Window>
