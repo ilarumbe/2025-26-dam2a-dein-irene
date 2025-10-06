@@ -1,0 +1,9 @@
+﻿<Application x:Class="_1._7.NavegaciónWPF_Irene_Larumbe.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:_1._7.NavegaciónWPF_Irene_Larumbe"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>
