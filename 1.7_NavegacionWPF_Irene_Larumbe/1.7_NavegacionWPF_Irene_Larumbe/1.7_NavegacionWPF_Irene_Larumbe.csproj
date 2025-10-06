@@ -9,4 +9,14 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Images\back-image.jpg" />
+    <None Remove="Images\WPF.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\back-image.jpg" />
+    <Resource Include="Images\WPF.png" />
+  </ItemGroup>
+
 </Project>

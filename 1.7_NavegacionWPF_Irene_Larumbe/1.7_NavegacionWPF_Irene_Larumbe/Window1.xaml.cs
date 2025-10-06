@@ -23,5 +23,11 @@ namespace _1._7_NavegacionWPF_Irene_Larumbe
         {
             InitializeComponent();
         }
+        private void MainWindow_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow AbrirMainWindow = new MainWindow();
+            this.Close();
+            AbrirMainWindow.Show();
+        }
     }
 }
