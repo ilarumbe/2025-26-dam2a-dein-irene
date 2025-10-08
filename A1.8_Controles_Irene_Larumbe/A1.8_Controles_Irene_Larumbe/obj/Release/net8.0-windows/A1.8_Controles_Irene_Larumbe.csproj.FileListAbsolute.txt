@@ -19,3 +19,4 @@ C:\Users\Irene\DAM2\DEIN\WPF\2025-26-dam2-dein-irene\A1.8_Controles_Irene_Larumb
 C:\Users\Irene\DAM2\DEIN\WPF\2025-26-dam2-dein-irene\A1.8_Controles_Irene_Larumbe\A1.8_Controles_Irene_Larumbe\obj\Release\net8.0-windows\A1.8_Controles_Irene_Larumbe.pdb
 C:\Users\Irene\DAM2\DEIN\WPF\2025-26-dam2-dein-irene\A1.8_Controles_Irene_Larumbe\A1.8_Controles_Irene_Larumbe\obj\Release\net8.0-windows\A1.8_Controles_Irene_Larumbe.genruntimeconfig.cache
 C:\Users\Irene\DAM2\DEIN\WPF\2025-26-dam2-dein-irene\A1.8_Controles_Irene_Larumbe\A1.8_Controles_Irene_Larumbe\obj\Release\net8.0-windows\ref\A1.8_Controles_Irene_Larumbe.dll
+C:\Users\Irene\DAM2\DEIN\WPF\2025-26-dam2-dein-irene\A1.8_Controles_Irene_Larumbe\A1.8_Controles_Irene_Larumbe\obj\Release\net8.0-windows\GeneratedInternalTypeHelper.g.cs

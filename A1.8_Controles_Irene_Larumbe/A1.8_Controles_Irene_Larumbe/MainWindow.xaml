@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:A1._8_Controles_Irene_Larumbe"
         mc:Ignorable="d"
-        Title="Diseño de controles de estilo libre Irene" Height="600" Width="800"
+        Title="Diseño de controles de estilo libre Irene" Height="700" Width="800"
         WindowStartupLocation="CenterScreen"
         ResizeMode="CanResize"
         Background="LightPink">
@@ -14,8 +14,9 @@
             <StackPanel Margin="10">
                 <TextBlock Text="TextBox" FontWeight="Bold" Foreground="White"/>
                 <TextBox Height="50" SpellCheck.IsEnabled="True" Background="White"></TextBox>
+                
                 <TextBlock Text="ComboBox" FontWeight="Bold" Foreground="White"/>
-                <ComboBox Height="30" Background="White">
+                <ComboBox Height="50" Background="White">
                     <ComboBoxItem>
                         <StackPanel Orientation="Horizontal">
                             <Image Source="Images/mario.png" Width="30" Height="30" Margin="5"/>
@@ -35,6 +36,7 @@
                         </StackPanel>
                     </ComboBoxItem>
                 </ComboBox>
+                
                 <TextBlock Text="ListBox" FontWeight="Bold" Foreground="White"/>
                 <ListBox Background="White">
                     <ListBoxItem>
@@ -74,7 +76,26 @@
                         </StackPanel>
                     </ListBoxItem>
                     </ListBox>
-                </StackPanel>
+
+                <TextBlock Text="DataGrid" FontWeight="Bold" Foreground="White"></TextBlock>
+                <DataGrid AutoGenerateColumns="False"
+                          CanUserAddRows="False"
+                          GridLinesVisibility="All"
+                          Background="White">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID" Binding="{Binding ID}" Width="30"/>
+                        <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" Width="240"/>
+                        <DataGridTextColumn Header="Apellido 1" Binding="{Binding Apellido1}" Width="240"/>
+                        <DataGridTextColumn Header="Apellido 2" Binding="{Binding Apellido2}" Width="240"/>
+                    </DataGrid.Columns>
+
+                    <DataGrid.Items>
+                        <local:Companero ID="1" Nombre="Irene" Apellido1="Larumbe" Apellido2="Zozaya"/>
+                        <local:Companero ID="2" Nombre="Sara" Apellido1="Vertiz" Apellido2="Conde"/>
+                        <local:Companero ID="3" Nombre="Maria" Apellido1="Lopez" Apellido2="Garcia"/>
+                    </DataGrid.Items>
+                </DataGrid>
+            </StackPanel>
         </Border>
     </Grid>
 </Window>
