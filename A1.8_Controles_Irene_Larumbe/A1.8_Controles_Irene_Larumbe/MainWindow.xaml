@@ -5,10 +5,76 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:A1._8_Controles_Irene_Larumbe"
         mc:Ignorable="d"
-        Title="Diseño de controles de estilo libre Irene" Height="450" Width="800"
+        Title="Diseño de controles de estilo libre Irene" Height="600" Width="800"
         WindowStartupLocation="CenterScreen"
-        ResizeMode="CanResize">
+        ResizeMode="CanResize"
+        Background="LightPink">
     <Grid>
-
+        <Border BorderBrush="White" BorderThickness="10" CornerRadius="20">
+            <StackPanel Margin="10">
+                <TextBlock Text="TextBox" FontWeight="Bold" Foreground="White"/>
+                <TextBox Height="50" SpellCheck.IsEnabled="True" Background="White"></TextBox>
+                <TextBlock Text="ComboBox" FontWeight="Bold" Foreground="White"/>
+                <ComboBox Height="30" Background="White">
+                    <ComboBoxItem>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="Images/mario.png" Width="30" Height="30" Margin="5"/>
+                            <TextBlock Text="Mario" VerticalAlignment="Center" Foreground="Black"/>
+                        </StackPanel>
+                    </ComboBoxItem>
+                    <ComboBoxItem>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="Images/yoshi.jpg" Width="30" Height="30" Margin="5"/>
+                            <TextBlock Text="Yoshi" VerticalAlignment="Center" Foreground="Black"/>
+                        </StackPanel>
+                    </ComboBoxItem>
+                    <ComboBoxItem>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="Images/toad.png" Width="30" Height="30" Margin="5"/>
+                            <TextBlock Text="Toad" VerticalAlignment="Center" Foreground="Black"/>
+                        </StackPanel>
+                    </ComboBoxItem>
+                </ComboBox>
+                <TextBlock Text="ListBox" FontWeight="Bold" Foreground="White"/>
+                <ListBox Background="White">
+                    <ListBoxItem>
+                        <StackPanel>
+                            <TextBlock Text="Acceso a Datos" FontWeight="Bold" Foreground="Black"/>
+                            <ProgressBar Value="70" Maximum="100" Height="10" Margin="0,5,0,10"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        <StackPanel>
+                            <TextBlock Text="Desarrollo de Interfaces" FontWeight="Bold" Foreground="Black"/>
+                            <ProgressBar Value="70" Maximum="100" Height="10" Margin="0,5,0,10"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        <StackPanel>
+                            <TextBlock Text="Programación de Servicios y Procesos" FontWeight="Bold" Foreground="Black"/>
+                            <ProgressBar Value="20" Maximum="100" Height="10" Margin="0,5,0,10"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        <StackPanel>
+                            <TextBlock Text="Sistemas de Gestión Empresarial" FontWeight="Bold" Foreground="Red"/>
+                            <ProgressBar Value="40" Maximum="100" Height="10" Margin="0,5,0,10"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        <StackPanel>
+                            <TextBlock Text="Desarrollo Web" FontWeight="Bold" Foreground="Black"/>
+                            <ProgressBar Value="90" Maximum="100" Height="10" Margin="0,5,0,10"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        <StackPanel>
+                            <TextBlock Text="Programación Multimedia y Dispositivos Móviles" FontWeight="Bold" Foreground="Black"/>
+                            <ProgressBar Value="60" Maximum="100" Height="10" Margin="0,5,0,10"/>
+                        </StackPanel>
+                    </ListBoxItem>
+                    </ListBox>
+                </StackPanel>
+        </Border>
     </Grid>
 </Window>
