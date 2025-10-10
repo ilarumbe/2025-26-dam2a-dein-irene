@@ -1,0 +1,42 @@
+﻿<Window x:Class="A1._9_Menus_Irene.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:A1._9_Menus_Irene"
+        mc:Ignorable="d"
+        Title="Actividad - Menú Desplegable" Height="600" Width="800"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanResizeWithGrip">
+    <Grid>
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="_Fichero">
+                    <MenuItem Header="_Nuevo" Click="M_Nuevo_Click"/>
+                    <MenuItem Header="_Abrir" Click="M_Abrir_Click"/>
+                    <MenuItem Header="_Guardar" Click="M_Guardar_Click"/>
+                    <MenuItem Header="_Guardar como" Click="M_Guardar_como_Click"/>
+                    <MenuItem Header="_Imprimir" Click="M_Imprimir_Click"/>
+                    <Separator/>
+                    <MenuItem Header="_Salir" Click="M_Salir_Click"/>
+                </MenuItem>
+                <MenuItem Header="Herramientas">
+                    <MenuItem Header="Gestión de Usuarios" Click="M_Usuarios_Click">
+                        <MenuItem.Icon>
+                            <Image Source="Images/Usuario.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="_Mostrar Grupos" IsCheckable="True" IsChecked="True" />
+                </MenuItem>
+                <MenuItem Header="_Editar">
+                    <MenuItem Header="Cortar" Click="M_Cortar_Click"/>
+                    <MenuItem Header="Copiar" Click="M_Copiar_Click"/>
+                    <MenuItem Header="Pegar" Click="M_Pegar_Click"/>
+                    <MenuItem Header="Eliminar" Click="M_Eliminar_Click"/>
+                </MenuItem>
+            </Menu>
+            
+            <TextBox AcceptsReturn="True" SpellCheck.IsEnabled="True" Name="txtEditor" />
+        </DockPanel>
+    </Grid>
+</Window>
