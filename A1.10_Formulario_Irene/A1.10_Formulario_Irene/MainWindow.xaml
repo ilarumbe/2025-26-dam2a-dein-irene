@@ -1,0 +1,83 @@
+﻿<Window x:Class="A1._10_Formulario_Irene.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:A1._10_Formulario_Irene"
+        mc:Ignorable="d"
+        Title="Introducción de Datos de Empleados" Height="700" Width="800">
+    <Grid>
+        <StackPanel>
+            <TextBlock Text="Introducción de Datos de Empleados" 
+                       FontSize="20" 
+                       HorizontalAlignment="Center"/>
+
+            <StackPanel Margin="20,10,0,30">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Nombre*" Width="60"/>
+                    <TextBox x:Name="txtNombre" Width="330"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <TextBlock Text="Apellidos*" Width="60"/>
+                    <TextBox x:Name="txtApellidos" Width="330"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <TextBlock Text="E-mail*" Width="60"/>
+                    <TextBox x:Name="txtEmail" Width="330"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <TextBlock Text="Teléfono*" Width="60"/>
+                    <TextBox x:Name="txtTelefono" Width="330"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <TextBlock Text="Fecha de nacimiento" Width="120"/>
+                    <DatePicker x:Name="dpFechaNacimiento" Width="270"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <TextBlock Text="DNI" Width="30"/>
+                    <TextBox x:Name="txtDNI" Width="330"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,40,0,0">
+                    <TextBlock Text="Adjuntar fotografía" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                    <Button x:Name="btnCargarFoto" Content="Cargar Foto" Width="100" Height="40" Click="btnCargarFoto_Click"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,40,0,0">
+                    <TextBlock Text="Domicilio" Width="80"/>
+                    <TextBox x:Name="txtDireccion" Text="Dirección" Width="300"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="80,5,0,0">
+                    <TextBox x:Name="txtCiudad" Text="Ciudad" Width="300"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="80,5,0,0">
+                    <TextBox x:Name="txtProvincia" Text="Provincia" Width="300"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="80,5,0,0">
+                    <TextBox x:Name="txtCP" Text="Código Postal" Width="300"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="80,5,0,0">
+                    <TextBox x:Name="txtPais" Text="País" Width="300"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                    <TextBlock Text="Enlace a red social" Width="120"/>
+                    <TextBox x:Name="txtEnlace" Width="600"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <TextBlock Text="Rol actual" VerticalAlignment="Center" Margin="0,0,70,0"/>
+                    <ComboBox x:Name="cbRol">
+                        <ComboBoxItem Content="Desarrollador"/>
+                        <ComboBoxItem Content="Analista"/>
+                        <ComboBoxItem Content="Tester"/>
+                    </ComboBox>
+                </StackPanel>
+            </StackPanel>
+
+
+            <Button x:Name="btnGuardar" Content="Guardar" Width="100" Height="40" Click="btnGuardar_Click"/>
+            <Button x:Name="btnCancelar" Content="Cancelar" Width="100" Height="40" Click="btnCancelar_Click"/>
+
+        </StackPanel>
+    </Grid>
+</Window>

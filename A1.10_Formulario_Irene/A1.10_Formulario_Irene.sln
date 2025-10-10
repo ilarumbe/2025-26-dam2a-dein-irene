@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36429.23 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A1.10_Formulario_Irene", "A1.10_Formulario_Irene\A1.10_Formulario_Irene.csproj", "{2B2B5EF3-C678-4BD4-B220-5A939D36B088}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2B2B5EF3-C678-4BD4-B220-5A939D36B088}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B2B5EF3-C678-4BD4-B220-5A939D36B088}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B2B5EF3-C678-4BD4-B220-5A939D36B088}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B2B5EF3-C678-4BD4-B220-5A939D36B088}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4F15D427-EAB2-4DB5-A600-B64DC7EDCE16}
+	EndGlobalSection
+EndGlobal
