@@ -77,7 +77,7 @@ namespace _1._7_NavegacionWPF_Irene_Larumbe {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/1.7_NavegacionWPF_Irene_Larumbe;component/mainwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/1.7_NavegacionWPF_Irene_Larumbe;V1.0.0.0;component/mainwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\MainWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

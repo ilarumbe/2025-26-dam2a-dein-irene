@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("A1.8_Controles_Irene_Larumbe")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d18638cc8c382be87b0c9a9e2065265b95e8d8ef")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d49d0b6a58a2988ea807fa09ef11dddf607882ee")]
 [assembly: System.Reflection.AssemblyProductAttribute("A1.8_Controles_Irene_Larumbe")]
 [assembly: System.Reflection.AssemblyTitleAttribute("A1.8_Controles_Irene_Larumbe")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

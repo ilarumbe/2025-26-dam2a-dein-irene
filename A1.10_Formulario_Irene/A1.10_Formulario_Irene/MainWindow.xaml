@@ -5,13 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:A1._10_Formulario_Irene"
         mc:Ignorable="d"
-        Title="Introducción de Datos de Empleados" Height="700" Width="800">
+        Title="Introducción de Datos de Empleados" Height="800" Width="800">
     <Grid>
         <StackPanel>
             <TextBlock Text="Introducción de Datos de Empleados" 
                        FontSize="20" 
                        HorizontalAlignment="Center"/>
-
             <StackPanel Margin="20,10,0,30">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Nombre*" Width="60"/>
@@ -38,26 +37,27 @@
                     <TextBox x:Name="txtDNI" Width="330"/>
                 </StackPanel>
 
-                <StackPanel Orientation="Horizontal" Margin="0,40,0,0">
+                <StackPanel Orientation="Horizontal" Margin="0,5,0,5">
                     <TextBlock Text="Adjuntar fotografía" VerticalAlignment="Center" Margin="0,0,10,0"/>
                     <Button x:Name="btnCargarFoto" Content="Cargar Foto" Width="100" Height="40" Click="btnCargarFoto_Click"/>
+                    <Image x:Name="imgFoto" Width="50" Height="50" Stretch="UniformToFill" Margin="20,0,0,0" />
                 </StackPanel>
-
-                <StackPanel Orientation="Horizontal" Margin="0,40,0,0">
+                <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Domicilio" Width="80"/>
-                    <TextBox x:Name="txtDireccion" Text="Dirección" Width="300"/>
+                    <TextBox x:Name="txtDireccion" Text="Dirección" Width="300" GotFocus="Txt_GotFocus" LostFocus="Txt_LostFocus"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="80,5,0,0">
-                    <TextBox x:Name="txtCiudad" Text="Ciudad" Width="300"/>
+                    <TextBox x:Name="txtCiudad" Text="Ciudad" Width="300" GotFocus="Txt_GotFocus" LostFocus="Txt_LostFocus"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="80,5,0,0">
-                    <TextBox x:Name="txtProvincia" Text="Provincia" Width="300"/>
+                    <TextBox x:Name="txtProvincia" Text="Provincia" Width="300" GotFocus="Txt_GotFocus" LostFocus="Txt_LostFocus" Height="20"/>
+                    <Image Source="/Images/logo.png" Width="100" Height="100" Margin="150,-40,0,-40"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="80,5,0,0">
-                    <TextBox x:Name="txtCP" Text="Código Postal" Width="300"/>
+                    <TextBox x:Name="txtCP" Text="Código Postal" Width="300" GotFocus="Txt_GotFocus" LostFocus="Txt_LostFocus"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="80,5,0,0">
-                    <TextBox x:Name="txtPais" Text="País" Width="300"/>
+                    <TextBox x:Name="txtPais" Text="País" Width="300" GotFocus="Txt_GotFocus" LostFocus="Txt_LostFocus"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
@@ -66,18 +66,25 @@
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
                     <TextBlock Text="Rol actual" VerticalAlignment="Center" Margin="0,0,70,0"/>
-                    <ComboBox x:Name="cbRol">
+                    <ComboBox x:Name="cbRol" Width="250">
                         <ComboBoxItem Content="Desarrollador"/>
                         <ComboBoxItem Content="Analista"/>
                         <ComboBoxItem Content="Tester"/>
                     </ComboBox>
                 </StackPanel>
+                <StackPanel Margin="0,5,0,0">
+                    <TextBlock Text="Descripción del puesto de trabajo actual:"/>
+                    <TextBox x:Name="txtDescripcion" Width="730" Height="50" HorizontalAlignment="Left" Margin="0,10,0,0"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0" HorizontalAlignment="Center">
+                    <Button x:Name="btnGuardar" Content="Guardar" Width="100" Height="30" Click="btnGuardar_Click"/>
+                    <Button x:Name="btnCancelar" Content="Cancelar" Width="100" Height="30" Margin="10,0,0,0" Click="btnCancelar_Click"/>
+                </StackPanel>
             </StackPanel>
-
-
-            <Button x:Name="btnGuardar" Content="Guardar" Width="100" Height="40" Click="btnGuardar_Click"/>
-            <Button x:Name="btnCancelar" Content="Cancelar" Width="100" Height="40" Click="btnCancelar_Click"/>
-
+            <StackPanel>
+                <DataGrid x:Name="empleados" CanUserAddRows="False" ColumnWidth="*">
+                </DataGrid>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Window>

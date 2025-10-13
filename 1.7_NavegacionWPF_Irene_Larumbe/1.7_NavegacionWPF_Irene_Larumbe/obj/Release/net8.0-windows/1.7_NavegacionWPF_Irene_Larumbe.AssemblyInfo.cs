@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("1.7_NavegacionWPF_Irene_Larumbe")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+239bf37b9f0526d888b65de18fc9ac1eedacd3e9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7718d03fa4b988e2fa42e77a14802dfafd329b85")]
 [assembly: System.Reflection.AssemblyProductAttribute("1.7_NavegacionWPF_Irene_Larumbe")]
 [assembly: System.Reflection.AssemblyTitleAttribute("1.7_NavegacionWPF_Irene_Larumbe")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
