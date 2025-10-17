@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace A1._11._Aplicación_Orla_de_clase
+namespace A1._11_Orla_Irene
 {
     /// <summary>
-    /// Lógica de interacción para UserControl1.xaml
+    /// Lógica de interacción para Puesto.xaml
     /// </summary>
-    public partial class UserControl1 : UserControl
+    public partial class Puesto : UserControl
     {
-        public UserControl1()
+        public Puesto()
         {
             InitializeComponent();
         }
