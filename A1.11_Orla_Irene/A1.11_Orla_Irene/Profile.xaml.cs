@@ -12,12 +12,13 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using String = System.String;
 
 namespace A1._11_Orla_Irene
 {
     public partial class Profile : Window
     {
-        /*public Profile(String Nombre, String Apellidos, String Email, String Foto)
+        public Profile(String Nombre, String Apellidos, String Email, String Foto)
         {
             InitializeComponent();
             Profile_Nombre.Text = Nombre;
@@ -25,27 +26,6 @@ namespace A1._11_Orla_Irene
             Profile_Email.Text = Email;
             Profile_Image.Source = new BitmapImage(new Uri(string.Format(@"..\..\{0}", Foto), UriKind.Relative));
         }
-
-        private void Persona_MouseEnter(object sender, MouseEventArgs e)
-        {
-            LabelPuesto.Text = Nombre + " " + Apellidos;
-        }
-
-        private void Persona_MouseLeave(object sender, MouseEventArgs e)
-        {
-            LabelPuesto.Text = "";
-        }
-
-        private void Persona_Click(object sender, RoutedEventArgs e)
-        {
-            LabelPuesto.Text = Email;
-        }
-
-        private void Persona_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-            Profile win2 = new Profile(Nombre, Apellidos, Email, Foto);
-            win2.Show();
-        }*/
 
     }
 }

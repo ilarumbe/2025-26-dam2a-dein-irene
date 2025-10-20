@@ -11,10 +11,50 @@
 
   <ItemGroup>
     <None Remove="Images\anuario.png" />
+    <None Remove="images\carla.png" />
+    <None Remove="images\david.png" />
+    <None Remove="images\diego.png" />
+    <None Remove="images\eduardo.png" />
+    <None Remove="images\eneko.png" />
+    <None Remove="images\ibon.png" />
+    <None Remove="images\irene.png" />
+    <None Remove="images\jokin.png" />
+    <None Remove="images\julen.png" />
+    <None Remove="images\luka.png" />
+    <None Remove="images\mamadi.png" />
+    <None Remove="images\manuel.png" />
+    <None Remove="images\oier.png" />
+    <None Remove="images\pc.png" />
+    <None Remove="images\ruben.png" />
+    <None Remove="images\usuario.png" />
+    <None Remove="images\ventsislav.png" />
+    <None Remove="images\xabier.png" />
+    <None Remove="images\yahya.png" />
+    <None Remove="images\yerai.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Images\anuario.png" />
+    <Resource Include="images\carla.png" />
+    <Resource Include="images\david.png" />
+    <Resource Include="images\diego.png" />
+    <Resource Include="images\eduardo.png" />
+    <Resource Include="images\eneko.png" />
+    <Resource Include="images\ibon.png" />
+    <Resource Include="images\irene.png" />
+    <Resource Include="images\jokin.png" />
+    <Resource Include="images\julen.png" />
+    <Resource Include="images\luka.png" />
+    <Resource Include="images\mamadi.png" />
+    <Resource Include="images\manuel.png" />
+    <Resource Include="images\oier.png" />
+    <Resource Include="images\pc.png" />
+    <Resource Include="images\ruben.png" />
+    <Resource Include="images\usuario.png" />
+    <Resource Include="images\ventsislav.png" />
+    <Resource Include="images\xabier.png" />
+    <Resource Include="images\yahya.png" />
+    <Resource Include="images\yerai.png" />
   </ItemGroup>
 
 </Project>
