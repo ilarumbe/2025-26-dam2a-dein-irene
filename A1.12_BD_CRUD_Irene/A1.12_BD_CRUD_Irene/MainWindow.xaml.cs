@@ -85,6 +85,43 @@ namespace A1._12_BD_CRUD_Irene
             }
         }
 
+        private void BtnActualizar_Click(object sender, RoutedEventArgs e)
+        {
+            if (selectedId == -1)
+            {
+                MessageBox.Show("Selecciona un videojuego para actualizar.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    string query = "UPDATE Videojuegos SET Titulo=@Titulo, Genero=@Genero, Plataforma=@Plataforma, " +
+                                   "Desarrollador=@Desarrollador, FechaLanzamiento=@FechaLanzamiento, Precio=@Precio " +
+                                   "WHERE Id=@Id";
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@Titulo", txtTitulo.Text);
+                        cmd.Parameters.AddWithValue("@Genero", txtGenero.Text);
+                        cmd.Parameters.AddWithValue("@Plataforma", txtPlataforma.Text);
+                        cmd.Parameters.AddWithValue("@Desarrollador", txtDesarrollador.Text);
+                        cmd.Parameters.AddWithValue("@FechaLanzamiento", dpFechaLanzamiento.SelectedDate.Value);
+                        cmd.Parameters.AddWithValue("@Precio", decimal.Parse(txtPrecio.Text));
+                        cmd.Parameters.AddWithValue("@Id", selectedId);
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+                MessageBox.Show("Videojuego actualizado correctamente.", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
+                CargarVideojuegos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al actualizar: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
 
 
 
