@@ -122,6 +122,37 @@ namespace A1._12_BD_CRUD_Irene
             }
         }
 
+        private void BtnEliminar_Click(object sender, RoutedEventArgs e)
+        {
+            if (selectedId == -1)
+            {
+                MessageBox.Show("Selecciona un videojuego para eliminar.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+            if (MessageBox.Show("¿Deseas eliminar este videojuego?", "Confirmar", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                try
+                {
+                    using (SqlConnection conn = new SqlConnection(connectionString))
+                    {
+                        conn.Open();
+                        string query = "DELETE FROM Videojuegos WHERE Id=@Id";
+                        using (SqlCommand cmd = new SqlCommand(query, conn))
+                        {
+                            cmd.Parameters.AddWithValue("@Id", selectedId);
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+                    MessageBox.Show("Videojuego eliminado correctamente.", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
+                    CargarVideojuegos();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error al eliminar: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+        }
+
 
 
 
