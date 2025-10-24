@@ -1,0 +1,38 @@
+﻿<Window x:Class="A1._12_BD_CRUD_Irene.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:A1._12_BD_CRUD_Irene"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="700" Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="10">
+        <StackPanel>
+            <TextBlock Text="Título:"/>
+            <TextBox x:Name="txtTitulo" Margin="0,5"/>
+            <TextBlock Text="Género:"/>
+            <TextBox x:Name="txtGenero" Margin="0,5"/>
+            <TextBlock Text="Plataforma:"/>
+            <TextBox x:Name="txtPlataforma" Margin="0,5"/>
+            <TextBlock Text="Desarrollador:"/>
+            <TextBox x:Name="txtDesarrollador" Margin="0,5"/>
+            <TextBlock Text="Fecha Lanzamiento:"/>
+            <DatePicker x:Name="dpFechaLanzamiento" Margin="0,5"/>
+            <TextBlock Text="Precio:"/>
+            <TextBox x:Name="txtPrecio" Margin="0,5"/>
+
+            <StackPanel Orientation="Horizontal" Margin="0,10">
+                <Button Content="Guardar" Width="100" Click="BtnGuardar_Click"/>
+                <Button Content="Actualizar" Width="100" Margin="10,0,0,0" Click="BtnActualizar_Click"/>
+                <Button Content="Eliminar" Width="100" Margin="10,0,0,0" Click="BtnEliminar_Click"/>
+            </StackPanel>
+
+            <TextBlock Text="Buscar por título:" Margin="0,10,0,0"/>
+            <TextBox x:Name="txtBuscar" Margin="0,5" TextChanged="TxtBuscar_TextChanged"/>
+
+            <DataGrid x:Name="dgVideojuegos" AutoGenerateColumns="True" Height="400" Margin="0,10,0,0"
+                      SelectionChanged="DgVideojuegos_SelectionChanged"/>
+        </StackPanel>
+    </Grid>
+</Window>
