@@ -59,7 +59,33 @@ namespace A1._12_BD_CRUD_Irene
             }
         }
 
-        
+        private void CargarVideojuegos(string filtro = "")
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    string query = "SELECT * FROM Videojuegos";
+                    if (!string.IsNullOrWhiteSpace(filtro))
+                        query += " WHERE Titulo LIKE @Filtro";
+
+                    SqlDataAdapter da = new SqlDataAdapter(query, conn);
+                    if (!string.IsNullOrWhiteSpace(filtro))
+                        da.SelectCommand.Parameters.AddWithValue("@Filtro", "%" + filtro + "%");
+
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    dgVideojuegos.ItemsSource = dt.DefaultView;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al cargar videojuegos: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+
 
 
 
