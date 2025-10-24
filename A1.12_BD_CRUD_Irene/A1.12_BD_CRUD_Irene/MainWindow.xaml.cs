@@ -31,6 +31,7 @@ namespace A1._12_BD_CRUD_Irene
 
         private void BtnGuardar_Click(object sender, RoutedEventArgs e)
         {
+            if (!ValidarCampos()) return;
 
             try
             {
@@ -51,7 +52,8 @@ namespace A1._12_BD_CRUD_Irene
                     }
                 }
                 MessageBox.Show("Videojuego guardado correctamente.", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
-
+                LimpiarCampos();
+                CargarVideojuegos();
             }
             catch (Exception ex)
             {
@@ -85,6 +87,19 @@ namespace A1._12_BD_CRUD_Irene
             }
         }
 
+        private void DgVideojuegos_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            if (dgVideojuegos.SelectedItem == null) return;
+            DataRowView row = (DataRowView)dgVideojuegos.SelectedItem;
+            selectedId = Convert.ToInt32(row["Id"]);
+            txtTitulo.Text = row["Titulo"].ToString();
+            txtGenero.Text = row["Genero"].ToString();
+            txtPlataforma.Text = row["Plataforma"].ToString();
+            txtDesarrollador.Text = row["Desarrollador"].ToString();
+            dpFechaLanzamiento.SelectedDate = Convert.ToDateTime(row["FechaLanzamiento"]);
+            txtPrecio.Text = row["Precio"].ToString();
+        }
+
         private void BtnActualizar_Click(object sender, RoutedEventArgs e)
         {
             if (selectedId == -1)
@@ -92,6 +107,7 @@ namespace A1._12_BD_CRUD_Irene
                 MessageBox.Show("Selecciona un videojuego para actualizar.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
+            if (!ValidarCampos()) return;
 
             try
             {
@@ -114,6 +130,7 @@ namespace A1._12_BD_CRUD_Irene
                     }
                 }
                 MessageBox.Show("Videojuego actualizado correctamente.", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
+                LimpiarCampos();
                 CargarVideojuegos();
             }
             catch (Exception ex)
@@ -144,6 +161,7 @@ namespace A1._12_BD_CRUD_Irene
                         }
                     }
                     MessageBox.Show("Videojuego eliminado correctamente.", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
+                    LimpiarCampos();
                     CargarVideojuegos();
                 }
                 catch (Exception ex)
@@ -178,9 +196,17 @@ namespace A1._12_BD_CRUD_Irene
             return true;
         }
 
-
-
-
-
+        private void LimpiarCampos()
+        {
+            txtTitulo.Clear();
+            txtGenero.Clear();
+            txtPlataforma.Clear();
+            txtDesarrollador.Clear();
+            dpFechaLanzamiento.SelectedDate = null;
+            txtPrecio.Clear();
+            selectedId = -1;
+        }
     }
+
 }
+
