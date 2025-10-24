@@ -153,6 +153,30 @@ namespace A1._12_BD_CRUD_Irene
             }
         }
 
+        private void TxtBuscar_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
+            CargarVideojuegos(txtBuscar.Text);
+        }
+
+        private bool ValidarCampos()
+        {
+            if (string.IsNullOrWhiteSpace(txtTitulo.Text) ||
+                string.IsNullOrWhiteSpace(txtGenero.Text) ||
+                string.IsNullOrWhiteSpace(txtPlataforma.Text) ||
+                string.IsNullOrWhiteSpace(txtDesarrollador.Text) ||
+                !dpFechaLanzamiento.SelectedDate.HasValue ||
+                string.IsNullOrWhiteSpace(txtPrecio.Text))
+            {
+                MessageBox.Show("Completa todos los campos.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return false;
+            }
+            if (!decimal.TryParse(txtPrecio.Text, out _))
+            {
+                MessageBox.Show("El precio debe ser un número válido.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return false;
+            }
+            return true;
+        }
 
 
 
