@@ -17,22 +17,17 @@
             <TextBox x:Name="txtPlataforma" Margin="0,5"/>
             <TextBlock Text="Desarrollador:"/>
             <TextBox x:Name="txtDesarrollador" Margin="0,5"/>
-            <TextBlock Text="Fecha Lanzamiento:"/>
-            <DatePicker x:Name="dpFechaLanzamiento" Margin="0,5"/>
+            <TextBlock Text="Fecha de Lanzamiento:"/>
+            <DatePicker x:Name="dpFecha" Margin="0,5"/>
             <TextBlock Text="Precio:"/>
             <TextBox x:Name="txtPrecio" Margin="0,5"/>
-
             <StackPanel Orientation="Horizontal" Margin="0,10">
-                <Button Content="Guardar" Width="100" Click="BtnGuardar_Click"/>
-                <Button Content="Actualizar" Width="100" Margin="10,0,0,0" Click="BtnActualizar_Click"/>
-                <Button Content="Eliminar" Width="100" Margin="10,0,0,0" Click="BtnEliminar_Click"/>
+                <Button Content="Guardar" Width="100" Margin="5" Click="BtnGuardar_Click"/>
+                <Button Content="Actualizar" Width="100" Margin="5" Click="BtnActualizar_Click"/>
+                <Button Content="Eliminar" Width="100" Margin="5" Click="BtnEliminar_Click"/>
             </StackPanel>
-
-            <TextBlock Text="Buscar por título:" Margin="0,10,0,0"/>
-            <TextBox x:Name="txtBuscar" Margin="0,5" TextChanged="TxtBuscar_TextChanged"/>
-
-            <DataGrid x:Name="dgVideojuegos" AutoGenerateColumns="True" Height="400" Margin="0,10,0,0"
-                      SelectionChanged="DgVideojuegos_SelectionChanged"/>
+            <TextBox x:Name="txtBuscar" Width="200" Margin="0,10" TextChanged="TxtBuscar_TextChanged"/>
+            <DataGrid x:Name="dgVideojuegos" AutoGenerateColumns="True" Height="500" Margin="0,10,0,0" SelectionChanged="DgVideojuegos_SelectionChanged"/>
         </StackPanel>
     </Grid>
 </Window>

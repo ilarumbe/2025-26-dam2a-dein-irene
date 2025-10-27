@@ -22,178 +22,156 @@ namespace A1._12_BD_CRUD_Irene
     public partial class MainWindow : Window
     {
         private readonly string connectionString;
-        private int selectedId = -1;
+        private int idSeleccionado = 0;
+
         public MainWindow()
         {
             InitializeComponent();
-            connectionString = ConfigurationManager.ConnectionStrings["Conexion"].ConnectionString;
+            connectionString = ConfigurationManager.ConnectionStrings["Conexion"]?.ConnectionString;
+
+            if (string.IsNullOrEmpty(connectionString))
+                MessageBox.Show("No se ha leído el connection string");
+            else
+                CargarVideojuegos();
+        }
+
+        private void CargarVideojuegos()
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Videojuegos", conn);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dgVideojuegos.ItemsSource = dt.DefaultView;
+            }
         }
 
         private void BtnGuardar_Click(object sender, RoutedEventArgs e)
-        {
-            if (!ValidarCampos()) return;
-
-            try
-            {
-                using (SqlConnection conn = new SqlConnection(connectionString))
-                {
-                    conn.Open();
-                    string query = "INSERT INTO Videojuegos (Titulo, Genero, Plataforma, Desarrollador, FechaLanzamiento, Precio) " +
-                                   "VALUES (@Titulo, @Genero, @Plataforma, @Desarrollador, @FechaLanzamiento, @Precio)";
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@Titulo", txtTitulo.Text);
-                        cmd.Parameters.AddWithValue("@Genero", txtGenero.Text);
-                        cmd.Parameters.AddWithValue("@Plataforma", txtPlataforma.Text);
-                        cmd.Parameters.AddWithValue("@Desarrollador", txtDesarrollador.Text);
-                        cmd.Parameters.AddWithValue("@FechaLanzamiento", dpFechaLanzamiento.SelectedDate.Value);
-                        cmd.Parameters.AddWithValue("@Precio", decimal.Parse(txtPrecio.Text));
-                        cmd.ExecuteNonQuery();
-                    }
-                }
-                MessageBox.Show("Videojuego guardado correctamente.", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
-                LimpiarCampos();
-                CargarVideojuegos();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error al guardar: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-        }
-
-        private void CargarVideojuegos(string filtro = "")
-        {
-            try
-            {
-                using (SqlConnection conn = new SqlConnection(connectionString))
-                {
-                    conn.Open();
-                    string query = "SELECT * FROM Videojuegos";
-                    if (!string.IsNullOrWhiteSpace(filtro))
-                        query += " WHERE Titulo LIKE @Filtro";
-
-                    SqlDataAdapter da = new SqlDataAdapter(query, conn);
-                    if (!string.IsNullOrWhiteSpace(filtro))
-                        da.SelectCommand.Parameters.AddWithValue("@Filtro", "%" + filtro + "%");
-
-                    DataTable dt = new DataTable();
-                    da.Fill(dt);
-                    dgVideojuegos.ItemsSource = dt.DefaultView;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error al cargar videojuegos: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-        }
-
-        private void DgVideojuegos_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
-        {
-            if (dgVideojuegos.SelectedItem == null) return;
-            DataRowView row = (DataRowView)dgVideojuegos.SelectedItem;
-            selectedId = Convert.ToInt32(row["Id"]);
-            txtTitulo.Text = row["Titulo"].ToString();
-            txtGenero.Text = row["Genero"].ToString();
-            txtPlataforma.Text = row["Plataforma"].ToString();
-            txtDesarrollador.Text = row["Desarrollador"].ToString();
-            dpFechaLanzamiento.SelectedDate = Convert.ToDateTime(row["FechaLanzamiento"]);
-            txtPrecio.Text = row["Precio"].ToString();
-        }
-
-        private void BtnActualizar_Click(object sender, RoutedEventArgs e)
-        {
-            if (selectedId == -1)
-            {
-                MessageBox.Show("Selecciona un videojuego para actualizar.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Warning);
-                return;
-            }
-            if (!ValidarCampos()) return;
-
-            try
-            {
-                using (SqlConnection conn = new SqlConnection(connectionString))
-                {
-                    conn.Open();
-                    string query = "UPDATE Videojuegos SET Titulo=@Titulo, Genero=@Genero, Plataforma=@Plataforma, " +
-                                   "Desarrollador=@Desarrollador, FechaLanzamiento=@FechaLanzamiento, Precio=@Precio " +
-                                   "WHERE Id=@Id";
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@Titulo", txtTitulo.Text);
-                        cmd.Parameters.AddWithValue("@Genero", txtGenero.Text);
-                        cmd.Parameters.AddWithValue("@Plataforma", txtPlataforma.Text);
-                        cmd.Parameters.AddWithValue("@Desarrollador", txtDesarrollador.Text);
-                        cmd.Parameters.AddWithValue("@FechaLanzamiento", dpFechaLanzamiento.SelectedDate.Value);
-                        cmd.Parameters.AddWithValue("@Precio", decimal.Parse(txtPrecio.Text));
-                        cmd.Parameters.AddWithValue("@Id", selectedId);
-                        cmd.ExecuteNonQuery();
-                    }
-                }
-                MessageBox.Show("Videojuego actualizado correctamente.", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
-                LimpiarCampos();
-                CargarVideojuegos();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error al actualizar: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-        }
-
-        private void BtnEliminar_Click(object sender, RoutedEventArgs e)
-        {
-            if (selectedId == -1)
-            {
-                MessageBox.Show("Selecciona un videojuego para eliminar.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Warning);
-                return;
-            }
-            if (MessageBox.Show("¿Deseas eliminar este videojuego?", "Confirmar", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
-            {
-                try
-                {
-                    using (SqlConnection conn = new SqlConnection(connectionString))
-                    {
-                        conn.Open();
-                        string query = "DELETE FROM Videojuegos WHERE Id=@Id";
-                        using (SqlCommand cmd = new SqlCommand(query, conn))
-                        {
-                            cmd.Parameters.AddWithValue("@Id", selectedId);
-                            cmd.ExecuteNonQuery();
-                        }
-                    }
-                    MessageBox.Show("Videojuego eliminado correctamente.", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
-                    LimpiarCampos();
-                    CargarVideojuegos();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Error al eliminar: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                }
-            }
-        }
-
-        private void TxtBuscar_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
-        {
-            CargarVideojuegos(txtBuscar.Text);
-        }
-
-        private bool ValidarCampos()
         {
             if (string.IsNullOrWhiteSpace(txtTitulo.Text) ||
                 string.IsNullOrWhiteSpace(txtGenero.Text) ||
                 string.IsNullOrWhiteSpace(txtPlataforma.Text) ||
                 string.IsNullOrWhiteSpace(txtDesarrollador.Text) ||
-                !dpFechaLanzamiento.SelectedDate.HasValue ||
+                dpFecha.SelectedDate == null ||
                 string.IsNullOrWhiteSpace(txtPrecio.Text))
             {
-                MessageBox.Show("Completa todos los campos.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Warning);
-                return false;
+                MessageBox.Show("Por favor, completa todos los campos.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
             }
-            if (!decimal.TryParse(txtPrecio.Text, out _))
+
+            if (!decimal.TryParse(txtPrecio.Text, out decimal precio))
             {
-                MessageBox.Show("El precio debe ser un número válido.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Warning);
-                return false;
+                MessageBox.Show("El precio debe ser numérico.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
             }
-            return true;
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "INSERT INTO Videojuegos (Titulo, Genero, Plataforma, Desarrollador, FechaLanzamiento, Precio) VALUES (@Titulo, @Genero, @Plataforma, @Desarrollador, @FechaLanzamiento, @Precio)";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@Titulo", txtTitulo.Text);
+                    cmd.Parameters.AddWithValue("@Genero", txtGenero.Text);
+                    cmd.Parameters.AddWithValue("@Plataforma", txtPlataforma.Text);
+                    cmd.Parameters.AddWithValue("@Desarrollador", txtDesarrollador.Text);
+                    cmd.Parameters.AddWithValue("@FechaLanzamiento", dpFecha.SelectedDate.Value);
+                    cmd.Parameters.AddWithValue("@Precio", precio);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            MessageBox.Show("Videojuego guardado correctamente.", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
+            LimpiarCampos();
+            CargarVideojuegos();
+        }
+
+        private void DgVideojuegos_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            if (dgVideojuegos.SelectedItem is DataRowView fila)
+            {
+                idSeleccionado = Convert.ToInt32(fila["Id"]);
+                txtTitulo.Text = fila["Titulo"].ToString();
+                txtGenero.Text = fila["Genero"].ToString();
+                txtPlataforma.Text = fila["Plataforma"].ToString();
+                txtDesarrollador.Text = fila["Desarrollador"].ToString();
+                dpFecha.SelectedDate = Convert.ToDateTime(fila["FechaLanzamiento"]);
+                txtPrecio.Text = fila["Precio"].ToString();
+            }
+        }
+
+        private void BtnActualizar_Click(object sender, RoutedEventArgs e)
+        {
+            if (idSeleccionado == 0)
+            {
+                MessageBox.Show("Selecciona un videojuego para actualizar.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            if (!decimal.TryParse(txtPrecio.Text, out decimal precio))
+            {
+                MessageBox.Show("El precio debe ser numérico.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "UPDATE Videojuegos SET Titulo=@Titulo, Genero=@Genero, Plataforma=@Plataforma, Desarrollador=@Desarrollador, FechaLanzamiento=@FechaLanzamiento, Precio=@Precio WHERE Id=@Id";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@Titulo", txtTitulo.Text);
+                    cmd.Parameters.AddWithValue("@Genero", txtGenero.Text);
+                    cmd.Parameters.AddWithValue("@Plataforma", txtPlataforma.Text);
+                    cmd.Parameters.AddWithValue("@Desarrollador", txtDesarrollador.Text);
+                    cmd.Parameters.AddWithValue("@FechaLanzamiento", dpFecha.SelectedDate.Value);
+                    cmd.Parameters.AddWithValue("@Precio", precio);
+                    cmd.Parameters.AddWithValue("@Id", idSeleccionado);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            MessageBox.Show("Videojuego actualizado correctamente.", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
+            LimpiarCampos();
+            CargarVideojuegos();
+        }
+
+        private void BtnEliminar_Click(object sender, RoutedEventArgs e)
+        {
+            if (idSeleccionado == 0)
+            {
+                MessageBox.Show("Selecciona un videojuego para eliminar.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            if (MessageBox.Show("¿Seguro que deseas eliminar este videojuego?", "Confirmar", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    string query = "DELETE FROM Videojuegos WHERE Id=@Id";
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@Id", idSeleccionado);
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+                MessageBox.Show("Videojuego eliminado correctamente.", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
+                LimpiarCampos();
+                CargarVideojuegos();
+            }
+        }
+
+        private void TxtBuscar_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Videojuegos WHERE Titulo LIKE @titulo", conn);
+                da.SelectCommand.Parameters.AddWithValue("@titulo", "%" + txtBuscar.Text + "%");
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dgVideojuegos.ItemsSource = dt.DefaultView;
+            }
         }
 
         private void LimpiarCampos()
@@ -202,9 +180,9 @@ namespace A1._12_BD_CRUD_Irene
             txtGenero.Clear();
             txtPlataforma.Clear();
             txtDesarrollador.Clear();
-            dpFechaLanzamiento.SelectedDate = null;
+            dpFecha.SelectedDate = null;
             txtPrecio.Clear();
-            selectedId = -1;
+            idSeleccionado = 0;
         }
     }
 
