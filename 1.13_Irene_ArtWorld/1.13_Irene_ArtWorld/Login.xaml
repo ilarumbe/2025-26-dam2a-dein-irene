@@ -5,8 +5,44 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_1._13_Irene_ArtWorld"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Login"
+        Height="400" Width="500"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Background="White">
     <Grid>
-        
+        <Image Source="images/mancha1.png" Width="58" Margin="28,24,414,298" Height="62"/>
+        <Image Source="images/mancha2.png" Width="49" Margin="428,8,23,323" Height="53"/>
+        <Image Source="images/mancha3.png" Width="53" Margin="127,322,320,9" Height="53"/>
+        <Image Source="images/mancha4.png" Width="95" Margin="382,331,23,6" Height="47"/>
+        <Image Source="images/mancha5.png" Width="72" Margin="21,213,407,118" Height="53"/>
+        <Image Source="images/mancha6.png" Width="55" Margin="390,136,55,201" Height="47"/>
+        <Image Source="images/logo.png" Margin="219,302,219,26" Height="56"/>
+
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,58,0,0" >
+            <TextBlock Text="LOGIN"
+                       FontSize="26"
+                       FontWeight="Bold"
+                       Foreground="Black"
+                       HorizontalAlignment="Center"
+                       Margin="0,0,0,20"/>
+
+            <Border Background="Black" CornerRadius="10" Padding="20" Width="212">
+                <StackPanel>
+                    <TextBlock Text="Usuario" Foreground="White" Margin="0,0,0,5"/>
+                    <TextBox x:Name="txtUsuario" Margin="0,0,0,10"/>
+
+                    <TextBlock Text="Contraseña" Foreground="White" Margin="0,0,0,5"/>
+                    <PasswordBox x:Name="txtContrasena" Margin="0,0,0,20"/>
+
+                    <Button Content="Entrar"
+                            Width="80"
+                            HorizontalAlignment="Center"
+                            Background="White"
+                            Foreground="Black"
+                            Click="BtnEntrar_Click"/>
+                </StackPanel>
+            </Border>
+        </StackPanel>
     </Grid>
 </Window>

@@ -101,5 +101,23 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="fonts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\mancha1.png" />
+    <Resource Include="images\mancha2.png" />
+    <Resource Include="images\mancha3.png" />
+    <Resource Include="images\mancha4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\mancha5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\mancha6.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
