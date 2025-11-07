@@ -1,5 +1,5 @@
-CREATE DATABASE ArtWorldDB;
-GO
+/*CREATE DATABASE ArtWorldDB;
+GO*/
 
 USE ArtWorldDB;
 GO
@@ -12,5 +12,6 @@ CREATE TABLE Usuarios (
 GO
 
 INSERT INTO Usuarios (Usuario, Contrasena)
-VALUES ('admin', '1234');
+VALUES ('admin', 'jGl25bVBBBW96Qi9Te4V37Fnqchz/Eu4qB9vKrRIqRg='), /* admin */
+('usuario1', 'XohImNooBHFR0OVvjcYpJ3NgPQ1qq73WKhHvch0VQtg='); /* password */
 GO
