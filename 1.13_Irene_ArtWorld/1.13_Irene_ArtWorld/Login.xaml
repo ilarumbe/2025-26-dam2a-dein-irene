@@ -10,6 +10,10 @@
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
         Background="White">
+    <Window.Resources>
+        <FontFamily x:Key="MacondoFont">/Fonts/#Macondo Swash Caps</FontFamily>
+        <FontFamily x:Key="MajorMonoFont">/Fonts/#Major Mono Display</FontFamily>
+    </Window.Resources>
     <Grid>
         <Image Source="images/mancha1.png" Width="58" Margin="28,24,414,298" Height="62"/>
         <Image Source="images/mancha2.png" Width="49" Margin="428,8,23,323" Height="53"/>
@@ -21,18 +25,19 @@
 
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,58,0,0" >
             <TextBlock Text="LOGIN"
-                       FontSize="26"
+                       FontSize="40"
                        FontWeight="Bold"
+                       FontFamily="{StaticResource MajorMonoFont}"
                        Foreground="Black"
                        HorizontalAlignment="Center"
                        Margin="0,0,0,20"/>
 
             <Border Background="Black" CornerRadius="10" Padding="20" Width="212">
                 <StackPanel>
-                    <TextBlock Text="Usuario" Foreground="White" Margin="0,0,0,5"/>
+                    <TextBlock Text="Usuario" Foreground="White" Margin="0,0,0,5" FontSize="16" FontFamily="{StaticResource MacondoFont}"/>
                     <TextBox x:Name="txtUsuario" Margin="0,0,0,10"/>
 
-                    <TextBlock Text="Contraseña" Foreground="White" Margin="0,0,0,5"/>
+                    <TextBlock Text="Contraseña" Foreground="White" Margin="0,0,0,5" FontSize="16" FontFamily="{StaticResource MacondoFont}"/>
                     <PasswordBox x:Name="txtContrasena" Margin="0,0,0,20"/>
 
                     <Button Content="Entrar"
@@ -40,6 +45,8 @@
                             HorizontalAlignment="Center"
                             Background="White"
                             Foreground="Black"
+                            FontSize="16"
+                            FontFamily="{StaticResource MacondoFont}"
                             Click="BtnEntrar_Click"/>
                 </StackPanel>
             </Border>
