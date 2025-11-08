@@ -14,6 +14,7 @@
         <FontFamily x:Key="MacondoFont">/Fonts/#Macondo Swash Caps</FontFamily>
         <FontFamily x:Key="MajorMonoFont">/Fonts/#Major Mono Display</FontFamily>
     </Window.Resources>
+    <Viewbox Stretch="Uniform">
     <Grid>
         <Image Source="images/mancha1.png" Width="58" Margin="28,24,414,298" Height="62"/>
         <Image Source="images/mancha2.png" Width="49" Margin="428,8,23,323" Height="53"/>
@@ -52,4 +53,5 @@
             </Border>
         </StackPanel>
     </Grid>
+    </Viewbox>
 </Window>
