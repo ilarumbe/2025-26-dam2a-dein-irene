@@ -1,4 +1,0 @@
-C:\Users\Irene\DAM2\DEIN\WPF\2025-26-dam2-dein-irene\1.7_NavegacionWPF_Irene_Larumbe\1.7_NavegacionWPF_Irene_Larumbe\obj\Debug\net8.0-windows\MainWindow.g.cs
-C:\Users\Irene\DAM2\DEIN\WPF\2025-26-dam2-dein-irene\1.7_NavegacionWPF_Irene_Larumbe\1.7_NavegacionWPF_Irene_Larumbe\obj\Debug\net8.0-windows\App.g.cs
-C:\Users\Irene\DAM2\DEIN\WPF\2025-26-dam2-dein-irene\1.7_NavegacionWPF_Irene_Larumbe\1.7_NavegacionWPF_Irene_Larumbe\obj\Debug\net8.0-windows\1.7_NavegacionWPF_Irene_Larumbe_MarkupCompile.cache
-C:\Users\Irene\DAM2\DEIN\WPF\2025-26-dam2-dein-irene\1.7_NavegacionWPF_Irene_Larumbe\1.7_NavegacionWPF_Irene_Larumbe\obj\Debug\net8.0-windows\1.7_NavegacionWPF_Irene_Larumbe_MarkupCompile.lref
