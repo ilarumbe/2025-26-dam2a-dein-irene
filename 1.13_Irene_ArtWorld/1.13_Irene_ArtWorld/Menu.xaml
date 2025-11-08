@@ -96,7 +96,7 @@
                             <StackPanel>
                                 <Border BorderBrush="Black" BorderThickness="1">
                                     <Image Source="{Binding Imagen}"
-                                           Height="90"
+                                           Height="120"
                                            Stretch="UniformToFill"/>
                                 </Border>
                                 <TextBlock Text="{Binding Nombre}"
