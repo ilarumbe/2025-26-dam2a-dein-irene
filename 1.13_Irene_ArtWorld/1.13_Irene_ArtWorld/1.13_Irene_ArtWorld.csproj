@@ -56,6 +56,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Autores.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Favoritos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Login.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -63,6 +71,13 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Autores.xaml.cs">
+      <DependentUpon>Autores.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Cuadro.cs" />
+    <Compile Include="Favoritos.xaml.cs">
+      <DependentUpon>Favoritos.xaml</DependentUpon>
     </Compile>
     <Compile Include="Helper.cs" />
     <Compile Include="Login.xaml.cs">
@@ -105,7 +120,13 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="images\cuadro1.jpg" />
+    <Resource Include="images\cuadro2.jpg" />
+    <Resource Include="images\cuadro3.jpg" />
+    <Resource Include="images\cuadro4.jpg" />
+    <Resource Include="images\cuadro5.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="images\logo.png" />
   </ItemGroup>
@@ -120,6 +141,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\mancha6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\lupa.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
