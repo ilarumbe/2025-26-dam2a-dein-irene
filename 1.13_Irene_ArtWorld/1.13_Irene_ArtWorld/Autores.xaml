@@ -67,7 +67,9 @@
         <ScrollViewer Margin="0,120,0,30" VerticalScrollBarVisibility="Auto">
             <StackPanel HorizontalAlignment="Center">
 
-                <Border Style="{StaticResource AutorCardStyle}">
+                <Border Style="{StaticResource AutorCardStyle}"
+                        MouseEnter="Autor_MouseEnter"
+                        MouseLeave="Autor_MouseLeave">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="250"/>
@@ -76,43 +78,60 @@
 
                         <StackPanel Grid.Column="0" HorizontalAlignment="Center">
                             <TextBlock Text="Leonardo da Vinci"
-                                       FontFamily="{StaticResource MacondoFont}"
-                                       FontSize="22"
-                                       Margin="0,0,0,10"
-                                       HorizontalAlignment="Center"/>
+                               FontFamily="{StaticResource MacondoFont}"
+                               FontSize="22"
+                               Margin="0,0,0,10"
+                               HorizontalAlignment="Center"/>
                             <Image Source="/images/leonardo.png"
-                                   Width="130" Height="130"
-                                   Stretch="UniformToFill"
-                                   />
+                                   Width="130" Height="150"
+                                   Stretch="UniformToFill"/>
                         </StackPanel>
 
-                        <StackPanel Grid.Column="1"
-                                    Orientation="Vertical"
-                                    HorizontalAlignment="Center"
-                                    VerticalAlignment="Center">
-                            <TextBlock Text="Cuadros"
-                                       FontFamily="{StaticResource MacondoFont}"
-                                       FontSize="22"
-                                       Margin="0,0,0,10"
-                                       HorizontalAlignment="Center"/>
-                            <StackPanel Orientation="Horizontal"
-                                        HorizontalAlignment="Center">
-                                <Border BorderBrush="Black" BorderThickness="1" Margin="10">
-                                    <Image Source="/images/mona_lisa.png"
-                                           Width="110" Height="130"
-                                           Stretch="UniformToFill"/>
-                                </Border>
-                                <Border BorderBrush="Black" BorderThickness="1" Margin="10">
-                                    <Image Source="/images/virgen_nino.png"
-                                           Width="110" Height="130"
-                                           Stretch="UniformToFill"/>
-                                </Border>
+                        <Grid Grid.Column="1"
+                              HorizontalAlignment="Center"
+                              VerticalAlignment="Center"
+                              MinHeight="200">
+
+                            <StackPanel x:Name="CuadrosPanelLeonardo"
+                                        Orientation="Vertical"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center">
+                                <TextBlock Text="Cuadros"
+                                           FontFamily="{StaticResource MacondoFont}"
+                                           FontSize="22"
+                                           Margin="0,0,0,10"
+                                           HorizontalAlignment="Center"/>
+                                <StackPanel Orientation="Horizontal"
+                                            HorizontalAlignment="Center">
+                                    <Border BorderBrush="Black" BorderThickness="1" Margin="10">
+                                        <Image Source="/images/mona_lisa.png"
+                                               Width="110" Height="130"
+                                               Stretch="UniformToFill"/>
+                                    </Border>
+                                    <Border BorderBrush="Black" BorderThickness="1" Margin="10">
+                                        <Image Source="/images/virgen_nino.png"
+                                               Width="110" Height="130"
+                                               Stretch="UniformToFill"/>
+                                    </Border>
+                                </StackPanel>
                             </StackPanel>
-                        </StackPanel>
+
+                            <TextBlock x:Name="DescripcionLeonardo"
+                                       Text="Leonardo da Vinci fue un pintor, inventor y científico del Renacimiento. Su obra maestra, la Mona Lisa, es una de las pinturas más reconocidas del mundo."
+                                       TextWrapping="Wrap"
+                                       FontFamily="Segoe UI"
+                                       FontSize="16"
+                                       Foreground="Black"
+                                       Margin="20"
+                                       TextAlignment="Center"
+                                       Visibility="Collapsed"
+                                       VerticalAlignment="Center"/>
+                        </Grid>
                     </Grid>
                 </Border>
-
-                <Border Style="{StaticResource AutorCardStyle}">
+                <Border Style="{StaticResource AutorCardStyle}" 
+                        MouseEnter="Autor_MouseEnter"
+                        MouseLeave="Autor_MouseLeave">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="250"/>
@@ -121,42 +140,61 @@
 
                         <StackPanel Grid.Column="0" HorizontalAlignment="Center">
                             <TextBlock Text="Pablo Picasso"
-                                       FontFamily="{StaticResource MacondoFont}"
-                                       FontSize="22"
-                                       Margin="0,0,0,10"
-                                       HorizontalAlignment="Center"/>
+                               FontFamily="{StaticResource MacondoFont}"
+                               FontSize="22"
+                               Margin="0,0,0,10"
+                               HorizontalAlignment="Center"/>
                             <Image Source="/images/picasso.png"
-                                   Width="130" Height="130"
-                                   Stretch="UniformToFill"
-                                   HorizontalAlignment="Center"/>
+                           Width="130" Height="150"
+                           Stretch="UniformToFill"
+                           HorizontalAlignment="Center"/>
                         </StackPanel>
 
-                        <StackPanel Grid.Column="1"
-                                    Orientation="Vertical"
-                                    HorizontalAlignment="Center"
-                                    VerticalAlignment="Center">
-                            <TextBlock Text="Cuadros"
-                                       FontFamily="{StaticResource MacondoFont}"
-                                       FontSize="22"
-                                       Margin="0,0,0,10"
-                                       HorizontalAlignment="Center"/>
-                            <StackPanel Orientation="Horizontal"
-                                        HorizontalAlignment="Center">
-                                <Border BorderBrush="Black" BorderThickness="1" Margin="10">
-                                    <Image Source="/images/retrato_autorretrato.png"
-                                           Width="110" Height="130"
-                                           Stretch="UniformToFill"/>
-                                </Border>
-                                <Border BorderBrush="Black" BorderThickness="1" Margin="10">
-                                    <Image Source="/images/mujer_sentada.png"
-                                           Width="110" Height="130"
-                                           Stretch="UniformToFill"/>
-                                </Border>
+                        <Grid Grid.Column="1"
+                      HorizontalAlignment="Center"
+                      VerticalAlignment="Center"
+                      MinHeight="200">
+                            <StackPanel x:Name="CuadrosPanelPicasso"
+                                Orientation="Vertical"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center">
+                                <TextBlock Text="Cuadros"
+                                   FontFamily="{StaticResource MacondoFont}"
+                                   FontSize="22"
+                                   Margin="0,0,0,10"
+                                   HorizontalAlignment="Center"/>
+                                <StackPanel Orientation="Horizontal"
+                                    HorizontalAlignment="Center">
+                                    <Border BorderBrush="Black" BorderThickness="1" Margin="10">
+                                        <Image Source="/images/retrato_autorretrato.png"
+                                       Width="110" Height="130"
+                                       Stretch="UniformToFill"/>
+                                    </Border>
+                                    <Border BorderBrush="Black" BorderThickness="1" Margin="10">
+                                        <Image Source="/images/mujer_sentada.png"
+                                       Width="110" Height="130"
+                                       Stretch="UniformToFill"/>
+                                    </Border>
+                                </StackPanel>
                             </StackPanel>
-                        </StackPanel>
+
+                            <TextBlock x:Name="DescripcionPicasso"
+                               Text="Pablo Picasso fue un pintor y escultor español, cofundador del cubismo. Su obra revolucionó el arte moderno con su innovación y creatividad."
+                               TextWrapping="Wrap"
+                               FontFamily="Segoe UI"
+                               FontSize="16"
+                               Foreground="Black"
+                               Margin="20"
+                               TextAlignment="Center"
+                               Visibility="Collapsed"
+                               VerticalAlignment="Center"/>
+
+                        </Grid>
                     </Grid>
                 </Border>
+
             </StackPanel>
         </ScrollViewer>
+
     </Grid>
 </Window>
