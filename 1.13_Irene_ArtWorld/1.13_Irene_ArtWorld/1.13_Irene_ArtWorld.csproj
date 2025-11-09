@@ -155,5 +155,11 @@
   <ItemGroup>
     <Resource Include="images\flecha_atras.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\estrella.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\linea.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

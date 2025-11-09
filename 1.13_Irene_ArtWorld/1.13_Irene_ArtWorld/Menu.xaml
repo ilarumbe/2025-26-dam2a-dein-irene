@@ -95,7 +95,7 @@
                         <Border Style="{StaticResource CuadroStyle}"
                 MouseLeftButtonDown="Cuadro_Click">
                             <StackPanel>
-                                <Border BorderBrush="Black" BorderThickness="1">
+                                <Border BorderBrush="Black" BorderThickness="2">
                                     <Image Source="{Binding Imagen}"
                                            Height="120"
                                            Stretch="UniformToFill"/>

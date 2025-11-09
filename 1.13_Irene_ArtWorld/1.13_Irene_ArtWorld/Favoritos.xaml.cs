@@ -1,27 +1,62 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using System.Configuration;
 
 namespace _1._13_Irene_ArtWorld
 {
-    /// <summary>
-    /// Lógica de interacción para Favoritos.xaml
-    /// </summary>
     public partial class Favoritos : Window
     {
+        private readonly string connectionString;
+
         public Favoritos()
         {
             InitializeComponent();
+            connectionString = ConfigurationManager.ConnectionStrings["Conexion"]?.ConnectionString;
+            CargarFavoritos();
+        }
+
+        private void CargarFavoritos()
+        {
+            List<Cuadro> favoritos = new List<Cuadro>();
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "SELECT Id, Nombre, Imagen FROM Cuadros WHERE Nombre IN ('La noche estrellada', 'El jardín de las delicias')";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    favoritos.Add(new Cuadro
+                    {
+                        Id = (int)reader["Id"],
+                        Nombre = reader["Nombre"].ToString(),
+                        Imagen = reader["Imagen"].ToString()
+                    });
+                }
+            }
+
+            PanelFavoritos.ItemsSource = favoritos;
+        }
+
+        private void Cuadro_Click(object sender, MouseButtonEventArgs e)
+        {
+            if ((sender as FrameworkElement)?.DataContext is Cuadro cuadro)
+            {
+                CuadroDetalles detalles = new CuadroDetalles(cuadro.Id);
+                detalles.Show();
+                this.Close();
+            }
+        }
+
+        private void BtnVolver_Click(object sender, RoutedEventArgs e)
+        {
+            Menu menu = new Menu();
+            menu.Show();
+            this.Close();
         }
     }
 }
