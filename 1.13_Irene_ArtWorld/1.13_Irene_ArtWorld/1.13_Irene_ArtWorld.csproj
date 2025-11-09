@@ -57,8 +57,8 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="Autores.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="CuadroDetalles.xaml">
       <SubType>Designer</SubType>
@@ -128,38 +128,72 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\cuadro1.jpg" />
-    <Resource Include="images\cuadro2.jpg" />
-    <Resource Include="images\cuadro3.jpg" />
-    <Resource Include="images\cuadro4.jpg" />
-    <Resource Include="images\cuadro5.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\logo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\mancha1.png" />
-    <Resource Include="images\mancha2.png" />
-    <Resource Include="images\mancha3.png" />
-    <Resource Include="images\mancha4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\mancha5.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\mancha6.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\lupa.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\flecha_atras.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\estrella.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\linea.png" />
+    <Content Include="images\cuadro1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\cuadro2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\cuadro3.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\cuadro4.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\cuadro5.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\estrella.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\flecha_atras.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\leonardo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\linea.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\lupa.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\mancha1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\mancha2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\mancha3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\mancha4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\mancha5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\mancha6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\mona_lisa.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\mujer_sentada.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\picasso.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\retrato_autorretrato.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\virgen_nino.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

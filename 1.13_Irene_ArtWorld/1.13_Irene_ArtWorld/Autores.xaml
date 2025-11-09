@@ -1,12 +1,162 @@
 ﻿<Window x:Class="_1._13_Irene_ArtWorld.Autores"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:_1._13_Irene_ArtWorld"
-        mc:Ignorable="d"
-        Title="Autores" Height="450" Width="800">
+        Title="Autores"
+        Width="900" Height="650"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Background="White">
+
+    <Window.Resources>
+        <FontFamily x:Key="MacondoFont">/Fonts/#Macondo Swash Caps</FontFamily>
+
+        <Style x:Key="AutorCardStyle" TargetType="Border">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="CornerRadius" Value="10"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="1.5"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="Margin" Value="20"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect BlurRadius="6" ShadowDepth="2" Opacity="0.25"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
     <Grid>
-        
+        <Grid Height="100" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="100"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Width="80"
+                    Height="80"
+                    BorderThickness="0"
+                    Background="Transparent"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    Click="BtnVolver_Click"
+                    Margin="10,0,0,0"
+                    Grid.Column="0">
+                <Image Source="images/flecha_atras.png"
+                       Width="80"
+                       Height="80"
+                       Stretch="Uniform"/>
+            </Button>
+
+            <StackPanel Grid.Column="1"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+                <TextBlock Text="AUTORES"
+                           FontFamily="{StaticResource MacondoFont}"
+                           FontSize="50"
+                           Foreground="Black"
+                           HorizontalAlignment="Center"/>
+                <Image Source="images/linea.png"
+                       Width="220"
+                       Height="25"
+                       HorizontalAlignment="Center"
+                       Margin="0,-5,0,0"/>
+            </StackPanel>
+        </Grid>
+
+        <ScrollViewer Margin="0,120,0,30" VerticalScrollBarVisibility="Auto">
+            <StackPanel HorizontalAlignment="Center">
+
+                <Border Style="{StaticResource AutorCardStyle}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="250"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Grid.Column="0" HorizontalAlignment="Center">
+                            <TextBlock Text="Leonardo da Vinci"
+                                       FontFamily="{StaticResource MacondoFont}"
+                                       FontSize="22"
+                                       Margin="0,0,0,10"
+                                       HorizontalAlignment="Center"/>
+                            <Image Source="/images/leonardo.png"
+                                   Width="130" Height="130"
+                                   Stretch="UniformToFill"
+                                   />
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="1"
+                                    Orientation="Vertical"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center">
+                            <TextBlock Text="Cuadros"
+                                       FontFamily="{StaticResource MacondoFont}"
+                                       FontSize="22"
+                                       Margin="0,0,0,10"
+                                       HorizontalAlignment="Center"/>
+                            <StackPanel Orientation="Horizontal"
+                                        HorizontalAlignment="Center">
+                                <Border BorderBrush="Black" BorderThickness="1" Margin="10">
+                                    <Image Source="/images/mona_lisa.png"
+                                           Width="110" Height="130"
+                                           Stretch="UniformToFill"/>
+                                </Border>
+                                <Border BorderBrush="Black" BorderThickness="1" Margin="10">
+                                    <Image Source="/images/virgen_nino.png"
+                                           Width="110" Height="130"
+                                           Stretch="UniformToFill"/>
+                                </Border>
+                            </StackPanel>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+
+                <Border Style="{StaticResource AutorCardStyle}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="250"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Grid.Column="0" HorizontalAlignment="Center">
+                            <TextBlock Text="Pablo Picasso"
+                                       FontFamily="{StaticResource MacondoFont}"
+                                       FontSize="22"
+                                       Margin="0,0,0,10"
+                                       HorizontalAlignment="Center"/>
+                            <Image Source="/images/picasso.png"
+                                   Width="130" Height="130"
+                                   Stretch="UniformToFill"
+                                   HorizontalAlignment="Center"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="1"
+                                    Orientation="Vertical"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center">
+                            <TextBlock Text="Cuadros"
+                                       FontFamily="{StaticResource MacondoFont}"
+                                       FontSize="22"
+                                       Margin="0,0,0,10"
+                                       HorizontalAlignment="Center"/>
+                            <StackPanel Orientation="Horizontal"
+                                        HorizontalAlignment="Center">
+                                <Border BorderBrush="Black" BorderThickness="1" Margin="10">
+                                    <Image Source="/images/retrato_autorretrato.png"
+                                           Width="110" Height="130"
+                                           Stretch="UniformToFill"/>
+                                </Border>
+                                <Border BorderBrush="Black" BorderThickness="1" Margin="10">
+                                    <Image Source="/images/mujer_sentada.png"
+                                           Width="110" Height="130"
+                                           Stretch="UniformToFill"/>
+                                </Border>
+                            </StackPanel>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Window>

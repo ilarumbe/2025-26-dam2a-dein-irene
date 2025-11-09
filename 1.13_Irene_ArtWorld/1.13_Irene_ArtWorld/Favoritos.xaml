@@ -10,7 +10,6 @@
     <Window.Resources>
         <FontFamily x:Key="MacondoFont">/Fonts/#Macondo Swash Caps</FontFamily>
 
-        <!-- Estilo para los cuadros -->
         <Style x:Key="CuadroStyle" TargetType="Border">
             <Setter Property="Background" Value="White"/>
             <Setter Property="CornerRadius" Value="8"/>

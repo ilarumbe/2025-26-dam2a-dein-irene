@@ -1,27 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace _1._13_Irene_ArtWorld
 {
-    /// <summary>
-    /// Lógica de interacción para Autores.xaml
-    /// </summary>
     public partial class Autores : Window
     {
+        private readonly string connectionString;
+
         public Autores()
         {
             InitializeComponent();
+            connectionString = ConfigurationManager.ConnectionStrings["Conexion"]?.ConnectionString;
+        }
+
+        private void BtnVolver_Click(object sender, RoutedEventArgs e)
+        {
+            Menu menu = new Menu();
+            menu.Show();
+            this.Close();
         }
     }
 }
