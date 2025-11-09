@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
@@ -93,6 +94,17 @@ namespace _1._13_Irene_ArtWorld
             Autores autores = new Autores();
             autores.Show();
             this.Close();
+        }
+
+        private void Cuadro_Click(object sender, MouseButtonEventArgs e)
+        {
+            var border = sender as Border;
+            if (border?.DataContext is Cuadro cuadro)
+            {
+                CuadroDetalles detalles = new CuadroDetalles(cuadro.Id);
+                detalles.Show();
+                this.Close();
+            }
         }
     }
 

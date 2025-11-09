@@ -1,5 +1,5 @@
-/*CREATE DATABASE ArtWorldDB;
-GO*/
+CREATE DATABASE ArtWorldDB;
+GO
 
 USE ArtWorldDB;
 GO

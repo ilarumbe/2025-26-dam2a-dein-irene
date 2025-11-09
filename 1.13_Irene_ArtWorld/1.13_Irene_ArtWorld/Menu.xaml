@@ -92,7 +92,8 @@
 
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <Border Style="{StaticResource CuadroStyle}">
+                        <Border Style="{StaticResource CuadroStyle}"
+                MouseLeftButtonDown="Cuadro_Click">
                             <StackPanel>
                                 <Border BorderBrush="Black" BorderThickness="1">
                                     <Image Source="{Binding Imagen}"

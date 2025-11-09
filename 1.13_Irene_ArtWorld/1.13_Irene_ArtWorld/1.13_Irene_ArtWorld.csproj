@@ -60,6 +60,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="CuadroDetalles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Favoritos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -76,6 +80,9 @@
       <DependentUpon>Autores.xaml</DependentUpon>
     </Compile>
     <Compile Include="Cuadro.cs" />
+    <Compile Include="CuadroDetalles.xaml.cs">
+      <DependentUpon>CuadroDetalles.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Favoritos.xaml.cs">
       <DependentUpon>Favoritos.xaml</DependentUpon>
     </Compile>
@@ -144,6 +151,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\lupa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\flecha_atras.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
