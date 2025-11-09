@@ -43,7 +43,9 @@ namespace _1._13_Irene_ArtWorld
 
                     if (result == null)
                     {
-                        MessageBox.Show("Usuario o contraseña incorrectos.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                        Error ventanaError = new Error();
+                        ventanaError.Show();
+                        this.Close();
                         return;
                     }
 
@@ -63,14 +65,19 @@ namespace _1._13_Irene_ArtWorld
                     }
                     else
                     {
-                        MessageBox.Show("Usuario o contraseña incorrectos.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                        Error ventanaError = new Error();
+                        ventanaError.Show();
+                        this.Close();
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("Error al conectar con la base de datos: " + ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                Error ventanaError = new Error();
+                ventanaError.Show();
+                this.Close();
             }
         }
+
     }
 }

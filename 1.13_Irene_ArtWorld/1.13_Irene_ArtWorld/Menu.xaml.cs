@@ -106,6 +106,12 @@ namespace _1._13_Irene_ArtWorld
                 this.Close();
             }
         }
+        private void BtnSalir_Click(object sender, RoutedEventArgs e)
+        {
+            LoginWindow login = new LoginWindow();
+            login.Show();
+            this.Close();
+        }
     }
 
 }
