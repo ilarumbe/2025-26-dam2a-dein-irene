@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace P2526_Irene_Biblioteca.ViewModels
+namespace P2526_Irene_Biblioteca.Services
 {
-    internal class LibroViewModel
+    public interface IWindowService
     {
+        void Close();
     }
 }

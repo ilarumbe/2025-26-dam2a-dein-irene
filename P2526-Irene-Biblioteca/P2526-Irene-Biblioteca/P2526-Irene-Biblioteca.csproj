@@ -55,6 +55,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Styles\Botones.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Colores.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\TextBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Ventanas.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -64,20 +76,15 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Helpers\Helper.cs" />
-    <Compile Include="Respositories\LibroRepository.cs" />
+    <Compile Include="Helpers\RelayCommand.cs" />
+    <Compile Include="Services\IWindowService.cs" />
+    <Compile Include="Services\WindowService.cs" />
     <Compile Include="Settings.cs" />
-    <Compile Include="ViewModels\LibroViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Styles\Colors.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Styles\Controls.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Autor.cs" />
@@ -114,7 +121,7 @@
   <ItemGroup>
     <Folder Include="CustomControls\" />
     <Folder Include="Images\" />
-    <Folder Include="Services\" />
+    <Folder Include="Respositories\" />
     <Folder Include="Themes\" />
     <Folder Include="UserControls\" />
   </ItemGroup>
