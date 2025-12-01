@@ -10,7 +10,7 @@ namespace P2526_Irene_Biblioteca.Models
     {
         public int IdLibro { get; set; }
         public string Titulo { get; set; }
-        public int Ano { get; set; }
+        public int Año { get; set; }
 
         public int IdAutor { get; set; }
         public int IdCategoria { get; set; }
@@ -21,3 +21,4 @@ namespace P2526_Irene_Biblioteca.Models
         public Categoria Categoria { get; set; }
     }
 }
+

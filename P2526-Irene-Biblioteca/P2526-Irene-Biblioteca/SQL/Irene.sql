@@ -8,7 +8,7 @@ CREATE TABLE Empleados (
     idEmpleado INT IDENTITY(1,1) PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL,
     usuario VARCHAR(50) NOT NULL UNIQUE,
-    password VARCHAR(50) NOT NULL
+    password VARCHAR(200) NOT NULL
 );
 
 CREATE TABLE Autores (
@@ -19,7 +19,14 @@ CREATE TABLE Autores (
 
 CREATE TABLE Categorias (
     idCategoria INT IDENTITY(1,1) PRIMARY KEY,
-    nombre VARCHAR(100) NOT NULL UNIQUE
+    nombre VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE Clientes (
+    idCliente INT IDENTITY(1,1) PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    usuario VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(200) NOT NULL
 );
 
 CREATE TABLE Libros (
@@ -34,20 +41,13 @@ CREATE TABLE Libros (
     FOREIGN KEY (idCategoria) REFERENCES Categorias(idCategoria)
 );
 
-CREATE TABLE Clientes (
-    idCliente INT IDENTITY(1,1) PRIMARY KEY,
-    nombre VARCHAR(100) NOT NULL,
-    usuario VARCHAR(50) UNIQUE NOT NULL,
-    password VARCHAR(50) NOT NULL
-);
-
 CREATE TABLE Prestamos (
     idPrestamo INT IDENTITY(1,1) PRIMARY KEY,
     idLibro INT NOT NULL,
     idCliente INT NOT NULL,
     idEmpleado INT NOT NULL,
     fechaPrestamo DATE NOT NULL,
-    fechaDevolucion DATE,
+    fechaDevolucion DATE NULL,
     devuelto BIT NOT NULL DEFAULT 0,
 
     FOREIGN KEY (idLibro) REFERENCES Libros(idLibro),
@@ -56,10 +56,10 @@ CREATE TABLE Prestamos (
 );
 
 INSERT INTO Empleados (nombre, usuario, password) VALUES
-('Administrador General', 'admin', '1234'),
-('Laura Méndez', 'lmendez', 'pass1'),
-('Carlos Ruiz', 'cruiz', 'pass2'),
-('Ana Torres', 'atorres', 'pass3');
+('Administrador General', 'admin', 'YbSBswFz0bwEUm50hQcQ5Qp5FyMBcPsIsuD6oHu2mEw='), /*admin123*/
+('Laura Méndez', 'lmendez', 'h+JpP7mBCHuAtdX9VvCY9Q=='), /*1234*/
+('Carlos Ruiz', 'cruiz', '8bqX8OojVohCsCk0ZrbJlA=='), /*pass1*/
+('Ana Torres', 'atorres', 'bg3fnlK11GIq2xZmwDSbPw=='); /*pass2*/      
 
 INSERT INTO Autores (nombre, nacionalidad) VALUES
 ('Gabriel García Márquez', 'Colombia'),
@@ -102,12 +102,11 @@ INSERT INTO Libros (titulo, año, idAutor, idCategoria, stock) VALUES
 ('Fuego y Sangre', 2018, 6, 6, 9);
 
 INSERT INTO Clientes (nombre, usuario, password) VALUES
-('María López', 'mlopez', '1234'),
-('Juan Hernández', 'jhernandez', 'pass1'),
-('Sofía Ríos', 'srios', 'pass2'),
-('Pedro Salas', 'psalas', 'pass3'),
-('Lucía Vega', 'lvega', 'pass4'),
-('Héctor Navarro', 'hnavarro', 'pass5');
+('María López', 'mlopez', 'X1gJjFUPAIxYH1WbVNkHQg=='), /*cliente1*/
+('Juan Hernández', 'jhernandez', 'YI6Cwbr+lpQGqsHllcXHQg=='), /*cliente2*/
+('Sofía Ríos', 'srios', '8bqX8OojVohCsCk0ZrbJlA=='), /*pass1*/
+('Pedro Salas', 'psalas', 'bg3fnlK11GIq2xZmwDSbPw=='), /*pass2*/
+('Lucía Vega', 'lvega', 'dzU6bQ+1L0e/aGqzcehVug=='); /*pass3*/
 
 INSERT INTO Prestamos (idLibro, idCliente, idEmpleado, fechaPrestamo, fechaDevolucion, devuelto) VALUES
 (1, 1, 2, '2024-01-10', '2024-01-20', 1),
@@ -115,7 +114,7 @@ INSERT INTO Prestamos (idLibro, idCliente, idEmpleado, fechaPrestamo, fechaDevol
 (5, 3, 3, '2024-01-05', '2024-01-15', 1),
 (9, 4, 2, '2024-01-16', NULL, 0),
 (11, 5, 4, '2024-01-01', '2024-01-10', 1),
-(14, 6, 2, '2024-01-18', NULL, 0),
+(14, 5, 2, '2024-01-18', NULL, 0),
 (7, 3, 1, '2024-01-03', '2024-01-12', 1),
 (10, 2, 3, '2024-01-07', NULL, 0);
 
