@@ -5,18 +5,18 @@ using P2526_Irene_Biblioteca.Models;
 
 namespace P2526_Irene_Biblioteca.Repositories
 {
-    public class EmpleadosRepository
+    public class ClientesRepository
     {
         private readonly string connectionString;
 
-        public EmpleadosRepository()
+        public ClientesRepository()
         {
             connectionString = ConfigurationManager
                 .ConnectionStrings["Conexion"]
                 .ConnectionString;
         }
 
-        public Empleado GetByUsuarioAndPassword(string usuario, string plainPassword)
+        public Cliente GetByUsuarioAndPassword(string usuario, string plainPassword)
         {
             string passwordHash = Helper.HashPassword(plainPassword);
 
@@ -24,8 +24,8 @@ namespace P2526_Irene_Biblioteca.Repositories
             {
                 conn.Open();
 
-                string sql = @"SELECT idEmpleado, nombre, usuario, password
-                               FROM Empleados
+                string sql = @"SELECT idCliente, nombre, usuario, password
+                               FROM Clientes
                                WHERE usuario = @Usuario AND password = @Pass";
 
                 using (SqlCommand cmd = new SqlCommand(sql, conn))
@@ -37,9 +37,9 @@ namespace P2526_Irene_Biblioteca.Repositories
                     {
                         if (reader.Read())
                         {
-                            return new Empleado
+                            return new Cliente
                             {
-                                IdEmpleado = (int)reader["idEmpleado"],
+                                IdCliente = (int)reader["idCliente"],
                                 Nombre = reader["nombre"].ToString(),
                                 Usuario = reader["usuario"].ToString(),
                                 Password = reader["password"].ToString()
@@ -52,7 +52,7 @@ namespace P2526_Irene_Biblioteca.Repositories
             return null;
         }
 
-        public void Insert(Empleado e, string plainPassword)
+        public void Insert(Cliente c, string plainPassword)
         {
             string passwordHash = Helper.HashPassword(plainPassword);
 
@@ -60,13 +60,13 @@ namespace P2526_Irene_Biblioteca.Repositories
             {
                 conn.Open();
 
-                string sql = @"INSERT INTO Empleados (nombre, usuario, password)
+                string sql = @"INSERT INTO Clientes (nombre, usuario, password)
                                VALUES (@Nombre, @Usuario, @Pass)";
 
                 using (SqlCommand cmd = new SqlCommand(sql, conn))
                 {
-                    cmd.Parameters.AddWithValue("@Nombre", e.Nombre);
-                    cmd.Parameters.AddWithValue("@Usuario", e.Usuario);
+                    cmd.Parameters.AddWithValue("@Nombre", c.Nombre);
+                    cmd.Parameters.AddWithValue("@Usuario", c.Usuario);
                     cmd.Parameters.AddWithValue("@Pass", passwordHash);
 
                     cmd.ExecuteNonQuery();

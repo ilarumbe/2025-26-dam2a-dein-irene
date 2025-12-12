@@ -56,10 +56,10 @@ CREATE TABLE Prestamos (
 );
 
 INSERT INTO Empleados (nombre, usuario, password) VALUES
-('Administrador General', 'admin', 'YbSBswFz0bwEUm50hQcQ5Qp5FyMBcPsIsuD6oHu2mEw='), /*admin123*/
-('Laura Méndez', 'lmendez', 'h+JpP7mBCHuAtdX9VvCY9Q=='), /*1234*/
-('Carlos Ruiz', 'cruiz', '8bqX8OojVohCsCk0ZrbJlA=='), /*pass1*/
-('Ana Torres', 'atorres', 'bg3fnlK11GIq2xZmwDSbPw=='); /*pass2*/      
+('Administrador', 'admin', 'JAvlGPq9JyTdtvBO6x2llnRI1+gxwIyPqCKAn3THIKk='), /*admin123*/
+('Laura Méndez', 'lmendez', 'A6xnQhbz4Vx2HuGl4lXwZ5U2I8iziLRFnhP5eNfIRvQ='), /*1234*/
+('Carlos Ruiz', 'cruiz', '5sPaWyBmNNfz81htdH/9s2tcZ1dXs4DGpf5cVwxxQ0k='), /*pass1*/
+('Ana Torres', 'atorres', 'G6PRbpiBlZ+MmpdihU9yxuYyHN1ENYoQpOk5AzEX6rk='); /*pass2*/      
 
 INSERT INTO Autores (nombre, nacionalidad) VALUES
 ('Gabriel García Márquez', 'Colombia'),
@@ -102,11 +102,11 @@ INSERT INTO Libros (titulo, año, idAutor, idCategoria, stock) VALUES
 ('Fuego y Sangre', 2018, 6, 6, 9);
 
 INSERT INTO Clientes (nombre, usuario, password) VALUES
-('María López', 'mlopez', 'X1gJjFUPAIxYH1WbVNkHQg=='), /*cliente1*/
-('Juan Hernández', 'jhernandez', 'YI6Cwbr+lpQGqsHllcXHQg=='), /*cliente2*/
-('Sofía Ríos', 'srios', '8bqX8OojVohCsCk0ZrbJlA=='), /*pass1*/
-('Pedro Salas', 'psalas', 'bg3fnlK11GIq2xZmwDSbPw=='), /*pass2*/
-('Lucía Vega', 'lvega', 'dzU6bQ+1L0e/aGqzcehVug=='); /*pass3*/
+('María López', 'mlopez', 'yq5lWyYXQF5yHSfUMzMdJ624cTVM5sm+RazJCGbfJPQ='), /*cliente1*/
+('Juan Hernández', 'jhernandez', '0sHloRAZrTDl4Z6hWtHw7A6lEHFZCZ40xm9y0ZIobdo='), /*cliente2*/
+('Sofía Ríos', 'srios', 'A6xnQhbz4Vx2HuGl4lXwZ5U2I8iziLRFnhP5eNfIRvQ='), /*1234*/
+('Pedro Salas', 'psalas', '5sPaWyBmNNfz81htdH/9s2tcZ1dXs4DGpf5cVwxxQ0k='), /*pass1*/
+('Lucía Vega', 'lvega', 'G6PRbpiBlZ+MmpdihU9yxuYyHN1ENYoQpOk5AzEX6rk='); /*pass2*/
 
 INSERT INTO Prestamos (idLibro, idCliente, idEmpleado, fechaPrestamo, fechaDevolucion, devuelto) VALUES
 (1, 1, 2, '2024-01-10', '2024-01-20', 1),
