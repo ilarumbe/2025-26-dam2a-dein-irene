@@ -1,0 +1,72 @@
+﻿<UserControl x:Class="P2526_Irene_Biblioteca.UserControls.EmpleadosView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="clr-namespace:P2526_Irene_Biblioteca.ViewModels">
+
+    <UserControl.DataContext>
+        <vm:EmpleadosViewModel/>
+    </UserControl.DataContext>
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+
+        <DataGrid ItemsSource="{Binding Empleados}"
+                  SelectedItem="{Binding EmpleadoSeleccionado}"
+                  AutoGenerateColumns="False"
+                  Margin="0,0,0,15">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding IdEmpleado}" Width="50"/>
+                <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" Width="*"/>
+                <DataGridTextColumn Header="Usuario" Binding="{Binding Usuario}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <StackPanel Grid.Row="1">
+
+            <StackPanel Width="200" Margin="0,0,10,0">
+                <TextBlock Text="Nombre"/>
+                <TextBox Text="{Binding Nombre, UpdateSourceTrigger=PropertyChanged}"/>
+            </StackPanel>
+
+            <StackPanel Width="200">
+                <TextBlock Text="Usuario"/>
+                <TextBox Text="{Binding Usuario, UpdateSourceTrigger=PropertyChanged}"/>
+            </StackPanel>
+
+            <PasswordBox x:Name="PasswordBox" Margin="0,0,0,10"/>
+
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Añadir"
+                        Command="{Binding AddCommand}"
+                        Width="90"
+                        Height="30"
+                        IsEnabled="{Binding EsEmpleado}"/>
+
+                <Button Content="Modificar"
+                        Command="{Binding UpdateCommand}"
+                        Width="90"
+                        Height="30"
+                        Margin="10,0"
+                        IsEnabled="{Binding EsEmpleado}"/>
+
+                <Button Content="Eliminar"
+                        Command="{Binding DeleteCommand}"
+                        Width="90"
+                        Height="30"
+                        IsEnabled="{Binding EsEmpleado}"/>
+
+                <Button Content="Limpiar"
+                        Command="{Binding ClearCommand}"
+                        Width="90"
+                        Height="30"
+                        Margin="10,0"
+                        IsEnabled="{Binding EsEmpleado}"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

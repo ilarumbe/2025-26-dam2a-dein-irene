@@ -9,7 +9,6 @@ namespace P2526_Irene_Biblioteca.ViewModels
     public class LoginViewModel : BaseViewModel
     {
         private readonly IWindowService windowService;
-
         public string Usuario { get; set; }
         public string Password { get; set; }
 
@@ -41,6 +40,9 @@ namespace P2526_Irene_Biblioteca.ViewModels
 
             if (empleado != null)
             {
+                SesionActual.EsEmpleado = true;
+                SesionActual.Usuario = empleado.Usuario;
+
                 AbrirMainWindow();
                 return;
             }
@@ -50,6 +52,9 @@ namespace P2526_Irene_Biblioteca.ViewModels
 
             if (cliente != null)
             {
+                SesionActual.EsEmpleado = false;
+                SesionActual.Usuario = cliente.Usuario;
+
                 AbrirMainWindow();
                 return;
             }

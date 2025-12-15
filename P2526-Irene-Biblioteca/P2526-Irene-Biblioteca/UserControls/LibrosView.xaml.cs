@@ -1,6 +1,4 @@
-﻿using P2526_Irene_Biblioteca.Services;
-using P2526_Irene_Biblioteca.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,20 +10,15 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace P2526_Irene_Biblioteca.Views
+namespace P2526_Irene_Biblioteca.UserControls
 {
-    /// <summary>
-    /// Lógica de interacción para MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow : Window
+    public partial class LibrosView : UserControl
     {
-        public MainWindow()
+        public LibrosView()
         {
             InitializeComponent();
-            DataContext = new MainWindowViewModel();
         }
     }
 }

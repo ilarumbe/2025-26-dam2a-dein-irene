@@ -65,25 +65,35 @@
                                        FontSize="18"
                                        Margin="0,0,0,20"/>
 
-                            <Button Style="{StaticResource MenuButtonStyle}" Content="🏷 Autores" Tag="Autores"/>
-                            <Button Style="{StaticResource MenuButtonStyle}" Content="📚 Libros" Tag="Libros"/>
-                            <Button Style="{StaticResource MenuButtonStyle}" Content="🗂 Categorías" Tag="Categorias"/>
-                            <Button Style="{StaticResource MenuButtonStyle}" Content="👥 Clientes" Tag="Clientes"/>
-                            <Button Style="{StaticResource MenuButtonStyle}" Content="🧑 Empleados" Tag="Empleados"/>
-                            <Button Style="{StaticResource MenuButtonStyle}" Content="📖 Préstamos" Tag="Prestamos"/>
+                            <Button Style="{StaticResource MenuButtonStyle}"
+                                    Content="🏷 Autores"
+                                    Command="{Binding ShowAutoresCommand}"/>
+
+                            <Button Style="{StaticResource MenuButtonStyle}"
+                                    Content="📚 Libros"
+                                    Command="{Binding ShowLibrosCommand}"/>
+
+                            <Button Style="{StaticResource MenuButtonStyle}"
+                                    Content="🗂 Categorías"
+                                    Command="{Binding ShowCategoriasCommand}"/>
+
+                            <Button Style="{StaticResource MenuButtonStyle}"
+                                    Content="👥 Clientes"
+                                    Command="{Binding ShowClientesCommand}"/>
+
+                            <Button Style="{StaticResource MenuButtonStyle}"
+                                    Content="🧑 Empleados"
+                                    Command="{Binding ShowEmpleadosCommand}"/>
+
+                            <Button Style="{StaticResource MenuButtonStyle}"
+                                    Content="📖 Préstamos"
+                                    Command="{Binding ShowPrestamosCommand}"/>
 
                         </StackPanel>
                     </Border>
 
                     <Border Grid.Column="1" Background="White">
-                        <Grid>
-                            <TextBlock Text="Bienvenido a la Biblioteca" 
-                                       FontSize="28"
-                                       FontWeight="Bold"
-                                       Foreground="#1A73E8"
-                                       VerticalAlignment="Center"
-                                       HorizontalAlignment="Center"/>
-                        </Grid>
+                        <ContentControl Content="{Binding CurrentView}"/>
                     </Border>
                 </Grid>
             </Grid>
