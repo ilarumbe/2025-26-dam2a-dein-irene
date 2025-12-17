@@ -14,6 +14,9 @@ namespace P2526_Irene_Biblioteca.ViewModels
     public class EmpleadosViewModel : BaseViewModel
     {
         public bool EsEmpleado => SesionActual.EsEmpleado;
+
+        public bool EsSoloLectura => !SesionActual.EsEmpleado;
+
         private readonly EmpleadosRepository repo = new EmpleadosRepository();
 
         public ObservableCollection<Empleado> Empleados { get; set; }

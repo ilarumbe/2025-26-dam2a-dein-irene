@@ -1,0 +1,12 @@
+﻿<Window x:Class="WPF_GestionFacturas.Views.VisorFacturaIndividual"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:wf="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration"
+        xmlns:rv="clr-namespace:Microsoft.Reporting.WinForms;assembly=Microsoft.ReportViewer.WinForms"
+        Title="Imprimir Factura" Height="800" Width="900" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <wf:WindowsFormsHost>
+            <rv:ReportViewer x:Name="visor" />
+        </wf:WindowsFormsHost>
+    </Grid>
+</Window>

@@ -190,6 +190,9 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Report2.rdlc" />
+    <Resource Include="Fonts\Geom-Italic-VariableFont_wght.ttf" />
+    <Resource Include="Fonts\Geom-VariableFont_wght.ttf" />
+    <Resource Include="Fonts\Quicksand-VariableFont_wght.ttf" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\P2526_Irene_Biblioteca.Models.Cliente.datasource" />
     <None Include="Properties\Settings.settings">

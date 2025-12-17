@@ -7,66 +7,133 @@
         <vm:EmpleadosViewModel/>
     </UserControl.DataContext>
 
+    <UserControl.Resources>
+
+        <Style x:Key="TitleStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="22"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="#1A73E8"/>
+            <Setter Property="Margin" Value="0,0,0,15"/>
+        </Style>
+
+        <Style x:Key="LabelStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="Margin" Value="0,10,0,5"/>
+        </Style>
+
+        <Style x:Key="InputStyle" TargetType="TextBox">
+            <Setter Property="Height" Value="32"/>
+        </Style>
+
+        <Style x:Key="PrimaryButtonStyle" TargetType="Button">
+            <Setter Property="Height" Value="32"/>
+            <Setter Property="Width" Value="90"/>
+            <Setter Property="Background" Value="#1A73E8"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+        </Style>
+
+        <Style x:Key="SecondaryButtonStyle" TargetType="Button">
+            <Setter Property="Height" Value="32"/>
+            <Setter Property="Width" Value="90"/>
+            <Setter Property="Background" Value="#E0E0E0"/>
+            <Setter Property="BorderThickness" Value="0"/>
+        </Style>
+
+    </UserControl.Resources>
+
     <Grid Margin="20">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
 
+        <StackPanel Grid.Column="0">
 
-        <DataGrid ItemsSource="{Binding Empleados}"
-                  SelectedItem="{Binding EmpleadoSeleccionado}"
-                  AutoGenerateColumns="False"
-                  Margin="0,0,0,15">
+            <TextBlock Text="Empleados"
+                       Style="{StaticResource TitleStyle}"/>
 
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="ID" Binding="{Binding IdEmpleado}" Width="50"/>
-                <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" Width="*"/>
-                <DataGridTextColumn Header="Usuario" Binding="{Binding Usuario}" Width="*"/>
-            </DataGrid.Columns>
-        </DataGrid>
+            <DataGrid ItemsSource="{Binding Empleados}"
+                      SelectedItem="{Binding EmpleadoSeleccionado}"
+                      AutoGenerateColumns="False"
+                      IsReadOnly="{Binding EsSoloLectura}"
+                      Height="350">
 
-        <StackPanel Grid.Row="1">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID"
+                                        Binding="{Binding IdEmpleado}"
+                                        Width="60"/>
 
-            <StackPanel Width="200" Margin="0,0,10,0">
-                <TextBlock Text="Nombre"/>
-                <TextBox Text="{Binding Nombre, UpdateSourceTrigger=PropertyChanged}"/>
-            </StackPanel>
+                    <DataGridTextColumn Header="Nombre"
+                                        Binding="{Binding Nombre}"
+                                        Width="*"/>
 
-            <StackPanel Width="200">
-                <TextBlock Text="Usuario"/>
-                <TextBox Text="{Binding Usuario, UpdateSourceTrigger=PropertyChanged}"/>
-            </StackPanel>
-
-            <PasswordBox x:Name="PasswordBox" Margin="0,0,0,10"/>
-
-            <StackPanel Orientation="Horizontal">
-                <Button Content="Añadir"
-                        Command="{Binding AddCommand}"
-                        Width="90"
-                        Height="30"
-                        IsEnabled="{Binding EsEmpleado}"/>
-
-                <Button Content="Modificar"
-                        Command="{Binding UpdateCommand}"
-                        Width="90"
-                        Height="30"
-                        Margin="10,0"
-                        IsEnabled="{Binding EsEmpleado}"/>
-
-                <Button Content="Eliminar"
-                        Command="{Binding DeleteCommand}"
-                        Width="90"
-                        Height="30"
-                        IsEnabled="{Binding EsEmpleado}"/>
-
-                <Button Content="Limpiar"
-                        Command="{Binding ClearCommand}"
-                        Width="90"
-                        Height="30"
-                        Margin="10,0"
-                        IsEnabled="{Binding EsEmpleado}"/>
-            </StackPanel>
+                    <DataGridTextColumn Header="Usuario"
+                                        Binding="{Binding Usuario}"
+                                        Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
         </StackPanel>
+
+        <Border Grid.Column="1"
+                Margin="20,0,0,0"
+                Padding="20"
+                Background="#F7F9FC"
+                CornerRadius="12">
+
+            <StackPanel>
+
+                <TextBlock Text="Gestión"
+                           Style="{StaticResource TitleStyle}"/>
+
+                <TextBlock Text="Nombre"
+                           Style="{StaticResource LabelStyle}"/>
+                <TextBox Text="{Binding Nombre, UpdateSourceTrigger=PropertyChanged}"
+                         Style="{StaticResource InputStyle}"
+                         IsEnabled="{Binding EsEmpleado}"/>
+
+                <TextBlock Text="Usuario"
+                           Style="{StaticResource LabelStyle}"/>
+                <TextBox Text="{Binding Usuario, UpdateSourceTrigger=PropertyChanged}"
+                         Style="{StaticResource InputStyle}"
+                         IsEnabled="{Binding EsEmpleado}"/>
+
+                <TextBlock Text="Contraseña"
+                           Style="{StaticResource LabelStyle}"/>
+                <PasswordBox x:Name="PasswordBox"
+                             Height="32"
+                             IsEnabled="{Binding EsEmpleado}"/>
+
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Right"
+                            Margin="0,20,0,0">
+
+                    <Button Content="Añadir"
+                            Command="{Binding AddCommand}"
+                            Style="{StaticResource PrimaryButtonStyle}"
+                            IsEnabled="{Binding EsEmpleado}"/>
+
+                    <Button Content="Modificar"
+                            Command="{Binding UpdateCommand}"
+                            Style="{StaticResource SecondaryButtonStyle}"
+                            Margin="10,0,0,0"
+                            IsEnabled="{Binding EsEmpleado}"/>
+
+                    <Button Content="Eliminar"
+                            Command="{Binding DeleteCommand}"
+                            Style="{StaticResource SecondaryButtonStyle}"
+                            Margin="10,0,0,0"
+                            IsEnabled="{Binding EsEmpleado}"/>
+
+                    <Button Content="Limpiar"
+                            Command="{Binding ClearCommand}"
+                            Style="{StaticResource SecondaryButtonStyle}"
+                            Margin="10,0,0,0"
+                            IsEnabled="{Binding EsEmpleado}"/>
+                </StackPanel>
+
+            </StackPanel>
+        </Border>
+
     </Grid>
 </UserControl>
