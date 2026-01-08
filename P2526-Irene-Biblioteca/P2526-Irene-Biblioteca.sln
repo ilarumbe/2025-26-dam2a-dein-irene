@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36429.23 d17.14
+VisualStudioVersion = 17.14.36429.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P2526-Irene-Biblioteca", "P2526-Irene-Biblioteca\P2526-Irene-Biblioteca.csproj", "{BF5ECFF5-56D1-49C7-914A-15238E00CC7B}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "AppInstaller", "AppInstaller\AppInstaller.vdproj", "{C33744FF-4BF0-F3AB-2A02-5C58D4DC7BDC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,8 @@ Global
 		{BF5ECFF5-56D1-49C7-914A-15238E00CC7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF5ECFF5-56D1-49C7-914A-15238E00CC7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF5ECFF5-56D1-49C7-914A-15238E00CC7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C33744FF-4BF0-F3AB-2A02-5C58D4DC7BDC}.Debug|Any CPU.ActiveCfg = Debug
+		{C33744FF-4BF0-F3AB-2A02-5C58D4DC7BDC}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
