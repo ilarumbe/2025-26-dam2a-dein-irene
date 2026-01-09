@@ -13,6 +13,8 @@ namespace P2526_Irene_Biblioteca.ViewModels
 {
     public class EmpleadosViewModel : BaseViewModel
     {
+        public event Action RequestClearPassword;
+
         public bool EsEmpleado => SesionActual.EsEmpleado;
 
         public bool EsSoloLectura => !SesionActual.EsEmpleado;
@@ -55,6 +57,13 @@ namespace P2526_Irene_Biblioteca.ViewModels
 
         private void Add()
         {
+            if (string.IsNullOrWhiteSpace(Nombre) ||
+                string.IsNullOrWhiteSpace(Usuario) ||
+                string.IsNullOrWhiteSpace(Password))
+            {
+                return;
+            }
+
             repo.Insert(new Empleado
             {
                 Nombre = Nombre,
@@ -63,6 +72,8 @@ namespace P2526_Irene_Biblioteca.ViewModels
 
             Limpiar();
             Cargar();
+
+            RequestClearPassword?.Invoke();
         }
 
         private void Update()
@@ -91,6 +102,8 @@ namespace P2526_Irene_Biblioteca.ViewModels
             OnPropertyChanged(nameof(Nombre));
             OnPropertyChanged(nameof(Usuario));
             OnPropertyChanged(nameof(Password));
+
+            RequestClearPassword?.Invoke();
         }
     }
 }
