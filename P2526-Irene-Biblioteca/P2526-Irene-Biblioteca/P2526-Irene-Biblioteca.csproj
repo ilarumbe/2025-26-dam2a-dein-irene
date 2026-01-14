@@ -128,8 +128,11 @@
     <Compile Include="Helpers\Helper.cs" />
     <Compile Include="Helpers\RelayCommand.cs" />
     <Compile Include="Helpers\SesionActual.cs" />
+    <Compile Include="Respositories\AutoresRepository.cs" />
     <Compile Include="Respositories\ClientesRepository.cs" />
     <Compile Include="Respositories\EmpleadosRepository.cs" />
+    <Compile Include="Services\AutoresService.cs" />
+    <Compile Include="Services\EmpleadosService.cs" />
     <Compile Include="Services\IWindowService.cs" />
     <Compile Include="Services\WindowService.cs" />
     <Compile Include="Settings.cs" />

@@ -1,15 +1,8 @@
 ﻿<UserControl x:Class="P2526_Irene_Biblioteca.UserControls.EmpleadosView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:vm="clr-namespace:P2526_Irene_Biblioteca.ViewModels"
-             Loaded="EmpleadosView_Loaded">
-
-    <UserControl.DataContext>
-        <vm:EmpleadosViewModel/>
-    </UserControl.DataContext>
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <UserControl.Resources>
-
         <Style x:Key="TitleStyle" TargetType="TextBlock">
             <Setter Property="FontSize" Value="22"/>
             <Setter Property="FontWeight" Value="Bold"/>
@@ -40,7 +33,6 @@
             <Setter Property="Background" Value="#E0E0E0"/>
             <Setter Property="BorderThickness" Value="0"/>
         </Style>
-
     </UserControl.Resources>
 
     <Grid Margin="20">
@@ -49,33 +41,23 @@
             <ColumnDefinition Width="3.5*"/>
         </Grid.ColumnDefinitions>
 
+        <!-- LISTADO -->
         <StackPanel Grid.Column="0">
+            <TextBlock Text="Empleados" Style="{StaticResource TitleStyle}"/>
 
-            <TextBlock Text="Empleados"
-                       Style="{StaticResource TitleStyle}"/>
-
-            <DataGrid ItemsSource="{Binding Empleados}"
-                      SelectedItem="{Binding EmpleadoSeleccionado}"
+            <DataGrid x:Name="EmpleadosGrid"
                       AutoGenerateColumns="False"
-                      IsReadOnly="{Binding EsSoloLectura}"
-                      Height="350">
-
+                      Height="350"
+                      SelectionChanged="EmpleadosGrid_SelectionChanged">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="ID"
-                                        Binding="{Binding IdEmpleado}"
-                                        Width="60"/>
-
-                    <DataGridTextColumn Header="Nombre"
-                                        Binding="{Binding Nombre}"
-                                        Width="*"/>
-
-                    <DataGridTextColumn Header="Usuario"
-                                        Binding="{Binding Usuario}"
-                                        Width="*"/>
+                    <DataGridTextColumn Header="ID" Binding="{Binding IdEmpleado}" Width="60"/>
+                    <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" Width="*"/>
+                    <DataGridTextColumn Header="Usuario" Binding="{Binding Usuario}" Width="*"/>
                 </DataGrid.Columns>
             </DataGrid>
         </StackPanel>
 
+        <!-- FORMULARIO -->
         <Border Grid.Column="1"
                 Margin="20,0,0,0"
                 Padding="20"
@@ -83,60 +65,44 @@
                 CornerRadius="12">
 
             <StackPanel>
+                <TextBlock Text="Gestión" Style="{StaticResource TitleStyle}"/>
 
-                <TextBlock Text="Gestión"
-                           Style="{StaticResource TitleStyle}"/>
+                <TextBlock Text="Nombre" Style="{StaticResource LabelStyle}"/>
+                <TextBox x:Name="NombreTextBox" Style="{StaticResource InputStyle}"/>
 
-                <TextBlock Text="Nombre"
-                           Style="{StaticResource LabelStyle}"/>
-                <TextBox Text="{Binding Nombre, UpdateSourceTrigger=PropertyChanged}"
-                         Style="{StaticResource InputStyle}"
-                         IsEnabled="{Binding EsEmpleado}"/>
+                <TextBlock Text="Usuario" Style="{StaticResource LabelStyle}"/>
+                <TextBox x:Name="UsuarioTextBox" Style="{StaticResource InputStyle}"/>
 
-                <TextBlock Text="Usuario"
-                           Style="{StaticResource LabelStyle}"/>
-                <TextBox Text="{Binding Usuario, UpdateSourceTrigger=PropertyChanged}"
-                         Style="{StaticResource InputStyle}"
-                         IsEnabled="{Binding EsEmpleado}"/>
+                <TextBlock Text="Contraseña" Style="{StaticResource LabelStyle}"/>
+                <PasswordBox x:Name="PasswordBox" Height="32"/>
 
-                <TextBlock Text="Contraseña"
-                           Style="{StaticResource LabelStyle}"/>
-                <PasswordBox x:Name="PasswordBox"
-                             Height="32"
-                             IsEnabled="{Binding EsEmpleado}"
-                             PasswordChanged="PasswordBox_PasswordChanged"/>
-
+                <TextBlock x:Name="ErrorText"
+                           Foreground="Red"
+                           Margin="0,10,0,0"/>
 
                 <StackPanel Orientation="Horizontal"
                             HorizontalAlignment="Right"
                             Margin="0,20,0,0">
-
                     <Button Content="Añadir"
-                            Command="{Binding AddCommand}"
                             Style="{StaticResource PrimaryButtonStyle}"
-                            IsEnabled="{Binding EsEmpleado}"/>
+                            Click="BtnAdd_Click"/>
 
                     <Button Content="Modificar"
-                            Command="{Binding UpdateCommand}"
                             Style="{StaticResource SecondaryButtonStyle}"
                             Margin="10,0,0,0"
-                            IsEnabled="{Binding EsEmpleado}"/>
+                            Click="BtnUpdate_Click"/>
 
                     <Button Content="Eliminar"
-                            Command="{Binding DeleteCommand}"
                             Style="{StaticResource SecondaryButtonStyle}"
                             Margin="10,0,0,0"
-                            IsEnabled="{Binding EsEmpleado}"/>
+                            Click="BtnDelete_Click"/>
 
                     <Button Content="Limpiar"
-                            Command="{Binding ClearCommand}"
                             Style="{StaticResource SecondaryButtonStyle}"
                             Margin="10,0,0,0"
-                            IsEnabled="{Binding EsEmpleado}"/>
+                            Click="BtnClear_Click"/>
                 </StackPanel>
-
             </StackPanel>
         </Border>
-
     </Grid>
 </UserControl>
