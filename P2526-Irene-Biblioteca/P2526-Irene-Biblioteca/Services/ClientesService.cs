@@ -1,20 +1,12 @@
 ﻿using P2526_Irene_Biblioteca.Helpers;
 using P2526_Irene_Biblioteca.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace P2526_Irene_Biblioteca.Services
 {
-    public class EmpleadosService
+    public class ClientesService
     {
         private readonly PrestamosRepository repoPrestamos = new PrestamosRepository();
-        public bool PuedeEditar()
-        {
-            return SesionActual.EsEmpleado;
-        }
+        public bool PuedeEditar() => SesionActual.EsEmpleado;
 
         public bool ValidarAlta(string nombre, string usuario, string password, out string error)
         {
@@ -36,7 +28,7 @@ namespace P2526_Irene_Biblioteca.Services
             return true;
         }
 
-        public bool ValidarModificacion(string nombre, string usuario, int? idEmpleado, out string error)
+        public bool ValidarModificacion(int? idCliente, string nombre, string usuario, out string error)
         {
             if (!PuedeEditar())
             {
@@ -44,9 +36,9 @@ namespace P2526_Irene_Biblioteca.Services
                 return false;
             }
 
-            if (idEmpleado == null || idEmpleado <= 0)
+            if (idCliente == null || idCliente <= 0)
             {
-                error = "Selecciona un empleado.";
+                error = "Selecciona un cliente.";
                 return false;
             }
 
@@ -60,7 +52,7 @@ namespace P2526_Irene_Biblioteca.Services
             return true;
         }
 
-        public bool ValidarBorrado(int? idEmpleado, out string error)
+        public bool ValidarBorrado(int? idCliente, out string error)
         {
             if (!PuedeEditar())
             {
@@ -68,16 +60,16 @@ namespace P2526_Irene_Biblioteca.Services
                 return false;
             }
 
-            if (idEmpleado == null || idEmpleado <= 0)
+            if (idCliente == null || idCliente <= 0)
             {
-                error = "Selecciona un empleado.";
+                error = "Selecciona un cliente.";
                 return false;
             }
 
-            int prestamos = repoPrestamos.CountByEmpleado(idEmpleado.Value);
+            int prestamos = repoPrestamos.CountByCliente(idCliente.Value);
             if (prestamos > 0)
             {
-                error = $"No se puede borrar: este empleado tiene {prestamos} préstamo(s).";
+                error = $"No se puede borrar: este cliente tiene {prestamos} préstamo(s).";
                 return false;
             }
 
@@ -86,4 +78,3 @@ namespace P2526_Irene_Biblioteca.Services
         }
     }
 }
-

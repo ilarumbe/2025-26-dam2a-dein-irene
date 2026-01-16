@@ -3,7 +3,7 @@ using P2526_Irene_Biblioteca.Repositories;
 
 namespace P2526_Irene_Biblioteca.Services
 {
-    public class AutoresService
+    public class CategoriasService
     {
         private readonly LibrosRepository repoLibros = new LibrosRepository();
         public bool PuedeEditar()
@@ -21,7 +21,7 @@ namespace P2526_Irene_Biblioteca.Services
 
             if (string.IsNullOrWhiteSpace(nombre))
             {
-                error = "El nombre del autor es obligatorio.";
+                error = "El nombre de la categoría es obligatorio.";
                 return false;
             }
 
@@ -29,7 +29,7 @@ namespace P2526_Irene_Biblioteca.Services
             return true;
         }
 
-        public bool ValidarModificacion(int? idAutor, string nombre, out string error)
+        public bool ValidarModificacion(int? idCategoria, string nombre, out string error)
         {
             if (!PuedeEditar())
             {
@@ -37,15 +37,15 @@ namespace P2526_Irene_Biblioteca.Services
                 return false;
             }
 
-            if (idAutor == null || idAutor <= 0)
+            if (idCategoria == null || idCategoria <= 0)
             {
-                error = "Selecciona un autor.";
+                error = "Selecciona una categoría.";
                 return false;
             }
 
             if (string.IsNullOrWhiteSpace(nombre))
             {
-                error = "El nombre del autor es obligatorio.";
+                error = "El nombre de la categoría es obligatorio.";
                 return false;
             }
 
@@ -53,7 +53,7 @@ namespace P2526_Irene_Biblioteca.Services
             return true;
         }
 
-        public bool ValidarBorrado(int? idAutor, out string error)
+        public bool ValidarBorrado(int? idCategoria, out string error)
         {
             if (!PuedeEditar())
             {
@@ -61,16 +61,16 @@ namespace P2526_Irene_Biblioteca.Services
                 return false;
             }
 
-            if (idAutor == null || idAutor <= 0)
+            if (idCategoria == null || idCategoria <= 0)
             {
-                error = "Selecciona un autor.";
+                error = "Selecciona una categoría.";
                 return false;
             }
 
-            int libros = repoLibros.CountByAutor(idAutor.Value);
+            int libros = repoLibros.CountByCategoria(idCategoria.Value);
             if (libros > 0)
             {
-                error = $"No se puede borrar: este autor tiene {libros} libro(s) asociado(s).";
+                error = $"No se puede borrar: esta categoría tiene {libros} libro(s) asociado(s).";
                 return false;
             }
 
@@ -79,4 +79,3 @@ namespace P2526_Irene_Biblioteca.Services
         }
     }
 }
-

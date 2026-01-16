@@ -17,8 +17,9 @@ namespace P2526_Irene_Biblioteca.Models
 
         public int Stock { get; set; }
 
-        public Autor Autor { get; set; }
-        public Categoria Categoria { get; set; }
+        public string AutorNombre { get; set; }
+        public string CategoriaNombre { get; set; }
+
     }
 }
 

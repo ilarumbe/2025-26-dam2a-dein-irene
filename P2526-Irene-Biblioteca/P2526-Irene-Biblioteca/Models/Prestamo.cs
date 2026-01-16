@@ -18,9 +18,9 @@ namespace P2526_Irene_Biblioteca.Models
         public DateTime? FechaDevolucion { get; set; }
         public bool Devuelto { get; set; }
 
-        public Libro Libro { get; set; }
-        public Cliente Cliente { get; set; }
-        public Empleado Empleado { get; set; }
+        public string LibroTitulo { get; set; }
+        public string ClienteNombre { get; set; }
+        public string EmpleadoNombre { get; set; }
     }
 }
 
