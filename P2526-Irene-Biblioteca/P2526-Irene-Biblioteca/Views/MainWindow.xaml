@@ -1,102 +1,176 @@
 ﻿<Window x:Class="P2526_Irene_Biblioteca.Views.MainWindow"
-         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Biblioteca"
-        Width="1100" Height="650"
+        WindowState="Maximized"
         WindowStyle="None"
-        AllowsTransparency="True"
-        Background="Transparent">
+        ResizeMode="NoResize"
+        Background="#0B1220">
 
-    <Border CornerRadius="12" Background="#FFFFFF" Padding="0" >
-        <Grid>
-            <Border Background="Transparent">
-                <Border.Effect>
-                    <DropShadowEffect BlurRadius="20"
-                                      ShadowDepth="0"
-                                      Opacity="0.4"/>
-                </Border.Effect>
-            </Border>
+    <Window.Resources>
 
-            <Grid>
+        <Color x:Key="Blue">#1A73E8</Color>
+        <Color x:Key="BlueDark">#0F4FB5</Color>
+        <Color x:Key="Teal">#22C1C3</Color>
+        <Color x:Key="Bg">#F7FAFF</Color>
+        <Color x:Key="Card">#FFFFFF</Color>
+        <Color x:Key="Text">#1F2937</Color>
+        <Color x:Key="Muted">#6B7280</Color>
+
+        <SolidColorBrush x:Key="BrushBlue" Color="{StaticResource Blue}"/>
+        <SolidColorBrush x:Key="BrushBlueDark" Color="{StaticResource BlueDark}"/>
+        <SolidColorBrush x:Key="BrushTeal" Color="{StaticResource Teal}"/>
+        <SolidColorBrush x:Key="BrushBg" Color="{StaticResource Bg}"/>
+        <SolidColorBrush x:Key="BrushCard" Color="{StaticResource Card}"/>
+        <SolidColorBrush x:Key="BrushText" Color="{StaticResource Text}"/>
+        <SolidColorBrush x:Key="BrushMuted" Color="{StaticResource Muted}"/>
+
+        <FontFamily x:Key="AppFont">/Fonts/#Quicksand</FontFamily>
+
+        <Style x:Key="TopBarTitle" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="{StaticResource AppFont}"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+
+        <Style x:Key="IconButton" TargetType="Button">
+            <Setter Property="Width" Value="44"/>
+            <Setter Property="Height" Value="38"/>
+            <Setter Property="Background" Value="#22FFFFFF"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="10" Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#33FFFFFF"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="SideTitle" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="{StaticResource AppFont}"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Margin" Value="0,0,0,18"/>
+        </Style>
+
+        <Style x:Key="MenuButtonStyleV2" TargetType="Button">
+            <Setter Property="FontFamily" Value="{StaticResource AppFont}"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Foreground" Value="#EAF2FF"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="12,10"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="12" Background="{TemplateBinding Background}">
+                            <ContentPresenter Margin="6,0" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#1FFFFFFF"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="#2AFFFFFF"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="ContentShell" TargetType="Border">
+            <Setter Property="CornerRadius" Value="18"/>
+            <Setter Property="Background" Value="{StaticResource BrushBg}"/>
+            <Setter Property="Padding" Value="18"/>
+        </Style>
+
+    </Window.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="280"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="0">
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#0F4FB5" Offset="0"/>
+                    <GradientStop Color="#1A73E8" Offset="0.6"/>
+                    <GradientStop Color="#22C1C3" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+
+            <Grid Margin="18">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="50"/>
-                    <RowDefinition/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
 
-                <Border Grid.Row="0" Background="#1A73E8">
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="Auto"/>
-                        </Grid.ColumnDefinitions>
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,6,0,16">
+                        <TextBlock Text="📚" FontSize="22" Margin="0,0,10,0" Foreground="White"/>
+                        <TextBlock Text="Biblioteca" Style="{StaticResource TopBarTitle}"/>
+                    </StackPanel>
 
-                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="15,0">
-                            <TextBlock Text="📚"
-                                       FontSize="20" Margin="0,0,10,0"
-                                       Foreground="White"/>
-                            <TextBlock Text="Biblioteca"
-                                       FontSize="18" 
-                                       Foreground="White"
-                                       VerticalAlignment="Center"/>
-                        </StackPanel>
+                    <TextBlock Text="Navegación" Style="{StaticResource SideTitle}"/>
 
-                        <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
+                    <Button Style="{StaticResource MenuButtonStyleV2}" Content="🏷  Autores" Command="{Binding ShowAutoresCommand}"/>
+                    <Button Style="{StaticResource MenuButtonStyleV2}" Content="📚  Libros" Command="{Binding ShowLibrosCommand}"/>
+                    <Button Style="{StaticResource MenuButtonStyleV2}" Content="🗂  Categorías" Command="{Binding ShowCategoriasCommand}"/>
+                    <Button Style="{StaticResource MenuButtonStyleV2}" Content="👥  Clientes" Command="{Binding ShowClientesCommand}"/>
+                    <Button Style="{StaticResource MenuButtonStyleV2}" Content="🧑  Empleados" Command="{Binding ShowEmpleadosCommand}"/>
+                    <Button Style="{StaticResource MenuButtonStyleV2}" Content="📖  Préstamos" Command="{Binding ShowPrestamosCommand}"/>
+                </StackPanel>
+            </Grid>
+        </Border>
 
-                            <Button Width="50" Height="40"
-                                    Background="Transparent" BorderThickness="0"
-                                    Command="{Binding CloseCommand}">
-                                <TextBlock Text="✕" FontSize="16" Foreground="White"/>
-                            </Button>
-                        </StackPanel>
-                    </Grid>
-                </Border>
+        <Grid Grid.Column="1" Margin="18">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="64"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
 
-                <Grid Grid.Row="1">
+            <Border CornerRadius="18" Background="#121B2C" Padding="16">
+                <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="220"/>
-                        <ColumnDefinition/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
                     </Grid.ColumnDefinitions>
 
-                    <Border Background="#F3F6FB" Grid.Column="0">
-                        <StackPanel Margin="20">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <TextBlock Text="Panel de gestión" FontFamily="{StaticResource AppFont}" Foreground="#EAF2FF" FontSize="16" FontWeight="SemiBold"/>
+                        <TextBlock Text="   ·   " Foreground="#66FFFFFF" Margin="10,0"/>
+                        <TextBlock Text="{Binding NombreVistaActual}" FontFamily="{StaticResource AppFont}" Foreground="#BFD8FF"/>
+                    </StackPanel>
 
-                            <TextBlock Text="Menú"
-                                       FontWeight="Bold"
-                                       FontSize="20"
-                                       Margin="0,0,0,20"/>
-
-                            <Button Style="{StaticResource MenuButtonStyle}"
-                                    Content="🏷 Autores"
-                                    Command="{Binding ShowAutoresCommand}"/>
-
-                            <Button Style="{StaticResource MenuButtonStyle}"
-                                    Content="📚 Libros"
-                                    Command="{Binding ShowLibrosCommand}"/>
-
-                            <Button Style="{StaticResource MenuButtonStyle}"
-                                    Content="🗂 Categorías"
-                                    Command="{Binding ShowCategoriasCommand}"/>
-
-                            <Button Style="{StaticResource MenuButtonStyle}"
-                                    Content="👥 Clientes"
-                                    Command="{Binding ShowClientesCommand}"/>
-
-                            <Button Style="{StaticResource MenuButtonStyle}"
-                                    Content="🧑 Empleados"
-                                    Command="{Binding ShowEmpleadosCommand}"/>
-
-                            <Button Style="{StaticResource MenuButtonStyle}"
-                                    Content="📖 Préstamos"
-                                    Command="{Binding ShowPrestamosCommand}"/>
-
-                        </StackPanel>
-                    </Border>
-
-                    <Border Grid.Column="1" Background="White">
-                        <ContentControl Content="{Binding CurrentView}"/>
-                    </Border>
+                    <Button Grid.Column="1"
+                            Style="{StaticResource IconButton}"
+                            Command="{Binding CloseCommand}">
+                        <TextBlock Text="✕" Foreground="White" FontSize="16"/>
+                    </Button>
                 </Grid>
-            </Grid>
+            </Border>
+
+            <Border Grid.Row="1" Style="{StaticResource ContentShell}">
+                <ContentControl Content="{Binding CurrentView}"/>
+            </Border>
         </Grid>
-    </Border>
+    </Grid>
 </Window>

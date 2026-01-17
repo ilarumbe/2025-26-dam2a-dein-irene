@@ -3,106 +3,255 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <UserControl.Resources>
-        <Style x:Key="TitleStyle" TargetType="TextBlock">
-            <Setter Property="FontSize" Value="22"/>
+
+        <FontFamily x:Key="Font">/Fonts/#Quicksand</FontFamily>
+
+        <Style x:Key="ViewTitle" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="{StaticResource Font}"/>
+            <Setter Property="FontSize" Value="24"/>
             <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="Foreground" Value="#1A73E8"/>
-            <Setter Property="Margin" Value="0,0,0,15"/>
+            <Setter Property="Foreground" Value="#0F4FB5"/>
+            <Setter Property="Margin" Value="0,0,0,12"/>
         </Style>
 
-        <Style x:Key="LabelStyle" TargetType="TextBlock">
+        <Style x:Key="SearchBox" TargetType="TextBox">
+            <Setter Property="FontFamily" Value="{StaticResource Font}"/>
+            <Setter Property="Height" Value="42"/>
+            <Setter Property="Padding" Value="12,0"/>
+            <Setter Property="BorderBrush" Value="#D7E6FF"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Background" Value="White"/>
+        </Style>
+
+        <Style x:Key="CardBorder" TargetType="Border">
+            <Setter Property="Width" Value="240"/>
+            <Setter Property="Height" Value="300"/>
+            <Setter Property="CornerRadius" Value="18"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Padding" Value="12"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect BlurRadius="18" ShadowDepth="2" Opacity="0.18"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="CardTitle" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="{StaticResource Font}"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="#111827"/>
+            <Setter Property="TextTrimming" Value="CharacterEllipsis"/>
+        </Style>
+
+        <Style x:Key="CardMeta" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="{StaticResource Font}"/>
             <Setter Property="FontSize" Value="13"/>
-            <Setter Property="Margin" Value="0,10,0,5"/>
+            <Setter Property="Foreground" Value="#6B7280"/>
+            <Setter Property="TextTrimming" Value="CharacterEllipsis"/>
         </Style>
 
-        <Style x:Key="InputStyle" TargetType="TextBox">
-            <Setter Property="Height" Value="32"/>
+        <Style x:Key="Pill" TargetType="Border">
+            <Setter Property="CornerRadius" Value="999"/>
+            <Setter Property="Background" Value="#E8F0FE"/>
+            <Setter Property="Padding" Value="10,4"/>
         </Style>
 
-        <Style x:Key="PrimaryButtonStyle" TargetType="Button">
-            <Setter Property="Height" Value="32"/>
-            <Setter Property="Width" Value="90"/>
+        <Style x:Key="PillText" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="{StaticResource Font}"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Foreground" Value="#1A73E8"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+        </Style>
+
+        <Style x:Key="FormTitle" TargetType="TextBlock" BasedOn="{StaticResource ViewTitle}">
+            <Setter Property="Text" Value="Gestión"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Margin" Value="0,0,0,10"/>
+        </Style>
+
+        <Style x:Key="Label" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="{StaticResource Font}"/>
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="Foreground" Value="#374151"/>
+            <Setter Property="Margin" Value="0,10,0,6"/>
+        </Style>
+
+        <Style x:Key="Input" TargetType="TextBox">
+            <Setter Property="FontFamily" Value="{StaticResource Font}"/>
+            <Setter Property="Height" Value="38"/>
+            <Setter Property="Padding" Value="10,0"/>
+            <Setter Property="BorderBrush" Value="#D7E6FF"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Background" Value="White"/>
+        </Style>
+
+        <Style x:Key="Combo" TargetType="ComboBox">
+            <Setter Property="FontFamily" Value="{StaticResource Font}"/>
+            <Setter Property="Height" Value="38"/>
+            <Setter Property="Padding" Value="8,0"/>
+        </Style>
+
+        <Style x:Key="PrimaryBtn" TargetType="Button">
+            <Setter Property="Height" Value="38"/>
+            <Setter Property="MinWidth" Value="110"/>
             <Setter Property="Background" Value="#1A73E8"/>
             <Setter Property="Foreground" Value="White"/>
             <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="FontFamily" Value="{StaticResource Font}"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="12" Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#0F4FB5"/>
+                </Trigger>
+            </Style.Triggers>
         </Style>
 
-        <Style x:Key="SecondaryButtonStyle" TargetType="Button">
-            <Setter Property="Height" Value="32"/>
-            <Setter Property="Width" Value="90"/>
-            <Setter Property="Background" Value="#E0E0E0"/>
+        <Style x:Key="GhostBtn" TargetType="Button">
+            <Setter Property="Height" Value="38"/>
+            <Setter Property="MinWidth" Value="110"/>
+            <Setter Property="Background" Value="#EEF2FF"/>
+            <Setter Property="Foreground" Value="#0F4FB5"/>
             <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="FontFamily" Value="{StaticResource Font}"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="12" Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#E8F0FE"/>
+                </Trigger>
+            </Style.Triggers>
         </Style>
+
     </UserControl.Resources>
 
-    <Grid Margin="20">
+    <Grid Margin="10">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2.5*"/>
-            <ColumnDefinition Width="3.5*"/>
+            <ColumnDefinition Width="3.4*"/>
+            <ColumnDefinition Width="2.2*"/>
         </Grid.ColumnDefinitions>
 
-        <StackPanel Grid.Column="0">
-            <TextBlock Text="Libros" Style="{StaticResource TitleStyle}"/>
+        <!-- IZQ: Grid de cards -->
+        <Grid Grid.Column="0" Margin="6">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
 
-            <DataGrid x:Name="LibrosGrid"
-                      AutoGenerateColumns="False"
-                      Height="350"
-                      SelectionChanged="LibrosGrid_SelectionChanged">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="ID" Binding="{Binding IdLibro}" Width="60"/>
-                    <DataGridTextColumn Header="Título" Binding="{Binding Titulo}" Width="*"/>
-                    <DataGridTextColumn Header="Año" Binding="{Binding Año}" Width="70"/>
-                    <DataGridTextColumn Header="Autor" Binding="{Binding AutorNombre}" Width="*"/>
-                    <DataGridTextColumn Header="Categoría" Binding="{Binding CategoriaNombre}" Width="*"/>
-                    <DataGridTextColumn Header="Stock" Binding="{Binding Stock}" Width="70"/>
-                </DataGrid.Columns>
-            </DataGrid>
-        </StackPanel>
+            <TextBlock Text="Libros" Style="{StaticResource ViewTitle}"/>
 
-        <Border Grid.Column="1"
-                Margin="20,0,0,0"
-                Padding="20"
-                Background="#F7F9FC"
-                CornerRadius="12">
+            <!-- Búsqueda opcional (si no la usas, puedes dejarla sin Binding) -->
+            <TextBox Grid.Row="1"
+                     Style="{StaticResource SearchBox}"
+                     Margin="0,0,0,10"
+                     Text="{Binding TextoBusqueda, UpdateSourceTrigger=PropertyChanged}"/>
 
+            <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto">
+                <ItemsControl ItemsSource="{Binding ElementName=LibrosGrid, Path=ItemsSource}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel/>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Border Style="{StaticResource CardBorder}">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="150"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+
+                                    <!-- Imagen -->
+                                    <Border CornerRadius="14" Background="#F3F6FB" ClipToBounds="True">
+                                        <Image Stretch="UniformToFill"
+                                               Source="{Binding ImagenRuta, FallbackValue=/Images/book_placeholder.png}"/>
+                                    </Border>
+
+                                    <TextBlock Grid.Row="1" Text="{Binding Titulo}" Style="{StaticResource CardTitle}" Margin="0,10,0,0"/>
+                                    <TextBlock Grid.Row="2" Text="{Binding AutorNombre}" Style="{StaticResource CardMeta}" Margin="0,4,0,0"/>
+
+                                    <StackPanel Grid.Row="3" Margin="0,10,0,0">
+                                        <TextBlock Text="{Binding CategoriaNombre}" Style="{StaticResource CardMeta}"/>
+                                        <TextBlock Text="{Binding Año, StringFormat=Año: {0}}" Style="{StaticResource CardMeta}" Margin="0,4,0,0"/>
+                                    </StackPanel>
+
+                                    <!-- Stock -->
+                                    <Border Grid.Row="4" Style="{StaticResource Pill}" HorizontalAlignment="Left">
+                                        <TextBlock Style="{StaticResource PillText}"
+                                                   Text="{Binding Stock, StringFormat=Stock: {0}}"/>
+                                    </Border>
+
+                                </Grid>
+
+                                <!-- Click para seleccionar: usa SelectionChanged del DataGrid como ya tienes,
+                                     o añade aquí MouseDown y selecciona desde code-behind si quieres -->
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
+        </Grid>
+
+        <!-- DER: Formulario (similar pero “card”) -->
+        <Border Grid.Column="1" Background="White" CornerRadius="18" Padding="18" Margin="6">
             <StackPanel>
-                <TextBlock Text="Gestión" Style="{StaticResource TitleStyle}"/>
+                <TextBlock Style="{StaticResource FormTitle}"/>
 
-                <TextBlock Text="Título" Style="{StaticResource LabelStyle}"/>
-                <TextBox x:Name="TituloTextBox" Style="{StaticResource InputStyle}"/>
+                <TextBlock Text="Título" Style="{StaticResource Label}"/>
+                <TextBox x:Name="TituloTextBox" Style="{StaticResource Input}"/>
 
-                <TextBlock Text="Año" Style="{StaticResource LabelStyle}"/>
-                <TextBox x:Name="AnioTextBox" Style="{StaticResource InputStyle}"/>
+                <TextBlock Text="Año" Style="{StaticResource Label}"/>
+                <TextBox x:Name="AnioTextBox" Style="{StaticResource Input}"/>
 
-                <TextBlock Text="Autor" Style="{StaticResource LabelStyle}"/>
-                <ComboBox x:Name="AutoresCombo"
-                          DisplayMemberPath="Nombre"
-                          SelectedValuePath="IdAutor"
-                          Height="32"/>
+                <TextBlock Text="Autor" Style="{StaticResource Label}"/>
+                <ComboBox x:Name="AutoresCombo" Style="{StaticResource Combo}"
+                          DisplayMemberPath="Nombre" SelectedValuePath="IdAutor"/>
 
-                <TextBlock Text="Categoría" Style="{StaticResource LabelStyle}"/>
-                <ComboBox x:Name="CategoriasCombo"
-                          DisplayMemberPath="Nombre"
-                          SelectedValuePath="IdCategoria"
-                          Height="32"/>
+                <TextBlock Text="Categoría" Style="{StaticResource Label}"/>
+                <ComboBox x:Name="CategoriasCombo" Style="{StaticResource Combo}"
+                          DisplayMemberPath="Nombre" SelectedValuePath="IdCategoria"/>
 
-                <TextBlock Text="Stock" Style="{StaticResource LabelStyle}"/>
-                <TextBox x:Name="StockTextBox" Style="{StaticResource InputStyle}"/>
+                <TextBlock Text="Stock" Style="{StaticResource Label}"/>
+                <TextBox x:Name="StockTextBox" Style="{StaticResource Input}"/>
 
-                <TextBlock x:Name="ErrorText"
-                           Foreground="Red"
-                           Margin="0,10,0,0"/>
+                <TextBlock x:Name="ErrorText" Foreground="#DC2626" Margin="0,10,0,0" FontFamily="{StaticResource Font}"/>
 
-                <StackPanel Orientation="Horizontal"
-                            HorizontalAlignment="Right"
-                            Margin="0,20,0,0">
-
-                    <Button Content="Añadir" Style="{StaticResource PrimaryButtonStyle}" Click="BtnAdd_Click"/>
-                    <Button Content="Modificar" Style="{StaticResource SecondaryButtonStyle}" Margin="10,0,0,0" Click="BtnUpdate_Click"/>
-                    <Button Content="Eliminar" Style="{StaticResource SecondaryButtonStyle}" Margin="10,0,0,0" Click="BtnDelete_Click"/>
-                    <Button Content="Limpiar" Style="{StaticResource SecondaryButtonStyle}" Margin="10,0,0,0" Click="BtnClear_Click"/>
-                </StackPanel>
+                <WrapPanel HorizontalAlignment="Right" Margin="0,16,0,0">
+                    <Button Content="Añadir" Style="{StaticResource PrimaryBtn}" Click="BtnAdd_Click"/>
+                    <Button Content="Modificar" Style="{StaticResource GhostBtn}" Margin="10,0,0,0" Click="BtnUpdate_Click"/>
+                    <Button Content="Eliminar" Style="{StaticResource GhostBtn}" Margin="10,0,0,0" Click="BtnDelete_Click"/>
+                    <Button Content="Limpiar" Style="{StaticResource GhostBtn}" Margin="10,0,0,0" Click="BtnClear_Click"/>
+                </WrapPanel>
             </StackPanel>
         </Border>
+
+        <!-- El DataGrid lo puedes mantener oculto si tu lógica depende de él -->
+        <DataGrid x:Name="LibrosGrid" Visibility="Collapsed"/>
     </Grid>
 </UserControl>

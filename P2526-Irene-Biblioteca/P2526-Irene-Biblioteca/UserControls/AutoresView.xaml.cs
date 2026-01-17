@@ -33,6 +33,7 @@ namespace P2526_Irene_Biblioteca.UserControls
         {
             List<Autor> lista = repo.GetAll();
             AutoresGrid.ItemsSource = lista;
+            AutoresCards.ItemsSource = lista;
         }
 
         private void AutoresGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -121,5 +122,18 @@ namespace P2526_Irene_Biblioteca.UserControls
             NacionalidadTextBox.Clear();
             ErrorText.Text = "";
         }
+
+        private void AutorSelect_Click(object sender, RoutedEventArgs e)
+        {
+            var autor = (sender as FrameworkElement)?.DataContext as Autor;
+            if (autor == null) return;
+
+            autorSeleccionado = autor;
+
+            NombreTextBox.Text = autorSeleccionado.Nombre;
+            NacionalidadTextBox.Text = autorSeleccionado.Nacionalidad;
+            ErrorText.Text = "";
+        }
+
     }
 }

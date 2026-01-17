@@ -26,7 +26,6 @@ namespace P2526_Irene_Biblioteca.UserControls
             bool puede = service.PuedeEditar();
 
             NombreTextBox.IsEnabled = puede;
-            // Si quieres, también puedes deshabilitar/ocultar botones
         }
 
         private void Cargar()

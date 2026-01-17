@@ -10,7 +10,115 @@
                 <ResourceDictionary Source="Styles/Botones.xaml"/>
                 <ResourceDictionary Source="Styles/TextBox.xaml"/>
                 <ResourceDictionary Source="Styles/Ventanas.xaml"/>
+                
+                <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+                    <FontFamily x:Key="AppFont">/Fonts/#Quicksand</FontFamily>
+
+                    <Color x:Key="Blue">#1A73E8</Color>
+                    <Color x:Key="BlueDark">#0F4FB5</Color>
+                    <Color x:Key="Teal">#22C1C3</Color>
+
+                    <SolidColorBrush x:Key="BrushBlue" Color="{StaticResource Blue}"/>
+                    <SolidColorBrush x:Key="BrushBlueDark" Color="{StaticResource BlueDark}"/>
+                    <SolidColorBrush x:Key="BrushTeal" Color="{StaticResource Teal}"/>
+
+                    <Style x:Key="H1" TargetType="TextBlock">
+                        <Setter Property="FontFamily" Value="{StaticResource AppFont}"/>
+                        <Setter Property="FontSize" Value="24"/>
+                        <Setter Property="FontWeight" Value="Bold"/>
+                        <Setter Property="Foreground" Value="{StaticResource BrushBlueDark}"/>
+                        <Setter Property="Margin" Value="0,0,0,12"/>
+                    </Style>
+
+                    <Style x:Key="Label" TargetType="TextBlock">
+                        <Setter Property="FontFamily" Value="{StaticResource AppFont}"/>
+                        <Setter Property="FontSize" Value="13"/>
+                        <Setter Property="Foreground" Value="#374151"/>
+                        <Setter Property="Margin" Value="0,10,0,6"/>
+                    </Style>
+
+                    <Style x:Key="Input" TargetType="TextBox">
+                        <Setter Property="FontFamily" Value="{StaticResource AppFont}"/>
+                        <Setter Property="Height" Value="38"/>
+                        <Setter Property="Padding" Value="10,0"/>
+                        <Setter Property="BorderBrush" Value="#D7E6FF"/>
+                        <Setter Property="BorderThickness" Value="1"/>
+                        <Setter Property="Background" Value="White"/>
+                    </Style>
+
+                    <Style x:Key="Combo" TargetType="ComboBox">
+                        <Setter Property="FontFamily" Value="{StaticResource AppFont}"/>
+                        <Setter Property="Height" Value="38"/>
+                        <Setter Property="Padding" Value="8,0"/>
+                    </Style>
+
+                    <Style x:Key="PrimaryBtn" TargetType="Button">
+                        <Setter Property="Height" Value="38"/>
+                        <Setter Property="MinWidth" Value="110"/>
+                        <Setter Property="Background" Value="{StaticResource BrushBlue}"/>
+                        <Setter Property="Foreground" Value="White"/>
+                        <Setter Property="BorderThickness" Value="0"/>
+                        <Setter Property="FontFamily" Value="{StaticResource AppFont}"/>
+                        <Setter Property="FontWeight" Value="SemiBold"/>
+                        <Setter Property="Cursor" Value="Hand"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border CornerRadius="12" Background="{TemplateBinding Background}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="{StaticResource BrushBlueDark}"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+
+                    <Style x:Key="GhostBtn" TargetType="Button">
+                        <Setter Property="Height" Value="38"/>
+                        <Setter Property="MinWidth" Value="110"/>
+                        <Setter Property="Background" Value="#EEF2FF"/>
+                        <Setter Property="Foreground" Value="{StaticResource BrushBlueDark}"/>
+                        <Setter Property="BorderThickness" Value="0"/>
+                        <Setter Property="FontFamily" Value="{StaticResource AppFont}"/>
+                        <Setter Property="FontWeight" Value="SemiBold"/>
+                        <Setter Property="Cursor" Value="Hand"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border CornerRadius="12" Background="{TemplateBinding Background}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#E8F0FE"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+
+                    <Style x:Key="Card" TargetType="Border">
+                        <Setter Property="CornerRadius" Value="18"/>
+                        <Setter Property="Background" Value="White"/>
+                        <Setter Property="Padding" Value="16"/>
+                        <Setter Property="Effect">
+                            <Setter.Value>
+                                <DropShadowEffect BlurRadius="18" ShadowDepth="2" Opacity="0.14"/>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+
+                </ResourceDictionary>
+
             </ResourceDictionary.MergedDictionaries>
+            
         </ResourceDictionary>
     </Application.Resources>
 </Application>
