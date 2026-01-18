@@ -31,5 +31,15 @@ namespace P2526_Irene_Biblioteca.Views
         {
             ((LoginViewModel)DataContext).Password = PasswordBox.Password;
         }
+
+        private void Close_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void Entrar_Click(object sender, RoutedEventArgs e)
+        {
+            ((LoginViewModel)DataContext).Login();
+        }
     }
 }

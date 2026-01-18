@@ -1,12 +1,4 @@
-﻿using P2526_Irene_Biblioteca.Helpers;
-using P2526_Irene_Biblioteca.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
-using P2526_Irene_Biblioteca.UserControls;
+﻿using P2526_Irene_Biblioteca.UserControls;
 
 namespace P2526_Irene_Biblioteca.ViewModels
 {
@@ -20,30 +12,39 @@ namespace P2526_Irene_Biblioteca.ViewModels
             {
                 currentView = value;
                 OnPropertyChanged();
+                OnPropertyChanged(nameof(NombreVistaActual));
             }
         }
 
-        public ICommand ShowAutoresCommand { get; }
-        public ICommand ShowLibrosCommand { get; }
-        public ICommand ShowCategoriasCommand { get; }
-        public ICommand ShowClientesCommand { get; }
-        public ICommand ShowEmpleadosCommand { get; }
-        public ICommand ShowPrestamosCommand { get; }
+        public string NombreVistaActual
+        {
+            get
+            {
+                if (CurrentView == null) return "Biblioteca";
 
-        public ICommand CloseCommand { get; }
+                var typeName = CurrentView.GetType().Name;
+
+                if (typeName == nameof(AutoresView)) return "Autores";
+                if (typeName == nameof(LibrosView)) return "Libros";
+                if (typeName == nameof(CategoriasView)) return "Categorías";
+                if (typeName == nameof(ClientesView)) return "Clientes";
+                if (typeName == nameof(EmpleadosView)) return "Empleados";
+                if (typeName == nameof(PrestamosView)) return "Préstamos";
+
+                return "Biblioteca";
+            }
+        }
 
         public MainWindowViewModel()
         {
-            ShowAutoresCommand = new RelayCommand(_ => CurrentView = new AutoresView());
-            ShowLibrosCommand = new RelayCommand(_ => CurrentView = new LibrosView());
-            ShowCategoriasCommand = new RelayCommand(_ => CurrentView = new CategoriasView());
-            ShowClientesCommand = new RelayCommand(_ => CurrentView = new ClientesView());
-            ShowEmpleadosCommand = new RelayCommand(_ => CurrentView = new EmpleadosView());
-            ShowPrestamosCommand = new RelayCommand(_ => CurrentView = new PrestamosView());
-
-            CloseCommand = new RelayCommand(_ => System.Windows.Application.Current.Shutdown());
-
-            CurrentView = new AutoresView();
+            ShowAutores();
         }
+
+        public void ShowAutores() => CurrentView = new AutoresView();
+        public void ShowLibros() => CurrentView = new LibrosView();
+        public void ShowCategorias() => CurrentView = new CategoriasView();
+        public void ShowClientes() => CurrentView = new ClientesView();
+        public void ShowEmpleados() => CurrentView = new EmpleadosView();
+        public void ShowPrestamos() => CurrentView = new PrestamosView();
     }
 }

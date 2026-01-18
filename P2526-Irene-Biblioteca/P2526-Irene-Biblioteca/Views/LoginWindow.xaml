@@ -134,17 +134,17 @@
         </Grid.Background>
 
         <Button Style="{StaticResource CloseBtn}"
-                HorizontalAlignment="Right"
-                VerticalAlignment="Top"
-                Margin="18"
-                Command="{Binding CloseCommand}">
+        HorizontalAlignment="Right"
+        VerticalAlignment="Top"
+        Margin="18"
+        Click="Close_Click">
             <TextBlock Text="✕" Foreground="White" FontSize="16"/>
         </Button>
+
 
         <Border Style="{StaticResource LoginCard}" VerticalAlignment="Center" HorizontalAlignment="Center">
             <StackPanel>
 
-                <!-- Logo arriba -->
                 <Image Style="{StaticResource LoginLogoStyle}"/>
 
                 <TextBlock Text="Iniciar sesión" Style="{StaticResource LoginTitle}"/>
@@ -159,8 +159,10 @@
 
                 <TextBlock Text="{Binding MensajeError}" Style="{StaticResource ErrorTextStyle}"/>
 
-                <Button Content="Entrar" Style="{StaticResource PrimaryButton}" Margin="0,18,0,0"
-                Command="{Binding LoginCommand}"/>
+                <Button Content="Entrar"
+                        Style="{StaticResource PrimaryButton}"
+                        Click="Entrar_Click"/>
+
             </StackPanel>
         </Border>
     </Grid>

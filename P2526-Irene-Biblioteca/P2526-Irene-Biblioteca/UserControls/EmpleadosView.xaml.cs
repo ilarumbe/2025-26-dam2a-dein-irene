@@ -1,7 +1,4 @@
-﻿using P2526_Irene_Biblioteca.Models;
-using P2526_Irene_Biblioteca.Repositories;
-using P2526_Irene_Biblioteca.Services;
-using System.Collections.Generic;
+﻿using P2526_Irene_Biblioteca.ViewModels;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -9,99 +6,37 @@ namespace P2526_Irene_Biblioteca.UserControls
 {
     public partial class EmpleadosView : UserControl
     {
-        private readonly EmpleadosRepository repo = new EmpleadosRepository();
-        private readonly EmpleadosService service = new EmpleadosService();
-
-        private Empleado empleadoSeleccionado;
+        private EmpleadosViewModel VM => (EmpleadosViewModel)DataContext;
 
         public EmpleadosView()
         {
             InitializeComponent();
-            Cargar();
-            AplicarPermisos();
+            DataContext = new EmpleadosViewModel();
         }
 
-        private void AplicarPermisos()
+        private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
         {
-            bool puede = service.PuedeEditar();
-
-            NombreTextBox.IsEnabled = puede;
-            UsuarioTextBox.IsEnabled = puede;
-            PasswordBox.IsEnabled = puede;
-
-        }
-
-        private void Cargar()
-        {
-            List<Empleado> lista = repo.GetAll();
-            EmpleadosGrid.ItemsSource = lista;
-        }
-
-        private void EmpleadosGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            empleadoSeleccionado = EmpleadosGrid.SelectedItem as Empleado;
-
-            if (empleadoSeleccionado == null)
-                return;
-
-            NombreTextBox.Text = empleadoSeleccionado.Nombre;
-            UsuarioTextBox.Text = empleadoSeleccionado.Usuario;
-
-            PasswordBox.Clear();
-            ErrorText.Text = "";
+            if (DataContext is EmpleadosViewModel vm)
+                vm.Password = PasswordBox.Password;
         }
 
         private void BtnAdd_Click(object sender, RoutedEventArgs e)
         {
-            ErrorText.Text = "";
-
-            if (!service.ValidarAlta(NombreTextBox.Text, UsuarioTextBox.Text, PasswordBox.Password, out string error))
-            {
-                ErrorText.Text = error;
-                return;
-            }
-
-            repo.Insert(new Empleado
-            {
-                Nombre = NombreTextBox.Text.Trim(),
-                Usuario = UsuarioTextBox.Text.Trim()
-            }, PasswordBox.Password);
-
-            BtnClear_Click(sender, e);
-            Cargar();
+            VM.Add();
+            PasswordBox.Clear();
         }
 
         private void BtnUpdate_Click(object sender, RoutedEventArgs e)
         {
-            ErrorText.Text = "";
-
-            int? id = empleadoSeleccionado?.IdEmpleado;
-            if (!service.ValidarModificacion(NombreTextBox.Text, UsuarioTextBox.Text, id, out string error))
-            {
-                ErrorText.Text = error;
-                return;
-            }
-
-            empleadoSeleccionado.Nombre = NombreTextBox.Text.Trim();
-            empleadoSeleccionado.Usuario = UsuarioTextBox.Text.Trim();
-
-            repo.Update(empleadoSeleccionado);
-
-            if (!string.IsNullOrWhiteSpace(PasswordBox.Password))
-                repo.UpdatePassword(empleadoSeleccionado.IdEmpleado, PasswordBox.Password);
-
-            BtnClear_Click(sender, e);
-            Cargar();
+            VM.Update();
+            PasswordBox.Clear();
         }
 
         private void BtnDelete_Click(object sender, RoutedEventArgs e)
         {
-            ErrorText.Text = "";
-
-            int? id = empleadoSeleccionado?.IdEmpleado;
-            if (!service.ValidarBorrado(id, out string error))
+            if (VM.EmpleadoSeleccionado == null)
             {
-                ErrorText.Text = error;
+                VM.ErrorText = "Selecciona un empleado.";
                 return;
             }
 
@@ -109,21 +44,14 @@ namespace P2526_Irene_Biblioteca.UserControls
                 MessageBoxButton.YesNo, MessageBoxImage.Warning) != MessageBoxResult.Yes)
                 return;
 
-            repo.Delete(empleadoSeleccionado.IdEmpleado);
-
-            BtnClear_Click(sender, e);
-            Cargar();
+            VM.Delete();
+            PasswordBox.Clear();
         }
 
         private void BtnClear_Click(object sender, RoutedEventArgs e)
         {
-            empleadoSeleccionado = null;
-            EmpleadosGrid.SelectedItem = null;
-
-            NombreTextBox.Clear();
-            UsuarioTextBox.Clear();
+            VM.Limpiar();
             PasswordBox.Clear();
-            ErrorText.Text = "";
         }
     }
 }

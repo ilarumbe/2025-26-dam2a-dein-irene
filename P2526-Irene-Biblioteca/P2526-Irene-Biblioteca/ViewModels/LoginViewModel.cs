@@ -2,14 +2,20 @@
 using P2526_Irene_Biblioteca.Repositories;
 using P2526_Irene_Biblioteca.Services;
 using P2526_Irene_Biblioteca.Views;
-using System.Windows.Input;
 
 namespace P2526_Irene_Biblioteca.ViewModels
 {
     public class LoginViewModel : BaseViewModel
     {
         private readonly IWindowService windowService;
-        public string Usuario { get; set; }
+
+        private string usuario;
+        public string Usuario
+        {
+            get => usuario;
+            set { usuario = value; OnPropertyChanged(); }
+        }
+
         public string Password { get; set; }
 
         private string mensajeError;
@@ -19,16 +25,15 @@ namespace P2526_Irene_Biblioteca.ViewModels
             set { mensajeError = value; OnPropertyChanged(); }
         }
 
-        public ICommand LoginCommand { get; }
-
         public LoginViewModel(IWindowService service)
         {
             windowService = service;
-            LoginCommand = new RelayCommand(o => Login());
         }
 
-        private void Login()
+        public void Login()
         {
+            MensajeError = "";
+
             if (string.IsNullOrWhiteSpace(Usuario) || string.IsNullOrWhiteSpace(Password))
             {
                 MensajeError = "Introduce usuario y contraseña";
@@ -42,7 +47,6 @@ namespace P2526_Irene_Biblioteca.ViewModels
             {
                 SesionActual.EsEmpleado = true;
                 SesionActual.Usuario = empleado.Usuario;
-
                 AbrirMainWindow();
                 return;
             }
@@ -54,7 +58,6 @@ namespace P2526_Irene_Biblioteca.ViewModels
             {
                 SesionActual.EsEmpleado = false;
                 SesionActual.Usuario = cliente.Usuario;
-
                 AbrirMainWindow();
                 return;
             }
@@ -66,7 +69,6 @@ namespace P2526_Irene_Biblioteca.ViewModels
         {
             var main = new MainWindow();
             main.Show();
-
             windowService.Close();
         }
     }

@@ -5,20 +5,20 @@ using System.Collections.ObjectModel;
 
 namespace P2526_Irene_Biblioteca.ViewModels
 {
-    public class AutoresViewModel : BaseViewModel
+    public class CategoriasViewModel : BaseViewModel
     {
-        private readonly AutoresRepository repo = new AutoresRepository();
-        private readonly AutoresService service = new AutoresService();
+        private readonly CategoriasRepository repo = new CategoriasRepository();
+        private readonly CategoriasService service = new CategoriasService();
 
-        public ObservableCollection<Autor> Autores { get; } = new ObservableCollection<Autor>();
+        public ObservableCollection<Categoria> Categorias { get; } = new ObservableCollection<Categoria>();
 
-        private Autor autorSeleccionado;
-        public Autor AutorSeleccionado
+        private Categoria categoriaSeleccionada;
+        public Categoria CategoriaSeleccionada
         {
-            get => autorSeleccionado;
+            get => categoriaSeleccionada;
             set
             {
-                autorSeleccionado = value;
+                categoriaSeleccionada = value;
                 OnPropertyChanged();
                 CargarDesdeSeleccion();
             }
@@ -31,13 +31,6 @@ namespace P2526_Irene_Biblioteca.ViewModels
             set { nombre = value; OnPropertyChanged(); }
         }
 
-        private string nacionalidad;
-        public string Nacionalidad
-        {
-            get => nacionalidad;
-            set { nacionalidad = value; OnPropertyChanged(); }
-        }
-
         private string errorText;
         public string ErrorText
         {
@@ -47,34 +40,32 @@ namespace P2526_Irene_Biblioteca.ViewModels
 
         public bool PuedeEditar => service.PuedeEditar();
 
-        public AutoresViewModel()
+        public CategoriasViewModel()
         {
             Cargar();
         }
 
         public void Cargar()
         {
-            Autores.Clear();
-            foreach (var a in repo.GetAll())
-                Autores.Add(a);
+            Categorias.Clear();
+            foreach (var c in repo.GetAll())
+                Categorias.Add(c);
 
             ErrorText = "";
         }
 
         private void CargarDesdeSeleccion()
         {
-            if (AutorSeleccionado == null) return;
+            if (CategoriaSeleccionada == null) return;
 
-            Nombre = AutorSeleccionado.Nombre;
-            Nacionalidad = AutorSeleccionado.Nacionalidad;
+            Nombre = CategoriaSeleccionada.Nombre;
             ErrorText = "";
         }
 
         public void Limpiar()
         {
-            AutorSeleccionado = null;
+            CategoriaSeleccionada = null;
             Nombre = "";
-            Nacionalidad = "";
             ErrorText = "";
         }
 
@@ -88,10 +79,9 @@ namespace P2526_Irene_Biblioteca.ViewModels
                 return;
             }
 
-            repo.Insert(new Autor
+            repo.Insert(new Categoria
             {
-                Nombre = Nombre.Trim(),
-                Nacionalidad = string.IsNullOrWhiteSpace(Nacionalidad) ? null : Nacionalidad.Trim()
+                Nombre = Nombre.Trim()
             });
 
             Limpiar();
@@ -102,39 +92,32 @@ namespace P2526_Irene_Biblioteca.ViewModels
         {
             ErrorText = "";
 
-            int? id = AutorSeleccionado?.IdAutor;
+            int? id = CategoriaSeleccionada?.IdCategoria;
             if (!service.ValidarModificacion(id, Nombre, out string error))
             {
                 ErrorText = error;
                 return;
             }
 
-            AutorSeleccionado.Nombre = Nombre.Trim();
-            AutorSeleccionado.Nacionalidad = string.IsNullOrWhiteSpace(Nacionalidad) ? null : Nacionalidad.Trim();
-
-            repo.Update(AutorSeleccionado);
+            CategoriaSeleccionada.Nombre = Nombre.Trim();
+            repo.Update(CategoriaSeleccionada);
 
             Limpiar();
             Cargar();
-        }
-
-        public bool CanDelete(out string error)
-        {
-            int? id = AutorSeleccionado?.IdAutor;
-            return service.ValidarBorrado(id, out error);
         }
 
         public void Delete()
         {
             ErrorText = "";
 
-            if (!CanDelete(out string error))
+            int? id = CategoriaSeleccionada?.IdCategoria;
+            if (!service.ValidarBorrado(id, out string error))
             {
                 ErrorText = error;
                 return;
             }
 
-            repo.Delete(AutorSeleccionado.IdAutor);
+            repo.Delete(CategoriaSeleccionada.IdCategoria);
 
             Limpiar();
             Cargar();

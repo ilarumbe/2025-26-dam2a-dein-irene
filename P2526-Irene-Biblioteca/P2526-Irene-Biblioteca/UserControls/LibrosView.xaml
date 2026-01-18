@@ -151,7 +151,6 @@
             <ColumnDefinition Width="2.2*"/>
         </Grid.ColumnDefinitions>
 
-        <!-- IZQ: Grid de cards -->
         <Grid Grid.Column="0" Margin="6">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
@@ -161,14 +160,13 @@
 
             <TextBlock Text="Libros" Style="{StaticResource ViewTitle}"/>
 
-            <!-- Búsqueda opcional (si no la usas, puedes dejarla sin Binding) -->
             <TextBox Grid.Row="1"
                      Style="{StaticResource SearchBox}"
                      Margin="0,0,0,10"
                      Text="{Binding TextoBusqueda, UpdateSourceTrigger=PropertyChanged}"/>
 
             <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto">
-                <ItemsControl ItemsSource="{Binding ElementName=LibrosGrid, Path=ItemsSource}">
+                <ItemsControl ItemsSource="{Binding Libros}">
                     <ItemsControl.ItemsPanel>
                         <ItemsPanelTemplate>
                             <WrapPanel/>
@@ -185,12 +183,12 @@
                                         <RowDefinition Height="Auto"/>
                                         <RowDefinition Height="*"/>
                                         <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
                                     </Grid.RowDefinitions>
 
-                                    <!-- Imagen -->
                                     <Border CornerRadius="14" Background="#F3F6FB" ClipToBounds="True">
                                         <Image Stretch="UniformToFill"
-                                               Source="{Binding ImagenRuta, FallbackValue=/Images/book_placeholder.png}"/>
+                                               Source="pack://application:,,,/Images/book_placeholder.png"/>
                                     </Border>
 
                                     <TextBlock Grid.Row="1" Text="{Binding Titulo}" Style="{StaticResource CardTitle}" Margin="0,10,0,0"/>
@@ -201,16 +199,18 @@
                                         <TextBlock Text="{Binding Año, StringFormat=Año: {0}}" Style="{StaticResource CardMeta}" Margin="0,4,0,0"/>
                                     </StackPanel>
 
-                                    <!-- Stock -->
                                     <Border Grid.Row="4" Style="{StaticResource Pill}" HorizontalAlignment="Left">
                                         <TextBlock Style="{StaticResource PillText}"
                                                    Text="{Binding Stock, StringFormat=Stock: {0}}"/>
                                     </Border>
 
+                                    <Button Grid.Row="5"
+                                            Content="Seleccionar"
+                                            Style="{StaticResource GhostBtn}"
+                                            HorizontalAlignment="Right"
+                                            Margin="0,10,0,0"
+                                            Click="LibroSelect_Click"/>
                                 </Grid>
-
-                                <!-- Click para seleccionar: usa SelectionChanged del DataGrid como ya tienes,
-                                     o añade aquí MouseDown y selecciona desde code-behind si quieres -->
                             </Border>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
@@ -218,40 +218,56 @@
             </ScrollViewer>
         </Grid>
 
-        <!-- DER: Formulario (similar pero “card”) -->
         <Border Grid.Column="1" Background="White" CornerRadius="18" Padding="18" Margin="6">
             <StackPanel>
                 <TextBlock Style="{StaticResource FormTitle}"/>
 
                 <TextBlock Text="Título" Style="{StaticResource Label}"/>
-                <TextBox x:Name="TituloTextBox" Style="{StaticResource Input}"/>
+                <TextBox Style="{StaticResource Input}"
+                         Text="{Binding Titulo, UpdateSourceTrigger=PropertyChanged}"
+                         IsEnabled="{Binding PuedeEditar}"/>
 
                 <TextBlock Text="Año" Style="{StaticResource Label}"/>
-                <TextBox x:Name="AnioTextBox" Style="{StaticResource Input}"/>
+                <TextBox Style="{StaticResource Input}"
+                         Text="{Binding Anio, UpdateSourceTrigger=PropertyChanged}"
+                         IsEnabled="{Binding PuedeEditar}"/>
 
                 <TextBlock Text="Autor" Style="{StaticResource Label}"/>
-                <ComboBox x:Name="AutoresCombo" Style="{StaticResource Combo}"
-                          DisplayMemberPath="Nombre" SelectedValuePath="IdAutor"/>
+                <ComboBox Style="{StaticResource Combo}"
+                          ItemsSource="{Binding Autores}"
+                          DisplayMemberPath="Nombre"
+                          SelectedValuePath="IdAutor"
+                          SelectedValue="{Binding AutorId}"
+                          IsEnabled="{Binding PuedeEditar}"/>
 
                 <TextBlock Text="Categoría" Style="{StaticResource Label}"/>
-                <ComboBox x:Name="CategoriasCombo" Style="{StaticResource Combo}"
-                          DisplayMemberPath="Nombre" SelectedValuePath="IdCategoria"/>
+                <ComboBox Style="{StaticResource Combo}"
+                          ItemsSource="{Binding Categorias}"
+                          DisplayMemberPath="Nombre"
+                          SelectedValuePath="IdCategoria"
+                          SelectedValue="{Binding CategoriaId}"
+                          IsEnabled="{Binding PuedeEditar}"/>
 
                 <TextBlock Text="Stock" Style="{StaticResource Label}"/>
-                <TextBox x:Name="StockTextBox" Style="{StaticResource Input}"/>
+                <TextBox Style="{StaticResource Input}"
+                         Text="{Binding Stock, UpdateSourceTrigger=PropertyChanged}"
+                         IsEnabled="{Binding PuedeEditar}"/>
 
-                <TextBlock x:Name="ErrorText" Foreground="#DC2626" Margin="0,10,0,0" FontFamily="{StaticResource Font}"/>
+                <TextBlock Text="{Binding ErrorText}"
+                           Foreground="#DC2626"
+                           Margin="0,10,0,0"
+                           FontFamily="{StaticResource Font}"/>
 
                 <WrapPanel HorizontalAlignment="Right" Margin="0,16,0,0">
-                    <Button Content="Añadir" Style="{StaticResource PrimaryBtn}" Click="BtnAdd_Click"/>
-                    <Button Content="Modificar" Style="{StaticResource GhostBtn}" Margin="10,0,0,0" Click="BtnUpdate_Click"/>
-                    <Button Content="Eliminar" Style="{StaticResource GhostBtn}" Margin="10,0,0,0" Click="BtnDelete_Click"/>
+                    <Button Content="Añadir" Style="{StaticResource PrimaryBtn}" Click="BtnAdd_Click"
+                            IsEnabled="{Binding PuedeEditar}"/>
+                    <Button Content="Modificar" Style="{StaticResource GhostBtn}" Margin="10,0,0,0" Click="BtnUpdate_Click"
+                            IsEnabled="{Binding PuedeEditar}"/>
+                    <Button Content="Eliminar" Style="{StaticResource GhostBtn}" Margin="10,0,0,0" Click="BtnDelete_Click"
+                            IsEnabled="{Binding PuedeEditar}"/>
                     <Button Content="Limpiar" Style="{StaticResource GhostBtn}" Margin="10,0,0,0" Click="BtnClear_Click"/>
                 </WrapPanel>
             </StackPanel>
         </Border>
-
-        <!-- El DataGrid lo puedes mantener oculto si tu lógica depende de él -->
-        <DataGrid x:Name="LibrosGrid" Visibility="Collapsed"/>
     </Grid>
 </UserControl>

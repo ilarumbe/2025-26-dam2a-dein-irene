@@ -5,20 +5,20 @@ using System.Collections.ObjectModel;
 
 namespace P2526_Irene_Biblioteca.ViewModels
 {
-    public class EmpleadosViewModel : BaseViewModel
+    public class ClientesViewModel : BaseViewModel
     {
-        private readonly EmpleadosRepository repo = new EmpleadosRepository();
-        private readonly EmpleadosService service = new EmpleadosService();
+        private readonly ClientesRepository repo = new ClientesRepository();
+        private readonly ClientesService service = new ClientesService();
 
-        public ObservableCollection<Empleado> Empleados { get; } = new ObservableCollection<Empleado>();
+        public ObservableCollection<Cliente> Clientes { get; } = new ObservableCollection<Cliente>();
 
-        private Empleado empleadoSeleccionado;
-        public Empleado EmpleadoSeleccionado
+        private Cliente clienteSeleccionado;
+        public Cliente ClienteSeleccionado
         {
-            get => empleadoSeleccionado;
+            get => clienteSeleccionado;
             set
             {
-                empleadoSeleccionado = value;
+                clienteSeleccionado = value;
                 OnPropertyChanged();
                 CargarDesdeSeleccion();
             }
@@ -54,33 +54,33 @@ namespace P2526_Irene_Biblioteca.ViewModels
 
         public bool PuedeEditar => service.PuedeEditar();
 
-        public EmpleadosViewModel()
+        public ClientesViewModel()
         {
             Cargar();
         }
 
         public void Cargar()
         {
-            Empleados.Clear();
-            foreach (var e in repo.GetAll())
-                Empleados.Add(e);
+            Clientes.Clear();
+            foreach (var c in repo.GetAll())
+                Clientes.Add(c);
 
             ErrorText = "";
         }
 
         private void CargarDesdeSeleccion()
         {
-            if (EmpleadoSeleccionado == null) return;
+            if (ClienteSeleccionado == null) return;
 
-            Nombre = EmpleadoSeleccionado.Nombre;
-            Usuario = EmpleadoSeleccionado.Usuario;
+            Nombre = ClienteSeleccionado.Nombre;
+            Usuario = ClienteSeleccionado.Usuario;
             Password = "";
             ErrorText = "";
         }
 
         public void Limpiar()
         {
-            EmpleadoSeleccionado = null;
+            ClienteSeleccionado = null;
             Nombre = "";
             Usuario = "";
             Password = "";
@@ -97,7 +97,7 @@ namespace P2526_Irene_Biblioteca.ViewModels
                 return;
             }
 
-            repo.Insert(new Empleado
+            repo.Insert(new Cliente
             {
                 Nombre = Nombre.Trim(),
                 Usuario = Usuario.Trim()
@@ -111,20 +111,20 @@ namespace P2526_Irene_Biblioteca.ViewModels
         {
             ErrorText = "";
 
-            int? id = EmpleadoSeleccionado?.IdEmpleado;
-            if (!service.ValidarModificacion(Nombre, Usuario, id, out string error))
+            int? id = ClienteSeleccionado?.IdCliente;
+            if (!service.ValidarModificacion(id, Nombre, Usuario, out string error))
             {
                 ErrorText = error;
                 return;
             }
 
-            EmpleadoSeleccionado.Nombre = Nombre.Trim();
-            EmpleadoSeleccionado.Usuario = Usuario.Trim();
+            ClienteSeleccionado.Nombre = Nombre.Trim();
+            ClienteSeleccionado.Usuario = Usuario.Trim();
 
-            repo.Update(EmpleadoSeleccionado);
+            repo.Update(ClienteSeleccionado);
 
             if (!string.IsNullOrWhiteSpace(Password))
-                repo.UpdatePassword(EmpleadoSeleccionado.IdEmpleado, Password);
+                repo.UpdatePassword(ClienteSeleccionado.IdCliente, Password);
 
             Limpiar();
             Cargar();
@@ -134,14 +134,14 @@ namespace P2526_Irene_Biblioteca.ViewModels
         {
             ErrorText = "";
 
-            int? id = EmpleadoSeleccionado?.IdEmpleado;
+            int? id = ClienteSeleccionado?.IdCliente;
             if (!service.ValidarBorrado(id, out string error))
             {
                 ErrorText = error;
                 return;
             }
 
-            repo.Delete(EmpleadoSeleccionado.IdEmpleado);
+            repo.Delete(ClienteSeleccionado.IdCliente);
 
             Limpiar();
             Cargar();

@@ -131,12 +131,12 @@
 
                     <TextBlock Text="Navegación" Style="{StaticResource SideTitle}"/>
 
-                    <Button Style="{StaticResource MenuButtonStyleV2}" Content="🏷  Autores" Command="{Binding ShowAutoresCommand}"/>
-                    <Button Style="{StaticResource MenuButtonStyleV2}" Content="📚  Libros" Command="{Binding ShowLibrosCommand}"/>
-                    <Button Style="{StaticResource MenuButtonStyleV2}" Content="🗂  Categorías" Command="{Binding ShowCategoriasCommand}"/>
-                    <Button Style="{StaticResource MenuButtonStyleV2}" Content="👥  Clientes" Command="{Binding ShowClientesCommand}"/>
-                    <Button Style="{StaticResource MenuButtonStyleV2}" Content="🧑  Empleados" Command="{Binding ShowEmpleadosCommand}"/>
-                    <Button Style="{StaticResource MenuButtonStyleV2}" Content="📖  Préstamos" Command="{Binding ShowPrestamosCommand}"/>
+                    <Button Style="{StaticResource MenuButtonStyleV2}" Content="🏷  Autores" Click="Autores_Click"/>
+                    <Button Style="{StaticResource MenuButtonStyleV2}" Content="📚  Libros" Click="Libros_Click"/>
+                    <Button Style="{StaticResource MenuButtonStyleV2}" Content="🗂  Categorías" Click="Categorias_Click"/>
+                    <Button Style="{StaticResource MenuButtonStyleV2}" Content="👥  Clientes" Click="Clientes_Click"/>
+                    <Button Style="{StaticResource MenuButtonStyleV2}" Content="🧑  Empleados" Click="Empleados_Click"/>
+                    <Button Style="{StaticResource MenuButtonStyleV2}" Content="📖  Préstamos" Click="Prestamos_Click"/>
                 </StackPanel>
             </Grid>
         </Border>
@@ -160,9 +160,7 @@
                         <TextBlock Text="{Binding NombreVistaActual}" FontFamily="{StaticResource AppFont}" Foreground="#BFD8FF"/>
                     </StackPanel>
 
-                    <Button Grid.Column="1"
-                            Style="{StaticResource IconButton}"
-                            Command="{Binding CloseCommand}">
+                    <Button Grid.Column="1" Style="{StaticResource IconButton}" Click="Close_Click">
                         <TextBlock Text="✕" Foreground="White" FontSize="16"/>
                     </Button>
                 </Grid>

@@ -18,7 +18,7 @@
                 <TextBlock Text="Autores" Style="{StaticResource H1}"/>
 
                 <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
-                    <ItemsControl x:Name="AutoresCards">
+                    <ItemsControl ItemsSource="{Binding Autores}">
                         <ItemsControl.ItemsPanel>
                             <ItemsPanelTemplate>
                                 <WrapPanel/>
@@ -41,7 +41,7 @@
 
                                         <Border Width="42" Height="42" CornerRadius="999"
                                                 Background="{StaticResource BrushTeal}" VerticalAlignment="Top">
-                                            <TextBlock Text="{Binding Nombre, StringFormat={}{0:0}}"
+                                            <TextBlock Text="{Binding Nombre}"
                                                        Foreground="White" FontWeight="Bold"
                                                        HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                         </Border>
@@ -54,7 +54,9 @@
                                                    FontFamily="{StaticResource AppFont}" Foreground="#6B7280" Margin="0,4,0,0"/>
 
                                         <Button Grid.Row="2" Grid.Column="1" Content="Seleccionar"
-                                                Style="{StaticResource GhostBtn}" HorizontalAlignment="Right" Margin="0,12,0,0"
+                                                Style="{StaticResource GhostBtn}"
+                                                HorizontalAlignment="Right"
+                                                Margin="0,12,0,0"
                                                 Click="AutorSelect_Click"/>
                                     </Grid>
                                 </Border>
@@ -74,24 +76,33 @@
 
                 <StackPanel>
                     <TextBlock Text="Gestión" Style="{StaticResource H1}" FontSize="18" Margin="0,0,0,6"/>
+
                     <TextBlock Text="Nombre" Style="{StaticResource Label}"/>
-                    <TextBox x:Name="NombreTextBox" Style="{StaticResource Input}"/>
+                    <TextBox Text="{Binding Nombre, UpdateSourceTrigger=PropertyChanged}"
+                             Style="{StaticResource Input}"
+                             IsEnabled="{Binding PuedeEditar}"/>
 
                     <TextBlock Text="Nacionalidad" Style="{StaticResource Label}"/>
-                    <TextBox x:Name="NacionalidadTextBox" Style="{StaticResource Input}"/>
+                    <TextBox Text="{Binding Nacionalidad, UpdateSourceTrigger=PropertyChanged}"
+                             Style="{StaticResource Input}"
+                             IsEnabled="{Binding PuedeEditar}"/>
 
-                    <TextBlock x:Name="ErrorText" Foreground="#DC2626" Margin="0,10,0,0" FontFamily="{StaticResource AppFont}"/>
+                    <TextBlock Text="{Binding ErrorText}"
+                               Foreground="#DC2626"
+                               Margin="0,10,0,0"
+                               FontFamily="{StaticResource AppFont}"/>
                 </StackPanel>
 
                 <StackPanel Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Right">
-                    <Button Content="Añadir" Style="{StaticResource PrimaryBtn}" Click="BtnAdd_Click"/>
-                    <Button Content="Modificar" Style="{StaticResource GhostBtn}" Margin="0,10,0,0" Click="BtnUpdate_Click"/>
-                    <Button Content="Eliminar" Style="{StaticResource GhostBtn}" Margin="0,10,0,0" Click="BtnDelete_Click"/>
+                    <Button Content="Añadir" Style="{StaticResource PrimaryBtn}" Click="BtnAdd_Click"
+                            IsEnabled="{Binding PuedeEditar}"/>
+                    <Button Content="Modificar" Style="{StaticResource GhostBtn}" Margin="0,10,0,0" Click="BtnUpdate_Click"
+                            IsEnabled="{Binding PuedeEditar}"/>
+                    <Button Content="Eliminar" Style="{StaticResource GhostBtn}" Margin="0,10,0,0" Click="BtnDelete_Click"
+                            IsEnabled="{Binding PuedeEditar}"/>
                     <Button Content="Limpiar" Style="{StaticResource GhostBtn}" Margin="0,10,0,0" Click="BtnClear_Click"/>
                 </StackPanel>
             </Grid>
         </Border>
-
-        <DataGrid x:Name="AutoresGrid" Visibility="Collapsed"/>
     </Grid>
 </UserControl>

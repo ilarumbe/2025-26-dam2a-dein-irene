@@ -1,31 +1,28 @@
-﻿using P2526_Irene_Biblioteca.Services;
-using P2526_Irene_Biblioteca.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using P2526_Irene_Biblioteca.ViewModels;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace P2526_Irene_Biblioteca.Views
 {
-    /// <summary>
-    /// Lógica de interacción para MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
+        private MainWindowViewModel VM => (MainWindowViewModel)DataContext;
+
         public MainWindow()
         {
             InitializeComponent();
             DataContext = new MainWindowViewModel();
+        }
+
+        private void Autores_Click(object sender, RoutedEventArgs e) => VM.ShowAutores();
+        private void Libros_Click(object sender, RoutedEventArgs e) => VM.ShowLibros();
+        private void Categorias_Click(object sender, RoutedEventArgs e) => VM.ShowCategorias();
+        private void Clientes_Click(object sender, RoutedEventArgs e) => VM.ShowClientes();
+        private void Empleados_Click(object sender, RoutedEventArgs e) => VM.ShowEmpleados();
+        private void Prestamos_Click(object sender, RoutedEventArgs e) => VM.ShowPrestamos();
+
+        private void Close_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }

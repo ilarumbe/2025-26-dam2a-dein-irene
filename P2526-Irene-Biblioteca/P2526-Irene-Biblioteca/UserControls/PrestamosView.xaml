@@ -2,105 +2,113 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-    <UserControl.Resources>
-        <Style x:Key="TitleStyle" TargetType="TextBlock">
-            <Setter Property="FontSize" Value="22"/>
-            <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="Foreground" Value="#1A73E8"/>
-            <Setter Property="Margin" Value="0,0,0,15"/>
-        </Style>
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
-        <Style x:Key="LabelStyle" TargetType="TextBlock">
-            <Setter Property="FontSize" Value="13"/>
-            <Setter Property="Margin" Value="0,10,0,5"/>
-        </Style>
+        <Border Style="{StaticResource Card}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1.4*"/>
+                    <ColumnDefinition Width="1.4*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
 
-        <Style x:Key="PrimaryButtonStyle" TargetType="Button">
-            <Setter Property="Height" Value="32"/>
-            <Setter Property="Width" Value="90"/>
-            <Setter Property="Background" Value="#1A73E8"/>
-            <Setter Property="Foreground" Value="White"/>
-            <Setter Property="BorderThickness" Value="0"/>
-        </Style>
+                <StackPanel Grid.Column="0" Margin="0,0,14,0">
+                    <TextBlock Text="Préstamos" Style="{StaticResource H1}"/>
 
-        <Style x:Key="SecondaryButtonStyle" TargetType="Button">
-            <Setter Property="Height" Value="32"/>
-            <Setter Property="Width" Value="90"/>
-            <Setter Property="Background" Value="#E0E0E0"/>
-            <Setter Property="BorderThickness" Value="0"/>
-        </Style>
-    </UserControl.Resources>
+                    <TextBlock Text="Libro" Style="{StaticResource Label}"/>
+                    <ComboBox Style="{StaticResource Combo}"
+                              ItemsSource="{Binding Libros}"
+                              DisplayMemberPath="Titulo"
+                              SelectedValuePath="IdLibro"
+                              SelectedValue="{Binding LibroId}"
+                              IsEnabled="{Binding PuedeEditar}"/>
 
-    <Grid Margin="20">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2.5*"/>
-            <ColumnDefinition Width="3.5*"/>
-        </Grid.ColumnDefinitions>
+                    <TextBlock Text="Cliente" Style="{StaticResource Label}"/>
+                    <ComboBox Style="{StaticResource Combo}"
+                              ItemsSource="{Binding Clientes}"
+                              DisplayMemberPath="Nombre"
+                              SelectedValuePath="IdCliente"
+                              SelectedValue="{Binding ClienteId}"
+                              IsEnabled="{Binding PuedeEditar}"/>
 
-        <StackPanel Grid.Column="0">
-            <TextBlock Text="Préstamos" Style="{StaticResource TitleStyle}"/>
-
-            <DataGrid x:Name="PrestamosGrid"
-                      AutoGenerateColumns="False"
-                      Height="350"
-                      SelectionChanged="PrestamosGrid_SelectionChanged">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="ID" Binding="{Binding IdPrestamo}" Width="60"/>
-                    <DataGridTextColumn Header="Libro" Binding="{Binding IdLibro}" Width="70"/>
-                    <DataGridTextColumn Header="Cliente" Binding="{Binding IdCliente}" Width="70"/>
-                    <DataGridTextColumn Header="Empleado" Binding="{Binding IdEmpleado}" Width="80"/>
-                    <DataGridTextColumn Header="F. Préstamo" Binding="{Binding FechaPrestamo}" Width="120"/>
-                    <DataGridTextColumn Header="F. Devolución" Binding="{Binding FechaDevolucion}" Width="120"/>
-                    <DataGridCheckBoxColumn Header="Devuelto" Binding="{Binding Devuelto}" Width="80"/>
-                </DataGrid.Columns>
-            </DataGrid>
-        </StackPanel>
-
-        <Border Grid.Column="1"
-                Margin="20,0,0,0"
-                Padding="20"
-                Background="#F7F9FC"
-                CornerRadius="12">
-            <StackPanel>
-                <TextBlock Text="Gestión" Style="{StaticResource TitleStyle}"/>
-
-                <TextBlock Text="Libro" Style="{StaticResource LabelStyle}"/>
-                <ComboBox x:Name="LibrosCombo"
-                          DisplayMemberPath="Titulo"
-                          SelectedValuePath="IdLibro"
-                          Height="32"/>
-
-                <TextBlock Text="Cliente" Style="{StaticResource LabelStyle}"/>
-                <ComboBox x:Name="ClientesCombo"
-                          DisplayMemberPath="Nombre"
-                          SelectedValuePath="IdCliente"
-                          Height="32"/>
-
-                <TextBlock Text="Empleado" Style="{StaticResource LabelStyle}"/>
-                <ComboBox x:Name="EmpleadosCombo"
-                          DisplayMemberPath="Nombre"
-                          SelectedValuePath="IdEmpleado"
-                          Height="32"/>
-
-                <TextBlock Text="Fecha préstamo" Style="{StaticResource LabelStyle}"/>
-                <DatePicker x:Name="FechaPrestamoPicker" Height="32"/>
-
-                <TextBlock Text="Fecha devolución (opcional)" Style="{StaticResource LabelStyle}"/>
-                <DatePicker x:Name="FechaDevolucionPicker" Height="32"/>
-
-                <CheckBox x:Name="DevueltoCheck" Content="Devuelto" Margin="0,10,0,0"/>
-
-                <TextBlock x:Name="ErrorText" Foreground="Red" Margin="0,10,0,0"/>
-
-                <StackPanel Orientation="Horizontal"
-                            HorizontalAlignment="Right"
-                            Margin="0,20,0,0">
-                    <Button Content="Añadir" Style="{StaticResource PrimaryButtonStyle}" Click="BtnAdd_Click"/>
-                    <Button Content="Modificar" Style="{StaticResource SecondaryButtonStyle}" Margin="10,0,0,0" Click="BtnUpdate_Click"/>
-                    <Button Content="Eliminar" Style="{StaticResource SecondaryButtonStyle}" Margin="10,0,0,0" Click="BtnDelete_Click"/>
-                    <Button Content="Limpiar" Style="{StaticResource SecondaryButtonStyle}" Margin="10,0,0,0" Click="BtnClear_Click"/>
+                    <CheckBox Content="Devuelto"
+                              FontFamily="{StaticResource AppFont}"
+                              Margin="0,12,0,0"
+                              IsChecked="{Binding Devuelto}"
+                              IsEnabled="{Binding PuedeEditar}"/>
                 </StackPanel>
-            </StackPanel>
+
+                <StackPanel Grid.Column="1">
+                    <TextBlock Text="Empleado" Style="{StaticResource Label}"/>
+                    <ComboBox Style="{StaticResource Combo}"
+                              ItemsSource="{Binding Empleados}"
+                              DisplayMemberPath="Nombre"
+                              SelectedValuePath="IdEmpleado"
+                              SelectedValue="{Binding EmpleadoId}"
+                              IsEnabled="{Binding PuedeEditar}"/>
+
+                    <TextBlock Text="Fecha préstamo" Style="{StaticResource Label}"/>
+                    <DatePicker Height="38"
+                                SelectedDate="{Binding FechaPrestamo}"
+                                IsEnabled="{Binding PuedeEditar}"/>
+
+                    <TextBlock Text="Fecha devolución (opcional)" Style="{StaticResource Label}"/>
+                    <DatePicker Height="38"
+                                SelectedDate="{Binding FechaDevolucion}"
+                                IsEnabled="{Binding PuedeEditar}"/>
+
+                    <TextBlock Text="{Binding ErrorText}"
+                               Foreground="#DC2626"
+                               Margin="0,10,0,0"
+                               FontFamily="{StaticResource AppFont}"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="2" VerticalAlignment="Bottom" Margin="14,0,0,0">
+                    <Button Content="Añadir" Style="{StaticResource PrimaryBtn}" Click="BtnAdd_Click"
+                            IsEnabled="{Binding PuedeEditar}"/>
+                    <Button Content="Modificar" Style="{StaticResource GhostBtn}" Margin="0,10,0,0" Click="BtnUpdate_Click"
+                            IsEnabled="{Binding PuedeEditar}"/>
+                    <Button Content="Eliminar" Style="{StaticResource GhostBtn}" Margin="0,10,0,0" Click="BtnDelete_Click"
+                            IsEnabled="{Binding PuedeEditar}"/>
+                    <Button Content="Limpiar" Style="{StaticResource GhostBtn}" Margin="0,10,0,0" Click="BtnClear_Click"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <Border Grid.Row="1" Style="{StaticResource Card}" Margin="0,12,0,0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="Histórico"
+                           FontFamily="{StaticResource AppFont}"
+                           FontSize="16"
+                           FontWeight="Bold"
+                           Foreground="#111827"/>
+
+                <DataGrid Grid.Row="1"
+                          ItemsSource="{Binding Prestamos}"
+                          SelectedItem="{Binding PrestamoSeleccionado}"
+                          AutoGenerateColumns="False"
+                          Margin="0,10,0,0"
+                          RowHeight="36">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID" Binding="{Binding IdPrestamo}" Width="70"/>
+                        <DataGridTextColumn Header="Libro" Binding="{Binding IdLibro}" Width="90"/>
+                        <DataGridTextColumn Header="Cliente" Binding="{Binding IdCliente}" Width="90"/>
+                        <DataGridTextColumn Header="Empleado" Binding="{Binding IdEmpleado}" Width="90"/>
+                        <DataGridTextColumn Header="F. Préstamo" Binding="{Binding FechaPrestamo}" Width="140"/>
+                        <DataGridTextColumn Header="F. Devolución" Binding="{Binding FechaDevolucion}" Width="150"/>
+                        <DataGridCheckBoxColumn Header="Devuelto" Binding="{Binding Devuelto}" Width="90"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
         </Border>
     </Grid>
 </UserControl>
