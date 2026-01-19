@@ -5,6 +5,7 @@
         WindowState="Maximized"
         WindowStyle="None"
         ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
         Background="#0B1220">
 
     <Window.Resources>

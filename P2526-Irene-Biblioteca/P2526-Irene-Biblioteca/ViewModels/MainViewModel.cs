@@ -1,4 +1,6 @@
-﻿using P2526_Irene_Biblioteca.UserControls;
+﻿using P2526_Irene_Biblioteca.Helpers;
+using P2526_Irene_Biblioteca.Services;
+using P2526_Irene_Biblioteca.UserControls;
 
 namespace P2526_Irene_Biblioteca.ViewModels
 {
@@ -15,6 +17,9 @@ namespace P2526_Irene_Biblioteca.ViewModels
                 OnPropertyChanged(nameof(NombreVistaActual));
             }
         }
+
+        public bool EsEmpleado => SesionActual.EsEmpleado;
+        public bool PuedeVerPrestamos => true;
 
         public string NombreVistaActual
         {
@@ -37,14 +42,45 @@ namespace P2526_Irene_Biblioteca.ViewModels
 
         public MainWindowViewModel()
         {
-            ShowAutores();
+            if (SesionActual.EsEmpleado)
+                ShowAutores();
+            else
+                ShowPrestamos();
         }
 
-        public void ShowAutores() => CurrentView = new AutoresView();
-        public void ShowLibros() => CurrentView = new LibrosView();
-        public void ShowCategorias() => CurrentView = new CategoriasView();
-        public void ShowClientes() => CurrentView = new ClientesView();
-        public void ShowEmpleados() => CurrentView = new EmpleadosView();
-        public void ShowPrestamos() => CurrentView = new PrestamosView();
+        public void ShowAutores()
+        {
+            if (!SesionActual.EsEmpleado) return;
+            CurrentView = new AutoresView();
+        }
+
+        public void ShowLibros()
+        {
+            if (!SesionActual.EsEmpleado) return;
+            CurrentView = new LibrosView();
+        }
+
+        public void ShowCategorias()
+        {
+            if (!SesionActual.EsEmpleado) return;
+            CurrentView = new CategoriasView();
+        }
+
+        public void ShowClientes()
+        {
+            if (!SesionActual.EsEmpleado) return;
+            CurrentView = new ClientesView();
+        }
+
+        public void ShowEmpleados()
+        {
+            if (!SesionActual.EsEmpleado) return;
+            CurrentView = new EmpleadosView();
+        }
+
+        public void ShowPrestamos()
+        {
+            CurrentView = new PrestamosView();
+        }
     }
 }

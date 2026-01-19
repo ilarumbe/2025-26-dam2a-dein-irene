@@ -1,8 +1,10 @@
-﻿using P2526_Irene_Biblioteca.Models;
+﻿using P2526_Irene_Biblioteca.Helpers;
+using P2526_Irene_Biblioteca.Models;
 using P2526_Irene_Biblioteca.Repositories;
 using P2526_Irene_Biblioteca.Services;
 using System;
 using System.Collections.ObjectModel;
+using System.Linq;
 
 namespace P2526_Irene_Biblioteca.ViewModels
 {
@@ -18,6 +20,22 @@ namespace P2526_Irene_Biblioteca.ViewModels
         public ObservableCollection<Libro> Libros { get; } = new ObservableCollection<Libro>();
         public ObservableCollection<Cliente> Clientes { get; } = new ObservableCollection<Cliente>();
         public ObservableCollection<Empleado> Empleados { get; } = new ObservableCollection<Empleado>();
+
+        private int? clienteActualId;
+
+        public bool EsEmpleado => SesionActual.EsEmpleado;
+
+        public bool PuedeEditar
+        {
+            get
+            {
+                if (EsEmpleado) return true;
+                return clienteActualId.HasValue;
+            }
+        }
+
+        public bool PuedeElegirCliente => EsEmpleado;
+        public bool PuedeElegirEmpleado => EsEmpleado;
 
         private Prestamo prestamoSeleccionado;
         public Prestamo PrestamoSeleccionado
@@ -80,12 +98,26 @@ namespace P2526_Irene_Biblioteca.ViewModels
             set { mensaje = value; OnPropertyChanged(); }
         }
 
-        public bool PuedeEditar => service.PuedeEditar();
-
         public PrestamosViewModel()
         {
+            if (!EsEmpleado)
+            {
+                var cli = repoClientes.GetAll().FirstOrDefault(c => c.Usuario == SesionActual.Usuario);
+                clienteActualId = cli?.IdCliente;
+            }
+
             CargarCombos();
             CargarPrestamos();
+
+            if (!EsEmpleado)
+            {
+                ClienteId = clienteActualId;
+                FechaPrestamo = DateTime.Today;
+
+                if (Empleados.Count > 0 && !EmpleadoId.HasValue)
+                    EmpleadoId = Empleados[0].IdEmpleado;
+            }
+
             Mensaje = "Selecciona un préstamo o crea uno nuevo.";
         }
 
@@ -96,8 +128,18 @@ namespace P2526_Irene_Biblioteca.ViewModels
                 Libros.Add(l);
 
             Clientes.Clear();
-            foreach (var c in repoClientes.GetAll())
-                Clientes.Add(c);
+            var clientesDb = repoClientes.GetAll();
+
+            if (EsEmpleado)
+            {
+                foreach (var c in clientesDb)
+                    Clientes.Add(c);
+            }
+            else
+            {
+                var propio = clientesDb.FirstOrDefault(c => c.IdCliente == clienteActualId);
+                if (propio != null) Clientes.Add(propio);
+            }
 
             Empleados.Clear();
             foreach (var e in repoEmpleados.GetAll())
@@ -107,13 +149,32 @@ namespace P2526_Irene_Biblioteca.ViewModels
         public void CargarPrestamos()
         {
             Prestamos.Clear();
-            foreach (var p in repoPrestamos.GetAll())
-                Prestamos.Add(p);
+            var lista = repoPrestamos.GetAll();
+
+            if (EsEmpleado)
+            {
+                foreach (var p in lista)
+                    Prestamos.Add(p);
+            }
+            else
+            {
+                if (!clienteActualId.HasValue) return;
+
+                foreach (var p in lista.Where(x => x.IdCliente == clienteActualId.Value))
+                    Prestamos.Add(p);
+            }
         }
 
         private void CargarDesdeSeleccion()
         {
             if (PrestamoSeleccionado == null) return;
+
+            if (!EsEmpleado && clienteActualId.HasValue && PrestamoSeleccionado.IdCliente != clienteActualId.Value)
+            {
+                Mensaje = "No tienes permiso para gestionar este préstamo.";
+                Limpiar();
+                return;
+            }
 
             LibroId = PrestamoSeleccionado.IdLibro;
             ClienteId = PrestamoSeleccionado.IdCliente;
@@ -131,10 +192,10 @@ namespace P2526_Irene_Biblioteca.ViewModels
             PrestamoSeleccionado = null;
 
             LibroId = null;
-            ClienteId = null;
-            EmpleadoId = null;
+            ClienteId = EsEmpleado ? (int?)null : clienteActualId;
+            EmpleadoId = EsEmpleado ? (int?)null : (Empleados.Count > 0 ? Empleados[0].IdEmpleado : (int?)null);
 
-            FechaPrestamo = null;
+            FechaPrestamo = EsEmpleado ? (DateTime?)null : DateTime.Today;
             FechaDevolucion = null;
 
             Devuelto = false;
@@ -166,6 +227,21 @@ namespace P2526_Irene_Biblioteca.ViewModels
 
         public void Add()
         {
+            if (!PuedeEditar)
+            {
+                Mensaje = "No tienes permisos para crear préstamos.";
+                return;
+            }
+
+            if (!EsEmpleado)
+            {
+                ClienteId = clienteActualId;
+                if (Empleados.Count > 0 && !EmpleadoId.HasValue)
+                    EmpleadoId = Empleados[0].IdEmpleado;
+                if (!FechaPrestamo.HasValue)
+                    FechaPrestamo = DateTime.Today;
+            }
+
             DateTime fp = FechaPrestamo ?? default(DateTime);
             if (!service.ValidarAlta(GetLibroObj(), GetClienteObj(), GetEmpleadoObj(), fp, out string error))
             {
@@ -202,10 +278,29 @@ namespace P2526_Irene_Biblioteca.ViewModels
 
         public void Update()
         {
+            if (!PuedeEditar)
+            {
+                Mensaje = "No tienes permisos para modificar préstamos.";
+                return;
+            }
+
             if (PrestamoSeleccionado == null)
             {
                 Mensaje = "Selecciona un préstamo.";
                 return;
+            }
+
+            if (!EsEmpleado && clienteActualId.HasValue && PrestamoSeleccionado.IdCliente != clienteActualId.Value)
+            {
+                Mensaje = "No tienes permiso para modificar este préstamo.";
+                return;
+            }
+
+            if (!EsEmpleado)
+            {
+                ClienteId = clienteActualId;
+                if (Empleados.Count > 0 && !EmpleadoId.HasValue)
+                    EmpleadoId = Empleados[0].IdEmpleado;
             }
 
             int oldLibro = PrestamoSeleccionado.IdLibro;
@@ -257,9 +352,21 @@ namespace P2526_Irene_Biblioteca.ViewModels
 
         public void Delete()
         {
+            if (!PuedeEditar)
+            {
+                Mensaje = "No tienes permisos para eliminar préstamos.";
+                return;
+            }
+
             if (PrestamoSeleccionado == null)
             {
                 Mensaje = "Selecciona un préstamo.";
+                return;
+            }
+
+            if (!EsEmpleado && clienteActualId.HasValue && PrestamoSeleccionado.IdCliente != clienteActualId.Value)
+            {
+                Mensaje = "No tienes permiso para eliminar este préstamo.";
                 return;
             }
 

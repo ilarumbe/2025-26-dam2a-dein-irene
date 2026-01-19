@@ -5,6 +5,7 @@
         WindowState="Maximized"
         WindowStyle="None"
         ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
         Background="#0B1220">
 
     <Window.Resources>
@@ -84,12 +85,19 @@
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
+
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
                     <Setter Property="Background" Value="#1FFFFFFF"/>
                 </Trigger>
                 <Trigger Property="IsPressed" Value="True">
                     <Setter Property="Background" Value="#2AFFFFFF"/>
+                </Trigger>
+
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Foreground" Value="#88EAF2FF"/>
+                    <Setter Property="Cursor" Value="Arrow"/>
+                    <Setter Property="Background" Value="#11FFFFFF"/>
                 </Trigger>
             </Style.Triggers>
         </Style>
@@ -118,12 +126,6 @@
             </Border.Background>
 
             <Grid Margin="18">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
-
                 <StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="0,6,0,16">
                         <TextBlock Text="📚" FontSize="22" Margin="0,0,10,0" Foreground="White"/>
@@ -132,12 +134,19 @@
 
                     <TextBlock Text="Menú" Style="{StaticResource SideTitle}"/>
 
-                    <Button Style="{StaticResource MenuButtonStyleV2}" Content="🏷  Autores" Click="Autores_Click"/>
-                    <Button Style="{StaticResource MenuButtonStyleV2}" Content="📚  Libros" Click="Libros_Click"/>
-                    <Button Style="{StaticResource MenuButtonStyleV2}" Content="🗂  Categorías" Click="Categorias_Click"/>
-                    <Button Style="{StaticResource MenuButtonStyleV2}" Content="👥  Clientes" Click="Clientes_Click"/>
-                    <Button Style="{StaticResource MenuButtonStyleV2}" Content="🧑  Empleados" Click="Empleados_Click"/>
-                    <Button Style="{StaticResource MenuButtonStyleV2}" Content="📖  Préstamos" Click="Prestamos_Click"/>
+                    <Button Style="{StaticResource MenuButtonStyleV2}" Content="🏷  Autores" Click="Autores_Click"
+                            IsEnabled="{Binding EsEmpleado}"/>
+                    <Button Style="{StaticResource MenuButtonStyleV2}" Content="📚  Libros" Click="Libros_Click"
+                            IsEnabled="{Binding EsEmpleado}"/>
+                    <Button Style="{StaticResource MenuButtonStyleV2}" Content="🗂  Categorías" Click="Categorias_Click"
+                            IsEnabled="{Binding EsEmpleado}"/>
+                    <Button Style="{StaticResource MenuButtonStyleV2}" Content="👥  Clientes" Click="Clientes_Click"
+                            IsEnabled="{Binding EsEmpleado}"/>
+                    <Button Style="{StaticResource MenuButtonStyleV2}" Content="🧑  Empleados" Click="Empleados_Click"
+                            IsEnabled="{Binding EsEmpleado}"/>
+
+                    <Button Style="{StaticResource MenuButtonStyleV2}" Content="📖  Préstamos" Click="Prestamos_Click"
+                            IsEnabled="{Binding PuedeVerPrestamos}"/>
                 </StackPanel>
             </Grid>
         </Border>
@@ -158,7 +167,7 @@
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                         <TextBlock Text="Panel de gestión" FontFamily="{StaticResource AppFont}" Foreground="#EAF2FF" FontSize="16" FontWeight="SemiBold"/>
                         <TextBlock Text="   ·   " Foreground="#66FFFFFF" Margin="0,0"/>
-                        <TextBlock Text="{Binding NombreVistaActual}" FontFamily="{StaticResource AppFont}" Foreground="#BFD8FF" VerticalAlignment="Center" Cursor=""/>
+                        <TextBlock Text="{Binding NombreVistaActual}" FontFamily="{StaticResource AppFont}" Foreground="#BFD8FF" VerticalAlignment="Center"/>
                     </StackPanel>
 
                     <Button Grid.Column="1" Style="{StaticResource IconButton}" Click="Close_Click">

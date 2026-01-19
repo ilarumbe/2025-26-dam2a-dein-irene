@@ -105,7 +105,7 @@
                                   DisplayMemberPath="Nombre"
                                   SelectedValuePath="IdCliente"
                                   SelectedValue="{Binding ClienteId}"
-                                  IsEnabled="{Binding PuedeEditar}"/>
+                                  IsEnabled="{Binding PuedeElegirCliente}"/>
 
                         <CheckBox Margin="0,8,0,0"
                                   FontFamily="{StaticResource AppFont}"
@@ -121,7 +121,7 @@
                                   DisplayMemberPath="Nombre"
                                   SelectedValuePath="IdEmpleado"
                                   SelectedValue="{Binding EmpleadoId}"
-                                  IsEnabled="{Binding PuedeEditar}"/>
+                                  IsEnabled="{Binding PuedeElegirEmpleado}"/>
 
                         <TextBlock Text="Fecha préstamo" Style="{StaticResource Label}"/>
                         <DatePicker Height="38"
