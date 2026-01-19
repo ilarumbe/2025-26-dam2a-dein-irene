@@ -41,11 +41,11 @@
 
                     <Style x:Key="Input" TargetType="TextBox">
                         <Setter Property="FontFamily" Value="{StaticResource AppFont}"/>
-                        <Setter Property="Height" Value="38"/>
-                        <Setter Property="Padding" Value="10,0"/>
+                        <Setter Property="Height" Value="30"/>
                         <Setter Property="BorderBrush" Value="#D7E6FF"/>
                         <Setter Property="BorderThickness" Value="1"/>
                         <Setter Property="Background" Value="White"/>
+                        <Setter Property="VerticalContentAlignment" Value="Center"/>
                     </Style>
 
                     <Style x:Key="Combo" TargetType="ComboBox">

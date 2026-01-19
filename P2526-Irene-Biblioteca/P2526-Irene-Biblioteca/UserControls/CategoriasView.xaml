@@ -27,25 +27,51 @@
 
                         <ItemsControl.ItemTemplate>
                             <DataTemplate>
-                                <Border CornerRadius="999" Background="#E8F0FE" Margin="8" Padding="12,8">
-                                    <StackPanel Orientation="Horizontal">
-                                        <TextBlock Text="{Binding Nombre}"
-                                                   FontFamily="{StaticResource AppFont}"
-                                                   FontWeight="SemiBold"
-                                                   Foreground="{StaticResource BrushBlueDark}" />
+                                <Button Click="CategoriaSelect_Click"
+                                        Width="160"
+                                        Height="160"
+                                        Margin="10"
+                                        Background="Transparent"
+                                        BorderThickness="0"
+                                        Cursor="Hand">
 
-                                        <Button Content="✎"
-                                                Width="34" Height="30"
-                                                Margin="10,0,0,0"
-                                                Background="Transparent"
-                                                BorderThickness="0"
-                                                Cursor="Hand"
-                                                Foreground="{StaticResource BrushBlueDark}"
-                                                Click="CategoriaSelect_Click"/>
-                                    </StackPanel>
-                                </Border>
+                                    <Border Background="#E8F0FE"
+                                            CornerRadius="18"
+                                            Padding="14">
+
+                                        <Border.Effect>
+                                            <DropShadowEffect BlurRadius="14"
+                                      ShadowDepth="2"
+                                      Opacity="0.12"/>
+                                        </Border.Effect>
+
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*"/>
+                                                <RowDefinition Height="Auto"/>
+                                            </Grid.RowDefinitions>
+
+                                            <TextBlock Text="🏷"
+                               FontSize="26"
+                               Foreground="{StaticResource BrushBlueDark}"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center" Cursor=""/>
+
+                                            <TextBlock Grid.Row="1"
+                               Text="{Binding Nombre}"
+                               FontFamily="{StaticResource AppFont}"
+                               FontSize="16"
+                               FontWeight="SemiBold"
+                               Foreground="{StaticResource BrushBlueDark}"
+                               HorizontalAlignment="Center"
+                               TextAlignment="Center"
+                               Margin="0,10,0,0"/>
+                                        </Grid>
+                                    </Border>
+                                </Button>
                             </DataTemplate>
                         </ItemsControl.ItemTemplate>
+
                     </ItemsControl>
                 </ScrollViewer>
             </Grid>
@@ -65,7 +91,7 @@
                            Margin="0,10,0,0"
                            FontFamily="{StaticResource AppFont}"/>
 
-                <WrapPanel HorizontalAlignment="Right" Margin="0,14,0,0">
+                <WrapPanel HorizontalAlignment="Center" Margin="0,14,0,0">
                     <Button Content="Añadir" Style="{StaticResource PrimaryBtn}" Click="BtnAdd_Click"
                             IsEnabled="{Binding PuedeEditar}"/>
                     <Button Content="Modificar" Style="{StaticResource GhostBtn}" Margin="10,0,0,0" Click="BtnUpdate_Click"

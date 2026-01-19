@@ -52,5 +52,10 @@ namespace P2526_Irene_Biblioteca.UserControls
         {
             VM.Limpiar();
         }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

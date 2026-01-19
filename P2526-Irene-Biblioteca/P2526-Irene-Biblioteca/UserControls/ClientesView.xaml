@@ -4,8 +4,8 @@
 
     <Grid Margin="10">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="3.2*"/>
-            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2.2*"/>
+            <ColumnDefinition Width="2.8*"/>
         </Grid.ColumnDefinitions>
 
         <Border Style="{StaticResource Card}">
@@ -15,35 +15,35 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                    <TextBlock Text="Clientes" Style="{StaticResource H1}" Margin="0,0,12,0"/>
-                    <Border CornerRadius="999" Background="#E8F0FE" Padding="10,4" VerticalAlignment="Center">
-                        <TextBlock Text="Tip: selecciona un cliente para editar"
-                                   FontFamily="{StaticResource AppFont}"
-                                   Foreground="{StaticResource BrushBlueDark}"
-                                   FontSize="12"/>
-                    </Border>
-                </StackPanel>
+                <TextBlock Text="Clientes" Style="{StaticResource H1}"/>
 
-                <DataGrid Grid.Row="1"
-                          ItemsSource="{Binding Clientes}"
-                          SelectedItem="{Binding ClienteSeleccionado}"
-                          AutoGenerateColumns="False"
-                          Margin="0,10,0,0"
-                          HeadersVisibility="Column"
-                          RowHeight="36">
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Header="ID" Binding="{Binding IdCliente}" Width="70"/>
-                        <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" Width="*"/>
-                        <DataGridTextColumn Header="Usuario" Binding="{Binding Usuario}" Width="*"/>
-                    </DataGrid.Columns>
-                </DataGrid>
+                <ListBox Grid.Row="1"
+                         Margin="0,10,0,0"
+                         ItemsSource="{Binding Clientes}"
+                         SelectedItem="{Binding ClienteSeleccionado}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Border CornerRadius="14" Background="#F7FAFF" Padding="12" Margin="0,6">
+                                <StackPanel>
+                                    <TextBlock Text="{Binding Nombre}"
+                                               FontFamily="{StaticResource AppFont}"
+                                               FontWeight="Bold"
+                                               Foreground="#111827"/>
+                                    <TextBlock Text="{Binding Usuario}"
+                                               FontFamily="{StaticResource AppFont}"
+                                               Foreground="#6B7280"
+                                               Margin="0,4,0,0"/>
+                                </StackPanel>
+                            </Border>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
             </Grid>
         </Border>
 
-        <Border Grid.Column="1" Style="{StaticResource Card}" Margin="12,0,0,0" Background="#F7FAFF">
+        <Border Grid.Column="1" Style="{StaticResource Card}" Margin="12,0,0,0">
             <StackPanel>
-                <TextBlock Text="Panel de edición" Style="{StaticResource H1}" FontSize="18"/>
+                <TextBlock Text="Gestión de clientes" Style="{StaticResource H1}" FontSize="18"/>
 
                 <TextBlock Text="Nombre" Style="{StaticResource Label}"/>
                 <TextBox Text="{Binding Nombre, UpdateSourceTrigger=PropertyChanged}"
@@ -57,8 +57,9 @@
 
                 <TextBlock Text="Contraseña (solo si quieres cambiarla)" Style="{StaticResource Label}"/>
                 <PasswordBox x:Name="PasswordBox"
-                             Height="38"
+                             Height="30"
                              Padding="10,0"
+                             VerticalContentAlignment="Center"
                              IsEnabled="{Binding PuedeEditar}"
                              PasswordChanged="PasswordBox_PasswordChanged"/>
 
@@ -67,7 +68,7 @@
                            Margin="0,10,0,0"
                            FontFamily="{StaticResource AppFont}"/>
 
-                <WrapPanel HorizontalAlignment="Right" Margin="0,14,0,0">
+                <WrapPanel HorizontalAlignment="Center" Margin="0,14,0,0">
                     <Button Content="Añadir" Style="{StaticResource PrimaryBtn}" Click="BtnAdd_Click"
                             IsEnabled="{Binding PuedeEditar}"/>
                     <Button Content="Modificar" Style="{StaticResource GhostBtn}" Margin="10,0,0,0" Click="BtnUpdate_Click"

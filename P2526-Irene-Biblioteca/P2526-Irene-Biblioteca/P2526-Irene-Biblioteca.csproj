@@ -227,6 +227,7 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\biblioteca.png" />
+    <Resource Include="Images\libro.jpg" />
     <Content Include="SQL\Irene.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

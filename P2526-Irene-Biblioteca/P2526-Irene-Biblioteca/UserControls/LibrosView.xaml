@@ -21,6 +21,7 @@
             <Setter Property="BorderBrush" Value="#D7E6FF"/>
             <Setter Property="BorderThickness" Value="1"/>
             <Setter Property="Background" Value="White"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
         </Style>
 
         <Style x:Key="CardBorder" TargetType="Border">
@@ -71,78 +72,6 @@
             <Setter Property="Margin" Value="0,0,0,10"/>
         </Style>
 
-        <Style x:Key="Label" TargetType="TextBlock">
-            <Setter Property="FontFamily" Value="{StaticResource Font}"/>
-            <Setter Property="FontSize" Value="13"/>
-            <Setter Property="Foreground" Value="#374151"/>
-            <Setter Property="Margin" Value="0,10,0,6"/>
-        </Style>
-
-        <Style x:Key="Input" TargetType="TextBox">
-            <Setter Property="FontFamily" Value="{StaticResource Font}"/>
-            <Setter Property="Height" Value="38"/>
-            <Setter Property="Padding" Value="10,0"/>
-            <Setter Property="BorderBrush" Value="#D7E6FF"/>
-            <Setter Property="BorderThickness" Value="1"/>
-            <Setter Property="Background" Value="White"/>
-        </Style>
-
-        <Style x:Key="Combo" TargetType="ComboBox">
-            <Setter Property="FontFamily" Value="{StaticResource Font}"/>
-            <Setter Property="Height" Value="38"/>
-            <Setter Property="Padding" Value="8,0"/>
-        </Style>
-
-        <Style x:Key="PrimaryBtn" TargetType="Button">
-            <Setter Property="Height" Value="38"/>
-            <Setter Property="MinWidth" Value="110"/>
-            <Setter Property="Background" Value="#1A73E8"/>
-            <Setter Property="Foreground" Value="White"/>
-            <Setter Property="BorderThickness" Value="0"/>
-            <Setter Property="FontFamily" Value="{StaticResource Font}"/>
-            <Setter Property="FontWeight" Value="SemiBold"/>
-            <Setter Property="Cursor" Value="Hand"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="Button">
-                        <Border CornerRadius="12" Background="{TemplateBinding Background}">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        </Border>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-            <Style.Triggers>
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="#0F4FB5"/>
-                </Trigger>
-            </Style.Triggers>
-        </Style>
-
-        <Style x:Key="GhostBtn" TargetType="Button">
-            <Setter Property="Height" Value="38"/>
-            <Setter Property="MinWidth" Value="110"/>
-            <Setter Property="Background" Value="#EEF2FF"/>
-            <Setter Property="Foreground" Value="#0F4FB5"/>
-            <Setter Property="BorderThickness" Value="0"/>
-            <Setter Property="FontFamily" Value="{StaticResource Font}"/>
-            <Setter Property="FontWeight" Value="SemiBold"/>
-            <Setter Property="Cursor" Value="Hand"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="Button">
-                        <Border CornerRadius="12" Background="{TemplateBinding Background}">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        </Border>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-            <Style.Triggers>
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="#E8F0FE"/>
-                </Trigger>
-            </Style.Triggers>
-        </Style>
-
     </UserControl.Resources>
 
     <Grid Margin="10">
@@ -188,7 +117,7 @@
 
                                     <Border CornerRadius="14" Background="#F3F6FB" ClipToBounds="True">
                                         <Image Stretch="UniformToFill"
-                                               Source="pack://application:,,,/Images/book_placeholder.png"/>
+                                               Source="pack://application:,,,/Images/libro.jpg"/>
                                     </Border>
 
                                     <TextBlock Grid.Row="1" Text="{Binding Titulo}" Style="{StaticResource CardTitle}" Margin="0,10,0,0"/>
@@ -258,7 +187,7 @@
                            Margin="0,10,0,0"
                            FontFamily="{StaticResource Font}"/>
 
-                <WrapPanel HorizontalAlignment="Right" Margin="0,16,0,0">
+                <WrapPanel HorizontalAlignment="Center" Margin="0,16,0,0">
                     <Button Content="Añadir" Style="{StaticResource PrimaryBtn}" Click="BtnAdd_Click"
                             IsEnabled="{Binding PuedeEditar}"/>
                     <Button Content="Modificar" Style="{StaticResource GhostBtn}" Margin="10,0,0,0" Click="BtnUpdate_Click"
