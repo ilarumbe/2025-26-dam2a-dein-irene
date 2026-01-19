@@ -31,11 +31,11 @@ namespace P2526_Irene_Biblioteca.ViewModels
             set { nombre = value; OnPropertyChanged(); }
         }
 
-        private string errorText;
-        public string ErrorText
+        private string mensaje;
+        public string Mensaje
         {
-            get => errorText;
-            set { errorText = value; OnPropertyChanged(); }
+            get => mensaje;
+            set { mensaje = value; OnPropertyChanged(); }
         }
 
         public bool PuedeEditar => service.PuedeEditar();
@@ -43,6 +43,7 @@ namespace P2526_Irene_Biblioteca.ViewModels
         public CategoriasViewModel()
         {
             Cargar();
+            Mensaje = "Selecciona una categoría o crea una nueva.";
         }
 
         public void Cargar()
@@ -50,8 +51,6 @@ namespace P2526_Irene_Biblioteca.ViewModels
             Categorias.Clear();
             foreach (var c in repo.GetAll())
                 Categorias.Add(c);
-
-            ErrorText = "";
         }
 
         private void CargarDesdeSeleccion()
@@ -59,23 +58,20 @@ namespace P2526_Irene_Biblioteca.ViewModels
             if (CategoriaSeleccionada == null) return;
 
             Nombre = CategoriaSeleccionada.Nombre;
-            ErrorText = "";
+            Mensaje = "Editando categoría seleccionada.";
         }
 
         public void Limpiar()
         {
             CategoriaSeleccionada = null;
             Nombre = "";
-            ErrorText = "";
         }
 
         public void Add()
         {
-            ErrorText = "";
-
             if (!service.ValidarAlta(Nombre, out string error))
             {
-                ErrorText = error;
+                Mensaje = error;
                 return;
             }
 
@@ -84,41 +80,52 @@ namespace P2526_Irene_Biblioteca.ViewModels
                 Nombre = Nombre.Trim()
             });
 
+            Mensaje = "Categoría añadida correctamente.";
             Limpiar();
             Cargar();
         }
 
         public void Update()
         {
-            ErrorText = "";
+            if (CategoriaSeleccionada == null)
+            {
+                Mensaje = "Selecciona una categoría.";
+                return;
+            }
 
-            int? id = CategoriaSeleccionada?.IdCategoria;
+            int? id = CategoriaSeleccionada.IdCategoria;
             if (!service.ValidarModificacion(id, Nombre, out string error))
             {
-                ErrorText = error;
+                Mensaje = error;
                 return;
             }
 
             CategoriaSeleccionada.Nombre = Nombre.Trim();
             repo.Update(CategoriaSeleccionada);
 
+            Mensaje = "Categoría modificada correctamente.";
             Limpiar();
             Cargar();
         }
 
         public void Delete()
         {
-            ErrorText = "";
+            if (CategoriaSeleccionada == null)
+            {
+                Mensaje = "Selecciona una categoría.";
+                return;
+            }
 
-            int? id = CategoriaSeleccionada?.IdCategoria;
+            int? id = CategoriaSeleccionada.IdCategoria;
             if (!service.ValidarBorrado(id, out string error))
             {
-                ErrorText = error;
+                Mensaje = error;
                 return;
             }
 
             repo.Delete(CategoriaSeleccionada.IdCategoria);
 
+            Mensaje = "Categoría eliminada correctamente.";
             Limpiar();
             Cargar();
         }

@@ -28,7 +28,7 @@ namespace P2526_Irene_Biblioteca.UserControls
         {
             if (VM.PrestamoSeleccionado == null)
             {
-                VM.ErrorText = "Selecciona un préstamo.";
+                VM.Mensaje = "Selecciona un préstamo.";
                 return;
             }
 

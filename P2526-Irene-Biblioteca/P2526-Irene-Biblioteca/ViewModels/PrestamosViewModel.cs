@@ -73,11 +73,11 @@ namespace P2526_Irene_Biblioteca.ViewModels
             set { devuelto = value; OnPropertyChanged(); }
         }
 
-        private string errorText;
-        public string ErrorText
+        private string mensaje;
+        public string Mensaje
         {
-            get => errorText;
-            set { errorText = value; OnPropertyChanged(); }
+            get => mensaje;
+            set { mensaje = value; OnPropertyChanged(); }
         }
 
         public bool PuedeEditar => service.PuedeEditar();
@@ -86,6 +86,7 @@ namespace P2526_Irene_Biblioteca.ViewModels
         {
             CargarCombos();
             CargarPrestamos();
+            Mensaje = "Selecciona un préstamo o crea uno nuevo.";
         }
 
         public void CargarCombos()
@@ -108,8 +109,6 @@ namespace P2526_Irene_Biblioteca.ViewModels
             Prestamos.Clear();
             foreach (var p in repoPrestamos.GetAll())
                 Prestamos.Add(p);
-
-            ErrorText = "";
         }
 
         private void CargarDesdeSeleccion()
@@ -124,7 +123,7 @@ namespace P2526_Irene_Biblioteca.ViewModels
             FechaDevolucion = PrestamoSeleccionado.FechaDevolucion;
 
             Devuelto = PrestamoSeleccionado.Devuelto;
-            ErrorText = "";
+            Mensaje = "Editando préstamo seleccionado.";
         }
 
         public void Limpiar()
@@ -139,7 +138,6 @@ namespace P2526_Irene_Biblioteca.ViewModels
             FechaDevolucion = null;
 
             Devuelto = false;
-            ErrorText = "";
         }
 
         private object GetLibroObj()
@@ -168,12 +166,10 @@ namespace P2526_Irene_Biblioteca.ViewModels
 
         public void Add()
         {
-            ErrorText = "";
-
             DateTime fp = FechaPrestamo ?? default(DateTime);
             if (!service.ValidarAlta(GetLibroObj(), GetClienteObj(), GetEmpleadoObj(), fp, out string error))
             {
-                ErrorText = error;
+                Mensaje = error;
                 return;
             }
 
@@ -181,7 +177,7 @@ namespace P2526_Irene_Biblioteca.ViewModels
 
             if (!service.PuedePrestar(idLibro, out error))
             {
-                ErrorText = error;
+                Mensaje = error;
                 return;
             }
 
@@ -198,6 +194,7 @@ namespace P2526_Irene_Biblioteca.ViewModels
             if (!Devuelto)
                 service.AplicarPrestamoStock(idLibro);
 
+            Mensaje = "Préstamo añadido correctamente.";
             Limpiar();
             CargarPrestamos();
             CargarCombos();
@@ -205,11 +202,9 @@ namespace P2526_Irene_Biblioteca.ViewModels
 
         public void Update()
         {
-            ErrorText = "";
-
             if (PrestamoSeleccionado == null)
             {
-                ErrorText = "Selecciona un préstamo.";
+                Mensaje = "Selecciona un préstamo.";
                 return;
             }
 
@@ -233,7 +228,7 @@ namespace P2526_Irene_Biblioteca.ViewModels
             {
                 if (!service.PuedePrestar(newLibro, out string err))
                 {
-                    ErrorText = err;
+                    Mensaje = err;
                     return;
                 }
                 service.AplicarPrestamoStock(newLibro);
@@ -246,7 +241,7 @@ namespace P2526_Irene_Biblioteca.ViewModels
                 if (!service.PuedePrestar(newLibro, out string err))
                 {
                     service.AplicarPrestamoStock(oldLibro);
-                    ErrorText = err;
+                    Mensaje = err;
                     return;
                 }
                 service.AplicarPrestamoStock(newLibro);
@@ -254,6 +249,7 @@ namespace P2526_Irene_Biblioteca.ViewModels
 
             repoPrestamos.Update(PrestamoSeleccionado);
 
+            Mensaje = "Préstamo modificado correctamente.";
             Limpiar();
             CargarPrestamos();
             CargarCombos();
@@ -261,11 +257,9 @@ namespace P2526_Irene_Biblioteca.ViewModels
 
         public void Delete()
         {
-            ErrorText = "";
-
             if (PrestamoSeleccionado == null)
             {
-                ErrorText = "Selecciona un préstamo.";
+                Mensaje = "Selecciona un préstamo.";
                 return;
             }
 
@@ -274,6 +268,7 @@ namespace P2526_Irene_Biblioteca.ViewModels
 
             repoPrestamos.Delete(PrestamoSeleccionado.IdPrestamo);
 
+            Mensaje = "Préstamo eliminado correctamente.";
             Limpiar();
             CargarPrestamos();
             CargarCombos();

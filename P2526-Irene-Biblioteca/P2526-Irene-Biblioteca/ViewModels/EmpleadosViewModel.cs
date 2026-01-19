@@ -45,11 +45,11 @@ namespace P2526_Irene_Biblioteca.ViewModels
             set { password = value; OnPropertyChanged(); }
         }
 
-        private string errorText;
-        public string ErrorText
+        private string mensaje;
+        public string Mensaje
         {
-            get => errorText;
-            set { errorText = value; OnPropertyChanged(); }
+            get => mensaje;
+            set { mensaje = value; OnPropertyChanged(); }
         }
 
         public bool PuedeEditar => service.PuedeEditar();
@@ -57,6 +57,7 @@ namespace P2526_Irene_Biblioteca.ViewModels
         public EmpleadosViewModel()
         {
             Cargar();
+            Mensaje = "Selecciona un empleado o crea uno nuevo.";
         }
 
         public void Cargar()
@@ -64,8 +65,6 @@ namespace P2526_Irene_Biblioteca.ViewModels
             Empleados.Clear();
             foreach (var e in repo.GetAll())
                 Empleados.Add(e);
-
-            ErrorText = "";
         }
 
         private void CargarDesdeSeleccion()
@@ -75,7 +74,7 @@ namespace P2526_Irene_Biblioteca.ViewModels
             Nombre = EmpleadoSeleccionado.Nombre;
             Usuario = EmpleadoSeleccionado.Usuario;
             Password = "";
-            ErrorText = "";
+            Mensaje = "Editando empleado seleccionado.";
         }
 
         public void Limpiar()
@@ -84,16 +83,13 @@ namespace P2526_Irene_Biblioteca.ViewModels
             Nombre = "";
             Usuario = "";
             Password = "";
-            ErrorText = "";
         }
 
         public void Add()
         {
-            ErrorText = "";
-
             if (!service.ValidarAlta(Nombre, Usuario, Password, out string error))
             {
-                ErrorText = error;
+                Mensaje = error;
                 return;
             }
 
@@ -103,18 +99,23 @@ namespace P2526_Irene_Biblioteca.ViewModels
                 Usuario = Usuario.Trim()
             }, Password);
 
+            Mensaje = "Empleado añadido correctamente.";
             Limpiar();
             Cargar();
         }
 
         public void Update()
         {
-            ErrorText = "";
+            if (EmpleadoSeleccionado == null)
+            {
+                Mensaje = "Selecciona un empleado.";
+                return;
+            }
 
-            int? id = EmpleadoSeleccionado?.IdEmpleado;
+            int? id = EmpleadoSeleccionado.IdEmpleado;
             if (!service.ValidarModificacion(Nombre, Usuario, id, out string error))
             {
-                ErrorText = error;
+                Mensaje = error;
                 return;
             }
 
@@ -126,23 +127,29 @@ namespace P2526_Irene_Biblioteca.ViewModels
             if (!string.IsNullOrWhiteSpace(Password))
                 repo.UpdatePassword(EmpleadoSeleccionado.IdEmpleado, Password);
 
+            Mensaje = "Empleado modificado correctamente.";
             Limpiar();
             Cargar();
         }
 
         public void Delete()
         {
-            ErrorText = "";
+            if (EmpleadoSeleccionado == null)
+            {
+                Mensaje = "Selecciona un empleado.";
+                return;
+            }
 
-            int? id = EmpleadoSeleccionado?.IdEmpleado;
+            int? id = EmpleadoSeleccionado.IdEmpleado;
             if (!service.ValidarBorrado(id, out string error))
             {
-                ErrorText = error;
+                Mensaje = error;
                 return;
             }
 
             repo.Delete(EmpleadoSeleccionado.IdEmpleado);
 
+            Mensaje = "Empleado eliminado correctamente.";
             Limpiar();
             Cargar();
         }

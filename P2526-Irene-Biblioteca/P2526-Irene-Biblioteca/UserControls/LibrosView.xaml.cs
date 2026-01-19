@@ -37,7 +37,7 @@ namespace P2526_Irene_Biblioteca.UserControls
         {
             if (VM.LibroSeleccionado == null)
             {
-                VM.ErrorText = "Selecciona un libro.";
+                VM.Mensaje = "Selecciona un libro.";
                 return;
             }
 

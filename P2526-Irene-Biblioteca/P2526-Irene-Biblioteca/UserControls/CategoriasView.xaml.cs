@@ -37,7 +37,7 @@ namespace P2526_Irene_Biblioteca.UserControls
         {
             if (VM.CategoriaSeleccionada == null)
             {
-                VM.ErrorText = "Selecciona una categoría.";
+                VM.Mensaje = "Selecciona una categoría.";
                 return;
             }
 

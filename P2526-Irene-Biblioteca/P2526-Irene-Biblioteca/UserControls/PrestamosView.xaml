@@ -133,7 +133,7 @@
                                     SelectedDate="{Binding FechaDevolucion}"
                                     IsEnabled="{Binding PuedeEditar}"/>
 
-                        <TextBlock Text="{Binding ErrorText}"
+                        <TextBlock Text="{Binding Mensaje}"
                                    Foreground="#DC2626"
                                    Margin="0,12,0,0"
                                    FontFamily="{StaticResource AppFont}"/>

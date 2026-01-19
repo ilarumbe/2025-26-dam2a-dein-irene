@@ -182,7 +182,7 @@
                          Text="{Binding Stock, UpdateSourceTrigger=PropertyChanged}"
                          IsEnabled="{Binding PuedeEditar}"/>
 
-                <TextBlock Text="{Binding ErrorText}"
+                <TextBlock Text="{Binding Mensaje}"
                            Foreground="#DC2626"
                            Margin="0,10,0,0"
                            FontFamily="{StaticResource Font}"/>

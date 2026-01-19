@@ -38,11 +38,11 @@ namespace P2526_Irene_Biblioteca.ViewModels
             set { nacionalidad = value; OnPropertyChanged(); }
         }
 
-        private string errorText;
-        public string ErrorText
+        private string mensaje;
+        public string Mensaje
         {
-            get => errorText;
-            set { errorText = value; OnPropertyChanged(); }
+            get => mensaje;
+            set { mensaje = value; OnPropertyChanged(); }
         }
 
         public bool PuedeEditar => service.PuedeEditar();
@@ -50,6 +50,7 @@ namespace P2526_Irene_Biblioteca.ViewModels
         public AutoresViewModel()
         {
             Cargar();
+            Mensaje = "Selecciona un autor o crea uno nuevo.";
         }
 
         public void Cargar()
@@ -58,7 +59,6 @@ namespace P2526_Irene_Biblioteca.ViewModels
             foreach (var a in repo.GetAll())
                 Autores.Add(a);
 
-            ErrorText = "";
         }
 
         private void CargarDesdeSeleccion()
@@ -67,7 +67,8 @@ namespace P2526_Irene_Biblioteca.ViewModels
 
             Nombre = AutorSeleccionado.Nombre;
             Nacionalidad = AutorSeleccionado.Nacionalidad;
-            ErrorText = "";
+
+            Mensaje = "Editando autor seleccionado.";
         }
 
         public void Limpiar()
@@ -75,16 +76,13 @@ namespace P2526_Irene_Biblioteca.ViewModels
             AutorSeleccionado = null;
             Nombre = "";
             Nacionalidad = "";
-            ErrorText = "";
         }
 
         public void Add()
         {
-            ErrorText = "";
-
             if (!service.ValidarAlta(Nombre, out string error))
             {
-                ErrorText = error;
+                Mensaje = error;
                 return;
             }
 
@@ -94,18 +92,23 @@ namespace P2526_Irene_Biblioteca.ViewModels
                 Nacionalidad = string.IsNullOrWhiteSpace(Nacionalidad) ? null : Nacionalidad.Trim()
             });
 
+            Mensaje = "Autor añadido correctamente.";
             Limpiar();
             Cargar();
         }
 
         public void Update()
         {
-            ErrorText = "";
+            if (AutorSeleccionado == null)
+            {
+                Mensaje = "Selecciona un autor.";
+                return;
+            }
 
-            int? id = AutorSeleccionado?.IdAutor;
+            int? id = AutorSeleccionado.IdAutor;
             if (!service.ValidarModificacion(id, Nombre, out string error))
             {
-                ErrorText = error;
+                Mensaje = error;
                 return;
             }
 
@@ -114,6 +117,7 @@ namespace P2526_Irene_Biblioteca.ViewModels
 
             repo.Update(AutorSeleccionado);
 
+            Mensaje = "Autor modificado correctamente.";
             Limpiar();
             Cargar();
         }
@@ -126,16 +130,21 @@ namespace P2526_Irene_Biblioteca.ViewModels
 
         public void Delete()
         {
-            ErrorText = "";
+            if (AutorSeleccionado == null)
+            {
+                Mensaje = "Selecciona un autor.";
+                return;
+            }
 
             if (!CanDelete(out string error))
             {
-                ErrorText = error;
+                Mensaje = error;
                 return;
             }
 
             repo.Delete(AutorSeleccionado.IdAutor);
 
+            Mensaje = "Autor eliminado correctamente.";
             Limpiar();
             Cargar();
         }

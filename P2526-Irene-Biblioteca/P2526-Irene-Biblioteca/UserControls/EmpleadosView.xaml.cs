@@ -36,7 +36,7 @@ namespace P2526_Irene_Biblioteca.UserControls
         {
             if (VM.EmpleadoSeleccionado == null)
             {
-                VM.ErrorText = "Selecciona un empleado.";
+                VM.Mensaje = "Selecciona un empleado.";
                 return;
             }
 

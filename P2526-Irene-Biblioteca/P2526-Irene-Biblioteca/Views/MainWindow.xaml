@@ -130,7 +130,7 @@
                         <TextBlock Text="Biblioteca" Style="{StaticResource TopBarTitle}"/>
                     </StackPanel>
 
-                    <TextBlock Text="Navegación" Style="{StaticResource SideTitle}"/>
+                    <TextBlock Text="Menú" Style="{StaticResource SideTitle}"/>
 
                     <Button Style="{StaticResource MenuButtonStyleV2}" Content="🏷  Autores" Click="Autores_Click"/>
                     <Button Style="{StaticResource MenuButtonStyleV2}" Content="📚  Libros" Click="Libros_Click"/>

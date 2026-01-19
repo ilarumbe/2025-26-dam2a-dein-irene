@@ -36,7 +36,7 @@ namespace P2526_Irene_Biblioteca.UserControls
         {
             if (VM.ClienteSeleccionado == null)
             {
-                VM.ErrorText = "Selecciona un cliente.";
+                VM.Mensaje = "Selecciona un cliente.";
                 return;
             }
 

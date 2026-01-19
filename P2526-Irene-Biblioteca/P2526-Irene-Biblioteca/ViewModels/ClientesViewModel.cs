@@ -45,11 +45,11 @@ namespace P2526_Irene_Biblioteca.ViewModels
             set { password = value; OnPropertyChanged(); }
         }
 
-        private string errorText;
-        public string ErrorText
+        private string mensaje;
+        public string Mensaje
         {
-            get => errorText;
-            set { errorText = value; OnPropertyChanged(); }
+            get => mensaje;
+            set { mensaje = value; OnPropertyChanged(); }
         }
 
         public bool PuedeEditar => service.PuedeEditar();
@@ -57,6 +57,7 @@ namespace P2526_Irene_Biblioteca.ViewModels
         public ClientesViewModel()
         {
             Cargar();
+            Mensaje = "Selecciona un cliente o crea uno nuevo.";
         }
 
         public void Cargar()
@@ -64,8 +65,6 @@ namespace P2526_Irene_Biblioteca.ViewModels
             Clientes.Clear();
             foreach (var c in repo.GetAll())
                 Clientes.Add(c);
-
-            ErrorText = "";
         }
 
         private void CargarDesdeSeleccion()
@@ -75,7 +74,7 @@ namespace P2526_Irene_Biblioteca.ViewModels
             Nombre = ClienteSeleccionado.Nombre;
             Usuario = ClienteSeleccionado.Usuario;
             Password = "";
-            ErrorText = "";
+            Mensaje = "Editando cliente seleccionado.";
         }
 
         public void Limpiar()
@@ -84,16 +83,13 @@ namespace P2526_Irene_Biblioteca.ViewModels
             Nombre = "";
             Usuario = "";
             Password = "";
-            ErrorText = "";
         }
 
         public void Add()
         {
-            ErrorText = "";
-
             if (!service.ValidarAlta(Nombre, Usuario, Password, out string error))
             {
-                ErrorText = error;
+                Mensaje = error;
                 return;
             }
 
@@ -103,18 +99,23 @@ namespace P2526_Irene_Biblioteca.ViewModels
                 Usuario = Usuario.Trim()
             }, Password);
 
+            Mensaje = "Cliente añadido correctamente.";
             Limpiar();
             Cargar();
         }
 
         public void Update()
         {
-            ErrorText = "";
+            if (ClienteSeleccionado == null)
+            {
+                Mensaje = "Selecciona un cliente.";
+                return;
+            }
 
-            int? id = ClienteSeleccionado?.IdCliente;
+            int? id = ClienteSeleccionado.IdCliente;
             if (!service.ValidarModificacion(id, Nombre, Usuario, out string error))
             {
-                ErrorText = error;
+                Mensaje = error;
                 return;
             }
 
@@ -126,23 +127,29 @@ namespace P2526_Irene_Biblioteca.ViewModels
             if (!string.IsNullOrWhiteSpace(Password))
                 repo.UpdatePassword(ClienteSeleccionado.IdCliente, Password);
 
+            Mensaje = "Cliente modificado correctamente.";
             Limpiar();
             Cargar();
         }
 
         public void Delete()
         {
-            ErrorText = "";
+            if (ClienteSeleccionado == null)
+            {
+                Mensaje = "Selecciona un cliente.";
+                return;
+            }
 
-            int? id = ClienteSeleccionado?.IdCliente;
+            int? id = ClienteSeleccionado.IdCliente;
             if (!service.ValidarBorrado(id, out string error))
             {
-                ErrorText = error;
+                Mensaje = error;
                 return;
             }
 
             repo.Delete(ClienteSeleccionado.IdCliente);
 
+            Mensaje = "Cliente eliminado correctamente.";
             Limpiar();
             Cargar();
         }

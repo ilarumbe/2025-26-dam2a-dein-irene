@@ -75,11 +75,11 @@ namespace P2526_Irene_Biblioteca.ViewModels
             set { stock = value; OnPropertyChanged(); }
         }
 
-        private string errorText;
-        public string ErrorText
+        private string mensaje;
+        public string Mensaje
         {
-            get => errorText;
-            set { errorText = value; OnPropertyChanged(); }
+            get => mensaje;
+            set { mensaje = value; OnPropertyChanged(); }
         }
 
         public bool PuedeEditar => service.PuedeEditar();
@@ -90,6 +90,7 @@ namespace P2526_Irene_Biblioteca.ViewModels
         {
             CargarCombos();
             CargarLibros();
+            Mensaje = "Selecciona un libro o crea uno nuevo.";
         }
 
         public void CargarCombos()
@@ -113,14 +114,11 @@ namespace P2526_Irene_Biblioteca.ViewModels
                 Libros.Add(l);
                 librosAll.Add(l);
             }
-
-            ErrorText = "";
         }
 
         private void Filtrar()
         {
             string q = (TextoBusqueda ?? "").Trim().ToLower();
-
             Libros.Clear();
 
             if (q.Length == 0)
@@ -131,11 +129,11 @@ namespace P2526_Irene_Biblioteca.ViewModels
 
             foreach (var l in librosAll)
             {
-                string titulo = (l.Titulo ?? "").ToLower();
-                string autor = (l.AutorNombre ?? "").ToLower();
-                string cat = (l.CategoriaNombre ?? "").ToLower();
+                string t = (l.Titulo ?? "").ToLower();
+                string a = (l.AutorNombre ?? "").ToLower();
+                string c = (l.CategoriaNombre ?? "").ToLower();
 
-                if (titulo.Contains(q) || autor.Contains(q) || cat.Contains(q))
+                if (t.Contains(q) || a.Contains(q) || c.Contains(q))
                     Libros.Add(l);
             }
         }
@@ -147,11 +145,10 @@ namespace P2526_Irene_Biblioteca.ViewModels
             Titulo = LibroSeleccionado.Titulo;
             Anio = LibroSeleccionado.Año.ToString();
             Stock = LibroSeleccionado.Stock.ToString();
-
             AutorId = LibroSeleccionado.IdAutor;
             CategoriaId = LibroSeleccionado.IdCategoria;
 
-            ErrorText = "";
+            Mensaje = "Editando libro seleccionado.";
         }
 
         public void Limpiar()
@@ -162,19 +159,16 @@ namespace P2526_Irene_Biblioteca.ViewModels
             Stock = "";
             AutorId = null;
             CategoriaId = null;
-            ErrorText = "";
         }
 
         public void Add()
         {
-            ErrorText = "";
-
             var autorObj = BuscarAutorSeleccionado();
             var catObj = BuscarCategoriaSeleccionada();
 
             if (!service.ValidarAlta(Titulo, Anio, autorObj, catObj, Stock, out string error))
             {
-                ErrorText = error;
+                Mensaje = error;
                 return;
             }
 
@@ -187,22 +181,27 @@ namespace P2526_Irene_Biblioteca.ViewModels
                 Stock = int.Parse(Stock)
             });
 
+            Mensaje = "Libro añadido correctamente.";
             Limpiar();
             CargarLibros();
         }
 
         public void Update()
         {
-            ErrorText = "";
+            if (LibroSeleccionado == null)
+            {
+                Mensaje = "Selecciona un libro.";
+                return;
+            }
 
-            int? id = LibroSeleccionado?.IdLibro;
+            int? id = LibroSeleccionado.IdLibro;
 
             var autorObj = BuscarAutorSeleccionado();
             var catObj = BuscarCategoriaSeleccionada();
 
             if (!service.ValidarModificacion(id, Titulo, Anio, autorObj, catObj, Stock, out string error))
             {
-                ErrorText = error;
+                Mensaje = error;
                 return;
             }
 
@@ -214,23 +213,29 @@ namespace P2526_Irene_Biblioteca.ViewModels
 
             repoLibros.Update(LibroSeleccionado);
 
+            Mensaje = "Libro modificado correctamente.";
             Limpiar();
             CargarLibros();
         }
 
         public void Delete()
         {
-            ErrorText = "";
+            if (LibroSeleccionado == null)
+            {
+                Mensaje = "Selecciona un libro.";
+                return;
+            }
 
-            int? id = LibroSeleccionado?.IdLibro;
+            int? id = LibroSeleccionado.IdLibro;
             if (!service.ValidarBorrado(id, out string error))
             {
-                ErrorText = error;
+                Mensaje = error;
                 return;
             }
 
             repoLibros.Delete(LibroSeleccionado.IdLibro);
 
+            Mensaje = "Libro eliminado correctamente.";
             Limpiar();
             CargarLibros();
         }
