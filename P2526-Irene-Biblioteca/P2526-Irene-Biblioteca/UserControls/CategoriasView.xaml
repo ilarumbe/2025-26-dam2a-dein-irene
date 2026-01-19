@@ -94,9 +94,9 @@
                 <WrapPanel HorizontalAlignment="Center" Margin="0,14,0,0">
                     <Button Content="Añadir" Style="{StaticResource PrimaryBtn}" Click="BtnAdd_Click"
                             IsEnabled="{Binding PuedeEditar}"/>
-                    <Button Content="Modificar" Style="{StaticResource GhostBtn}" Margin="10,0,0,0" Click="BtnUpdate_Click"
+                    <Button Content="Eliminar" Style="{StaticResource DangerBtn}" Margin="10,0,0,0" Click="BtnDelete_Click"
                             IsEnabled="{Binding PuedeEditar}"/>
-                    <Button Content="Eliminar" Style="{StaticResource GhostBtn}" Margin="10,0,0,0" Click="BtnDelete_Click"
+                    <Button Content="Modificar" Style="{StaticResource GhostBtn}" Margin="10,0,0,0" Click="BtnUpdate_Click"
                             IsEnabled="{Binding PuedeEditar}"/>
                     <Button Content="Limpiar" Style="{StaticResource GhostBtn}" Margin="10,0,0,0" Click="BtnClear_Click"/>
                 </WrapPanel>

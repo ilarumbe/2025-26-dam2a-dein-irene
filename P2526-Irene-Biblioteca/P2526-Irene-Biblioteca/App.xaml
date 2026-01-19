@@ -104,6 +104,16 @@
                         </Style.Triggers>
                     </Style>
 
+                    <Style x:Key="DangerBtn" TargetType="Button" BasedOn="{StaticResource GhostBtn}">
+                        <Setter Property="Background" Value="#991B1B"/>
+                        <Setter Property="Foreground" Value="#FEE2E2"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#791B1B"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+
                     <Style x:Key="Card" TargetType="Border">
                         <Setter Property="CornerRadius" Value="18"/>
                         <Setter Property="Background" Value="White"/>
