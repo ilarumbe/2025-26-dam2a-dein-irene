@@ -5,9 +5,7 @@
       "src": [
         {
           "src": "../src",
-          "files": [
-            "../P2526_Irene_Biblioteca.csproj"
-          ]
+          "files": [ "src/docfx.csproj" ]
         }
       ],
       "dest": "api"
