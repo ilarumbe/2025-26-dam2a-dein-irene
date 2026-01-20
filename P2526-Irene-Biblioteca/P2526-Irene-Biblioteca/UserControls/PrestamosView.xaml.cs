@@ -1,6 +1,7 @@
 ﻿using P2526_Irene_Biblioteca.ViewModels;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace P2526_Irene_Biblioteca.UserControls
 {
@@ -42,6 +43,44 @@ namespace P2526_Irene_Biblioteca.UserControls
         private void BtnClear_Click(object sender, RoutedEventArgs e)
         {
             VM.Limpiar();
+        }
+
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            Focus();
+        }
+
+        private void UserControl_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (!VM.PuedeEditar)
+                return;
+
+            if (Keyboard.Modifiers == ModifierKeys.Control && e.Key == Key.S)
+            {
+                VM.Add();
+                e.Handled = true;
+                return;
+            }
+
+            if (Keyboard.Modifiers == ModifierKeys.Control && e.Key == Key.U)
+            {
+                VM.Update();
+                e.Handled = true;
+                return;
+            }
+
+            if (Keyboard.Modifiers == ModifierKeys.Control && e.Key == Key.D)
+            {
+                VM.Delete();
+                e.Handled = true;
+                return;
+            }
+
+            if (e.Key == Key.Escape)
+            {
+                VM.Limpiar();
+                e.Handled = true;
+            }
         }
     }
 }

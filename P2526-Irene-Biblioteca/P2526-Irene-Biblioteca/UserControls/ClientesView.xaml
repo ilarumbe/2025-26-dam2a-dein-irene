@@ -1,6 +1,9 @@
 ﻿<UserControl x:Class="P2526_Irene_Biblioteca.UserControls.ClientesView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Focusable="True"
+             Loaded="UserControl_Loaded"
+             PreviewKeyDown="UserControl_PreviewKeyDown">
 
     <Grid Margin="10">
         <Grid.ColumnDefinitions>
