@@ -100,4 +100,3 @@ namespace P2526_Irene_Biblioteca.Repositories
         }
     }
 }
-

@@ -51,6 +51,101 @@ namespace P2526_Irene_Biblioteca.Repositories
             return lista;
         }
 
+        public List<Prestamo> GetAllReport()
+        {
+            var lista = new List<Prestamo>();
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+
+                string sql = @"
+                    SELECT  p.idPrestamo, p.idLibro, p.idCliente, p.idEmpleado,
+                            p.fechaPrestamo, p.fechaDevolucion, p.devuelto,
+                            l.titulo AS LibroTitulo,
+                            c.nombre AS ClienteNombre,
+                            e.nombre AS EmpleadoNombre
+                    FROM Prestamos p
+                    INNER JOIN Libros l ON l.idLibro = p.idLibro
+                    INNER JOIN Clientes c ON c.idCliente = p.idCliente
+                    INNER JOIN Empleados e ON e.idEmpleado = p.idEmpleado
+                    ORDER BY p.idPrestamo DESC;";
+
+                using (SqlCommand cmd = new SqlCommand(sql, conn))
+                using (SqlDataReader r = cmd.ExecuteReader())
+                {
+                    while (r.Read())
+                    {
+                        lista.Add(new Prestamo
+                        {
+                            IdPrestamo = (int)r["idPrestamo"],
+                            IdLibro = (int)r["idLibro"],
+                            IdCliente = (int)r["idCliente"],
+                            IdEmpleado = (int)r["idEmpleado"],
+                            FechaPrestamo = (DateTime)r["fechaPrestamo"],
+                            FechaDevolucion = r["fechaDevolucion"] == DBNull.Value ? (DateTime?)null : (DateTime)r["fechaDevolucion"],
+                            Devuelto = (bool)r["devuelto"],
+                            LibroTitulo = r["LibroTitulo"].ToString(),
+                            ClienteNombre = r["ClienteNombre"].ToString(),
+                            EmpleadoNombre = r["EmpleadoNombre"].ToString()
+                        });
+                    }
+                }
+            }
+
+            return lista;
+        }
+
+        public List<Prestamo> GetByClienteReport(int idCliente)
+        {
+            var lista = new List<Prestamo>();
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+
+                string sql = @"
+                    SELECT  p.idPrestamo, p.idLibro, p.idCliente, p.idEmpleado,
+                            p.fechaPrestamo, p.fechaDevolucion, p.devuelto,
+                            l.titulo AS LibroTitulo,
+                            c.nombre AS ClienteNombre,
+                            e.nombre AS EmpleadoNombre
+                    FROM Prestamos p
+                    INNER JOIN Libros l ON l.idLibro = p.idLibro
+                    INNER JOIN Clientes c ON c.idCliente = p.idCliente
+                    INNER JOIN Empleados e ON e.idEmpleado = p.idEmpleado
+                    WHERE p.idCliente = @IdCliente
+                    ORDER BY p.idPrestamo DESC;";
+
+                using (SqlCommand cmd = new SqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@IdCliente", idCliente);
+
+                    using (SqlDataReader r = cmd.ExecuteReader())
+                    {
+                        while (r.Read())
+                        {
+                            lista.Add(new Prestamo
+                            {
+                                IdPrestamo = (int)r["idPrestamo"],
+                                IdLibro = (int)r["idLibro"],
+                                IdCliente = (int)r["idCliente"],
+                                IdEmpleado = (int)r["idEmpleado"],
+                                FechaPrestamo = (DateTime)r["fechaPrestamo"],
+                                FechaDevolucion = r["fechaDevolucion"] == DBNull.Value ? (DateTime?)null : (DateTime)r["fechaDevolucion"],
+                                Devuelto = (bool)r["devuelto"],
+                                LibroTitulo = r["LibroTitulo"].ToString(),
+                                ClienteNombre = r["ClienteNombre"].ToString(),
+                                EmpleadoNombre = r["EmpleadoNombre"].ToString()
+                            });
+                        }
+                    }
+                }
+            }
+
+            return lista;
+        }
+
         public int Insert(Prestamo p)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))

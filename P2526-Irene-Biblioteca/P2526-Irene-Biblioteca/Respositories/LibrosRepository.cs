@@ -1,6 +1,7 @@
 ﻿using P2526_Irene_Biblioteca.Models;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 
 namespace P2526_Irene_Biblioteca.Repositories
@@ -171,6 +172,5 @@ namespace P2526_Irene_Biblioteca.Repositories
                 }
             }
         }
-
     }
 }

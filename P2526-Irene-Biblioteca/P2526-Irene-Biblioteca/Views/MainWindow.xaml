@@ -149,6 +149,9 @@
 
                     <Button Style="{StaticResource MenuButtonStyleV2}" Content="📖  Préstamos" Click="Prestamos_Click"
                             IsEnabled="{Binding PuedeVerPrestamos}"/>
+                    <Button Style="{StaticResource MenuButtonStyleV2}" Content="📊  Informes" Click="Informes_Click"
+                            IsEnabled="{Binding EsEmpleado}"/>
+
                 </StackPanel>
             </Grid>
         </Border>

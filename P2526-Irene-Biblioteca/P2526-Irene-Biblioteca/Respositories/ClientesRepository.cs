@@ -53,6 +53,38 @@ namespace P2526_Irene_Biblioteca.Repositories
             return null;
         }
 
+        public Cliente GetByUsuario(string usuario)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+
+                string sql = @"SELECT idCliente, nombre, usuario
+                               FROM Clientes
+                               WHERE usuario = @Usuario";
+
+                using (SqlCommand cmd = new SqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@Usuario", usuario);
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return new Cliente
+                            {
+                                IdCliente = (int)reader["idCliente"],
+                                Nombre = reader["nombre"].ToString(),
+                                Usuario = reader["usuario"].ToString()
+                            };
+                        }
+                    }
+                }
+            }
+
+            return null;
+        }
+
         public List<Cliente> GetAll()
         {
             var lista = new List<Cliente>();

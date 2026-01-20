@@ -3,6 +3,8 @@ using P2526_Irene_Biblioteca.Services;
 using P2526_Irene_Biblioteca.ViewModels;
 using System.Windows;
 using System.Windows.Input;
+using P2526_Irene_Biblioteca.Repositories;
+using P2526_Irene_Biblioteca.Views;
 
 namespace P2526_Irene_Biblioteca.Views
 {
@@ -104,5 +106,14 @@ namespace P2526_Irene_Biblioteca.Views
         {
             Application.Current.Shutdown();
         }
+
+        private void Informes_Click(object sender, RoutedEventArgs e)
+        {
+            var w = new InformesWindow();
+            w.Owner = this;
+            w.ShowDialog();
+        }
+
+
     }
 }
