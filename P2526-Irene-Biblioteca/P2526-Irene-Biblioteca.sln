@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P2526-Irene-Biblioteca", "P
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "AppInstaller", "AppInstaller\AppInstaller.vdproj", "{C33744FF-4BF0-F3AB-2A02-5C58D4DC7BDC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P2526_Irene_Biblioteca_MSTest", "P2526_Irene_Biblioteca_MSTest\P2526_Irene_Biblioteca_MSTest.csproj", "{906F8AE5-0A71-47D3-94BE-FE866B0D1E80}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{BF5ECFF5-56D1-49C7-914A-15238E00CC7B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C33744FF-4BF0-F3AB-2A02-5C58D4DC7BDC}.Debug|Any CPU.ActiveCfg = Debug
 		{C33744FF-4BF0-F3AB-2A02-5C58D4DC7BDC}.Release|Any CPU.ActiveCfg = Release
+		{906F8AE5-0A71-47D3-94BE-FE866B0D1E80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{906F8AE5-0A71-47D3-94BE-FE866B0D1E80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{906F8AE5-0A71-47D3-94BE-FE866B0D1E80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{906F8AE5-0A71-47D3-94BE-FE866B0D1E80}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
