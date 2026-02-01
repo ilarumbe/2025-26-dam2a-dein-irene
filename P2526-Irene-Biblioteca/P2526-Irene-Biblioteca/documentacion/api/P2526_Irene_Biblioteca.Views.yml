@@ -1,0 +1,51 @@
+### YamlMime:ManagedReference
+items:
+- uid: P2526_Irene_Biblioteca.Views
+  commentId: N:P2526_Irene_Biblioteca.Views
+  id: P2526_Irene_Biblioteca.Views
+  children:
+  - P2526_Irene_Biblioteca.Views.HelpWindow
+  - P2526_Irene_Biblioteca.Views.InformesWindow
+  - P2526_Irene_Biblioteca.Views.LoginWindow
+  - P2526_Irene_Biblioteca.Views.MainWindow
+  - P2526_Irene_Biblioteca.Views.ReportWindow
+  langs:
+  - csharp
+  - vb
+  name: P2526_Irene_Biblioteca.Views
+  nameWithType: P2526_Irene_Biblioteca.Views
+  fullName: P2526_Irene_Biblioteca.Views
+  type: Namespace
+  assemblies:
+  - P2526-Irene-Biblioteca
+references:
+- uid: P2526_Irene_Biblioteca.Views.ReportWindow
+  commentId: T:P2526_Irene_Biblioteca.Views.ReportWindow
+  href: P2526_Irene_Biblioteca.Views.ReportWindow.html
+  name: ReportWindow
+  nameWithType: ReportWindow
+  fullName: P2526_Irene_Biblioteca.Views.ReportWindow
+- uid: P2526_Irene_Biblioteca.Views.HelpWindow
+  commentId: T:P2526_Irene_Biblioteca.Views.HelpWindow
+  href: P2526_Irene_Biblioteca.Views.HelpWindow.html
+  name: HelpWindow
+  nameWithType: HelpWindow
+  fullName: P2526_Irene_Biblioteca.Views.HelpWindow
+- uid: P2526_Irene_Biblioteca.Views.InformesWindow
+  commentId: T:P2526_Irene_Biblioteca.Views.InformesWindow
+  href: P2526_Irene_Biblioteca.Views.InformesWindow.html
+  name: InformesWindow
+  nameWithType: InformesWindow
+  fullName: P2526_Irene_Biblioteca.Views.InformesWindow
+- uid: P2526_Irene_Biblioteca.Views.LoginWindow
+  commentId: T:P2526_Irene_Biblioteca.Views.LoginWindow
+  href: P2526_Irene_Biblioteca.Views.LoginWindow.html
+  name: LoginWindow
+  nameWithType: LoginWindow
+  fullName: P2526_Irene_Biblioteca.Views.LoginWindow
+- uid: P2526_Irene_Biblioteca.Views.MainWindow
+  commentId: T:P2526_Irene_Biblioteca.Views.MainWindow
+  href: P2526_Irene_Biblioteca.Views.MainWindow.html
+  name: MainWindow
+  nameWithType: MainWindow
+  fullName: P2526_Irene_Biblioteca.Views.MainWindow

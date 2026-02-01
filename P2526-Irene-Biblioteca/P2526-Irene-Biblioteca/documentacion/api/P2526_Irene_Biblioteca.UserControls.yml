@@ -1,0 +1,58 @@
+### YamlMime:ManagedReference
+items:
+- uid: P2526_Irene_Biblioteca.UserControls
+  commentId: N:P2526_Irene_Biblioteca.UserControls
+  id: P2526_Irene_Biblioteca.UserControls
+  children:
+  - P2526_Irene_Biblioteca.UserControls.AutoresView
+  - P2526_Irene_Biblioteca.UserControls.CategoriasView
+  - P2526_Irene_Biblioteca.UserControls.ClientesView
+  - P2526_Irene_Biblioteca.UserControls.EmpleadosView
+  - P2526_Irene_Biblioteca.UserControls.LibrosView
+  - P2526_Irene_Biblioteca.UserControls.PrestamosView
+  langs:
+  - csharp
+  - vb
+  name: P2526_Irene_Biblioteca.UserControls
+  nameWithType: P2526_Irene_Biblioteca.UserControls
+  fullName: P2526_Irene_Biblioteca.UserControls
+  type: Namespace
+  assemblies:
+  - P2526-Irene-Biblioteca
+references:
+- uid: P2526_Irene_Biblioteca.UserControls.AutoresView
+  commentId: T:P2526_Irene_Biblioteca.UserControls.AutoresView
+  href: P2526_Irene_Biblioteca.UserControls.AutoresView.html
+  name: AutoresView
+  nameWithType: AutoresView
+  fullName: P2526_Irene_Biblioteca.UserControls.AutoresView
+- uid: P2526_Irene_Biblioteca.UserControls.CategoriasView
+  commentId: T:P2526_Irene_Biblioteca.UserControls.CategoriasView
+  href: P2526_Irene_Biblioteca.UserControls.CategoriasView.html
+  name: CategoriasView
+  nameWithType: CategoriasView
+  fullName: P2526_Irene_Biblioteca.UserControls.CategoriasView
+- uid: P2526_Irene_Biblioteca.UserControls.ClientesView
+  commentId: T:P2526_Irene_Biblioteca.UserControls.ClientesView
+  href: P2526_Irene_Biblioteca.UserControls.ClientesView.html
+  name: ClientesView
+  nameWithType: ClientesView
+  fullName: P2526_Irene_Biblioteca.UserControls.ClientesView
+- uid: P2526_Irene_Biblioteca.UserControls.EmpleadosView
+  commentId: T:P2526_Irene_Biblioteca.UserControls.EmpleadosView
+  href: P2526_Irene_Biblioteca.UserControls.EmpleadosView.html
+  name: EmpleadosView
+  nameWithType: EmpleadosView
+  fullName: P2526_Irene_Biblioteca.UserControls.EmpleadosView
+- uid: P2526_Irene_Biblioteca.UserControls.LibrosView
+  commentId: T:P2526_Irene_Biblioteca.UserControls.LibrosView
+  href: P2526_Irene_Biblioteca.UserControls.LibrosView.html
+  name: LibrosView
+  nameWithType: LibrosView
+  fullName: P2526_Irene_Biblioteca.UserControls.LibrosView
+- uid: P2526_Irene_Biblioteca.UserControls.PrestamosView
+  commentId: T:P2526_Irene_Biblioteca.UserControls.PrestamosView
+  href: P2526_Irene_Biblioteca.UserControls.PrestamosView.html
+  name: PrestamosView
+  nameWithType: PrestamosView
+  fullName: P2526_Irene_Biblioteca.UserControls.PrestamosView

@@ -1,0 +1,102 @@
+### YamlMime:ManagedReference
+items:
+- uid: P2526_Irene_Biblioteca.ViewModels
+  commentId: N:P2526_Irene_Biblioteca.ViewModels
+  id: P2526_Irene_Biblioteca.ViewModels
+  children:
+  - P2526_Irene_Biblioteca.ViewModels.AutoresViewModel
+  - P2526_Irene_Biblioteca.ViewModels.BaseViewModel
+  - P2526_Irene_Biblioteca.ViewModels.CategoriasViewModel
+  - P2526_Irene_Biblioteca.ViewModels.ClientesViewModel
+  - P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel
+  - P2526_Irene_Biblioteca.ViewModels.LibrosViewModel
+  - P2526_Irene_Biblioteca.ViewModels.LoginViewModel
+  - P2526_Irene_Biblioteca.ViewModels.MainWindowViewModel
+  - P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel
+  langs:
+  - csharp
+  - vb
+  name: P2526_Irene_Biblioteca.ViewModels
+  nameWithType: P2526_Irene_Biblioteca.ViewModels
+  fullName: P2526_Irene_Biblioteca.ViewModels
+  type: Namespace
+  assemblies:
+  - P2526-Irene-Biblioteca
+references:
+- uid: P2526_Irene_Biblioteca.ViewModels.AutoresViewModel
+  commentId: T:P2526_Irene_Biblioteca.ViewModels.AutoresViewModel
+  href: P2526_Irene_Biblioteca.ViewModels.AutoresViewModel.html
+  name: AutoresViewModel
+  nameWithType: AutoresViewModel
+  fullName: P2526_Irene_Biblioteca.ViewModels.AutoresViewModel
+- uid: P2526_Irene_Biblioteca.ViewModels.BaseViewModel
+  commentId: T:P2526_Irene_Biblioteca.ViewModels.BaseViewModel
+  parent: P2526_Irene_Biblioteca.ViewModels
+  href: P2526_Irene_Biblioteca.ViewModels.BaseViewModel.html
+  name: BaseViewModel
+  nameWithType: BaseViewModel
+  fullName: P2526_Irene_Biblioteca.ViewModels.BaseViewModel
+- uid: P2526_Irene_Biblioteca.ViewModels.CategoriasViewModel
+  commentId: T:P2526_Irene_Biblioteca.ViewModels.CategoriasViewModel
+  href: P2526_Irene_Biblioteca.ViewModels.CategoriasViewModel.html
+  name: CategoriasViewModel
+  nameWithType: CategoriasViewModel
+  fullName: P2526_Irene_Biblioteca.ViewModels.CategoriasViewModel
+- uid: P2526_Irene_Biblioteca.ViewModels.ClientesViewModel
+  commentId: T:P2526_Irene_Biblioteca.ViewModels.ClientesViewModel
+  href: P2526_Irene_Biblioteca.ViewModels.ClientesViewModel.html
+  name: ClientesViewModel
+  nameWithType: ClientesViewModel
+  fullName: P2526_Irene_Biblioteca.ViewModels.ClientesViewModel
+- uid: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel
+  commentId: T:P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel
+  href: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.html
+  name: EmpleadosViewModel
+  nameWithType: EmpleadosViewModel
+  fullName: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel
+- uid: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel
+  commentId: T:P2526_Irene_Biblioteca.ViewModels.LibrosViewModel
+  href: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.html
+  name: LibrosViewModel
+  nameWithType: LibrosViewModel
+  fullName: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel
+- uid: P2526_Irene_Biblioteca.ViewModels.LoginViewModel
+  commentId: T:P2526_Irene_Biblioteca.ViewModels.LoginViewModel
+  href: P2526_Irene_Biblioteca.ViewModels.LoginViewModel.html
+  name: LoginViewModel
+  nameWithType: LoginViewModel
+  fullName: P2526_Irene_Biblioteca.ViewModels.LoginViewModel
+- uid: P2526_Irene_Biblioteca.ViewModels.MainWindowViewModel
+  commentId: T:P2526_Irene_Biblioteca.ViewModels.MainWindowViewModel
+  href: P2526_Irene_Biblioteca.ViewModels.MainWindowViewModel.html
+  name: MainWindowViewModel
+  nameWithType: MainWindowViewModel
+  fullName: P2526_Irene_Biblioteca.ViewModels.MainWindowViewModel
+- uid: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel
+  commentId: T:P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel
+  href: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.html
+  name: PrestamosViewModel
+  nameWithType: PrestamosViewModel
+  fullName: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel
+- uid: P2526_Irene_Biblioteca.ViewModels
+  commentId: N:P2526_Irene_Biblioteca.ViewModels
+  href: P2526_Irene_Biblioteca.html
+  name: P2526_Irene_Biblioteca.ViewModels
+  nameWithType: P2526_Irene_Biblioteca.ViewModels
+  fullName: P2526_Irene_Biblioteca.ViewModels
+  spec.csharp:
+  - uid: P2526_Irene_Biblioteca
+    name: P2526_Irene_Biblioteca
+    href: P2526_Irene_Biblioteca.html
+  - name: .
+  - uid: P2526_Irene_Biblioteca.ViewModels
+    name: ViewModels
+    href: P2526_Irene_Biblioteca.ViewModels.html
+  spec.vb:
+  - uid: P2526_Irene_Biblioteca
+    name: P2526_Irene_Biblioteca
+    href: P2526_Irene_Biblioteca.html
+  - name: .
+  - uid: P2526_Irene_Biblioteca.ViewModels
+    name: ViewModels
+    href: P2526_Irene_Biblioteca.ViewModels.html

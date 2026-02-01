@@ -1,0 +1,872 @@
+{
+  "source_base_path": "C:/Users/MIPC/Desktop/P2526-Irene-Biblioteca/P2526-Irene-Biblioteca/documentacion",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca.App.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca.App.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca.App",
+      "Summary": "<p sourcefile=\"api/P2526_Irene_Biblioteca.App.yml\" sourcestartlinenumber=\"1\">Lógica de interacción para App.xaml</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca.Helpers.Helper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca.Helpers.Helper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca.Helpers.Helper",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca.Helpers.SesionActual.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca.Helpers.SesionActual.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca.Helpers.SesionActual",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca.Helpers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca.Helpers.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca.Helpers",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca.Models.Autor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca.Models.Autor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca.Models.Autor",
+      "Summary": "<p sourcefile=\"api/P2526_Irene_Biblioteca.Models.Autor.yml\" sourcestartlinenumber=\"1\">Representa un autor de la biblioteca.\nContiene los datos básicos que se almacenan en la tabla Autores.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca.Models.Categoria.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca.Models.Categoria.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca.Models.Categoria",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca.Models.Cliente.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca.Models.Cliente.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca.Models.Cliente",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca.Models.Empleado.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca.Models.Empleado.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca.Models.Empleado",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca.Models.Libro.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca.Models.Libro.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca.Models.Libro",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca.Models.Prestamo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca.Models.Prestamo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca.Models.Prestamo",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca.Models.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca.Models",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca.Repositories.AutoresRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca.Repositories.AutoresRepository.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca.Repositories.AutoresRepository",
+      "Summary": "<p sourcefile=\"api/P2526_Irene_Biblioteca.Repositories.AutoresRepository.yml\" sourcestartlinenumber=\"1\">Repositorio de acceso a datos para la entidad <xref href=\"P2526_Irene_Biblioteca.Models.Autor\" data-throw-if-not-resolved=\"false\"></xref>.\nCentraliza las operaciones CRUD contra la tabla Autores.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca.Repositories.CategoriasRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca.Repositories.CategoriasRepository.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca.Repositories.CategoriasRepository",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca.Repositories.ClientesRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca.Repositories.ClientesRepository.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca.Repositories.ClientesRepository",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca.Repositories.EmpleadosRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca.Repositories.EmpleadosRepository.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca.Repositories.EmpleadosRepository",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca.Repositories.LibrosRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca.Repositories.LibrosRepository.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca.Repositories.LibrosRepository",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca.Repositories.PrestamosRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca.Repositories.PrestamosRepository.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca.Repositories.PrestamosRepository",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca.Repositories.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca.Repositories.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca.Repositories",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca.Services.AutoresService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca.Services.AutoresService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca.Services.AutoresService",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca.Services.CategoriasService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca.Services.CategoriasService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca.Services.CategoriasService",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca.Services.ClientesService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca.Services.ClientesService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca.Services.ClientesService",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca.Services.EmpleadosService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca.Services.EmpleadosService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca.Services.EmpleadosService",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca.Services.IWindowService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca.Services.IWindowService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca.Services.IWindowService",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca.Services.LibrosService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca.Services.LibrosService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca.Services.LibrosService",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca.Services.PrestamosService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca.Services.PrestamosService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca.Services.PrestamosService",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca.Services.WindowService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca.Services.WindowService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca.Services.WindowService",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca.Services.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca.Services.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca.Services",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca.UserControls.AutoresView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca.UserControls.AutoresView.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca.UserControls.AutoresView",
+      "Summary": "<p sourcefile=\"api/P2526_Irene_Biblioteca.UserControls.AutoresView.yml\" sourcestartlinenumber=\"1\">Vista (UserControl) encargada de mostrar y gestionar autores.\nContiene el código de interacción de la UI (eventos) y delega la lógica al ViewModel.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca.UserControls.CategoriasView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca.UserControls.CategoriasView.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca.UserControls.CategoriasView",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca.UserControls.ClientesView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca.UserControls.ClientesView.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca.UserControls.ClientesView",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca.UserControls.EmpleadosView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca.UserControls.EmpleadosView.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca.UserControls.EmpleadosView",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca.UserControls.LibrosView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca.UserControls.LibrosView.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca.UserControls.LibrosView",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca.UserControls.PrestamosView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca.UserControls.PrestamosView.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca.UserControls.PrestamosView",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca.UserControls.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca.UserControls.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca.UserControls",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca.ViewModels.AutoresViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca.ViewModels.AutoresViewModel.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca.ViewModels.AutoresViewModel",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca.ViewModels.BaseViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca.ViewModels.BaseViewModel.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca.ViewModels.BaseViewModel",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca.ViewModels.CategoriasViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca.ViewModels.CategoriasViewModel.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca.ViewModels.CategoriasViewModel",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca.ViewModels.ClientesViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca.ViewModels.ClientesViewModel.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca.ViewModels.ClientesViewModel",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca.ViewModels.LibrosViewModel",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca.ViewModels.LoginViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca.ViewModels.LoginViewModel.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca.ViewModels.LoginViewModel",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca.ViewModels.MainWindowViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca.ViewModels.MainWindowViewModel.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca.ViewModels.MainWindowViewModel",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca.ViewModels.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca.ViewModels.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca.ViewModels",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca.Views.HelpWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca.Views.HelpWindow.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca.Views.HelpWindow",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca.Views.InformesWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca.Views.InformesWindow.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca.Views.InformesWindow",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca.Views.LoginWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca.Views.LoginWindow.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca.Views.LoginWindow",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca.Views.MainWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca.Views.MainWindow.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca.Views.MainWindow",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca.Views.ReportWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca.Views.ReportWindow.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca.Views.ReportWindow",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca.Views.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca.Views.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca.Views",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca_MSTest.AutorModelTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca_MSTest.AutorModelTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca_MSTest.AutorModelTests",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca_MSTest.AutoresRepositoryTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca_MSTest.AutoresRepositoryTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca_MSTest.AutoresRepositoryTests",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca_MSTest.ClientesRepositoryTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca_MSTest.ClientesRepositoryTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca_MSTest.ClientesRepositoryTests",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca_MSTest.HelperTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca_MSTest.HelperTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca_MSTest.HelperTests",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/P2526_Irene_Biblioteca_MSTest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/P2526_Irene_Biblioteca_MSTest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "P2526_Irene_Biblioteca_MSTest",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/toc.html"
+        },
+        ".json": {
+          "relative_path": "docs/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

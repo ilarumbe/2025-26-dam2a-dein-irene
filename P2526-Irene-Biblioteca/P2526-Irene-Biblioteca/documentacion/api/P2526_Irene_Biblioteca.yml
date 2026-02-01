@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: P2526_Irene_Biblioteca
+  commentId: N:P2526_Irene_Biblioteca
+  id: P2526_Irene_Biblioteca
+  children:
+  - P2526_Irene_Biblioteca.App
+  langs:
+  - csharp
+  - vb
+  name: P2526_Irene_Biblioteca
+  nameWithType: P2526_Irene_Biblioteca
+  fullName: P2526_Irene_Biblioteca
+  type: Namespace
+  assemblies:
+  - P2526-Irene-Biblioteca
+references:
+- uid: P2526_Irene_Biblioteca.App
+  commentId: T:P2526_Irene_Biblioteca.App
+  href: P2526_Irene_Biblioteca.App.html
+  name: App
+  nameWithType: App
+  fullName: P2526_Irene_Biblioteca.App

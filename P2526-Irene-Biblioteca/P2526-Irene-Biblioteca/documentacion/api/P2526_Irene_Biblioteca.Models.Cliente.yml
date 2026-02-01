@@ -1,0 +1,444 @@
+### YamlMime:ManagedReference
+items:
+- uid: P2526_Irene_Biblioteca.Models.Cliente
+  commentId: T:P2526_Irene_Biblioteca.Models.Cliente
+  id: Cliente
+  parent: P2526_Irene_Biblioteca.Models
+  children:
+  - P2526_Irene_Biblioteca.Models.Cliente.IdCliente
+  - P2526_Irene_Biblioteca.Models.Cliente.Nombre
+  - P2526_Irene_Biblioteca.Models.Cliente.Password
+  - P2526_Irene_Biblioteca.Models.Cliente.Usuario
+  langs:
+  - csharp
+  - vb
+  name: Cliente
+  nameWithType: Cliente
+  fullName: P2526_Irene_Biblioteca.Models.Cliente
+  type: Class
+  source:
+    id: Cliente
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\Models\Cliente.cs
+    startLine: 8
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.Models
+  syntax:
+    content: public class Cliente
+    content.vb: Public Class Cliente
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: P2526_Irene_Biblioteca.Models.Cliente.IdCliente
+  commentId: P:P2526_Irene_Biblioteca.Models.Cliente.IdCliente
+  id: IdCliente
+  parent: P2526_Irene_Biblioteca.Models.Cliente
+  langs:
+  - csharp
+  - vb
+  name: IdCliente
+  nameWithType: Cliente.IdCliente
+  fullName: P2526_Irene_Biblioteca.Models.Cliente.IdCliente
+  type: Property
+  source:
+    id: IdCliente
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\Models\Cliente.cs
+    startLine: 10
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.Models
+  syntax:
+    content: public int IdCliente { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property IdCliente As Integer
+  overload: P2526_Irene_Biblioteca.Models.Cliente.IdCliente*
+- uid: P2526_Irene_Biblioteca.Models.Cliente.Nombre
+  commentId: P:P2526_Irene_Biblioteca.Models.Cliente.Nombre
+  id: Nombre
+  parent: P2526_Irene_Biblioteca.Models.Cliente
+  langs:
+  - csharp
+  - vb
+  name: Nombre
+  nameWithType: Cliente.Nombre
+  fullName: P2526_Irene_Biblioteca.Models.Cliente.Nombre
+  type: Property
+  source:
+    id: Nombre
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\Models\Cliente.cs
+    startLine: 11
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.Models
+  syntax:
+    content: public string Nombre { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Nombre As String
+  overload: P2526_Irene_Biblioteca.Models.Cliente.Nombre*
+- uid: P2526_Irene_Biblioteca.Models.Cliente.Usuario
+  commentId: P:P2526_Irene_Biblioteca.Models.Cliente.Usuario
+  id: Usuario
+  parent: P2526_Irene_Biblioteca.Models.Cliente
+  langs:
+  - csharp
+  - vb
+  name: Usuario
+  nameWithType: Cliente.Usuario
+  fullName: P2526_Irene_Biblioteca.Models.Cliente.Usuario
+  type: Property
+  source:
+    id: Usuario
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\Models\Cliente.cs
+    startLine: 12
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.Models
+  syntax:
+    content: public string Usuario { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Usuario As String
+  overload: P2526_Irene_Biblioteca.Models.Cliente.Usuario*
+- uid: P2526_Irene_Biblioteca.Models.Cliente.Password
+  commentId: P:P2526_Irene_Biblioteca.Models.Cliente.Password
+  id: Password
+  parent: P2526_Irene_Biblioteca.Models.Cliente
+  langs:
+  - csharp
+  - vb
+  name: Password
+  nameWithType: Cliente.Password
+  fullName: P2526_Irene_Biblioteca.Models.Cliente.Password
+  type: Property
+  source:
+    id: Password
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\Models\Cliente.cs
+    startLine: 13
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.Models
+  syntax:
+    content: public string Password { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Password As String
+  overload: P2526_Irene_Biblioteca.Models.Cliente.Password*
+references:
+- uid: P2526_Irene_Biblioteca.Models
+  commentId: N:P2526_Irene_Biblioteca.Models
+  href: P2526_Irene_Biblioteca.html
+  name: P2526_Irene_Biblioteca.Models
+  nameWithType: P2526_Irene_Biblioteca.Models
+  fullName: P2526_Irene_Biblioteca.Models
+  spec.csharp:
+  - uid: P2526_Irene_Biblioteca
+    name: P2526_Irene_Biblioteca
+    href: P2526_Irene_Biblioteca.html
+  - name: .
+  - uid: P2526_Irene_Biblioteca.Models
+    name: Models
+    href: P2526_Irene_Biblioteca.Models.html
+  spec.vb:
+  - uid: P2526_Irene_Biblioteca
+    name: P2526_Irene_Biblioteca
+    href: P2526_Irene_Biblioteca.html
+  - name: .
+  - uid: P2526_Irene_Biblioteca.Models
+    name: Models
+    href: P2526_Irene_Biblioteca.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: P2526_Irene_Biblioteca.Models.Cliente.IdCliente*
+  commentId: Overload:P2526_Irene_Biblioteca.Models.Cliente.IdCliente
+  href: P2526_Irene_Biblioteca.Models.Cliente.html#P2526_Irene_Biblioteca_Models_Cliente_IdCliente
+  name: IdCliente
+  nameWithType: Cliente.IdCliente
+  fullName: P2526_Irene_Biblioteca.Models.Cliente.IdCliente
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: P2526_Irene_Biblioteca.Models.Cliente.Nombre*
+  commentId: Overload:P2526_Irene_Biblioteca.Models.Cliente.Nombre
+  href: P2526_Irene_Biblioteca.Models.Cliente.html#P2526_Irene_Biblioteca_Models_Cliente_Nombre
+  name: Nombre
+  nameWithType: Cliente.Nombre
+  fullName: P2526_Irene_Biblioteca.Models.Cliente.Nombre
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: P2526_Irene_Biblioteca.Models.Cliente.Usuario*
+  commentId: Overload:P2526_Irene_Biblioteca.Models.Cliente.Usuario
+  href: P2526_Irene_Biblioteca.Models.Cliente.html#P2526_Irene_Biblioteca_Models_Cliente_Usuario
+  name: Usuario
+  nameWithType: Cliente.Usuario
+  fullName: P2526_Irene_Biblioteca.Models.Cliente.Usuario
+- uid: P2526_Irene_Biblioteca.Models.Cliente.Password*
+  commentId: Overload:P2526_Irene_Biblioteca.Models.Cliente.Password
+  href: P2526_Irene_Biblioteca.Models.Cliente.html#P2526_Irene_Biblioteca_Models_Cliente_Password
+  name: Password
+  nameWithType: Cliente.Password
+  fullName: P2526_Irene_Biblioteca.Models.Cliente.Password

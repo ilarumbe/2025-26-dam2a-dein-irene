@@ -1,0 +1,1238 @@
+### YamlMime:ManagedReference
+items:
+- uid: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel
+  commentId: T:P2526_Irene_Biblioteca.ViewModels.LibrosViewModel
+  id: LibrosViewModel
+  parent: P2526_Irene_Biblioteca.ViewModels
+  children:
+  - P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.#ctor
+  - P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Add
+  - P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Anio
+  - P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.AutorId
+  - P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Autores
+  - P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.CargarCombos
+  - P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.CargarLibros
+  - P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.CategoriaId
+  - P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Categorias
+  - P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Delete
+  - P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.LibroSeleccionado
+  - P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Libros
+  - P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Limpiar
+  - P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Mensaje
+  - P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.PuedeEditar
+  - P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Stock
+  - P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.TextoBusqueda
+  - P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Titulo
+  - P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Update
+  langs:
+  - csharp
+  - vb
+  name: LibrosViewModel
+  nameWithType: LibrosViewModel
+  fullName: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel
+  type: Class
+  source:
+    id: LibrosViewModel
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\LibrosViewModel.cs
+    startLine: 7
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: 'public class LibrosViewModel : BaseViewModel, INotifyPropertyChanged'
+    content.vb: Public Class LibrosViewModel Inherits BaseViewModel Implements INotifyPropertyChanged
+  inheritance:
+  - System.Object
+  - P2526_Irene_Biblioteca.ViewModels.BaseViewModel
+  implements:
+  - System.ComponentModel.INotifyPropertyChanged
+  inheritedMembers:
+  - P2526_Irene_Biblioteca.ViewModels.BaseViewModel.PropertyChanged
+  - P2526_Irene_Biblioteca.ViewModels.BaseViewModel.OnPropertyChanged(System.String)
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Libros
+  commentId: P:P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Libros
+  id: Libros
+  parent: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel
+  langs:
+  - csharp
+  - vb
+  name: Libros
+  nameWithType: LibrosViewModel.Libros
+  fullName: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Libros
+  type: Property
+  source:
+    id: Libros
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\LibrosViewModel.cs
+    startLine: 14
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public ObservableCollection<Libro> Libros { get; }
+    parameters: []
+    return:
+      type: System.Collections.ObjectModel.ObservableCollection{P2526_Irene_Biblioteca.Models.Libro}
+    content.vb: Public ReadOnly Property Libros As ObservableCollection(Of Libro)
+  overload: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Libros*
+- uid: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Autores
+  commentId: P:P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Autores
+  id: Autores
+  parent: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel
+  langs:
+  - csharp
+  - vb
+  name: Autores
+  nameWithType: LibrosViewModel.Autores
+  fullName: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Autores
+  type: Property
+  source:
+    id: Autores
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\LibrosViewModel.cs
+    startLine: 15
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public ObservableCollection<Autor> Autores { get; }
+    parameters: []
+    return:
+      type: System.Collections.ObjectModel.ObservableCollection{P2526_Irene_Biblioteca.Models.Autor}
+    content.vb: Public ReadOnly Property Autores As ObservableCollection(Of Autor)
+  overload: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Autores*
+- uid: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Categorias
+  commentId: P:P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Categorias
+  id: Categorias
+  parent: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel
+  langs:
+  - csharp
+  - vb
+  name: Categorias
+  nameWithType: LibrosViewModel.Categorias
+  fullName: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Categorias
+  type: Property
+  source:
+    id: Categorias
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\LibrosViewModel.cs
+    startLine: 16
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public ObservableCollection<Categoria> Categorias { get; }
+    parameters: []
+    return:
+      type: System.Collections.ObjectModel.ObservableCollection{P2526_Irene_Biblioteca.Models.Categoria}
+    content.vb: Public ReadOnly Property Categorias As ObservableCollection(Of Categoria)
+  overload: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Categorias*
+- uid: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.LibroSeleccionado
+  commentId: P:P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.LibroSeleccionado
+  id: LibroSeleccionado
+  parent: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel
+  langs:
+  - csharp
+  - vb
+  name: LibroSeleccionado
+  nameWithType: LibrosViewModel.LibroSeleccionado
+  fullName: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.LibroSeleccionado
+  type: Property
+  source:
+    id: LibroSeleccionado
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\LibrosViewModel.cs
+    startLine: 19
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public Libro LibroSeleccionado { get; set; }
+    parameters: []
+    return:
+      type: P2526_Irene_Biblioteca.Models.Libro
+    content.vb: Public Property LibroSeleccionado As Libro
+  overload: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.LibroSeleccionado*
+- uid: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.TextoBusqueda
+  commentId: P:P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.TextoBusqueda
+  id: TextoBusqueda
+  parent: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel
+  langs:
+  - csharp
+  - vb
+  name: TextoBusqueda
+  nameWithType: LibrosViewModel.TextoBusqueda
+  fullName: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.TextoBusqueda
+  type: Property
+  source:
+    id: TextoBusqueda
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\LibrosViewModel.cs
+    startLine: 31
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public string TextoBusqueda { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TextoBusqueda As String
+  overload: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.TextoBusqueda*
+- uid: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Titulo
+  commentId: P:P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Titulo
+  id: Titulo
+  parent: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel
+  langs:
+  - csharp
+  - vb
+  name: Titulo
+  nameWithType: LibrosViewModel.Titulo
+  fullName: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Titulo
+  type: Property
+  source:
+    id: Titulo
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\LibrosViewModel.cs
+    startLine: 43
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public string Titulo { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Titulo As String
+  overload: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Titulo*
+- uid: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Anio
+  commentId: P:P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Anio
+  id: Anio
+  parent: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel
+  langs:
+  - csharp
+  - vb
+  name: Anio
+  nameWithType: LibrosViewModel.Anio
+  fullName: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Anio
+  type: Property
+  source:
+    id: Anio
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\LibrosViewModel.cs
+    startLine: 50
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public string Anio { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Anio As String
+  overload: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Anio*
+- uid: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.AutorId
+  commentId: P:P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.AutorId
+  id: AutorId
+  parent: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel
+  langs:
+  - csharp
+  - vb
+  name: AutorId
+  nameWithType: LibrosViewModel.AutorId
+  fullName: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.AutorId
+  type: Property
+  source:
+    id: AutorId
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\LibrosViewModel.cs
+    startLine: 57
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public int? AutorId { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property AutorId As Integer?
+  overload: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.AutorId*
+- uid: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.CategoriaId
+  commentId: P:P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.CategoriaId
+  id: CategoriaId
+  parent: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel
+  langs:
+  - csharp
+  - vb
+  name: CategoriaId
+  nameWithType: LibrosViewModel.CategoriaId
+  fullName: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.CategoriaId
+  type: Property
+  source:
+    id: CategoriaId
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\LibrosViewModel.cs
+    startLine: 64
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public int? CategoriaId { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property CategoriaId As Integer?
+  overload: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.CategoriaId*
+- uid: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Stock
+  commentId: P:P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Stock
+  id: Stock
+  parent: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel
+  langs:
+  - csharp
+  - vb
+  name: Stock
+  nameWithType: LibrosViewModel.Stock
+  fullName: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Stock
+  type: Property
+  source:
+    id: Stock
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\LibrosViewModel.cs
+    startLine: 71
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public string Stock { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Stock As String
+  overload: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Stock*
+- uid: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Mensaje
+  commentId: P:P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Mensaje
+  id: Mensaje
+  parent: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel
+  langs:
+  - csharp
+  - vb
+  name: Mensaje
+  nameWithType: LibrosViewModel.Mensaje
+  fullName: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Mensaje
+  type: Property
+  source:
+    id: Mensaje
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\LibrosViewModel.cs
+    startLine: 78
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public string Mensaje { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Mensaje As String
+  overload: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Mensaje*
+- uid: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.PuedeEditar
+  commentId: P:P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.PuedeEditar
+  id: PuedeEditar
+  parent: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel
+  langs:
+  - csharp
+  - vb
+  name: PuedeEditar
+  nameWithType: LibrosViewModel.PuedeEditar
+  fullName: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.PuedeEditar
+  type: Property
+  source:
+    id: PuedeEditar
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\LibrosViewModel.cs
+    startLine: 84
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public bool PuedeEditar { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property PuedeEditar As Boolean
+  overload: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.PuedeEditar*
+- uid: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.#ctor
+  commentId: M:P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.#ctor
+  id: '#ctor'
+  parent: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel
+  langs:
+  - csharp
+  - vb
+  name: LibrosViewModel()
+  nameWithType: LibrosViewModel.LibrosViewModel()
+  fullName: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.LibrosViewModel()
+  type: Constructor
+  source:
+    id: .ctor
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\LibrosViewModel.cs
+    startLine: 88
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public LibrosViewModel()
+    content.vb: Public Sub New()
+  overload: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.#ctor*
+  nameWithType.vb: LibrosViewModel.New()
+  fullName.vb: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.New()
+  name.vb: New()
+- uid: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.CargarCombos
+  commentId: M:P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.CargarCombos
+  id: CargarCombos
+  parent: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel
+  langs:
+  - csharp
+  - vb
+  name: CargarCombos()
+  nameWithType: LibrosViewModel.CargarCombos()
+  fullName: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.CargarCombos()
+  type: Method
+  source:
+    id: CargarCombos
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\LibrosViewModel.cs
+    startLine: 95
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public void CargarCombos()
+    content.vb: Public Sub CargarCombos()
+  overload: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.CargarCombos*
+- uid: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.CargarLibros
+  commentId: M:P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.CargarLibros
+  id: CargarLibros
+  parent: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel
+  langs:
+  - csharp
+  - vb
+  name: CargarLibros()
+  nameWithType: LibrosViewModel.CargarLibros()
+  fullName: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.CargarLibros()
+  type: Method
+  source:
+    id: CargarLibros
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\LibrosViewModel.cs
+    startLine: 106
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public void CargarLibros()
+    content.vb: Public Sub CargarLibros()
+  overload: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.CargarLibros*
+- uid: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Limpiar
+  commentId: M:P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Limpiar
+  id: Limpiar
+  parent: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel
+  langs:
+  - csharp
+  - vb
+  name: Limpiar()
+  nameWithType: LibrosViewModel.Limpiar()
+  fullName: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Limpiar()
+  type: Method
+  source:
+    id: Limpiar
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\LibrosViewModel.cs
+    startLine: 153
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public void Limpiar()
+    content.vb: Public Sub Limpiar()
+  overload: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Limpiar*
+- uid: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Add
+  commentId: M:P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Add
+  id: Add
+  parent: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel
+  langs:
+  - csharp
+  - vb
+  name: Add()
+  nameWithType: LibrosViewModel.Add()
+  fullName: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Add()
+  type: Method
+  source:
+    id: Add
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\LibrosViewModel.cs
+    startLine: 163
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public void Add()
+    content.vb: Public Sub Add()
+  overload: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Add*
+- uid: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Update
+  commentId: M:P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Update
+  id: Update
+  parent: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: LibrosViewModel.Update()
+  fullName: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Update()
+  type: Method
+  source:
+    id: Update
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\LibrosViewModel.cs
+    startLine: 188
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public void Update()
+    content.vb: Public Sub Update()
+  overload: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Update*
+- uid: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Delete
+  commentId: M:P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Delete
+  id: Delete
+  parent: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel
+  langs:
+  - csharp
+  - vb
+  name: Delete()
+  nameWithType: LibrosViewModel.Delete()
+  fullName: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Delete()
+  type: Method
+  source:
+    id: Delete
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\LibrosViewModel.cs
+    startLine: 220
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public void Delete()
+    content.vb: Public Sub Delete()
+  overload: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Delete*
+references:
+- uid: P2526_Irene_Biblioteca.ViewModels
+  commentId: N:P2526_Irene_Biblioteca.ViewModels
+  href: P2526_Irene_Biblioteca.html
+  name: P2526_Irene_Biblioteca.ViewModels
+  nameWithType: P2526_Irene_Biblioteca.ViewModels
+  fullName: P2526_Irene_Biblioteca.ViewModels
+  spec.csharp:
+  - uid: P2526_Irene_Biblioteca
+    name: P2526_Irene_Biblioteca
+    href: P2526_Irene_Biblioteca.html
+  - name: .
+  - uid: P2526_Irene_Biblioteca.ViewModels
+    name: ViewModels
+    href: P2526_Irene_Biblioteca.ViewModels.html
+  spec.vb:
+  - uid: P2526_Irene_Biblioteca
+    name: P2526_Irene_Biblioteca
+    href: P2526_Irene_Biblioteca.html
+  - name: .
+  - uid: P2526_Irene_Biblioteca.ViewModels
+    name: ViewModels
+    href: P2526_Irene_Biblioteca.ViewModels.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: P2526_Irene_Biblioteca.ViewModels.BaseViewModel
+  commentId: T:P2526_Irene_Biblioteca.ViewModels.BaseViewModel
+  parent: P2526_Irene_Biblioteca.ViewModels
+  href: P2526_Irene_Biblioteca.ViewModels.BaseViewModel.html
+  name: BaseViewModel
+  nameWithType: BaseViewModel
+  fullName: P2526_Irene_Biblioteca.ViewModels.BaseViewModel
+- uid: System.ComponentModel.INotifyPropertyChanged
+  commentId: T:System.ComponentModel.INotifyPropertyChanged
+  parent: System.ComponentModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged
+  name: INotifyPropertyChanged
+  nameWithType: INotifyPropertyChanged
+  fullName: System.ComponentModel.INotifyPropertyChanged
+- uid: P2526_Irene_Biblioteca.ViewModels.BaseViewModel.PropertyChanged
+  commentId: E:P2526_Irene_Biblioteca.ViewModels.BaseViewModel.PropertyChanged
+  parent: P2526_Irene_Biblioteca.ViewModels.BaseViewModel
+  href: P2526_Irene_Biblioteca.ViewModels.BaseViewModel.html#P2526_Irene_Biblioteca_ViewModels_BaseViewModel_PropertyChanged
+  name: PropertyChanged
+  nameWithType: BaseViewModel.PropertyChanged
+  fullName: P2526_Irene_Biblioteca.ViewModels.BaseViewModel.PropertyChanged
+- uid: P2526_Irene_Biblioteca.ViewModels.BaseViewModel.OnPropertyChanged(System.String)
+  commentId: M:P2526_Irene_Biblioteca.ViewModels.BaseViewModel.OnPropertyChanged(System.String)
+  parent: P2526_Irene_Biblioteca.ViewModels.BaseViewModel
+  isExternal: true
+  href: P2526_Irene_Biblioteca.ViewModels.BaseViewModel.html#P2526_Irene_Biblioteca_ViewModels_BaseViewModel_OnPropertyChanged_System_String_
+  name: OnPropertyChanged(string)
+  nameWithType: BaseViewModel.OnPropertyChanged(string)
+  fullName: P2526_Irene_Biblioteca.ViewModels.BaseViewModel.OnPropertyChanged(string)
+  nameWithType.vb: BaseViewModel.OnPropertyChanged(String)
+  fullName.vb: P2526_Irene_Biblioteca.ViewModels.BaseViewModel.OnPropertyChanged(String)
+  name.vb: OnPropertyChanged(String)
+  spec.csharp:
+  - uid: P2526_Irene_Biblioteca.ViewModels.BaseViewModel.OnPropertyChanged(System.String)
+    name: OnPropertyChanged
+    href: P2526_Irene_Biblioteca.ViewModels.BaseViewModel.html#P2526_Irene_Biblioteca_ViewModels_BaseViewModel_OnPropertyChanged_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: P2526_Irene_Biblioteca.ViewModels.BaseViewModel.OnPropertyChanged(System.String)
+    name: OnPropertyChanged
+    href: P2526_Irene_Biblioteca.ViewModels.BaseViewModel.html#P2526_Irene_Biblioteca_ViewModels_BaseViewModel_OnPropertyChanged_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ComponentModel
+  commentId: N:System.ComponentModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.ComponentModel
+  nameWithType: System.ComponentModel
+  fullName: System.ComponentModel
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.ComponentModel
+    name: ComponentModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.ComponentModel
+    name: ComponentModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel
+- uid: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Libros*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Libros
+  href: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.html#P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_Libros
+  name: Libros
+  nameWithType: LibrosViewModel.Libros
+  fullName: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Libros
+- uid: System.Collections.ObjectModel.ObservableCollection{P2526_Irene_Biblioteca.Models.Libro}
+  commentId: T:System.Collections.ObjectModel.ObservableCollection{P2526_Irene_Biblioteca.Models.Libro}
+  parent: System.Collections.ObjectModel
+  definition: System.Collections.ObjectModel.ObservableCollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  name: ObservableCollection<Libro>
+  nameWithType: ObservableCollection<Libro>
+  fullName: System.Collections.ObjectModel.ObservableCollection<P2526_Irene_Biblioteca.Models.Libro>
+  nameWithType.vb: ObservableCollection(Of Libro)
+  fullName.vb: System.Collections.ObjectModel.ObservableCollection(Of P2526_Irene_Biblioteca.Models.Libro)
+  name.vb: ObservableCollection(Of Libro)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ObservableCollection`1
+    name: ObservableCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  - name: <
+  - uid: P2526_Irene_Biblioteca.Models.Libro
+    name: Libro
+    href: P2526_Irene_Biblioteca.Models.Libro.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ObservableCollection`1
+    name: ObservableCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: P2526_Irene_Biblioteca.Models.Libro
+    name: Libro
+    href: P2526_Irene_Biblioteca.Models.Libro.html
+  - name: )
+- uid: System.Collections.ObjectModel.ObservableCollection`1
+  commentId: T:System.Collections.ObjectModel.ObservableCollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  name: ObservableCollection<T>
+  nameWithType: ObservableCollection<T>
+  fullName: System.Collections.ObjectModel.ObservableCollection<T>
+  nameWithType.vb: ObservableCollection(Of T)
+  fullName.vb: System.Collections.ObjectModel.ObservableCollection(Of T)
+  name.vb: ObservableCollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ObservableCollection`1
+    name: ObservableCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ObservableCollection`1
+    name: ObservableCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.ObjectModel
+  commentId: N:System.Collections.ObjectModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.ObjectModel
+  nameWithType: System.Collections.ObjectModel
+  fullName: System.Collections.ObjectModel
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.ObjectModel
+    name: ObjectModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.ObjectModel
+    name: ObjectModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel
+- uid: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Autores*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Autores
+  href: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.html#P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_Autores
+  name: Autores
+  nameWithType: LibrosViewModel.Autores
+  fullName: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Autores
+- uid: System.Collections.ObjectModel.ObservableCollection{P2526_Irene_Biblioteca.Models.Autor}
+  commentId: T:System.Collections.ObjectModel.ObservableCollection{P2526_Irene_Biblioteca.Models.Autor}
+  parent: System.Collections.ObjectModel
+  definition: System.Collections.ObjectModel.ObservableCollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  name: ObservableCollection<Autor>
+  nameWithType: ObservableCollection<Autor>
+  fullName: System.Collections.ObjectModel.ObservableCollection<P2526_Irene_Biblioteca.Models.Autor>
+  nameWithType.vb: ObservableCollection(Of Autor)
+  fullName.vb: System.Collections.ObjectModel.ObservableCollection(Of P2526_Irene_Biblioteca.Models.Autor)
+  name.vb: ObservableCollection(Of Autor)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ObservableCollection`1
+    name: ObservableCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  - name: <
+  - uid: P2526_Irene_Biblioteca.Models.Autor
+    name: Autor
+    href: P2526_Irene_Biblioteca.Models.Autor.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ObservableCollection`1
+    name: ObservableCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: P2526_Irene_Biblioteca.Models.Autor
+    name: Autor
+    href: P2526_Irene_Biblioteca.Models.Autor.html
+  - name: )
+- uid: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Categorias*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Categorias
+  href: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.html#P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_Categorias
+  name: Categorias
+  nameWithType: LibrosViewModel.Categorias
+  fullName: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Categorias
+- uid: System.Collections.ObjectModel.ObservableCollection{P2526_Irene_Biblioteca.Models.Categoria}
+  commentId: T:System.Collections.ObjectModel.ObservableCollection{P2526_Irene_Biblioteca.Models.Categoria}
+  parent: System.Collections.ObjectModel
+  definition: System.Collections.ObjectModel.ObservableCollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  name: ObservableCollection<Categoria>
+  nameWithType: ObservableCollection<Categoria>
+  fullName: System.Collections.ObjectModel.ObservableCollection<P2526_Irene_Biblioteca.Models.Categoria>
+  nameWithType.vb: ObservableCollection(Of Categoria)
+  fullName.vb: System.Collections.ObjectModel.ObservableCollection(Of P2526_Irene_Biblioteca.Models.Categoria)
+  name.vb: ObservableCollection(Of Categoria)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ObservableCollection`1
+    name: ObservableCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  - name: <
+  - uid: P2526_Irene_Biblioteca.Models.Categoria
+    name: Categoria
+    href: P2526_Irene_Biblioteca.Models.Categoria.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ObservableCollection`1
+    name: ObservableCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: P2526_Irene_Biblioteca.Models.Categoria
+    name: Categoria
+    href: P2526_Irene_Biblioteca.Models.Categoria.html
+  - name: )
+- uid: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.LibroSeleccionado*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.LibroSeleccionado
+  href: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.html#P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_LibroSeleccionado
+  name: LibroSeleccionado
+  nameWithType: LibrosViewModel.LibroSeleccionado
+  fullName: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.LibroSeleccionado
+- uid: P2526_Irene_Biblioteca.Models.Libro
+  commentId: T:P2526_Irene_Biblioteca.Models.Libro
+  parent: P2526_Irene_Biblioteca.Models
+  href: P2526_Irene_Biblioteca.Models.Libro.html
+  name: Libro
+  nameWithType: Libro
+  fullName: P2526_Irene_Biblioteca.Models.Libro
+- uid: P2526_Irene_Biblioteca.Models
+  commentId: N:P2526_Irene_Biblioteca.Models
+  href: P2526_Irene_Biblioteca.html
+  name: P2526_Irene_Biblioteca.Models
+  nameWithType: P2526_Irene_Biblioteca.Models
+  fullName: P2526_Irene_Biblioteca.Models
+  spec.csharp:
+  - uid: P2526_Irene_Biblioteca
+    name: P2526_Irene_Biblioteca
+    href: P2526_Irene_Biblioteca.html
+  - name: .
+  - uid: P2526_Irene_Biblioteca.Models
+    name: Models
+    href: P2526_Irene_Biblioteca.Models.html
+  spec.vb:
+  - uid: P2526_Irene_Biblioteca
+    name: P2526_Irene_Biblioteca
+    href: P2526_Irene_Biblioteca.html
+  - name: .
+  - uid: P2526_Irene_Biblioteca.Models
+    name: Models
+    href: P2526_Irene_Biblioteca.Models.html
+- uid: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.TextoBusqueda*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.TextoBusqueda
+  href: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.html#P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_TextoBusqueda
+  name: TextoBusqueda
+  nameWithType: LibrosViewModel.TextoBusqueda
+  fullName: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.TextoBusqueda
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Titulo*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Titulo
+  href: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.html#P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_Titulo
+  name: Titulo
+  nameWithType: LibrosViewModel.Titulo
+  fullName: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Titulo
+- uid: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Anio*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Anio
+  href: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.html#P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_Anio
+  name: Anio
+  nameWithType: LibrosViewModel.Anio
+  fullName: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Anio
+- uid: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.AutorId*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.AutorId
+  href: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.html#P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_AutorId
+  name: AutorId
+  nameWithType: LibrosViewModel.AutorId
+  fullName: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.AutorId
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int?
+  nameWithType: int?
+  fullName: int?
+  nameWithType.vb: Integer?
+  fullName.vb: Integer?
+  name.vb: Integer?
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.CategoriaId*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.CategoriaId
+  href: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.html#P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_CategoriaId
+  name: CategoriaId
+  nameWithType: LibrosViewModel.CategoriaId
+  fullName: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.CategoriaId
+- uid: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Stock*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Stock
+  href: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.html#P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_Stock
+  name: Stock
+  nameWithType: LibrosViewModel.Stock
+  fullName: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Stock
+- uid: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Mensaje*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Mensaje
+  href: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.html#P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_Mensaje
+  name: Mensaje
+  nameWithType: LibrosViewModel.Mensaje
+  fullName: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Mensaje
+- uid: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.PuedeEditar*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.PuedeEditar
+  href: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.html#P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_PuedeEditar
+  name: PuedeEditar
+  nameWithType: LibrosViewModel.PuedeEditar
+  fullName: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.PuedeEditar
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.#ctor*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.#ctor
+  href: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.html#P2526_Irene_Biblioteca_ViewModels_LibrosViewModel__ctor
+  name: LibrosViewModel
+  nameWithType: LibrosViewModel.LibrosViewModel
+  fullName: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.LibrosViewModel
+  nameWithType.vb: LibrosViewModel.New
+  fullName.vb: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.New
+  name.vb: New
+- uid: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.CargarCombos*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.CargarCombos
+  href: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.html#P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_CargarCombos
+  name: CargarCombos
+  nameWithType: LibrosViewModel.CargarCombos
+  fullName: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.CargarCombos
+- uid: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.CargarLibros*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.CargarLibros
+  href: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.html#P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_CargarLibros
+  name: CargarLibros
+  nameWithType: LibrosViewModel.CargarLibros
+  fullName: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.CargarLibros
+- uid: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Limpiar*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Limpiar
+  href: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.html#P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_Limpiar
+  name: Limpiar
+  nameWithType: LibrosViewModel.Limpiar
+  fullName: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Limpiar
+- uid: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Add*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Add
+  href: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.html#P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_Add
+  name: Add
+  nameWithType: LibrosViewModel.Add
+  fullName: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Add
+- uid: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Update*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Update
+  href: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.html#P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_Update
+  name: Update
+  nameWithType: LibrosViewModel.Update
+  fullName: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Update
+- uid: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Delete*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Delete
+  href: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.html#P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_Delete
+  name: Delete
+  nameWithType: LibrosViewModel.Delete
+  fullName: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Delete

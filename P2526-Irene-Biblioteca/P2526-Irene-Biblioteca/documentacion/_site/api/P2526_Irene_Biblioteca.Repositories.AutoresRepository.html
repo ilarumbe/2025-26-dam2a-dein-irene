@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class AutoresRepository | Biblioteca </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class AutoresRepository | Biblioteca ">
+      
+      <meta name="description" content="Repositorio de acceso a datos para la entidad . Centraliza las operaciones CRUD contra la tabla Autores.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Biblioteca">
+            Biblioteca
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="P2526_Irene_Biblioteca.Repositories.AutoresRepository">
+
+
+
+  <h1 id="P2526_Irene_Biblioteca_Repositories_AutoresRepository" data-uid="P2526_Irene_Biblioteca.Repositories.AutoresRepository" class="text-break">
+Class AutoresRepository  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="P2526_Irene_Biblioteca.html">P2526_Irene_Biblioteca</a>.<a class="xref" href="P2526_Irene_Biblioteca.Repositories.html">Repositories</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>P2526-Irene-Biblioteca.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Repositorio de acceso a datos para la entidad <a class="xref" href="P2526_Irene_Biblioteca.Models.Autor.html">Autor</a>.
+Centraliza las operaciones CRUD contra la tabla Autores.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class AutoresRepository</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">AutoresRepository</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="P2526_Irene_Biblioteca_Repositories_AutoresRepository__ctor_" data-uid="P2526_Irene_Biblioteca.Repositories.AutoresRepository.#ctor*"></a>
+
+  <h3 id="P2526_Irene_Biblioteca_Repositories_AutoresRepository__ctor" data-uid="P2526_Irene_Biblioteca.Repositories.AutoresRepository.#ctor">
+  AutoresRepository()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Inicializa el repositorio leyendo la cadena de conexión &quot;Conexion&quot; desde App.config.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AutoresRepository()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="P2526_Irene_Biblioteca_Repositories_AutoresRepository_Delete_" data-uid="P2526_Irene_Biblioteca.Repositories.AutoresRepository.Delete*"></a>
+
+  <h3 id="P2526_Irene_Biblioteca_Repositories_AutoresRepository_Delete_System_Int32_" data-uid="P2526_Irene_Biblioteca.Repositories.AutoresRepository.Delete(System.Int32)">
+  Delete(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Elimina un autor por su identificador.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Delete(int idAutor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>idAutor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Identificador del autor a eliminar.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="P2526_Irene_Biblioteca_Repositories_AutoresRepository_GetAll_" data-uid="P2526_Irene_Biblioteca.Repositories.AutoresRepository.GetAll*"></a>
+
+  <h3 id="P2526_Irene_Biblioteca_Repositories_AutoresRepository_GetAll" data-uid="P2526_Irene_Biblioteca.Repositories.AutoresRepository.GetAll">
+  GetAll()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Obtiene todos los autores almacenados en la tabla Autores.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;Autor&gt; GetAll()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="P2526_Irene_Biblioteca.Models.Autor.html">Autor</a>&gt;</dt>
+    <dd><p>Lista de <a class="xref" href="P2526_Irene_Biblioteca.Models.Autor.html">Autor</a> con sus campos IdAutor, Nombre y Nacionalidad.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="P2526_Irene_Biblioteca_Repositories_AutoresRepository_Insert_" data-uid="P2526_Irene_Biblioteca.Repositories.AutoresRepository.Insert*"></a>
+
+  <h3 id="P2526_Irene_Biblioteca_Repositories_AutoresRepository_Insert_P2526_Irene_Biblioteca_Models_Autor_" data-uid="P2526_Irene_Biblioteca.Repositories.AutoresRepository.Insert(P2526_Irene_Biblioteca.Models.Autor)">
+  Insert(Autor)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Inserta un nuevo autor en la tabla Autores.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Insert(Autor a)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="P2526_Irene_Biblioteca.Models.Autor.html">Autor</a></dt>
+    <dd><p>Autor a insertar. Debe contener al menos <a class="xref" href="P2526_Irene_Biblioteca.Models.Autor.html#P2526_Irene_Biblioteca_Models_Autor_Nombre">Nombre</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Se lanza si <code class="paramref">a</code> es null.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="P2526_Irene_Biblioteca_Repositories_AutoresRepository_Update_" data-uid="P2526_Irene_Biblioteca.Repositories.AutoresRepository.Update*"></a>
+
+  <h3 id="P2526_Irene_Biblioteca_Repositories_AutoresRepository_Update_P2526_Irene_Biblioteca_Models_Autor_" data-uid="P2526_Irene_Biblioteca.Repositories.AutoresRepository.Update(P2526_Irene_Biblioteca.Models.Autor)">
+  Update(Autor)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Actualiza los datos de un autor existente en la tabla Autores.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Update(Autor a)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="P2526_Irene_Biblioteca.Models.Autor.html">Autor</a></dt>
+    <dd><p>Autor a actualizar. Debe tener <a class="xref" href="P2526_Irene_Biblioteca.Models.Autor.html#P2526_Irene_Biblioteca_Models_Autor_IdAutor">IdAutor</a> válido y los campos a modificar.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
+    <dd><p>Se lanza si <code class="paramref">a</code> es null.</p>
+</dd>
+  </dl>
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+### YamlMime:ManagedReference
+items:
+- uid: P2526_Irene_Biblioteca.Repositories
+  commentId: N:P2526_Irene_Biblioteca.Repositories
+  id: P2526_Irene_Biblioteca.Repositories
+  children:
+  - P2526_Irene_Biblioteca.Repositories.AutoresRepository
+  - P2526_Irene_Biblioteca.Repositories.CategoriasRepository
+  - P2526_Irene_Biblioteca.Repositories.ClientesRepository
+  - P2526_Irene_Biblioteca.Repositories.EmpleadosRepository
+  - P2526_Irene_Biblioteca.Repositories.LibrosRepository
+  - P2526_Irene_Biblioteca.Repositories.PrestamosRepository
+  langs:
+  - csharp
+  - vb
+  name: P2526_Irene_Biblioteca.Repositories
+  nameWithType: P2526_Irene_Biblioteca.Repositories
+  fullName: P2526_Irene_Biblioteca.Repositories
+  type: Namespace
+  assemblies:
+  - P2526-Irene-Biblioteca
+references:
+- uid: P2526_Irene_Biblioteca.Repositories.AutoresRepository
+  commentId: T:P2526_Irene_Biblioteca.Repositories.AutoresRepository
+  href: P2526_Irene_Biblioteca.Repositories.AutoresRepository.html
+  name: AutoresRepository
+  nameWithType: AutoresRepository
+  fullName: P2526_Irene_Biblioteca.Repositories.AutoresRepository
+- uid: P2526_Irene_Biblioteca.Repositories.CategoriasRepository
+  commentId: T:P2526_Irene_Biblioteca.Repositories.CategoriasRepository
+  href: P2526_Irene_Biblioteca.Repositories.CategoriasRepository.html
+  name: CategoriasRepository
+  nameWithType: CategoriasRepository
+  fullName: P2526_Irene_Biblioteca.Repositories.CategoriasRepository
+- uid: P2526_Irene_Biblioteca.Repositories.ClientesRepository
+  commentId: T:P2526_Irene_Biblioteca.Repositories.ClientesRepository
+  href: P2526_Irene_Biblioteca.Repositories.ClientesRepository.html
+  name: ClientesRepository
+  nameWithType: ClientesRepository
+  fullName: P2526_Irene_Biblioteca.Repositories.ClientesRepository
+- uid: P2526_Irene_Biblioteca.Repositories.EmpleadosRepository
+  commentId: T:P2526_Irene_Biblioteca.Repositories.EmpleadosRepository
+  href: P2526_Irene_Biblioteca.Repositories.EmpleadosRepository.html
+  name: EmpleadosRepository
+  nameWithType: EmpleadosRepository
+  fullName: P2526_Irene_Biblioteca.Repositories.EmpleadosRepository
+- uid: P2526_Irene_Biblioteca.Repositories.LibrosRepository
+  commentId: T:P2526_Irene_Biblioteca.Repositories.LibrosRepository
+  href: P2526_Irene_Biblioteca.Repositories.LibrosRepository.html
+  name: LibrosRepository
+  nameWithType: LibrosRepository
+  fullName: P2526_Irene_Biblioteca.Repositories.LibrosRepository
+- uid: P2526_Irene_Biblioteca.Repositories.PrestamosRepository
+  commentId: T:P2526_Irene_Biblioteca.Repositories.PrestamosRepository
+  href: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.html
+  name: PrestamosRepository
+  nameWithType: PrestamosRepository
+  fullName: P2526_Irene_Biblioteca.Repositories.PrestamosRepository

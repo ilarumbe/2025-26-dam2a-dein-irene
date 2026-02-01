@@ -1,0 +1,597 @@
+### YamlMime:ManagedReference
+items:
+- uid: P2526_Irene_Biblioteca.Repositories.CategoriasRepository
+  commentId: T:P2526_Irene_Biblioteca.Repositories.CategoriasRepository
+  id: CategoriasRepository
+  parent: P2526_Irene_Biblioteca.Repositories
+  children:
+  - P2526_Irene_Biblioteca.Repositories.CategoriasRepository.#ctor
+  - P2526_Irene_Biblioteca.Repositories.CategoriasRepository.Delete(System.Int32)
+  - P2526_Irene_Biblioteca.Repositories.CategoriasRepository.GetAll
+  - P2526_Irene_Biblioteca.Repositories.CategoriasRepository.Insert(P2526_Irene_Biblioteca.Models.Categoria)
+  - P2526_Irene_Biblioteca.Repositories.CategoriasRepository.Update(P2526_Irene_Biblioteca.Models.Categoria)
+  langs:
+  - csharp
+  - vb
+  name: CategoriasRepository
+  nameWithType: CategoriasRepository
+  fullName: P2526_Irene_Biblioteca.Repositories.CategoriasRepository
+  type: Class
+  source:
+    id: CategoriasRepository
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\Respositories\CategoriasRepository.cs
+    startLine: 7
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.Repositories
+  syntax:
+    content: public class CategoriasRepository
+    content.vb: Public Class CategoriasRepository
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: P2526_Irene_Biblioteca.Repositories.CategoriasRepository.#ctor
+  commentId: M:P2526_Irene_Biblioteca.Repositories.CategoriasRepository.#ctor
+  id: '#ctor'
+  parent: P2526_Irene_Biblioteca.Repositories.CategoriasRepository
+  langs:
+  - csharp
+  - vb
+  name: CategoriasRepository()
+  nameWithType: CategoriasRepository.CategoriasRepository()
+  fullName: P2526_Irene_Biblioteca.Repositories.CategoriasRepository.CategoriasRepository()
+  type: Constructor
+  source:
+    id: .ctor
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\Respositories\CategoriasRepository.cs
+    startLine: 11
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.Repositories
+  syntax:
+    content: public CategoriasRepository()
+    content.vb: Public Sub New()
+  overload: P2526_Irene_Biblioteca.Repositories.CategoriasRepository.#ctor*
+  nameWithType.vb: CategoriasRepository.New()
+  fullName.vb: P2526_Irene_Biblioteca.Repositories.CategoriasRepository.New()
+  name.vb: New()
+- uid: P2526_Irene_Biblioteca.Repositories.CategoriasRepository.GetAll
+  commentId: M:P2526_Irene_Biblioteca.Repositories.CategoriasRepository.GetAll
+  id: GetAll
+  parent: P2526_Irene_Biblioteca.Repositories.CategoriasRepository
+  langs:
+  - csharp
+  - vb
+  name: GetAll()
+  nameWithType: CategoriasRepository.GetAll()
+  fullName: P2526_Irene_Biblioteca.Repositories.CategoriasRepository.GetAll()
+  type: Method
+  source:
+    id: GetAll
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\Respositories\CategoriasRepository.cs
+    startLine: 18
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.Repositories
+  syntax:
+    content: public List<Categoria> GetAll()
+    return:
+      type: System.Collections.Generic.List{P2526_Irene_Biblioteca.Models.Categoria}
+    content.vb: Public Function GetAll() As List(Of Categoria)
+  overload: P2526_Irene_Biblioteca.Repositories.CategoriasRepository.GetAll*
+- uid: P2526_Irene_Biblioteca.Repositories.CategoriasRepository.Insert(P2526_Irene_Biblioteca.Models.Categoria)
+  commentId: M:P2526_Irene_Biblioteca.Repositories.CategoriasRepository.Insert(P2526_Irene_Biblioteca.Models.Categoria)
+  id: Insert(P2526_Irene_Biblioteca.Models.Categoria)
+  parent: P2526_Irene_Biblioteca.Repositories.CategoriasRepository
+  langs:
+  - csharp
+  - vb
+  name: Insert(Categoria)
+  nameWithType: CategoriasRepository.Insert(Categoria)
+  fullName: P2526_Irene_Biblioteca.Repositories.CategoriasRepository.Insert(P2526_Irene_Biblioteca.Models.Categoria)
+  type: Method
+  source:
+    id: Insert
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\Respositories\CategoriasRepository.cs
+    startLine: 45
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.Repositories
+  syntax:
+    content: public void Insert(Categoria c)
+    parameters:
+    - id: c
+      type: P2526_Irene_Biblioteca.Models.Categoria
+    content.vb: Public Sub Insert(c As Categoria)
+  overload: P2526_Irene_Biblioteca.Repositories.CategoriasRepository.Insert*
+- uid: P2526_Irene_Biblioteca.Repositories.CategoriasRepository.Update(P2526_Irene_Biblioteca.Models.Categoria)
+  commentId: M:P2526_Irene_Biblioteca.Repositories.CategoriasRepository.Update(P2526_Irene_Biblioteca.Models.Categoria)
+  id: Update(P2526_Irene_Biblioteca.Models.Categoria)
+  parent: P2526_Irene_Biblioteca.Repositories.CategoriasRepository
+  langs:
+  - csharp
+  - vb
+  name: Update(Categoria)
+  nameWithType: CategoriasRepository.Update(Categoria)
+  fullName: P2526_Irene_Biblioteca.Repositories.CategoriasRepository.Update(P2526_Irene_Biblioteca.Models.Categoria)
+  type: Method
+  source:
+    id: Update
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\Respositories\CategoriasRepository.cs
+    startLine: 62
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.Repositories
+  syntax:
+    content: public void Update(Categoria c)
+    parameters:
+    - id: c
+      type: P2526_Irene_Biblioteca.Models.Categoria
+    content.vb: Public Sub Update(c As Categoria)
+  overload: P2526_Irene_Biblioteca.Repositories.CategoriasRepository.Update*
+- uid: P2526_Irene_Biblioteca.Repositories.CategoriasRepository.Delete(System.Int32)
+  commentId: M:P2526_Irene_Biblioteca.Repositories.CategoriasRepository.Delete(System.Int32)
+  id: Delete(System.Int32)
+  parent: P2526_Irene_Biblioteca.Repositories.CategoriasRepository
+  langs:
+  - csharp
+  - vb
+  name: Delete(int)
+  nameWithType: CategoriasRepository.Delete(int)
+  fullName: P2526_Irene_Biblioteca.Repositories.CategoriasRepository.Delete(int)
+  type: Method
+  source:
+    id: Delete
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\Respositories\CategoriasRepository.cs
+    startLine: 81
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.Repositories
+  syntax:
+    content: public void Delete(int idCategoria)
+    parameters:
+    - id: idCategoria
+      type: System.Int32
+    content.vb: Public Sub Delete(idCategoria As Integer)
+  overload: P2526_Irene_Biblioteca.Repositories.CategoriasRepository.Delete*
+  nameWithType.vb: CategoriasRepository.Delete(Integer)
+  fullName.vb: P2526_Irene_Biblioteca.Repositories.CategoriasRepository.Delete(Integer)
+  name.vb: Delete(Integer)
+references:
+- uid: P2526_Irene_Biblioteca.Repositories
+  commentId: N:P2526_Irene_Biblioteca.Repositories
+  href: P2526_Irene_Biblioteca.html
+  name: P2526_Irene_Biblioteca.Repositories
+  nameWithType: P2526_Irene_Biblioteca.Repositories
+  fullName: P2526_Irene_Biblioteca.Repositories
+  spec.csharp:
+  - uid: P2526_Irene_Biblioteca
+    name: P2526_Irene_Biblioteca
+    href: P2526_Irene_Biblioteca.html
+  - name: .
+  - uid: P2526_Irene_Biblioteca.Repositories
+    name: Repositories
+    href: P2526_Irene_Biblioteca.Repositories.html
+  spec.vb:
+  - uid: P2526_Irene_Biblioteca
+    name: P2526_Irene_Biblioteca
+    href: P2526_Irene_Biblioteca.html
+  - name: .
+  - uid: P2526_Irene_Biblioteca.Repositories
+    name: Repositories
+    href: P2526_Irene_Biblioteca.Repositories.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: P2526_Irene_Biblioteca.Repositories.CategoriasRepository.#ctor*
+  commentId: Overload:P2526_Irene_Biblioteca.Repositories.CategoriasRepository.#ctor
+  href: P2526_Irene_Biblioteca.Repositories.CategoriasRepository.html#P2526_Irene_Biblioteca_Repositories_CategoriasRepository__ctor
+  name: CategoriasRepository
+  nameWithType: CategoriasRepository.CategoriasRepository
+  fullName: P2526_Irene_Biblioteca.Repositories.CategoriasRepository.CategoriasRepository
+  nameWithType.vb: CategoriasRepository.New
+  fullName.vb: P2526_Irene_Biblioteca.Repositories.CategoriasRepository.New
+  name.vb: New
+- uid: P2526_Irene_Biblioteca.Repositories.CategoriasRepository.GetAll*
+  commentId: Overload:P2526_Irene_Biblioteca.Repositories.CategoriasRepository.GetAll
+  href: P2526_Irene_Biblioteca.Repositories.CategoriasRepository.html#P2526_Irene_Biblioteca_Repositories_CategoriasRepository_GetAll
+  name: GetAll
+  nameWithType: CategoriasRepository.GetAll
+  fullName: P2526_Irene_Biblioteca.Repositories.CategoriasRepository.GetAll
+- uid: System.Collections.Generic.List{P2526_Irene_Biblioteca.Models.Categoria}
+  commentId: T:System.Collections.Generic.List{P2526_Irene_Biblioteca.Models.Categoria}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<Categoria>
+  nameWithType: List<Categoria>
+  fullName: System.Collections.Generic.List<P2526_Irene_Biblioteca.Models.Categoria>
+  nameWithType.vb: List(Of Categoria)
+  fullName.vb: System.Collections.Generic.List(Of P2526_Irene_Biblioteca.Models.Categoria)
+  name.vb: List(Of Categoria)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: P2526_Irene_Biblioteca.Models.Categoria
+    name: Categoria
+    href: P2526_Irene_Biblioteca.Models.Categoria.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: P2526_Irene_Biblioteca.Models.Categoria
+    name: Categoria
+    href: P2526_Irene_Biblioteca.Models.Categoria.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: P2526_Irene_Biblioteca.Repositories.CategoriasRepository.Insert*
+  commentId: Overload:P2526_Irene_Biblioteca.Repositories.CategoriasRepository.Insert
+  href: P2526_Irene_Biblioteca.Repositories.CategoriasRepository.html#P2526_Irene_Biblioteca_Repositories_CategoriasRepository_Insert_P2526_Irene_Biblioteca_Models_Categoria_
+  name: Insert
+  nameWithType: CategoriasRepository.Insert
+  fullName: P2526_Irene_Biblioteca.Repositories.CategoriasRepository.Insert
+- uid: P2526_Irene_Biblioteca.Models.Categoria
+  commentId: T:P2526_Irene_Biblioteca.Models.Categoria
+  parent: P2526_Irene_Biblioteca.Models
+  href: P2526_Irene_Biblioteca.Models.Categoria.html
+  name: Categoria
+  nameWithType: Categoria
+  fullName: P2526_Irene_Biblioteca.Models.Categoria
+- uid: P2526_Irene_Biblioteca.Models
+  commentId: N:P2526_Irene_Biblioteca.Models
+  href: P2526_Irene_Biblioteca.html
+  name: P2526_Irene_Biblioteca.Models
+  nameWithType: P2526_Irene_Biblioteca.Models
+  fullName: P2526_Irene_Biblioteca.Models
+  spec.csharp:
+  - uid: P2526_Irene_Biblioteca
+    name: P2526_Irene_Biblioteca
+    href: P2526_Irene_Biblioteca.html
+  - name: .
+  - uid: P2526_Irene_Biblioteca.Models
+    name: Models
+    href: P2526_Irene_Biblioteca.Models.html
+  spec.vb:
+  - uid: P2526_Irene_Biblioteca
+    name: P2526_Irene_Biblioteca
+    href: P2526_Irene_Biblioteca.html
+  - name: .
+  - uid: P2526_Irene_Biblioteca.Models
+    name: Models
+    href: P2526_Irene_Biblioteca.Models.html
+- uid: P2526_Irene_Biblioteca.Repositories.CategoriasRepository.Update*
+  commentId: Overload:P2526_Irene_Biblioteca.Repositories.CategoriasRepository.Update
+  href: P2526_Irene_Biblioteca.Repositories.CategoriasRepository.html#P2526_Irene_Biblioteca_Repositories_CategoriasRepository_Update_P2526_Irene_Biblioteca_Models_Categoria_
+  name: Update
+  nameWithType: CategoriasRepository.Update
+  fullName: P2526_Irene_Biblioteca.Repositories.CategoriasRepository.Update
+- uid: P2526_Irene_Biblioteca.Repositories.CategoriasRepository.Delete*
+  commentId: Overload:P2526_Irene_Biblioteca.Repositories.CategoriasRepository.Delete
+  href: P2526_Irene_Biblioteca.Repositories.CategoriasRepository.html#P2526_Irene_Biblioteca_Repositories_CategoriasRepository_Delete_System_Int32_
+  name: Delete
+  nameWithType: CategoriasRepository.Delete
+  fullName: P2526_Irene_Biblioteca.Repositories.CategoriasRepository.Delete
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer

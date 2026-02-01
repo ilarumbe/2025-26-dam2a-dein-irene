@@ -1,0 +1,1422 @@
+### YamlMime:ManagedReference
+items:
+- uid: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel
+  commentId: T:P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel
+  id: PrestamosViewModel
+  parent: P2526_Irene_Biblioteca.ViewModels
+  children:
+  - P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.#ctor
+  - P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Add
+  - P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.CargarCombos
+  - P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.CargarPrestamos
+  - P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.ClienteId
+  - P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Clientes
+  - P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Delete
+  - P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Devuelto
+  - P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.EmpleadoId
+  - P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Empleados
+  - P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.EsEmpleado
+  - P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.FechaDevolucion
+  - P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.FechaPrestamo
+  - P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.LibroId
+  - P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Libros
+  - P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Limpiar
+  - P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Mensaje
+  - P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.PrestamoSeleccionado
+  - P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Prestamos
+  - P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.PuedeEditar
+  - P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.PuedeElegirCliente
+  - P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.PuedeElegirEmpleado
+  - P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Update
+  langs:
+  - csharp
+  - vb
+  name: PrestamosViewModel
+  nameWithType: PrestamosViewModel
+  fullName: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel
+  type: Class
+  source:
+    id: PrestamosViewModel
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\PrestamosViewModel.cs
+    startLine: 10
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: 'public class PrestamosViewModel : BaseViewModel, INotifyPropertyChanged'
+    content.vb: Public Class PrestamosViewModel Inherits BaseViewModel Implements INotifyPropertyChanged
+  inheritance:
+  - System.Object
+  - P2526_Irene_Biblioteca.ViewModels.BaseViewModel
+  implements:
+  - System.ComponentModel.INotifyPropertyChanged
+  inheritedMembers:
+  - P2526_Irene_Biblioteca.ViewModels.BaseViewModel.PropertyChanged
+  - P2526_Irene_Biblioteca.ViewModels.BaseViewModel.OnPropertyChanged(System.String)
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Prestamos
+  commentId: P:P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Prestamos
+  id: Prestamos
+  parent: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel
+  langs:
+  - csharp
+  - vb
+  name: Prestamos
+  nameWithType: PrestamosViewModel.Prestamos
+  fullName: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Prestamos
+  type: Property
+  source:
+    id: Prestamos
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\PrestamosViewModel.cs
+    startLine: 18
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public ObservableCollection<Prestamo> Prestamos { get; }
+    parameters: []
+    return:
+      type: System.Collections.ObjectModel.ObservableCollection{P2526_Irene_Biblioteca.Models.Prestamo}
+    content.vb: Public ReadOnly Property Prestamos As ObservableCollection(Of Prestamo)
+  overload: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Prestamos*
+- uid: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Libros
+  commentId: P:P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Libros
+  id: Libros
+  parent: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel
+  langs:
+  - csharp
+  - vb
+  name: Libros
+  nameWithType: PrestamosViewModel.Libros
+  fullName: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Libros
+  type: Property
+  source:
+    id: Libros
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\PrestamosViewModel.cs
+    startLine: 19
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public ObservableCollection<Libro> Libros { get; }
+    parameters: []
+    return:
+      type: System.Collections.ObjectModel.ObservableCollection{P2526_Irene_Biblioteca.Models.Libro}
+    content.vb: Public ReadOnly Property Libros As ObservableCollection(Of Libro)
+  overload: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Libros*
+- uid: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Clientes
+  commentId: P:P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Clientes
+  id: Clientes
+  parent: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel
+  langs:
+  - csharp
+  - vb
+  name: Clientes
+  nameWithType: PrestamosViewModel.Clientes
+  fullName: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Clientes
+  type: Property
+  source:
+    id: Clientes
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\PrestamosViewModel.cs
+    startLine: 20
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public ObservableCollection<Cliente> Clientes { get; }
+    parameters: []
+    return:
+      type: System.Collections.ObjectModel.ObservableCollection{P2526_Irene_Biblioteca.Models.Cliente}
+    content.vb: Public ReadOnly Property Clientes As ObservableCollection(Of Cliente)
+  overload: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Clientes*
+- uid: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Empleados
+  commentId: P:P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Empleados
+  id: Empleados
+  parent: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel
+  langs:
+  - csharp
+  - vb
+  name: Empleados
+  nameWithType: PrestamosViewModel.Empleados
+  fullName: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Empleados
+  type: Property
+  source:
+    id: Empleados
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\PrestamosViewModel.cs
+    startLine: 21
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public ObservableCollection<Empleado> Empleados { get; }
+    parameters: []
+    return:
+      type: System.Collections.ObjectModel.ObservableCollection{P2526_Irene_Biblioteca.Models.Empleado}
+    content.vb: Public ReadOnly Property Empleados As ObservableCollection(Of Empleado)
+  overload: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Empleados*
+- uid: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.EsEmpleado
+  commentId: P:P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.EsEmpleado
+  id: EsEmpleado
+  parent: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel
+  langs:
+  - csharp
+  - vb
+  name: EsEmpleado
+  nameWithType: PrestamosViewModel.EsEmpleado
+  fullName: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.EsEmpleado
+  type: Property
+  source:
+    id: EsEmpleado
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\PrestamosViewModel.cs
+    startLine: 25
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public bool EsEmpleado { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property EsEmpleado As Boolean
+  overload: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.EsEmpleado*
+- uid: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.PuedeEditar
+  commentId: P:P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.PuedeEditar
+  id: PuedeEditar
+  parent: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel
+  langs:
+  - csharp
+  - vb
+  name: PuedeEditar
+  nameWithType: PrestamosViewModel.PuedeEditar
+  fullName: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.PuedeEditar
+  type: Property
+  source:
+    id: PuedeEditar
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\PrestamosViewModel.cs
+    startLine: 27
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public bool PuedeEditar { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property PuedeEditar As Boolean
+  overload: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.PuedeEditar*
+- uid: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.PuedeElegirCliente
+  commentId: P:P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.PuedeElegirCliente
+  id: PuedeElegirCliente
+  parent: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel
+  langs:
+  - csharp
+  - vb
+  name: PuedeElegirCliente
+  nameWithType: PrestamosViewModel.PuedeElegirCliente
+  fullName: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.PuedeElegirCliente
+  type: Property
+  source:
+    id: PuedeElegirCliente
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\PrestamosViewModel.cs
+    startLine: 36
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public bool PuedeElegirCliente { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property PuedeElegirCliente As Boolean
+  overload: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.PuedeElegirCliente*
+- uid: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.PuedeElegirEmpleado
+  commentId: P:P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.PuedeElegirEmpleado
+  id: PuedeElegirEmpleado
+  parent: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel
+  langs:
+  - csharp
+  - vb
+  name: PuedeElegirEmpleado
+  nameWithType: PrestamosViewModel.PuedeElegirEmpleado
+  fullName: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.PuedeElegirEmpleado
+  type: Property
+  source:
+    id: PuedeElegirEmpleado
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\PrestamosViewModel.cs
+    startLine: 37
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public bool PuedeElegirEmpleado { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property PuedeElegirEmpleado As Boolean
+  overload: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.PuedeElegirEmpleado*
+- uid: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.PrestamoSeleccionado
+  commentId: P:P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.PrestamoSeleccionado
+  id: PrestamoSeleccionado
+  parent: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel
+  langs:
+  - csharp
+  - vb
+  name: PrestamoSeleccionado
+  nameWithType: PrestamosViewModel.PrestamoSeleccionado
+  fullName: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.PrestamoSeleccionado
+  type: Property
+  source:
+    id: PrestamoSeleccionado
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\PrestamosViewModel.cs
+    startLine: 40
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public Prestamo PrestamoSeleccionado { get; set; }
+    parameters: []
+    return:
+      type: P2526_Irene_Biblioteca.Models.Prestamo
+    content.vb: Public Property PrestamoSeleccionado As Prestamo
+  overload: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.PrestamoSeleccionado*
+- uid: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.LibroId
+  commentId: P:P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.LibroId
+  id: LibroId
+  parent: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel
+  langs:
+  - csharp
+  - vb
+  name: LibroId
+  nameWithType: PrestamosViewModel.LibroId
+  fullName: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.LibroId
+  type: Property
+  source:
+    id: LibroId
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\PrestamosViewModel.cs
+    startLine: 52
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public int? LibroId { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property LibroId As Integer?
+  overload: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.LibroId*
+- uid: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.ClienteId
+  commentId: P:P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.ClienteId
+  id: ClienteId
+  parent: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel
+  langs:
+  - csharp
+  - vb
+  name: ClienteId
+  nameWithType: PrestamosViewModel.ClienteId
+  fullName: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.ClienteId
+  type: Property
+  source:
+    id: ClienteId
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\PrestamosViewModel.cs
+    startLine: 59
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public int? ClienteId { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property ClienteId As Integer?
+  overload: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.ClienteId*
+- uid: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.EmpleadoId
+  commentId: P:P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.EmpleadoId
+  id: EmpleadoId
+  parent: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel
+  langs:
+  - csharp
+  - vb
+  name: EmpleadoId
+  nameWithType: PrestamosViewModel.EmpleadoId
+  fullName: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.EmpleadoId
+  type: Property
+  source:
+    id: EmpleadoId
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\PrestamosViewModel.cs
+    startLine: 66
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public int? EmpleadoId { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property EmpleadoId As Integer?
+  overload: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.EmpleadoId*
+- uid: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.FechaPrestamo
+  commentId: P:P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.FechaPrestamo
+  id: FechaPrestamo
+  parent: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel
+  langs:
+  - csharp
+  - vb
+  name: FechaPrestamo
+  nameWithType: PrestamosViewModel.FechaPrestamo
+  fullName: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.FechaPrestamo
+  type: Property
+  source:
+    id: FechaPrestamo
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\PrestamosViewModel.cs
+    startLine: 73
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public DateTime? FechaPrestamo { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property FechaPrestamo As Date?
+  overload: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.FechaPrestamo*
+- uid: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.FechaDevolucion
+  commentId: P:P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.FechaDevolucion
+  id: FechaDevolucion
+  parent: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel
+  langs:
+  - csharp
+  - vb
+  name: FechaDevolucion
+  nameWithType: PrestamosViewModel.FechaDevolucion
+  fullName: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.FechaDevolucion
+  type: Property
+  source:
+    id: FechaDevolucion
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\PrestamosViewModel.cs
+    startLine: 80
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public DateTime? FechaDevolucion { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property FechaDevolucion As Date?
+  overload: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.FechaDevolucion*
+- uid: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Devuelto
+  commentId: P:P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Devuelto
+  id: Devuelto
+  parent: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel
+  langs:
+  - csharp
+  - vb
+  name: Devuelto
+  nameWithType: PrestamosViewModel.Devuelto
+  fullName: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Devuelto
+  type: Property
+  source:
+    id: Devuelto
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\PrestamosViewModel.cs
+    startLine: 87
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public bool Devuelto { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property Devuelto As Boolean
+  overload: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Devuelto*
+- uid: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Mensaje
+  commentId: P:P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Mensaje
+  id: Mensaje
+  parent: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel
+  langs:
+  - csharp
+  - vb
+  name: Mensaje
+  nameWithType: PrestamosViewModel.Mensaje
+  fullName: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Mensaje
+  type: Property
+  source:
+    id: Mensaje
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\PrestamosViewModel.cs
+    startLine: 94
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public string Mensaje { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Mensaje As String
+  overload: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Mensaje*
+- uid: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.#ctor
+  commentId: M:P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.#ctor
+  id: '#ctor'
+  parent: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel
+  langs:
+  - csharp
+  - vb
+  name: PrestamosViewModel()
+  nameWithType: PrestamosViewModel.PrestamosViewModel()
+  fullName: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.PrestamosViewModel()
+  type: Constructor
+  source:
+    id: .ctor
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\PrestamosViewModel.cs
+    startLine: 100
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public PrestamosViewModel()
+    content.vb: Public Sub New()
+  overload: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.#ctor*
+  nameWithType.vb: PrestamosViewModel.New()
+  fullName.vb: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.New()
+  name.vb: New()
+- uid: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.CargarCombos
+  commentId: M:P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.CargarCombos
+  id: CargarCombos
+  parent: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel
+  langs:
+  - csharp
+  - vb
+  name: CargarCombos()
+  nameWithType: PrestamosViewModel.CargarCombos()
+  fullName: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.CargarCombos()
+  type: Method
+  source:
+    id: CargarCombos
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\PrestamosViewModel.cs
+    startLine: 123
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public void CargarCombos()
+    content.vb: Public Sub CargarCombos()
+  overload: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.CargarCombos*
+- uid: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.CargarPrestamos
+  commentId: M:P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.CargarPrestamos
+  id: CargarPrestamos
+  parent: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel
+  langs:
+  - csharp
+  - vb
+  name: CargarPrestamos()
+  nameWithType: PrestamosViewModel.CargarPrestamos()
+  fullName: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.CargarPrestamos()
+  type: Method
+  source:
+    id: CargarPrestamos
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\PrestamosViewModel.cs
+    startLine: 148
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public void CargarPrestamos()
+    content.vb: Public Sub CargarPrestamos()
+  overload: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.CargarPrestamos*
+- uid: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Limpiar
+  commentId: M:P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Limpiar
+  id: Limpiar
+  parent: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel
+  langs:
+  - csharp
+  - vb
+  name: Limpiar()
+  nameWithType: PrestamosViewModel.Limpiar()
+  fullName: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Limpiar()
+  type: Method
+  source:
+    id: Limpiar
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\PrestamosViewModel.cs
+    startLine: 189
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public void Limpiar()
+    content.vb: Public Sub Limpiar()
+  overload: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Limpiar*
+- uid: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Add
+  commentId: M:P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Add
+  id: Add
+  parent: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel
+  langs:
+  - csharp
+  - vb
+  name: Add()
+  nameWithType: PrestamosViewModel.Add()
+  fullName: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Add()
+  type: Method
+  source:
+    id: Add
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\PrestamosViewModel.cs
+    startLine: 227
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public void Add()
+    content.vb: Public Sub Add()
+  overload: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Add*
+- uid: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Update
+  commentId: M:P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Update
+  id: Update
+  parent: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: PrestamosViewModel.Update()
+  fullName: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Update()
+  type: Method
+  source:
+    id: Update
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\PrestamosViewModel.cs
+    startLine: 278
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public void Update()
+    content.vb: Public Sub Update()
+  overload: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Update*
+- uid: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Delete
+  commentId: M:P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Delete
+  id: Delete
+  parent: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel
+  langs:
+  - csharp
+  - vb
+  name: Delete()
+  nameWithType: PrestamosViewModel.Delete()
+  fullName: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Delete()
+  type: Method
+  source:
+    id: Delete
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\PrestamosViewModel.cs
+    startLine: 352
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public void Delete()
+    content.vb: Public Sub Delete()
+  overload: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Delete*
+references:
+- uid: P2526_Irene_Biblioteca.ViewModels
+  commentId: N:P2526_Irene_Biblioteca.ViewModels
+  href: P2526_Irene_Biblioteca.html
+  name: P2526_Irene_Biblioteca.ViewModels
+  nameWithType: P2526_Irene_Biblioteca.ViewModels
+  fullName: P2526_Irene_Biblioteca.ViewModels
+  spec.csharp:
+  - uid: P2526_Irene_Biblioteca
+    name: P2526_Irene_Biblioteca
+    href: P2526_Irene_Biblioteca.html
+  - name: .
+  - uid: P2526_Irene_Biblioteca.ViewModels
+    name: ViewModels
+    href: P2526_Irene_Biblioteca.ViewModels.html
+  spec.vb:
+  - uid: P2526_Irene_Biblioteca
+    name: P2526_Irene_Biblioteca
+    href: P2526_Irene_Biblioteca.html
+  - name: .
+  - uid: P2526_Irene_Biblioteca.ViewModels
+    name: ViewModels
+    href: P2526_Irene_Biblioteca.ViewModels.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: P2526_Irene_Biblioteca.ViewModels.BaseViewModel
+  commentId: T:P2526_Irene_Biblioteca.ViewModels.BaseViewModel
+  parent: P2526_Irene_Biblioteca.ViewModels
+  href: P2526_Irene_Biblioteca.ViewModels.BaseViewModel.html
+  name: BaseViewModel
+  nameWithType: BaseViewModel
+  fullName: P2526_Irene_Biblioteca.ViewModels.BaseViewModel
+- uid: System.ComponentModel.INotifyPropertyChanged
+  commentId: T:System.ComponentModel.INotifyPropertyChanged
+  parent: System.ComponentModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged
+  name: INotifyPropertyChanged
+  nameWithType: INotifyPropertyChanged
+  fullName: System.ComponentModel.INotifyPropertyChanged
+- uid: P2526_Irene_Biblioteca.ViewModels.BaseViewModel.PropertyChanged
+  commentId: E:P2526_Irene_Biblioteca.ViewModels.BaseViewModel.PropertyChanged
+  parent: P2526_Irene_Biblioteca.ViewModels.BaseViewModel
+  href: P2526_Irene_Biblioteca.ViewModels.BaseViewModel.html#P2526_Irene_Biblioteca_ViewModels_BaseViewModel_PropertyChanged
+  name: PropertyChanged
+  nameWithType: BaseViewModel.PropertyChanged
+  fullName: P2526_Irene_Biblioteca.ViewModels.BaseViewModel.PropertyChanged
+- uid: P2526_Irene_Biblioteca.ViewModels.BaseViewModel.OnPropertyChanged(System.String)
+  commentId: M:P2526_Irene_Biblioteca.ViewModels.BaseViewModel.OnPropertyChanged(System.String)
+  parent: P2526_Irene_Biblioteca.ViewModels.BaseViewModel
+  isExternal: true
+  href: P2526_Irene_Biblioteca.ViewModels.BaseViewModel.html#P2526_Irene_Biblioteca_ViewModels_BaseViewModel_OnPropertyChanged_System_String_
+  name: OnPropertyChanged(string)
+  nameWithType: BaseViewModel.OnPropertyChanged(string)
+  fullName: P2526_Irene_Biblioteca.ViewModels.BaseViewModel.OnPropertyChanged(string)
+  nameWithType.vb: BaseViewModel.OnPropertyChanged(String)
+  fullName.vb: P2526_Irene_Biblioteca.ViewModels.BaseViewModel.OnPropertyChanged(String)
+  name.vb: OnPropertyChanged(String)
+  spec.csharp:
+  - uid: P2526_Irene_Biblioteca.ViewModels.BaseViewModel.OnPropertyChanged(System.String)
+    name: OnPropertyChanged
+    href: P2526_Irene_Biblioteca.ViewModels.BaseViewModel.html#P2526_Irene_Biblioteca_ViewModels_BaseViewModel_OnPropertyChanged_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: P2526_Irene_Biblioteca.ViewModels.BaseViewModel.OnPropertyChanged(System.String)
+    name: OnPropertyChanged
+    href: P2526_Irene_Biblioteca.ViewModels.BaseViewModel.html#P2526_Irene_Biblioteca_ViewModels_BaseViewModel_OnPropertyChanged_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ComponentModel
+  commentId: N:System.ComponentModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.ComponentModel
+  nameWithType: System.ComponentModel
+  fullName: System.ComponentModel
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.ComponentModel
+    name: ComponentModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.ComponentModel
+    name: ComponentModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel
+- uid: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Prestamos*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Prestamos
+  href: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.html#P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_Prestamos
+  name: Prestamos
+  nameWithType: PrestamosViewModel.Prestamos
+  fullName: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Prestamos
+- uid: System.Collections.ObjectModel.ObservableCollection{P2526_Irene_Biblioteca.Models.Prestamo}
+  commentId: T:System.Collections.ObjectModel.ObservableCollection{P2526_Irene_Biblioteca.Models.Prestamo}
+  parent: System.Collections.ObjectModel
+  definition: System.Collections.ObjectModel.ObservableCollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  name: ObservableCollection<Prestamo>
+  nameWithType: ObservableCollection<Prestamo>
+  fullName: System.Collections.ObjectModel.ObservableCollection<P2526_Irene_Biblioteca.Models.Prestamo>
+  nameWithType.vb: ObservableCollection(Of Prestamo)
+  fullName.vb: System.Collections.ObjectModel.ObservableCollection(Of P2526_Irene_Biblioteca.Models.Prestamo)
+  name.vb: ObservableCollection(Of Prestamo)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ObservableCollection`1
+    name: ObservableCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  - name: <
+  - uid: P2526_Irene_Biblioteca.Models.Prestamo
+    name: Prestamo
+    href: P2526_Irene_Biblioteca.Models.Prestamo.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ObservableCollection`1
+    name: ObservableCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: P2526_Irene_Biblioteca.Models.Prestamo
+    name: Prestamo
+    href: P2526_Irene_Biblioteca.Models.Prestamo.html
+  - name: )
+- uid: System.Collections.ObjectModel.ObservableCollection`1
+  commentId: T:System.Collections.ObjectModel.ObservableCollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  name: ObservableCollection<T>
+  nameWithType: ObservableCollection<T>
+  fullName: System.Collections.ObjectModel.ObservableCollection<T>
+  nameWithType.vb: ObservableCollection(Of T)
+  fullName.vb: System.Collections.ObjectModel.ObservableCollection(Of T)
+  name.vb: ObservableCollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ObservableCollection`1
+    name: ObservableCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ObservableCollection`1
+    name: ObservableCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.ObjectModel
+  commentId: N:System.Collections.ObjectModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.ObjectModel
+  nameWithType: System.Collections.ObjectModel
+  fullName: System.Collections.ObjectModel
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.ObjectModel
+    name: ObjectModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.ObjectModel
+    name: ObjectModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel
+- uid: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Libros*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Libros
+  href: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.html#P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_Libros
+  name: Libros
+  nameWithType: PrestamosViewModel.Libros
+  fullName: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Libros
+- uid: System.Collections.ObjectModel.ObservableCollection{P2526_Irene_Biblioteca.Models.Libro}
+  commentId: T:System.Collections.ObjectModel.ObservableCollection{P2526_Irene_Biblioteca.Models.Libro}
+  parent: System.Collections.ObjectModel
+  definition: System.Collections.ObjectModel.ObservableCollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  name: ObservableCollection<Libro>
+  nameWithType: ObservableCollection<Libro>
+  fullName: System.Collections.ObjectModel.ObservableCollection<P2526_Irene_Biblioteca.Models.Libro>
+  nameWithType.vb: ObservableCollection(Of Libro)
+  fullName.vb: System.Collections.ObjectModel.ObservableCollection(Of P2526_Irene_Biblioteca.Models.Libro)
+  name.vb: ObservableCollection(Of Libro)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ObservableCollection`1
+    name: ObservableCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  - name: <
+  - uid: P2526_Irene_Biblioteca.Models.Libro
+    name: Libro
+    href: P2526_Irene_Biblioteca.Models.Libro.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ObservableCollection`1
+    name: ObservableCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: P2526_Irene_Biblioteca.Models.Libro
+    name: Libro
+    href: P2526_Irene_Biblioteca.Models.Libro.html
+  - name: )
+- uid: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Clientes*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Clientes
+  href: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.html#P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_Clientes
+  name: Clientes
+  nameWithType: PrestamosViewModel.Clientes
+  fullName: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Clientes
+- uid: System.Collections.ObjectModel.ObservableCollection{P2526_Irene_Biblioteca.Models.Cliente}
+  commentId: T:System.Collections.ObjectModel.ObservableCollection{P2526_Irene_Biblioteca.Models.Cliente}
+  parent: System.Collections.ObjectModel
+  definition: System.Collections.ObjectModel.ObservableCollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  name: ObservableCollection<Cliente>
+  nameWithType: ObservableCollection<Cliente>
+  fullName: System.Collections.ObjectModel.ObservableCollection<P2526_Irene_Biblioteca.Models.Cliente>
+  nameWithType.vb: ObservableCollection(Of Cliente)
+  fullName.vb: System.Collections.ObjectModel.ObservableCollection(Of P2526_Irene_Biblioteca.Models.Cliente)
+  name.vb: ObservableCollection(Of Cliente)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ObservableCollection`1
+    name: ObservableCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  - name: <
+  - uid: P2526_Irene_Biblioteca.Models.Cliente
+    name: Cliente
+    href: P2526_Irene_Biblioteca.Models.Cliente.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ObservableCollection`1
+    name: ObservableCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: P2526_Irene_Biblioteca.Models.Cliente
+    name: Cliente
+    href: P2526_Irene_Biblioteca.Models.Cliente.html
+  - name: )
+- uid: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Empleados*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Empleados
+  href: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.html#P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_Empleados
+  name: Empleados
+  nameWithType: PrestamosViewModel.Empleados
+  fullName: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Empleados
+- uid: System.Collections.ObjectModel.ObservableCollection{P2526_Irene_Biblioteca.Models.Empleado}
+  commentId: T:System.Collections.ObjectModel.ObservableCollection{P2526_Irene_Biblioteca.Models.Empleado}
+  parent: System.Collections.ObjectModel
+  definition: System.Collections.ObjectModel.ObservableCollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  name: ObservableCollection<Empleado>
+  nameWithType: ObservableCollection<Empleado>
+  fullName: System.Collections.ObjectModel.ObservableCollection<P2526_Irene_Biblioteca.Models.Empleado>
+  nameWithType.vb: ObservableCollection(Of Empleado)
+  fullName.vb: System.Collections.ObjectModel.ObservableCollection(Of P2526_Irene_Biblioteca.Models.Empleado)
+  name.vb: ObservableCollection(Of Empleado)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ObservableCollection`1
+    name: ObservableCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  - name: <
+  - uid: P2526_Irene_Biblioteca.Models.Empleado
+    name: Empleado
+    href: P2526_Irene_Biblioteca.Models.Empleado.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ObservableCollection`1
+    name: ObservableCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: P2526_Irene_Biblioteca.Models.Empleado
+    name: Empleado
+    href: P2526_Irene_Biblioteca.Models.Empleado.html
+  - name: )
+- uid: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.EsEmpleado*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.EsEmpleado
+  href: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.html#P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_EsEmpleado
+  name: EsEmpleado
+  nameWithType: PrestamosViewModel.EsEmpleado
+  fullName: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.EsEmpleado
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.PuedeEditar*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.PuedeEditar
+  href: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.html#P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_PuedeEditar
+  name: PuedeEditar
+  nameWithType: PrestamosViewModel.PuedeEditar
+  fullName: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.PuedeEditar
+- uid: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.PuedeElegirCliente*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.PuedeElegirCliente
+  href: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.html#P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_PuedeElegirCliente
+  name: PuedeElegirCliente
+  nameWithType: PrestamosViewModel.PuedeElegirCliente
+  fullName: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.PuedeElegirCliente
+- uid: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.PuedeElegirEmpleado*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.PuedeElegirEmpleado
+  href: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.html#P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_PuedeElegirEmpleado
+  name: PuedeElegirEmpleado
+  nameWithType: PrestamosViewModel.PuedeElegirEmpleado
+  fullName: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.PuedeElegirEmpleado
+- uid: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.PrestamoSeleccionado*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.PrestamoSeleccionado
+  href: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.html#P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_PrestamoSeleccionado
+  name: PrestamoSeleccionado
+  nameWithType: PrestamosViewModel.PrestamoSeleccionado
+  fullName: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.PrestamoSeleccionado
+- uid: P2526_Irene_Biblioteca.Models.Prestamo
+  commentId: T:P2526_Irene_Biblioteca.Models.Prestamo
+  parent: P2526_Irene_Biblioteca.Models
+  href: P2526_Irene_Biblioteca.Models.Prestamo.html
+  name: Prestamo
+  nameWithType: Prestamo
+  fullName: P2526_Irene_Biblioteca.Models.Prestamo
+- uid: P2526_Irene_Biblioteca.Models
+  commentId: N:P2526_Irene_Biblioteca.Models
+  href: P2526_Irene_Biblioteca.html
+  name: P2526_Irene_Biblioteca.Models
+  nameWithType: P2526_Irene_Biblioteca.Models
+  fullName: P2526_Irene_Biblioteca.Models
+  spec.csharp:
+  - uid: P2526_Irene_Biblioteca
+    name: P2526_Irene_Biblioteca
+    href: P2526_Irene_Biblioteca.html
+  - name: .
+  - uid: P2526_Irene_Biblioteca.Models
+    name: Models
+    href: P2526_Irene_Biblioteca.Models.html
+  spec.vb:
+  - uid: P2526_Irene_Biblioteca
+    name: P2526_Irene_Biblioteca
+    href: P2526_Irene_Biblioteca.html
+  - name: .
+  - uid: P2526_Irene_Biblioteca.Models
+    name: Models
+    href: P2526_Irene_Biblioteca.Models.html
+- uid: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.LibroId*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.LibroId
+  href: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.html#P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_LibroId
+  name: LibroId
+  nameWithType: PrestamosViewModel.LibroId
+  fullName: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.LibroId
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int?
+  nameWithType: int?
+  fullName: int?
+  nameWithType.vb: Integer?
+  fullName.vb: Integer?
+  name.vb: Integer?
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.ClienteId*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.ClienteId
+  href: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.html#P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_ClienteId
+  name: ClienteId
+  nameWithType: PrestamosViewModel.ClienteId
+  fullName: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.ClienteId
+- uid: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.EmpleadoId*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.EmpleadoId
+  href: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.html#P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_EmpleadoId
+  name: EmpleadoId
+  nameWithType: PrestamosViewModel.EmpleadoId
+  fullName: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.EmpleadoId
+- uid: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.FechaPrestamo*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.FechaPrestamo
+  href: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.html#P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_FechaPrestamo
+  name: FechaPrestamo
+  nameWithType: PrestamosViewModel.FechaPrestamo
+  fullName: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.FechaPrestamo
+- uid: System.Nullable{System.DateTime}
+  commentId: T:System.Nullable{System.DateTime}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime?
+  nameWithType: DateTime?
+  fullName: System.DateTime?
+  nameWithType.vb: Date?
+  fullName.vb: Date?
+  name.vb: Date?
+  spec.csharp:
+  - uid: System.DateTime
+    name: DateTime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+  spec.vb:
+  - uid: System.DateTime
+    name: Date
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+- uid: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.FechaDevolucion*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.FechaDevolucion
+  href: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.html#P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_FechaDevolucion
+  name: FechaDevolucion
+  nameWithType: PrestamosViewModel.FechaDevolucion
+  fullName: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.FechaDevolucion
+- uid: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Devuelto*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Devuelto
+  href: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.html#P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_Devuelto
+  name: Devuelto
+  nameWithType: PrestamosViewModel.Devuelto
+  fullName: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Devuelto
+- uid: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Mensaje*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Mensaje
+  href: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.html#P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_Mensaje
+  name: Mensaje
+  nameWithType: PrestamosViewModel.Mensaje
+  fullName: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Mensaje
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.#ctor*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.#ctor
+  href: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.html#P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel__ctor
+  name: PrestamosViewModel
+  nameWithType: PrestamosViewModel.PrestamosViewModel
+  fullName: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.PrestamosViewModel
+  nameWithType.vb: PrestamosViewModel.New
+  fullName.vb: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.New
+  name.vb: New
+- uid: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.CargarCombos*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.CargarCombos
+  href: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.html#P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_CargarCombos
+  name: CargarCombos
+  nameWithType: PrestamosViewModel.CargarCombos
+  fullName: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.CargarCombos
+- uid: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.CargarPrestamos*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.CargarPrestamos
+  href: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.html#P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_CargarPrestamos
+  name: CargarPrestamos
+  nameWithType: PrestamosViewModel.CargarPrestamos
+  fullName: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.CargarPrestamos
+- uid: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Limpiar*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Limpiar
+  href: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.html#P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_Limpiar
+  name: Limpiar
+  nameWithType: PrestamosViewModel.Limpiar
+  fullName: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Limpiar
+- uid: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Add*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Add
+  href: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.html#P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_Add
+  name: Add
+  nameWithType: PrestamosViewModel.Add
+  fullName: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Add
+- uid: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Update*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Update
+  href: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.html#P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_Update
+  name: Update
+  nameWithType: PrestamosViewModel.Update
+  fullName: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Update
+- uid: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Delete*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Delete
+  href: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.html#P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_Delete
+  name: Delete
+  nameWithType: PrestamosViewModel.Delete
+  fullName: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Delete

@@ -1,0 +1,582 @@
+### YamlMime:ManagedReference
+items:
+- uid: P2526_Irene_Biblioteca.ViewModels.LoginViewModel
+  commentId: T:P2526_Irene_Biblioteca.ViewModels.LoginViewModel
+  id: LoginViewModel
+  parent: P2526_Irene_Biblioteca.ViewModels
+  children:
+  - P2526_Irene_Biblioteca.ViewModels.LoginViewModel.#ctor(P2526_Irene_Biblioteca.Services.IWindowService)
+  - P2526_Irene_Biblioteca.ViewModels.LoginViewModel.Login
+  - P2526_Irene_Biblioteca.ViewModels.LoginViewModel.MensajeError
+  - P2526_Irene_Biblioteca.ViewModels.LoginViewModel.Password
+  - P2526_Irene_Biblioteca.ViewModels.LoginViewModel.Usuario
+  langs:
+  - csharp
+  - vb
+  name: LoginViewModel
+  nameWithType: LoginViewModel
+  fullName: P2526_Irene_Biblioteca.ViewModels.LoginViewModel
+  type: Class
+  source:
+    id: LoginViewModel
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\LoginViewModel.cs
+    startLine: 7
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: 'public class LoginViewModel : BaseViewModel, INotifyPropertyChanged'
+    content.vb: Public Class LoginViewModel Inherits BaseViewModel Implements INotifyPropertyChanged
+  inheritance:
+  - System.Object
+  - P2526_Irene_Biblioteca.ViewModels.BaseViewModel
+  implements:
+  - System.ComponentModel.INotifyPropertyChanged
+  inheritedMembers:
+  - P2526_Irene_Biblioteca.ViewModels.BaseViewModel.PropertyChanged
+  - P2526_Irene_Biblioteca.ViewModels.BaseViewModel.OnPropertyChanged(System.String)
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: P2526_Irene_Biblioteca.ViewModels.LoginViewModel.Usuario
+  commentId: P:P2526_Irene_Biblioteca.ViewModels.LoginViewModel.Usuario
+  id: Usuario
+  parent: P2526_Irene_Biblioteca.ViewModels.LoginViewModel
+  langs:
+  - csharp
+  - vb
+  name: Usuario
+  nameWithType: LoginViewModel.Usuario
+  fullName: P2526_Irene_Biblioteca.ViewModels.LoginViewModel.Usuario
+  type: Property
+  source:
+    id: Usuario
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\LoginViewModel.cs
+    startLine: 12
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public string Usuario { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Usuario As String
+  overload: P2526_Irene_Biblioteca.ViewModels.LoginViewModel.Usuario*
+- uid: P2526_Irene_Biblioteca.ViewModels.LoginViewModel.Password
+  commentId: P:P2526_Irene_Biblioteca.ViewModels.LoginViewModel.Password
+  id: Password
+  parent: P2526_Irene_Biblioteca.ViewModels.LoginViewModel
+  langs:
+  - csharp
+  - vb
+  name: Password
+  nameWithType: LoginViewModel.Password
+  fullName: P2526_Irene_Biblioteca.ViewModels.LoginViewModel.Password
+  type: Property
+  source:
+    id: Password
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\LoginViewModel.cs
+    startLine: 18
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public string Password { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Password As String
+  overload: P2526_Irene_Biblioteca.ViewModels.LoginViewModel.Password*
+- uid: P2526_Irene_Biblioteca.ViewModels.LoginViewModel.MensajeError
+  commentId: P:P2526_Irene_Biblioteca.ViewModels.LoginViewModel.MensajeError
+  id: MensajeError
+  parent: P2526_Irene_Biblioteca.ViewModels.LoginViewModel
+  langs:
+  - csharp
+  - vb
+  name: MensajeError
+  nameWithType: LoginViewModel.MensajeError
+  fullName: P2526_Irene_Biblioteca.ViewModels.LoginViewModel.MensajeError
+  type: Property
+  source:
+    id: MensajeError
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\LoginViewModel.cs
+    startLine: 21
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public string MensajeError { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property MensajeError As String
+  overload: P2526_Irene_Biblioteca.ViewModels.LoginViewModel.MensajeError*
+- uid: P2526_Irene_Biblioteca.ViewModels.LoginViewModel.#ctor(P2526_Irene_Biblioteca.Services.IWindowService)
+  commentId: M:P2526_Irene_Biblioteca.ViewModels.LoginViewModel.#ctor(P2526_Irene_Biblioteca.Services.IWindowService)
+  id: '#ctor(P2526_Irene_Biblioteca.Services.IWindowService)'
+  parent: P2526_Irene_Biblioteca.ViewModels.LoginViewModel
+  langs:
+  - csharp
+  - vb
+  name: LoginViewModel(IWindowService)
+  nameWithType: LoginViewModel.LoginViewModel(IWindowService)
+  fullName: P2526_Irene_Biblioteca.ViewModels.LoginViewModel.LoginViewModel(P2526_Irene_Biblioteca.Services.IWindowService)
+  type: Constructor
+  source:
+    id: .ctor
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\LoginViewModel.cs
+    startLine: 27
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public LoginViewModel(IWindowService service)
+    parameters:
+    - id: service
+      type: P2526_Irene_Biblioteca.Services.IWindowService
+    content.vb: Public Sub New(service As IWindowService)
+  overload: P2526_Irene_Biblioteca.ViewModels.LoginViewModel.#ctor*
+  nameWithType.vb: LoginViewModel.New(IWindowService)
+  fullName.vb: P2526_Irene_Biblioteca.ViewModels.LoginViewModel.New(P2526_Irene_Biblioteca.Services.IWindowService)
+  name.vb: New(IWindowService)
+- uid: P2526_Irene_Biblioteca.ViewModels.LoginViewModel.Login
+  commentId: M:P2526_Irene_Biblioteca.ViewModels.LoginViewModel.Login
+  id: Login
+  parent: P2526_Irene_Biblioteca.ViewModels.LoginViewModel
+  langs:
+  - csharp
+  - vb
+  name: Login()
+  nameWithType: LoginViewModel.Login()
+  fullName: P2526_Irene_Biblioteca.ViewModels.LoginViewModel.Login()
+  type: Method
+  source:
+    id: Login
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\LoginViewModel.cs
+    startLine: 32
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public void Login()
+    content.vb: Public Sub Login()
+  overload: P2526_Irene_Biblioteca.ViewModels.LoginViewModel.Login*
+references:
+- uid: P2526_Irene_Biblioteca.ViewModels
+  commentId: N:P2526_Irene_Biblioteca.ViewModels
+  href: P2526_Irene_Biblioteca.html
+  name: P2526_Irene_Biblioteca.ViewModels
+  nameWithType: P2526_Irene_Biblioteca.ViewModels
+  fullName: P2526_Irene_Biblioteca.ViewModels
+  spec.csharp:
+  - uid: P2526_Irene_Biblioteca
+    name: P2526_Irene_Biblioteca
+    href: P2526_Irene_Biblioteca.html
+  - name: .
+  - uid: P2526_Irene_Biblioteca.ViewModels
+    name: ViewModels
+    href: P2526_Irene_Biblioteca.ViewModels.html
+  spec.vb:
+  - uid: P2526_Irene_Biblioteca
+    name: P2526_Irene_Biblioteca
+    href: P2526_Irene_Biblioteca.html
+  - name: .
+  - uid: P2526_Irene_Biblioteca.ViewModels
+    name: ViewModels
+    href: P2526_Irene_Biblioteca.ViewModels.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: P2526_Irene_Biblioteca.ViewModels.BaseViewModel
+  commentId: T:P2526_Irene_Biblioteca.ViewModels.BaseViewModel
+  parent: P2526_Irene_Biblioteca.ViewModels
+  href: P2526_Irene_Biblioteca.ViewModels.BaseViewModel.html
+  name: BaseViewModel
+  nameWithType: BaseViewModel
+  fullName: P2526_Irene_Biblioteca.ViewModels.BaseViewModel
+- uid: System.ComponentModel.INotifyPropertyChanged
+  commentId: T:System.ComponentModel.INotifyPropertyChanged
+  parent: System.ComponentModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged
+  name: INotifyPropertyChanged
+  nameWithType: INotifyPropertyChanged
+  fullName: System.ComponentModel.INotifyPropertyChanged
+- uid: P2526_Irene_Biblioteca.ViewModels.BaseViewModel.PropertyChanged
+  commentId: E:P2526_Irene_Biblioteca.ViewModels.BaseViewModel.PropertyChanged
+  parent: P2526_Irene_Biblioteca.ViewModels.BaseViewModel
+  href: P2526_Irene_Biblioteca.ViewModels.BaseViewModel.html#P2526_Irene_Biblioteca_ViewModels_BaseViewModel_PropertyChanged
+  name: PropertyChanged
+  nameWithType: BaseViewModel.PropertyChanged
+  fullName: P2526_Irene_Biblioteca.ViewModels.BaseViewModel.PropertyChanged
+- uid: P2526_Irene_Biblioteca.ViewModels.BaseViewModel.OnPropertyChanged(System.String)
+  commentId: M:P2526_Irene_Biblioteca.ViewModels.BaseViewModel.OnPropertyChanged(System.String)
+  parent: P2526_Irene_Biblioteca.ViewModels.BaseViewModel
+  isExternal: true
+  href: P2526_Irene_Biblioteca.ViewModels.BaseViewModel.html#P2526_Irene_Biblioteca_ViewModels_BaseViewModel_OnPropertyChanged_System_String_
+  name: OnPropertyChanged(string)
+  nameWithType: BaseViewModel.OnPropertyChanged(string)
+  fullName: P2526_Irene_Biblioteca.ViewModels.BaseViewModel.OnPropertyChanged(string)
+  nameWithType.vb: BaseViewModel.OnPropertyChanged(String)
+  fullName.vb: P2526_Irene_Biblioteca.ViewModels.BaseViewModel.OnPropertyChanged(String)
+  name.vb: OnPropertyChanged(String)
+  spec.csharp:
+  - uid: P2526_Irene_Biblioteca.ViewModels.BaseViewModel.OnPropertyChanged(System.String)
+    name: OnPropertyChanged
+    href: P2526_Irene_Biblioteca.ViewModels.BaseViewModel.html#P2526_Irene_Biblioteca_ViewModels_BaseViewModel_OnPropertyChanged_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: P2526_Irene_Biblioteca.ViewModels.BaseViewModel.OnPropertyChanged(System.String)
+    name: OnPropertyChanged
+    href: P2526_Irene_Biblioteca.ViewModels.BaseViewModel.html#P2526_Irene_Biblioteca_ViewModels_BaseViewModel_OnPropertyChanged_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ComponentModel
+  commentId: N:System.ComponentModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.ComponentModel
+  nameWithType: System.ComponentModel
+  fullName: System.ComponentModel
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.ComponentModel
+    name: ComponentModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.ComponentModel
+    name: ComponentModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel
+- uid: P2526_Irene_Biblioteca.ViewModels.LoginViewModel.Usuario*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.LoginViewModel.Usuario
+  href: P2526_Irene_Biblioteca.ViewModels.LoginViewModel.html#P2526_Irene_Biblioteca_ViewModels_LoginViewModel_Usuario
+  name: Usuario
+  nameWithType: LoginViewModel.Usuario
+  fullName: P2526_Irene_Biblioteca.ViewModels.LoginViewModel.Usuario
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: P2526_Irene_Biblioteca.ViewModels.LoginViewModel.Password*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.LoginViewModel.Password
+  href: P2526_Irene_Biblioteca.ViewModels.LoginViewModel.html#P2526_Irene_Biblioteca_ViewModels_LoginViewModel_Password
+  name: Password
+  nameWithType: LoginViewModel.Password
+  fullName: P2526_Irene_Biblioteca.ViewModels.LoginViewModel.Password
+- uid: P2526_Irene_Biblioteca.ViewModels.LoginViewModel.MensajeError*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.LoginViewModel.MensajeError
+  href: P2526_Irene_Biblioteca.ViewModels.LoginViewModel.html#P2526_Irene_Biblioteca_ViewModels_LoginViewModel_MensajeError
+  name: MensajeError
+  nameWithType: LoginViewModel.MensajeError
+  fullName: P2526_Irene_Biblioteca.ViewModels.LoginViewModel.MensajeError
+- uid: P2526_Irene_Biblioteca.ViewModels.LoginViewModel.#ctor*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.LoginViewModel.#ctor
+  href: P2526_Irene_Biblioteca.ViewModels.LoginViewModel.html#P2526_Irene_Biblioteca_ViewModels_LoginViewModel__ctor_P2526_Irene_Biblioteca_Services_IWindowService_
+  name: LoginViewModel
+  nameWithType: LoginViewModel.LoginViewModel
+  fullName: P2526_Irene_Biblioteca.ViewModels.LoginViewModel.LoginViewModel
+  nameWithType.vb: LoginViewModel.New
+  fullName.vb: P2526_Irene_Biblioteca.ViewModels.LoginViewModel.New
+  name.vb: New
+- uid: P2526_Irene_Biblioteca.Services.IWindowService
+  commentId: T:P2526_Irene_Biblioteca.Services.IWindowService
+  parent: P2526_Irene_Biblioteca.Services
+  href: P2526_Irene_Biblioteca.Services.IWindowService.html
+  name: IWindowService
+  nameWithType: IWindowService
+  fullName: P2526_Irene_Biblioteca.Services.IWindowService
+- uid: P2526_Irene_Biblioteca.Services
+  commentId: N:P2526_Irene_Biblioteca.Services
+  href: P2526_Irene_Biblioteca.html
+  name: P2526_Irene_Biblioteca.Services
+  nameWithType: P2526_Irene_Biblioteca.Services
+  fullName: P2526_Irene_Biblioteca.Services
+  spec.csharp:
+  - uid: P2526_Irene_Biblioteca
+    name: P2526_Irene_Biblioteca
+    href: P2526_Irene_Biblioteca.html
+  - name: .
+  - uid: P2526_Irene_Biblioteca.Services
+    name: Services
+    href: P2526_Irene_Biblioteca.Services.html
+  spec.vb:
+  - uid: P2526_Irene_Biblioteca
+    name: P2526_Irene_Biblioteca
+    href: P2526_Irene_Biblioteca.html
+  - name: .
+  - uid: P2526_Irene_Biblioteca.Services
+    name: Services
+    href: P2526_Irene_Biblioteca.Services.html
+- uid: P2526_Irene_Biblioteca.ViewModels.LoginViewModel.Login*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.LoginViewModel.Login
+  href: P2526_Irene_Biblioteca.ViewModels.LoginViewModel.html#P2526_Irene_Biblioteca_ViewModels_LoginViewModel_Login
+  name: Login
+  nameWithType: LoginViewModel.Login
+  fullName: P2526_Irene_Biblioteca.ViewModels.LoginViewModel.Login

@@ -1,0 +1,932 @@
+### YamlMime:ManagedReference
+items:
+- uid: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel
+  commentId: T:P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel
+  id: EmpleadosViewModel
+  parent: P2526_Irene_Biblioteca.ViewModels
+  children:
+  - P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.#ctor
+  - P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Add
+  - P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Cargar
+  - P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Delete
+  - P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.EmpleadoSeleccionado
+  - P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Empleados
+  - P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Limpiar
+  - P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Mensaje
+  - P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Nombre
+  - P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Password
+  - P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.PuedeEditar
+  - P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Update
+  - P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Usuario
+  langs:
+  - csharp
+  - vb
+  name: EmpleadosViewModel
+  nameWithType: EmpleadosViewModel
+  fullName: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel
+  type: Class
+  source:
+    id: EmpleadosViewModel
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\EmpleadosViewModel.cs
+    startLine: 7
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: 'public class EmpleadosViewModel : BaseViewModel, INotifyPropertyChanged'
+    content.vb: Public Class EmpleadosViewModel Inherits BaseViewModel Implements INotifyPropertyChanged
+  inheritance:
+  - System.Object
+  - P2526_Irene_Biblioteca.ViewModels.BaseViewModel
+  implements:
+  - System.ComponentModel.INotifyPropertyChanged
+  inheritedMembers:
+  - P2526_Irene_Biblioteca.ViewModels.BaseViewModel.PropertyChanged
+  - P2526_Irene_Biblioteca.ViewModels.BaseViewModel.OnPropertyChanged(System.String)
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Empleados
+  commentId: P:P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Empleados
+  id: Empleados
+  parent: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel
+  langs:
+  - csharp
+  - vb
+  name: Empleados
+  nameWithType: EmpleadosViewModel.Empleados
+  fullName: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Empleados
+  type: Property
+  source:
+    id: Empleados
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\EmpleadosViewModel.cs
+    startLine: 12
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public ObservableCollection<Empleado> Empleados { get; }
+    parameters: []
+    return:
+      type: System.Collections.ObjectModel.ObservableCollection{P2526_Irene_Biblioteca.Models.Empleado}
+    content.vb: Public ReadOnly Property Empleados As ObservableCollection(Of Empleado)
+  overload: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Empleados*
+- uid: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.EmpleadoSeleccionado
+  commentId: P:P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.EmpleadoSeleccionado
+  id: EmpleadoSeleccionado
+  parent: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel
+  langs:
+  - csharp
+  - vb
+  name: EmpleadoSeleccionado
+  nameWithType: EmpleadosViewModel.EmpleadoSeleccionado
+  fullName: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.EmpleadoSeleccionado
+  type: Property
+  source:
+    id: EmpleadoSeleccionado
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\EmpleadosViewModel.cs
+    startLine: 15
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public Empleado EmpleadoSeleccionado { get; set; }
+    parameters: []
+    return:
+      type: P2526_Irene_Biblioteca.Models.Empleado
+    content.vb: Public Property EmpleadoSeleccionado As Empleado
+  overload: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.EmpleadoSeleccionado*
+- uid: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Nombre
+  commentId: P:P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Nombre
+  id: Nombre
+  parent: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel
+  langs:
+  - csharp
+  - vb
+  name: Nombre
+  nameWithType: EmpleadosViewModel.Nombre
+  fullName: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Nombre
+  type: Property
+  source:
+    id: Nombre
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\EmpleadosViewModel.cs
+    startLine: 27
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public string Nombre { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Nombre As String
+  overload: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Nombre*
+- uid: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Usuario
+  commentId: P:P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Usuario
+  id: Usuario
+  parent: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel
+  langs:
+  - csharp
+  - vb
+  name: Usuario
+  nameWithType: EmpleadosViewModel.Usuario
+  fullName: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Usuario
+  type: Property
+  source:
+    id: Usuario
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\EmpleadosViewModel.cs
+    startLine: 34
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public string Usuario { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Usuario As String
+  overload: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Usuario*
+- uid: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Password
+  commentId: P:P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Password
+  id: Password
+  parent: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel
+  langs:
+  - csharp
+  - vb
+  name: Password
+  nameWithType: EmpleadosViewModel.Password
+  fullName: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Password
+  type: Property
+  source:
+    id: Password
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\EmpleadosViewModel.cs
+    startLine: 41
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public string Password { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Password As String
+  overload: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Password*
+- uid: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Mensaje
+  commentId: P:P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Mensaje
+  id: Mensaje
+  parent: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel
+  langs:
+  - csharp
+  - vb
+  name: Mensaje
+  nameWithType: EmpleadosViewModel.Mensaje
+  fullName: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Mensaje
+  type: Property
+  source:
+    id: Mensaje
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\EmpleadosViewModel.cs
+    startLine: 48
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public string Mensaje { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Mensaje As String
+  overload: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Mensaje*
+- uid: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.PuedeEditar
+  commentId: P:P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.PuedeEditar
+  id: PuedeEditar
+  parent: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel
+  langs:
+  - csharp
+  - vb
+  name: PuedeEditar
+  nameWithType: EmpleadosViewModel.PuedeEditar
+  fullName: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.PuedeEditar
+  type: Property
+  source:
+    id: PuedeEditar
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\EmpleadosViewModel.cs
+    startLine: 54
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public bool PuedeEditar { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property PuedeEditar As Boolean
+  overload: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.PuedeEditar*
+- uid: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.#ctor
+  commentId: M:P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.#ctor
+  id: '#ctor'
+  parent: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel
+  langs:
+  - csharp
+  - vb
+  name: EmpleadosViewModel()
+  nameWithType: EmpleadosViewModel.EmpleadosViewModel()
+  fullName: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.EmpleadosViewModel()
+  type: Constructor
+  source:
+    id: .ctor
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\EmpleadosViewModel.cs
+    startLine: 56
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public EmpleadosViewModel()
+    content.vb: Public Sub New()
+  overload: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.#ctor*
+  nameWithType.vb: EmpleadosViewModel.New()
+  fullName.vb: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.New()
+  name.vb: New()
+- uid: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Cargar
+  commentId: M:P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Cargar
+  id: Cargar
+  parent: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel
+  langs:
+  - csharp
+  - vb
+  name: Cargar()
+  nameWithType: EmpleadosViewModel.Cargar()
+  fullName: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Cargar()
+  type: Method
+  source:
+    id: Cargar
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\EmpleadosViewModel.cs
+    startLine: 62
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public void Cargar()
+    content.vb: Public Sub Cargar()
+  overload: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Cargar*
+- uid: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Limpiar
+  commentId: M:P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Limpiar
+  id: Limpiar
+  parent: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel
+  langs:
+  - csharp
+  - vb
+  name: Limpiar()
+  nameWithType: EmpleadosViewModel.Limpiar()
+  fullName: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Limpiar()
+  type: Method
+  source:
+    id: Limpiar
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\EmpleadosViewModel.cs
+    startLine: 79
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public void Limpiar()
+    content.vb: Public Sub Limpiar()
+  overload: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Limpiar*
+- uid: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Add
+  commentId: M:P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Add
+  id: Add
+  parent: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel
+  langs:
+  - csharp
+  - vb
+  name: Add()
+  nameWithType: EmpleadosViewModel.Add()
+  fullName: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Add()
+  type: Method
+  source:
+    id: Add
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\EmpleadosViewModel.cs
+    startLine: 87
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public void Add()
+    content.vb: Public Sub Add()
+  overload: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Add*
+- uid: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Update
+  commentId: M:P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Update
+  id: Update
+  parent: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: EmpleadosViewModel.Update()
+  fullName: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Update()
+  type: Method
+  source:
+    id: Update
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\EmpleadosViewModel.cs
+    startLine: 106
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public void Update()
+    content.vb: Public Sub Update()
+  overload: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Update*
+- uid: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Delete
+  commentId: M:P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Delete
+  id: Delete
+  parent: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel
+  langs:
+  - csharp
+  - vb
+  name: Delete()
+  nameWithType: EmpleadosViewModel.Delete()
+  fullName: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Delete()
+  type: Method
+  source:
+    id: Delete
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\ViewModels\EmpleadosViewModel.cs
+    startLine: 134
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.ViewModels
+  syntax:
+    content: public void Delete()
+    content.vb: Public Sub Delete()
+  overload: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Delete*
+references:
+- uid: P2526_Irene_Biblioteca.ViewModels
+  commentId: N:P2526_Irene_Biblioteca.ViewModels
+  href: P2526_Irene_Biblioteca.html
+  name: P2526_Irene_Biblioteca.ViewModels
+  nameWithType: P2526_Irene_Biblioteca.ViewModels
+  fullName: P2526_Irene_Biblioteca.ViewModels
+  spec.csharp:
+  - uid: P2526_Irene_Biblioteca
+    name: P2526_Irene_Biblioteca
+    href: P2526_Irene_Biblioteca.html
+  - name: .
+  - uid: P2526_Irene_Biblioteca.ViewModels
+    name: ViewModels
+    href: P2526_Irene_Biblioteca.ViewModels.html
+  spec.vb:
+  - uid: P2526_Irene_Biblioteca
+    name: P2526_Irene_Biblioteca
+    href: P2526_Irene_Biblioteca.html
+  - name: .
+  - uid: P2526_Irene_Biblioteca.ViewModels
+    name: ViewModels
+    href: P2526_Irene_Biblioteca.ViewModels.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: P2526_Irene_Biblioteca.ViewModels.BaseViewModel
+  commentId: T:P2526_Irene_Biblioteca.ViewModels.BaseViewModel
+  parent: P2526_Irene_Biblioteca.ViewModels
+  href: P2526_Irene_Biblioteca.ViewModels.BaseViewModel.html
+  name: BaseViewModel
+  nameWithType: BaseViewModel
+  fullName: P2526_Irene_Biblioteca.ViewModels.BaseViewModel
+- uid: System.ComponentModel.INotifyPropertyChanged
+  commentId: T:System.ComponentModel.INotifyPropertyChanged
+  parent: System.ComponentModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged
+  name: INotifyPropertyChanged
+  nameWithType: INotifyPropertyChanged
+  fullName: System.ComponentModel.INotifyPropertyChanged
+- uid: P2526_Irene_Biblioteca.ViewModels.BaseViewModel.PropertyChanged
+  commentId: E:P2526_Irene_Biblioteca.ViewModels.BaseViewModel.PropertyChanged
+  parent: P2526_Irene_Biblioteca.ViewModels.BaseViewModel
+  href: P2526_Irene_Biblioteca.ViewModels.BaseViewModel.html#P2526_Irene_Biblioteca_ViewModels_BaseViewModel_PropertyChanged
+  name: PropertyChanged
+  nameWithType: BaseViewModel.PropertyChanged
+  fullName: P2526_Irene_Biblioteca.ViewModels.BaseViewModel.PropertyChanged
+- uid: P2526_Irene_Biblioteca.ViewModels.BaseViewModel.OnPropertyChanged(System.String)
+  commentId: M:P2526_Irene_Biblioteca.ViewModels.BaseViewModel.OnPropertyChanged(System.String)
+  parent: P2526_Irene_Biblioteca.ViewModels.BaseViewModel
+  isExternal: true
+  href: P2526_Irene_Biblioteca.ViewModels.BaseViewModel.html#P2526_Irene_Biblioteca_ViewModels_BaseViewModel_OnPropertyChanged_System_String_
+  name: OnPropertyChanged(string)
+  nameWithType: BaseViewModel.OnPropertyChanged(string)
+  fullName: P2526_Irene_Biblioteca.ViewModels.BaseViewModel.OnPropertyChanged(string)
+  nameWithType.vb: BaseViewModel.OnPropertyChanged(String)
+  fullName.vb: P2526_Irene_Biblioteca.ViewModels.BaseViewModel.OnPropertyChanged(String)
+  name.vb: OnPropertyChanged(String)
+  spec.csharp:
+  - uid: P2526_Irene_Biblioteca.ViewModels.BaseViewModel.OnPropertyChanged(System.String)
+    name: OnPropertyChanged
+    href: P2526_Irene_Biblioteca.ViewModels.BaseViewModel.html#P2526_Irene_Biblioteca_ViewModels_BaseViewModel_OnPropertyChanged_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: P2526_Irene_Biblioteca.ViewModels.BaseViewModel.OnPropertyChanged(System.String)
+    name: OnPropertyChanged
+    href: P2526_Irene_Biblioteca.ViewModels.BaseViewModel.html#P2526_Irene_Biblioteca_ViewModels_BaseViewModel_OnPropertyChanged_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ComponentModel
+  commentId: N:System.ComponentModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.ComponentModel
+  nameWithType: System.ComponentModel
+  fullName: System.ComponentModel
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.ComponentModel
+    name: ComponentModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.ComponentModel
+    name: ComponentModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel
+- uid: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Empleados*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Empleados
+  href: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.html#P2526_Irene_Biblioteca_ViewModels_EmpleadosViewModel_Empleados
+  name: Empleados
+  nameWithType: EmpleadosViewModel.Empleados
+  fullName: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Empleados
+- uid: System.Collections.ObjectModel.ObservableCollection{P2526_Irene_Biblioteca.Models.Empleado}
+  commentId: T:System.Collections.ObjectModel.ObservableCollection{P2526_Irene_Biblioteca.Models.Empleado}
+  parent: System.Collections.ObjectModel
+  definition: System.Collections.ObjectModel.ObservableCollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  name: ObservableCollection<Empleado>
+  nameWithType: ObservableCollection<Empleado>
+  fullName: System.Collections.ObjectModel.ObservableCollection<P2526_Irene_Biblioteca.Models.Empleado>
+  nameWithType.vb: ObservableCollection(Of Empleado)
+  fullName.vb: System.Collections.ObjectModel.ObservableCollection(Of P2526_Irene_Biblioteca.Models.Empleado)
+  name.vb: ObservableCollection(Of Empleado)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ObservableCollection`1
+    name: ObservableCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  - name: <
+  - uid: P2526_Irene_Biblioteca.Models.Empleado
+    name: Empleado
+    href: P2526_Irene_Biblioteca.Models.Empleado.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ObservableCollection`1
+    name: ObservableCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: P2526_Irene_Biblioteca.Models.Empleado
+    name: Empleado
+    href: P2526_Irene_Biblioteca.Models.Empleado.html
+  - name: )
+- uid: System.Collections.ObjectModel.ObservableCollection`1
+  commentId: T:System.Collections.ObjectModel.ObservableCollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  name: ObservableCollection<T>
+  nameWithType: ObservableCollection<T>
+  fullName: System.Collections.ObjectModel.ObservableCollection<T>
+  nameWithType.vb: ObservableCollection(Of T)
+  fullName.vb: System.Collections.ObjectModel.ObservableCollection(Of T)
+  name.vb: ObservableCollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ObservableCollection`1
+    name: ObservableCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ObservableCollection`1
+    name: ObservableCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.ObjectModel
+  commentId: N:System.Collections.ObjectModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.ObjectModel
+  nameWithType: System.Collections.ObjectModel
+  fullName: System.Collections.ObjectModel
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.ObjectModel
+    name: ObjectModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.ObjectModel
+    name: ObjectModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel
+- uid: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.EmpleadoSeleccionado*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.EmpleadoSeleccionado
+  href: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.html#P2526_Irene_Biblioteca_ViewModels_EmpleadosViewModel_EmpleadoSeleccionado
+  name: EmpleadoSeleccionado
+  nameWithType: EmpleadosViewModel.EmpleadoSeleccionado
+  fullName: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.EmpleadoSeleccionado
+- uid: P2526_Irene_Biblioteca.Models.Empleado
+  commentId: T:P2526_Irene_Biblioteca.Models.Empleado
+  parent: P2526_Irene_Biblioteca.Models
+  href: P2526_Irene_Biblioteca.Models.Empleado.html
+  name: Empleado
+  nameWithType: Empleado
+  fullName: P2526_Irene_Biblioteca.Models.Empleado
+- uid: P2526_Irene_Biblioteca.Models
+  commentId: N:P2526_Irene_Biblioteca.Models
+  href: P2526_Irene_Biblioteca.html
+  name: P2526_Irene_Biblioteca.Models
+  nameWithType: P2526_Irene_Biblioteca.Models
+  fullName: P2526_Irene_Biblioteca.Models
+  spec.csharp:
+  - uid: P2526_Irene_Biblioteca
+    name: P2526_Irene_Biblioteca
+    href: P2526_Irene_Biblioteca.html
+  - name: .
+  - uid: P2526_Irene_Biblioteca.Models
+    name: Models
+    href: P2526_Irene_Biblioteca.Models.html
+  spec.vb:
+  - uid: P2526_Irene_Biblioteca
+    name: P2526_Irene_Biblioteca
+    href: P2526_Irene_Biblioteca.html
+  - name: .
+  - uid: P2526_Irene_Biblioteca.Models
+    name: Models
+    href: P2526_Irene_Biblioteca.Models.html
+- uid: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Nombre*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Nombre
+  href: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.html#P2526_Irene_Biblioteca_ViewModels_EmpleadosViewModel_Nombre
+  name: Nombre
+  nameWithType: EmpleadosViewModel.Nombre
+  fullName: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Nombre
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Usuario*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Usuario
+  href: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.html#P2526_Irene_Biblioteca_ViewModels_EmpleadosViewModel_Usuario
+  name: Usuario
+  nameWithType: EmpleadosViewModel.Usuario
+  fullName: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Usuario
+- uid: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Password*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Password
+  href: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.html#P2526_Irene_Biblioteca_ViewModels_EmpleadosViewModel_Password
+  name: Password
+  nameWithType: EmpleadosViewModel.Password
+  fullName: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Password
+- uid: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Mensaje*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Mensaje
+  href: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.html#P2526_Irene_Biblioteca_ViewModels_EmpleadosViewModel_Mensaje
+  name: Mensaje
+  nameWithType: EmpleadosViewModel.Mensaje
+  fullName: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Mensaje
+- uid: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.PuedeEditar*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.PuedeEditar
+  href: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.html#P2526_Irene_Biblioteca_ViewModels_EmpleadosViewModel_PuedeEditar
+  name: PuedeEditar
+  nameWithType: EmpleadosViewModel.PuedeEditar
+  fullName: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.PuedeEditar
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.#ctor*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.#ctor
+  href: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.html#P2526_Irene_Biblioteca_ViewModels_EmpleadosViewModel__ctor
+  name: EmpleadosViewModel
+  nameWithType: EmpleadosViewModel.EmpleadosViewModel
+  fullName: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.EmpleadosViewModel
+  nameWithType.vb: EmpleadosViewModel.New
+  fullName.vb: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.New
+  name.vb: New
+- uid: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Cargar*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Cargar
+  href: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.html#P2526_Irene_Biblioteca_ViewModels_EmpleadosViewModel_Cargar
+  name: Cargar
+  nameWithType: EmpleadosViewModel.Cargar
+  fullName: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Cargar
+- uid: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Limpiar*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Limpiar
+  href: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.html#P2526_Irene_Biblioteca_ViewModels_EmpleadosViewModel_Limpiar
+  name: Limpiar
+  nameWithType: EmpleadosViewModel.Limpiar
+  fullName: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Limpiar
+- uid: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Add*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Add
+  href: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.html#P2526_Irene_Biblioteca_ViewModels_EmpleadosViewModel_Add
+  name: Add
+  nameWithType: EmpleadosViewModel.Add
+  fullName: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Add
+- uid: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Update*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Update
+  href: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.html#P2526_Irene_Biblioteca_ViewModels_EmpleadosViewModel_Update
+  name: Update
+  nameWithType: EmpleadosViewModel.Update
+  fullName: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Update
+- uid: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Delete*
+  commentId: Overload:P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Delete
+  href: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.html#P2526_Irene_Biblioteca_ViewModels_EmpleadosViewModel_Delete
+  name: Delete
+  nameWithType: EmpleadosViewModel.Delete
+  fullName: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel.Delete

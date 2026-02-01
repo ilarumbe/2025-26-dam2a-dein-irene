@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class PrestamosViewModel | Biblioteca </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class PrestamosViewModel | Biblioteca ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Biblioteca">
+            Biblioteca
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel">
+
+
+
+  <h1 id="P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel" data-uid="P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel" class="text-break">
+Class PrestamosViewModel  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="P2526_Irene_Biblioteca.html">P2526_Irene_Biblioteca</a>.<a class="xref" href="P2526_Irene_Biblioteca.ViewModels.html">ViewModels</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>P2526-Irene-Biblioteca.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class PrestamosViewModel : BaseViewModel, INotifyPropertyChanged</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="P2526_Irene_Biblioteca.ViewModels.BaseViewModel.html">BaseViewModel</a></div>
+      <div><span class="xref">PrestamosViewModel</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="P2526_Irene_Biblioteca.ViewModels.BaseViewModel.html#P2526_Irene_Biblioteca_ViewModels_BaseViewModel_PropertyChanged">BaseViewModel.PropertyChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="P2526_Irene_Biblioteca.ViewModels.BaseViewModel.html#P2526_Irene_Biblioteca_ViewModels_BaseViewModel_OnPropertyChanged_System_String_">BaseViewModel.OnPropertyChanged(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel__ctor_" data-uid="P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.#ctor*"></a>
+
+  <h3 id="P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel__ctor" data-uid="P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.#ctor">
+  PrestamosViewModel()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PrestamosViewModel()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_ClienteId_" data-uid="P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.ClienteId*"></a>
+
+  <h3 id="P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_ClienteId" data-uid="P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.ClienteId">
+  ClienteId
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? ClienteId { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_Clientes_" data-uid="P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Clientes*"></a>
+
+  <h3 id="P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_Clientes" data-uid="P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Clientes">
+  Clientes
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ObservableCollection&lt;Cliente&gt; Clientes { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1">ObservableCollection</a>&lt;<a class="xref" href="P2526_Irene_Biblioteca.Models.Cliente.html">Cliente</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_Devuelto_" data-uid="P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Devuelto*"></a>
+
+  <h3 id="P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_Devuelto" data-uid="P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Devuelto">
+  Devuelto
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Devuelto { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_EmpleadoId_" data-uid="P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.EmpleadoId*"></a>
+
+  <h3 id="P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_EmpleadoId" data-uid="P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.EmpleadoId">
+  EmpleadoId
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? EmpleadoId { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_Empleados_" data-uid="P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Empleados*"></a>
+
+  <h3 id="P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_Empleados" data-uid="P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Empleados">
+  Empleados
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ObservableCollection&lt;Empleado&gt; Empleados { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1">ObservableCollection</a>&lt;<a class="xref" href="P2526_Irene_Biblioteca.Models.Empleado.html">Empleado</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_EsEmpleado_" data-uid="P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.EsEmpleado*"></a>
+
+  <h3 id="P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_EsEmpleado" data-uid="P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.EsEmpleado">
+  EsEmpleado
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EsEmpleado { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_FechaDevolucion_" data-uid="P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.FechaDevolucion*"></a>
+
+  <h3 id="P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_FechaDevolucion" data-uid="P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.FechaDevolucion">
+  FechaDevolucion
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTime? FechaDevolucion { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_FechaPrestamo_" data-uid="P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.FechaPrestamo*"></a>
+
+  <h3 id="P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_FechaPrestamo" data-uid="P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.FechaPrestamo">
+  FechaPrestamo
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTime? FechaPrestamo { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_LibroId_" data-uid="P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.LibroId*"></a>
+
+  <h3 id="P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_LibroId" data-uid="P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.LibroId">
+  LibroId
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? LibroId { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_Libros_" data-uid="P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Libros*"></a>
+
+  <h3 id="P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_Libros" data-uid="P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Libros">
+  Libros
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ObservableCollection&lt;Libro&gt; Libros { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1">ObservableCollection</a>&lt;<a class="xref" href="P2526_Irene_Biblioteca.Models.Libro.html">Libro</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_Mensaje_" data-uid="P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Mensaje*"></a>
+
+  <h3 id="P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_Mensaje" data-uid="P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Mensaje">
+  Mensaje
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Mensaje { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_PrestamoSeleccionado_" data-uid="P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.PrestamoSeleccionado*"></a>
+
+  <h3 id="P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_PrestamoSeleccionado" data-uid="P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.PrestamoSeleccionado">
+  PrestamoSeleccionado
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Prestamo PrestamoSeleccionado { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="P2526_Irene_Biblioteca.Models.Prestamo.html">Prestamo</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_Prestamos_" data-uid="P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Prestamos*"></a>
+
+  <h3 id="P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_Prestamos" data-uid="P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Prestamos">
+  Prestamos
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ObservableCollection&lt;Prestamo&gt; Prestamos { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1">ObservableCollection</a>&lt;<a class="xref" href="P2526_Irene_Biblioteca.Models.Prestamo.html">Prestamo</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_PuedeEditar_" data-uid="P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.PuedeEditar*"></a>
+
+  <h3 id="P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_PuedeEditar" data-uid="P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.PuedeEditar">
+  PuedeEditar
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool PuedeEditar { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_PuedeElegirCliente_" data-uid="P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.PuedeElegirCliente*"></a>
+
+  <h3 id="P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_PuedeElegirCliente" data-uid="P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.PuedeElegirCliente">
+  PuedeElegirCliente
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool PuedeElegirCliente { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_PuedeElegirEmpleado_" data-uid="P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.PuedeElegirEmpleado*"></a>
+
+  <h3 id="P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_PuedeElegirEmpleado" data-uid="P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.PuedeElegirEmpleado">
+  PuedeElegirEmpleado
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool PuedeElegirEmpleado { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_Add_" data-uid="P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Add*"></a>
+
+  <h3 id="P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_Add" data-uid="P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Add">
+  Add()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Add()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_CargarCombos_" data-uid="P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.CargarCombos*"></a>
+
+  <h3 id="P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_CargarCombos" data-uid="P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.CargarCombos">
+  CargarCombos()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CargarCombos()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_CargarPrestamos_" data-uid="P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.CargarPrestamos*"></a>
+
+  <h3 id="P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_CargarPrestamos" data-uid="P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.CargarPrestamos">
+  CargarPrestamos()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CargarPrestamos()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_Delete_" data-uid="P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Delete*"></a>
+
+  <h3 id="P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_Delete" data-uid="P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Delete">
+  Delete()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Delete()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_Limpiar_" data-uid="P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Limpiar*"></a>
+
+  <h3 id="P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_Limpiar" data-uid="P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Limpiar">
+  Limpiar()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Limpiar()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_Update_" data-uid="P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Update*"></a>
+
+  <h3 id="P2526_Irene_Biblioteca_ViewModels_PrestamosViewModel_Update" data-uid="P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel.Update">
+  Update()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Update()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

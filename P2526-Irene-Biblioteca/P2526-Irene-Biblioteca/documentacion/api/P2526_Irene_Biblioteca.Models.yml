@@ -1,0 +1,86 @@
+### YamlMime:ManagedReference
+items:
+- uid: P2526_Irene_Biblioteca.Models
+  commentId: N:P2526_Irene_Biblioteca.Models
+  id: P2526_Irene_Biblioteca.Models
+  children:
+  - P2526_Irene_Biblioteca.Models.Autor
+  - P2526_Irene_Biblioteca.Models.Categoria
+  - P2526_Irene_Biblioteca.Models.Cliente
+  - P2526_Irene_Biblioteca.Models.Empleado
+  - P2526_Irene_Biblioteca.Models.Libro
+  - P2526_Irene_Biblioteca.Models.Prestamo
+  langs:
+  - csharp
+  - vb
+  name: P2526_Irene_Biblioteca.Models
+  nameWithType: P2526_Irene_Biblioteca.Models
+  fullName: P2526_Irene_Biblioteca.Models
+  type: Namespace
+  assemblies:
+  - P2526-Irene-Biblioteca
+references:
+- uid: P2526_Irene_Biblioteca.Models.Autor
+  commentId: T:P2526_Irene_Biblioteca.Models.Autor
+  parent: P2526_Irene_Biblioteca.Models
+  href: P2526_Irene_Biblioteca.Models.Autor.html
+  name: Autor
+  nameWithType: Autor
+  fullName: P2526_Irene_Biblioteca.Models.Autor
+- uid: P2526_Irene_Biblioteca.Models.Categoria
+  commentId: T:P2526_Irene_Biblioteca.Models.Categoria
+  parent: P2526_Irene_Biblioteca.Models
+  href: P2526_Irene_Biblioteca.Models.Categoria.html
+  name: Categoria
+  nameWithType: Categoria
+  fullName: P2526_Irene_Biblioteca.Models.Categoria
+- uid: P2526_Irene_Biblioteca.Models.Cliente
+  commentId: T:P2526_Irene_Biblioteca.Models.Cliente
+  parent: P2526_Irene_Biblioteca.Models
+  href: P2526_Irene_Biblioteca.Models.Cliente.html
+  name: Cliente
+  nameWithType: Cliente
+  fullName: P2526_Irene_Biblioteca.Models.Cliente
+- uid: P2526_Irene_Biblioteca.Models.Empleado
+  commentId: T:P2526_Irene_Biblioteca.Models.Empleado
+  parent: P2526_Irene_Biblioteca.Models
+  href: P2526_Irene_Biblioteca.Models.Empleado.html
+  name: Empleado
+  nameWithType: Empleado
+  fullName: P2526_Irene_Biblioteca.Models.Empleado
+- uid: P2526_Irene_Biblioteca.Models.Libro
+  commentId: T:P2526_Irene_Biblioteca.Models.Libro
+  parent: P2526_Irene_Biblioteca.Models
+  href: P2526_Irene_Biblioteca.Models.Libro.html
+  name: Libro
+  nameWithType: Libro
+  fullName: P2526_Irene_Biblioteca.Models.Libro
+- uid: P2526_Irene_Biblioteca.Models.Prestamo
+  commentId: T:P2526_Irene_Biblioteca.Models.Prestamo
+  parent: P2526_Irene_Biblioteca.Models
+  href: P2526_Irene_Biblioteca.Models.Prestamo.html
+  name: Prestamo
+  nameWithType: Prestamo
+  fullName: P2526_Irene_Biblioteca.Models.Prestamo
+- uid: P2526_Irene_Biblioteca.Models
+  commentId: N:P2526_Irene_Biblioteca.Models
+  href: P2526_Irene_Biblioteca.html
+  name: P2526_Irene_Biblioteca.Models
+  nameWithType: P2526_Irene_Biblioteca.Models
+  fullName: P2526_Irene_Biblioteca.Models
+  spec.csharp:
+  - uid: P2526_Irene_Biblioteca
+    name: P2526_Irene_Biblioteca
+    href: P2526_Irene_Biblioteca.html
+  - name: .
+  - uid: P2526_Irene_Biblioteca.Models
+    name: Models
+    href: P2526_Irene_Biblioteca.Models.html
+  spec.vb:
+  - uid: P2526_Irene_Biblioteca
+    name: P2526_Irene_Biblioteca
+    href: P2526_Irene_Biblioteca.html
+  - name: .
+  - uid: P2526_Irene_Biblioteca.Models
+    name: Models
+    href: P2526_Irene_Biblioteca.Models.html

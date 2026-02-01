@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class LibrosViewModel | Biblioteca </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class LibrosViewModel | Biblioteca ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Biblioteca">
+            Biblioteca
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="P2526_Irene_Biblioteca.ViewModels.LibrosViewModel">
+
+
+
+  <h1 id="P2526_Irene_Biblioteca_ViewModels_LibrosViewModel" data-uid="P2526_Irene_Biblioteca.ViewModels.LibrosViewModel" class="text-break">
+Class LibrosViewModel  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="P2526_Irene_Biblioteca.html">P2526_Irene_Biblioteca</a>.<a class="xref" href="P2526_Irene_Biblioteca.ViewModels.html">ViewModels</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>P2526-Irene-Biblioteca.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class LibrosViewModel : BaseViewModel, INotifyPropertyChanged</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="P2526_Irene_Biblioteca.ViewModels.BaseViewModel.html">BaseViewModel</a></div>
+      <div><span class="xref">LibrosViewModel</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="P2526_Irene_Biblioteca.ViewModels.BaseViewModel.html#P2526_Irene_Biblioteca_ViewModels_BaseViewModel_PropertyChanged">BaseViewModel.PropertyChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="P2526_Irene_Biblioteca.ViewModels.BaseViewModel.html#P2526_Irene_Biblioteca_ViewModels_BaseViewModel_OnPropertyChanged_System_String_">BaseViewModel.OnPropertyChanged(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="P2526_Irene_Biblioteca_ViewModels_LibrosViewModel__ctor_" data-uid="P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.#ctor*"></a>
+
+  <h3 id="P2526_Irene_Biblioteca_ViewModels_LibrosViewModel__ctor" data-uid="P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.#ctor">
+  LibrosViewModel()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LibrosViewModel()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_Anio_" data-uid="P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Anio*"></a>
+
+  <h3 id="P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_Anio" data-uid="P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Anio">
+  Anio
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Anio { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_AutorId_" data-uid="P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.AutorId*"></a>
+
+  <h3 id="P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_AutorId" data-uid="P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.AutorId">
+  AutorId
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? AutorId { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_Autores_" data-uid="P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Autores*"></a>
+
+  <h3 id="P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_Autores" data-uid="P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Autores">
+  Autores
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ObservableCollection&lt;Autor&gt; Autores { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1">ObservableCollection</a>&lt;<a class="xref" href="P2526_Irene_Biblioteca.Models.Autor.html">Autor</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_CategoriaId_" data-uid="P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.CategoriaId*"></a>
+
+  <h3 id="P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_CategoriaId" data-uid="P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.CategoriaId">
+  CategoriaId
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? CategoriaId { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_Categorias_" data-uid="P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Categorias*"></a>
+
+  <h3 id="P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_Categorias" data-uid="P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Categorias">
+  Categorias
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ObservableCollection&lt;Categoria&gt; Categorias { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1">ObservableCollection</a>&lt;<a class="xref" href="P2526_Irene_Biblioteca.Models.Categoria.html">Categoria</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_LibroSeleccionado_" data-uid="P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.LibroSeleccionado*"></a>
+
+  <h3 id="P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_LibroSeleccionado" data-uid="P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.LibroSeleccionado">
+  LibroSeleccionado
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Libro LibroSeleccionado { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="P2526_Irene_Biblioteca.Models.Libro.html">Libro</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_Libros_" data-uid="P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Libros*"></a>
+
+  <h3 id="P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_Libros" data-uid="P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Libros">
+  Libros
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ObservableCollection&lt;Libro&gt; Libros { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1">ObservableCollection</a>&lt;<a class="xref" href="P2526_Irene_Biblioteca.Models.Libro.html">Libro</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_Mensaje_" data-uid="P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Mensaje*"></a>
+
+  <h3 id="P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_Mensaje" data-uid="P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Mensaje">
+  Mensaje
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Mensaje { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_PuedeEditar_" data-uid="P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.PuedeEditar*"></a>
+
+  <h3 id="P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_PuedeEditar" data-uid="P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.PuedeEditar">
+  PuedeEditar
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool PuedeEditar { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_Stock_" data-uid="P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Stock*"></a>
+
+  <h3 id="P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_Stock" data-uid="P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Stock">
+  Stock
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Stock { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_TextoBusqueda_" data-uid="P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.TextoBusqueda*"></a>
+
+  <h3 id="P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_TextoBusqueda" data-uid="P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.TextoBusqueda">
+  TextoBusqueda
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string TextoBusqueda { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_Titulo_" data-uid="P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Titulo*"></a>
+
+  <h3 id="P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_Titulo" data-uid="P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Titulo">
+  Titulo
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Titulo { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_Add_" data-uid="P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Add*"></a>
+
+  <h3 id="P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_Add" data-uid="P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Add">
+  Add()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Add()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_CargarCombos_" data-uid="P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.CargarCombos*"></a>
+
+  <h3 id="P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_CargarCombos" data-uid="P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.CargarCombos">
+  CargarCombos()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CargarCombos()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_CargarLibros_" data-uid="P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.CargarLibros*"></a>
+
+  <h3 id="P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_CargarLibros" data-uid="P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.CargarLibros">
+  CargarLibros()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CargarLibros()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_Delete_" data-uid="P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Delete*"></a>
+
+  <h3 id="P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_Delete" data-uid="P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Delete">
+  Delete()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Delete()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_Limpiar_" data-uid="P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Limpiar*"></a>
+
+  <h3 id="P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_Limpiar" data-uid="P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Limpiar">
+  Limpiar()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Limpiar()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_Update_" data-uid="P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Update*"></a>
+
+  <h3 id="P2526_Irene_Biblioteca_ViewModels_LibrosViewModel_Update" data-uid="P2526_Irene_Biblioteca.ViewModels.LibrosViewModel.Update">
+  Update()
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Update()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

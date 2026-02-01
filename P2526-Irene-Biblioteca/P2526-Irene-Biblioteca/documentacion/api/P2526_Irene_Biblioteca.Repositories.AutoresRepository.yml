@@ -1,0 +1,643 @@
+### YamlMime:ManagedReference
+items:
+- uid: P2526_Irene_Biblioteca.Repositories.AutoresRepository
+  commentId: T:P2526_Irene_Biblioteca.Repositories.AutoresRepository
+  id: AutoresRepository
+  parent: P2526_Irene_Biblioteca.Repositories
+  children:
+  - P2526_Irene_Biblioteca.Repositories.AutoresRepository.#ctor
+  - P2526_Irene_Biblioteca.Repositories.AutoresRepository.Delete(System.Int32)
+  - P2526_Irene_Biblioteca.Repositories.AutoresRepository.GetAll
+  - P2526_Irene_Biblioteca.Repositories.AutoresRepository.Insert(P2526_Irene_Biblioteca.Models.Autor)
+  - P2526_Irene_Biblioteca.Repositories.AutoresRepository.Update(P2526_Irene_Biblioteca.Models.Autor)
+  langs:
+  - csharp
+  - vb
+  name: AutoresRepository
+  nameWithType: AutoresRepository
+  fullName: P2526_Irene_Biblioteca.Repositories.AutoresRepository
+  type: Class
+  source:
+    id: AutoresRepository
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\Respositories\AutoresRepository.cs
+    startLine: 12
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.Repositories
+  summary: >-
+    Repositorio de acceso a datos para la entidad <xref href="P2526_Irene_Biblioteca.Models.Autor" data-throw-if-not-resolved="false"></xref>.
+
+    Centraliza las operaciones CRUD contra la tabla Autores.
+  example: []
+  syntax:
+    content: public class AutoresRepository
+    content.vb: Public Class AutoresRepository
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: P2526_Irene_Biblioteca.Repositories.AutoresRepository.#ctor
+  commentId: M:P2526_Irene_Biblioteca.Repositories.AutoresRepository.#ctor
+  id: '#ctor'
+  parent: P2526_Irene_Biblioteca.Repositories.AutoresRepository
+  langs:
+  - csharp
+  - vb
+  name: AutoresRepository()
+  nameWithType: AutoresRepository.AutoresRepository()
+  fullName: P2526_Irene_Biblioteca.Repositories.AutoresRepository.AutoresRepository()
+  type: Constructor
+  source:
+    id: .ctor
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\Respositories\AutoresRepository.cs
+    startLine: 19
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.Repositories
+  summary: Inicializa el repositorio leyendo la cadena de conexión "Conexion" desde App.config.
+  example: []
+  syntax:
+    content: public AutoresRepository()
+    content.vb: Public Sub New()
+  overload: P2526_Irene_Biblioteca.Repositories.AutoresRepository.#ctor*
+  nameWithType.vb: AutoresRepository.New()
+  fullName.vb: P2526_Irene_Biblioteca.Repositories.AutoresRepository.New()
+  name.vb: New()
+- uid: P2526_Irene_Biblioteca.Repositories.AutoresRepository.GetAll
+  commentId: M:P2526_Irene_Biblioteca.Repositories.AutoresRepository.GetAll
+  id: GetAll
+  parent: P2526_Irene_Biblioteca.Repositories.AutoresRepository
+  langs:
+  - csharp
+  - vb
+  name: GetAll()
+  nameWithType: AutoresRepository.GetAll()
+  fullName: P2526_Irene_Biblioteca.Repositories.AutoresRepository.GetAll()
+  type: Method
+  source:
+    id: GetAll
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\Respositories\AutoresRepository.cs
+    startLine: 32
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.Repositories
+  summary: Obtiene todos los autores almacenados en la tabla Autores.
+  example: []
+  syntax:
+    content: public List<Autor> GetAll()
+    return:
+      type: System.Collections.Generic.List{P2526_Irene_Biblioteca.Models.Autor}
+      description: Lista de <xref href="P2526_Irene_Biblioteca.Models.Autor" data-throw-if-not-resolved="false"></xref> con sus campos IdAutor, Nombre y Nacionalidad.
+    content.vb: Public Function GetAll() As List(Of Autor)
+  overload: P2526_Irene_Biblioteca.Repositories.AutoresRepository.GetAll*
+- uid: P2526_Irene_Biblioteca.Repositories.AutoresRepository.Insert(P2526_Irene_Biblioteca.Models.Autor)
+  commentId: M:P2526_Irene_Biblioteca.Repositories.AutoresRepository.Insert(P2526_Irene_Biblioteca.Models.Autor)
+  id: Insert(P2526_Irene_Biblioteca.Models.Autor)
+  parent: P2526_Irene_Biblioteca.Repositories.AutoresRepository
+  langs:
+  - csharp
+  - vb
+  name: Insert(Autor)
+  nameWithType: AutoresRepository.Insert(Autor)
+  fullName: P2526_Irene_Biblioteca.Repositories.AutoresRepository.Insert(P2526_Irene_Biblioteca.Models.Autor)
+  type: Method
+  source:
+    id: Insert
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\Respositories\AutoresRepository.cs
+    startLine: 65
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.Repositories
+  summary: Inserta un nuevo autor en la tabla Autores.
+  example: []
+  syntax:
+    content: public void Insert(Autor a)
+    parameters:
+    - id: a
+      type: P2526_Irene_Biblioteca.Models.Autor
+      description: Autor a insertar. Debe contener al menos <xref href="P2526_Irene_Biblioteca.Models.Autor.Nombre" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Sub Insert(a As Autor)
+  overload: P2526_Irene_Biblioteca.Repositories.AutoresRepository.Insert*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Se lanza si <code class="paramref">a</code> es null.
+- uid: P2526_Irene_Biblioteca.Repositories.AutoresRepository.Update(P2526_Irene_Biblioteca.Models.Autor)
+  commentId: M:P2526_Irene_Biblioteca.Repositories.AutoresRepository.Update(P2526_Irene_Biblioteca.Models.Autor)
+  id: Update(P2526_Irene_Biblioteca.Models.Autor)
+  parent: P2526_Irene_Biblioteca.Repositories.AutoresRepository
+  langs:
+  - csharp
+  - vb
+  name: Update(Autor)
+  nameWithType: AutoresRepository.Update(Autor)
+  fullName: P2526_Irene_Biblioteca.Repositories.AutoresRepository.Update(P2526_Irene_Biblioteca.Models.Autor)
+  type: Method
+  source:
+    id: Update
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\Respositories\AutoresRepository.cs
+    startLine: 92
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.Repositories
+  summary: Actualiza los datos de un autor existente en la tabla Autores.
+  example: []
+  syntax:
+    content: public void Update(Autor a)
+    parameters:
+    - id: a
+      type: P2526_Irene_Biblioteca.Models.Autor
+      description: Autor a actualizar. Debe tener <xref href="P2526_Irene_Biblioteca.Models.Autor.IdAutor" data-throw-if-not-resolved="false"></xref> válido y los campos a modificar.
+    content.vb: Public Sub Update(a As Autor)
+  overload: P2526_Irene_Biblioteca.Repositories.AutoresRepository.Update*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Se lanza si <code class="paramref">a</code> es null.
+- uid: P2526_Irene_Biblioteca.Repositories.AutoresRepository.Delete(System.Int32)
+  commentId: M:P2526_Irene_Biblioteca.Repositories.AutoresRepository.Delete(System.Int32)
+  id: Delete(System.Int32)
+  parent: P2526_Irene_Biblioteca.Repositories.AutoresRepository
+  langs:
+  - csharp
+  - vb
+  name: Delete(int)
+  nameWithType: AutoresRepository.Delete(int)
+  fullName: P2526_Irene_Biblioteca.Repositories.AutoresRepository.Delete(int)
+  type: Method
+  source:
+    id: Delete
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\Respositories\AutoresRepository.cs
+    startLine: 119
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.Repositories
+  summary: Elimina un autor por su identificador.
+  example: []
+  syntax:
+    content: public void Delete(int idAutor)
+    parameters:
+    - id: idAutor
+      type: System.Int32
+      description: Identificador del autor a eliminar.
+    content.vb: Public Sub Delete(idAutor As Integer)
+  overload: P2526_Irene_Biblioteca.Repositories.AutoresRepository.Delete*
+  nameWithType.vb: AutoresRepository.Delete(Integer)
+  fullName.vb: P2526_Irene_Biblioteca.Repositories.AutoresRepository.Delete(Integer)
+  name.vb: Delete(Integer)
+references:
+- uid: P2526_Irene_Biblioteca.Models.Autor
+  commentId: T:P2526_Irene_Biblioteca.Models.Autor
+  parent: P2526_Irene_Biblioteca.Models
+  href: P2526_Irene_Biblioteca.Models.Autor.html
+  name: Autor
+  nameWithType: Autor
+  fullName: P2526_Irene_Biblioteca.Models.Autor
+- uid: P2526_Irene_Biblioteca.Repositories
+  commentId: N:P2526_Irene_Biblioteca.Repositories
+  href: P2526_Irene_Biblioteca.html
+  name: P2526_Irene_Biblioteca.Repositories
+  nameWithType: P2526_Irene_Biblioteca.Repositories
+  fullName: P2526_Irene_Biblioteca.Repositories
+  spec.csharp:
+  - uid: P2526_Irene_Biblioteca
+    name: P2526_Irene_Biblioteca
+    href: P2526_Irene_Biblioteca.html
+  - name: .
+  - uid: P2526_Irene_Biblioteca.Repositories
+    name: Repositories
+    href: P2526_Irene_Biblioteca.Repositories.html
+  spec.vb:
+  - uid: P2526_Irene_Biblioteca
+    name: P2526_Irene_Biblioteca
+    href: P2526_Irene_Biblioteca.html
+  - name: .
+  - uid: P2526_Irene_Biblioteca.Repositories
+    name: Repositories
+    href: P2526_Irene_Biblioteca.Repositories.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: P2526_Irene_Biblioteca.Models
+  commentId: N:P2526_Irene_Biblioteca.Models
+  href: P2526_Irene_Biblioteca.html
+  name: P2526_Irene_Biblioteca.Models
+  nameWithType: P2526_Irene_Biblioteca.Models
+  fullName: P2526_Irene_Biblioteca.Models
+  spec.csharp:
+  - uid: P2526_Irene_Biblioteca
+    name: P2526_Irene_Biblioteca
+    href: P2526_Irene_Biblioteca.html
+  - name: .
+  - uid: P2526_Irene_Biblioteca.Models
+    name: Models
+    href: P2526_Irene_Biblioteca.Models.html
+  spec.vb:
+  - uid: P2526_Irene_Biblioteca
+    name: P2526_Irene_Biblioteca
+    href: P2526_Irene_Biblioteca.html
+  - name: .
+  - uid: P2526_Irene_Biblioteca.Models
+    name: Models
+    href: P2526_Irene_Biblioteca.Models.html
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: P2526_Irene_Biblioteca.Repositories.AutoresRepository.#ctor*
+  commentId: Overload:P2526_Irene_Biblioteca.Repositories.AutoresRepository.#ctor
+  href: P2526_Irene_Biblioteca.Repositories.AutoresRepository.html#P2526_Irene_Biblioteca_Repositories_AutoresRepository__ctor
+  name: AutoresRepository
+  nameWithType: AutoresRepository.AutoresRepository
+  fullName: P2526_Irene_Biblioteca.Repositories.AutoresRepository.AutoresRepository
+  nameWithType.vb: AutoresRepository.New
+  fullName.vb: P2526_Irene_Biblioteca.Repositories.AutoresRepository.New
+  name.vb: New
+- uid: P2526_Irene_Biblioteca.Repositories.AutoresRepository.GetAll*
+  commentId: Overload:P2526_Irene_Biblioteca.Repositories.AutoresRepository.GetAll
+  href: P2526_Irene_Biblioteca.Repositories.AutoresRepository.html#P2526_Irene_Biblioteca_Repositories_AutoresRepository_GetAll
+  name: GetAll
+  nameWithType: AutoresRepository.GetAll
+  fullName: P2526_Irene_Biblioteca.Repositories.AutoresRepository.GetAll
+- uid: System.Collections.Generic.List{P2526_Irene_Biblioteca.Models.Autor}
+  commentId: T:System.Collections.Generic.List{P2526_Irene_Biblioteca.Models.Autor}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<Autor>
+  nameWithType: List<Autor>
+  fullName: System.Collections.Generic.List<P2526_Irene_Biblioteca.Models.Autor>
+  nameWithType.vb: List(Of Autor)
+  fullName.vb: System.Collections.Generic.List(Of P2526_Irene_Biblioteca.Models.Autor)
+  name.vb: List(Of Autor)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: P2526_Irene_Biblioteca.Models.Autor
+    name: Autor
+    href: P2526_Irene_Biblioteca.Models.Autor.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: P2526_Irene_Biblioteca.Models.Autor
+    name: Autor
+    href: P2526_Irene_Biblioteca.Models.Autor.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: P2526_Irene_Biblioteca.Models.Autor.Nombre
+  commentId: P:P2526_Irene_Biblioteca.Models.Autor.Nombre
+  href: P2526_Irene_Biblioteca.Models.Autor.html#P2526_Irene_Biblioteca_Models_Autor_Nombre
+  name: Nombre
+  nameWithType: Autor.Nombre
+  fullName: P2526_Irene_Biblioteca.Models.Autor.Nombre
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentnullexception
+  name: ArgumentNullException
+  nameWithType: ArgumentNullException
+  fullName: System.ArgumentNullException
+- uid: P2526_Irene_Biblioteca.Repositories.AutoresRepository.Insert*
+  commentId: Overload:P2526_Irene_Biblioteca.Repositories.AutoresRepository.Insert
+  href: P2526_Irene_Biblioteca.Repositories.AutoresRepository.html#P2526_Irene_Biblioteca_Repositories_AutoresRepository_Insert_P2526_Irene_Biblioteca_Models_Autor_
+  name: Insert
+  nameWithType: AutoresRepository.Insert
+  fullName: P2526_Irene_Biblioteca.Repositories.AutoresRepository.Insert
+- uid: P2526_Irene_Biblioteca.Models.Autor.IdAutor
+  commentId: P:P2526_Irene_Biblioteca.Models.Autor.IdAutor
+  href: P2526_Irene_Biblioteca.Models.Autor.html#P2526_Irene_Biblioteca_Models_Autor_IdAutor
+  name: IdAutor
+  nameWithType: Autor.IdAutor
+  fullName: P2526_Irene_Biblioteca.Models.Autor.IdAutor
+- uid: P2526_Irene_Biblioteca.Repositories.AutoresRepository.Update*
+  commentId: Overload:P2526_Irene_Biblioteca.Repositories.AutoresRepository.Update
+  href: P2526_Irene_Biblioteca.Repositories.AutoresRepository.html#P2526_Irene_Biblioteca_Repositories_AutoresRepository_Update_P2526_Irene_Biblioteca_Models_Autor_
+  name: Update
+  nameWithType: AutoresRepository.Update
+  fullName: P2526_Irene_Biblioteca.Repositories.AutoresRepository.Update
+- uid: P2526_Irene_Biblioteca.Repositories.AutoresRepository.Delete*
+  commentId: Overload:P2526_Irene_Biblioteca.Repositories.AutoresRepository.Delete
+  href: P2526_Irene_Biblioteca.Repositories.AutoresRepository.html#P2526_Irene_Biblioteca_Repositories_AutoresRepository_Delete_System_Int32_
+  name: Delete
+  nameWithType: AutoresRepository.Delete
+  fullName: P2526_Irene_Biblioteca.Repositories.AutoresRepository.Delete
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer

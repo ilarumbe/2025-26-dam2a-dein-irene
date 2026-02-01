@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: P2526_Irene_Biblioteca.Helpers
+  commentId: N:P2526_Irene_Biblioteca.Helpers
+  id: P2526_Irene_Biblioteca.Helpers
+  children:
+  - P2526_Irene_Biblioteca.Helpers.Helper
+  - P2526_Irene_Biblioteca.Helpers.SesionActual
+  langs:
+  - csharp
+  - vb
+  name: P2526_Irene_Biblioteca.Helpers
+  nameWithType: P2526_Irene_Biblioteca.Helpers
+  fullName: P2526_Irene_Biblioteca.Helpers
+  type: Namespace
+  assemblies:
+  - P2526-Irene-Biblioteca
+references:
+- uid: P2526_Irene_Biblioteca.Helpers.Helper
+  commentId: T:P2526_Irene_Biblioteca.Helpers.Helper
+  href: P2526_Irene_Biblioteca.Helpers.Helper.html
+  name: Helper
+  nameWithType: Helper
+  fullName: P2526_Irene_Biblioteca.Helpers.Helper
+- uid: P2526_Irene_Biblioteca.Helpers.SesionActual
+  commentId: T:P2526_Irene_Biblioteca.Helpers.SesionActual
+  href: P2526_Irene_Biblioteca.Helpers.SesionActual.html
+  name: SesionActual
+  nameWithType: SesionActual
+  fullName: P2526_Irene_Biblioteca.Helpers.SesionActual

@@ -1,0 +1,778 @@
+### YamlMime:ManagedReference
+items:
+- uid: P2526_Irene_Biblioteca.Repositories.PrestamosRepository
+  commentId: T:P2526_Irene_Biblioteca.Repositories.PrestamosRepository
+  id: PrestamosRepository
+  parent: P2526_Irene_Biblioteca.Repositories
+  children:
+  - P2526_Irene_Biblioteca.Repositories.PrestamosRepository.#ctor
+  - P2526_Irene_Biblioteca.Repositories.PrestamosRepository.CountByCliente(System.Int32)
+  - P2526_Irene_Biblioteca.Repositories.PrestamosRepository.CountByEmpleado(System.Int32)
+  - P2526_Irene_Biblioteca.Repositories.PrestamosRepository.CountByLibro(System.Int32)
+  - P2526_Irene_Biblioteca.Repositories.PrestamosRepository.Delete(System.Int32)
+  - P2526_Irene_Biblioteca.Repositories.PrestamosRepository.GetAll
+  - P2526_Irene_Biblioteca.Repositories.PrestamosRepository.GetAllReport
+  - P2526_Irene_Biblioteca.Repositories.PrestamosRepository.GetByClienteReport(System.Int32)
+  - P2526_Irene_Biblioteca.Repositories.PrestamosRepository.Insert(P2526_Irene_Biblioteca.Models.Prestamo)
+  - P2526_Irene_Biblioteca.Repositories.PrestamosRepository.Update(P2526_Irene_Biblioteca.Models.Prestamo)
+  langs:
+  - csharp
+  - vb
+  name: PrestamosRepository
+  nameWithType: PrestamosRepository
+  fullName: P2526_Irene_Biblioteca.Repositories.PrestamosRepository
+  type: Class
+  source:
+    id: PrestamosRepository
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\Respositories\PrestamosRepository.cs
+    startLine: 8
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.Repositories
+  syntax:
+    content: public class PrestamosRepository
+    content.vb: Public Class PrestamosRepository
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.#ctor
+  commentId: M:P2526_Irene_Biblioteca.Repositories.PrestamosRepository.#ctor
+  id: '#ctor'
+  parent: P2526_Irene_Biblioteca.Repositories.PrestamosRepository
+  langs:
+  - csharp
+  - vb
+  name: PrestamosRepository()
+  nameWithType: PrestamosRepository.PrestamosRepository()
+  fullName: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.PrestamosRepository()
+  type: Constructor
+  source:
+    id: .ctor
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\Respositories\PrestamosRepository.cs
+    startLine: 12
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.Repositories
+  syntax:
+    content: public PrestamosRepository()
+    content.vb: Public Sub New()
+  overload: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.#ctor*
+  nameWithType.vb: PrestamosRepository.New()
+  fullName.vb: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.New()
+  name.vb: New()
+- uid: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.GetAll
+  commentId: M:P2526_Irene_Biblioteca.Repositories.PrestamosRepository.GetAll
+  id: GetAll
+  parent: P2526_Irene_Biblioteca.Repositories.PrestamosRepository
+  langs:
+  - csharp
+  - vb
+  name: GetAll()
+  nameWithType: PrestamosRepository.GetAll()
+  fullName: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.GetAll()
+  type: Method
+  source:
+    id: GetAll
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\Respositories\PrestamosRepository.cs
+    startLine: 17
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.Repositories
+  syntax:
+    content: public List<Prestamo> GetAll()
+    return:
+      type: System.Collections.Generic.List{P2526_Irene_Biblioteca.Models.Prestamo}
+    content.vb: Public Function GetAll() As List(Of Prestamo)
+  overload: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.GetAll*
+- uid: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.GetAllReport
+  commentId: M:P2526_Irene_Biblioteca.Repositories.PrestamosRepository.GetAllReport
+  id: GetAllReport
+  parent: P2526_Irene_Biblioteca.Repositories.PrestamosRepository
+  langs:
+  - csharp
+  - vb
+  name: GetAllReport()
+  nameWithType: PrestamosRepository.GetAllReport()
+  fullName: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.GetAllReport()
+  type: Method
+  source:
+    id: GetAllReport
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\Respositories\PrestamosRepository.cs
+    startLine: 53
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.Repositories
+  syntax:
+    content: public List<Prestamo> GetAllReport()
+    return:
+      type: System.Collections.Generic.List{P2526_Irene_Biblioteca.Models.Prestamo}
+    content.vb: Public Function GetAllReport() As List(Of Prestamo)
+  overload: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.GetAllReport*
+- uid: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.GetByClienteReport(System.Int32)
+  commentId: M:P2526_Irene_Biblioteca.Repositories.PrestamosRepository.GetByClienteReport(System.Int32)
+  id: GetByClienteReport(System.Int32)
+  parent: P2526_Irene_Biblioteca.Repositories.PrestamosRepository
+  langs:
+  - csharp
+  - vb
+  name: GetByClienteReport(int)
+  nameWithType: PrestamosRepository.GetByClienteReport(int)
+  fullName: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.GetByClienteReport(int)
+  type: Method
+  source:
+    id: GetByClienteReport
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\Respositories\PrestamosRepository.cs
+    startLine: 98
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.Repositories
+  syntax:
+    content: public List<Prestamo> GetByClienteReport(int idCliente)
+    parameters:
+    - id: idCliente
+      type: System.Int32
+    return:
+      type: System.Collections.Generic.List{P2526_Irene_Biblioteca.Models.Prestamo}
+    content.vb: Public Function GetByClienteReport(idCliente As Integer) As List(Of Prestamo)
+  overload: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.GetByClienteReport*
+  nameWithType.vb: PrestamosRepository.GetByClienteReport(Integer)
+  fullName.vb: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.GetByClienteReport(Integer)
+  name.vb: GetByClienteReport(Integer)
+- uid: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.Insert(P2526_Irene_Biblioteca.Models.Prestamo)
+  commentId: M:P2526_Irene_Biblioteca.Repositories.PrestamosRepository.Insert(P2526_Irene_Biblioteca.Models.Prestamo)
+  id: Insert(P2526_Irene_Biblioteca.Models.Prestamo)
+  parent: P2526_Irene_Biblioteca.Repositories.PrestamosRepository
+  langs:
+  - csharp
+  - vb
+  name: Insert(Prestamo)
+  nameWithType: PrestamosRepository.Insert(Prestamo)
+  fullName: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.Insert(P2526_Irene_Biblioteca.Models.Prestamo)
+  type: Method
+  source:
+    id: Insert
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\Respositories\PrestamosRepository.cs
+    startLine: 148
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.Repositories
+  syntax:
+    content: public int Insert(Prestamo p)
+    parameters:
+    - id: p
+      type: P2526_Irene_Biblioteca.Models.Prestamo
+    return:
+      type: System.Int32
+    content.vb: Public Function Insert(p As Prestamo) As Integer
+  overload: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.Insert*
+- uid: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.Update(P2526_Irene_Biblioteca.Models.Prestamo)
+  commentId: M:P2526_Irene_Biblioteca.Repositories.PrestamosRepository.Update(P2526_Irene_Biblioteca.Models.Prestamo)
+  id: Update(P2526_Irene_Biblioteca.Models.Prestamo)
+  parent: P2526_Irene_Biblioteca.Repositories.PrestamosRepository
+  langs:
+  - csharp
+  - vb
+  name: Update(Prestamo)
+  nameWithType: PrestamosRepository.Update(Prestamo)
+  fullName: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.Update(P2526_Irene_Biblioteca.Models.Prestamo)
+  type: Method
+  source:
+    id: Update
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\Respositories\PrestamosRepository.cs
+    startLine: 173
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.Repositories
+  syntax:
+    content: public void Update(Prestamo p)
+    parameters:
+    - id: p
+      type: P2526_Irene_Biblioteca.Models.Prestamo
+    content.vb: Public Sub Update(p As Prestamo)
+  overload: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.Update*
+- uid: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.Delete(System.Int32)
+  commentId: M:P2526_Irene_Biblioteca.Repositories.PrestamosRepository.Delete(System.Int32)
+  id: Delete(System.Int32)
+  parent: P2526_Irene_Biblioteca.Repositories.PrestamosRepository
+  langs:
+  - csharp
+  - vb
+  name: Delete(int)
+  nameWithType: PrestamosRepository.Delete(int)
+  fullName: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.Delete(int)
+  type: Method
+  source:
+    id: Delete
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\Respositories\PrestamosRepository.cs
+    startLine: 204
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.Repositories
+  syntax:
+    content: public void Delete(int idPrestamo)
+    parameters:
+    - id: idPrestamo
+      type: System.Int32
+    content.vb: Public Sub Delete(idPrestamo As Integer)
+  overload: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.Delete*
+  nameWithType.vb: PrestamosRepository.Delete(Integer)
+  fullName.vb: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.Delete(Integer)
+  name.vb: Delete(Integer)
+- uid: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.CountByCliente(System.Int32)
+  commentId: M:P2526_Irene_Biblioteca.Repositories.PrestamosRepository.CountByCliente(System.Int32)
+  id: CountByCliente(System.Int32)
+  parent: P2526_Irene_Biblioteca.Repositories.PrestamosRepository
+  langs:
+  - csharp
+  - vb
+  name: CountByCliente(int)
+  nameWithType: PrestamosRepository.CountByCliente(int)
+  fullName: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.CountByCliente(int)
+  type: Method
+  source:
+    id: CountByCliente
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\Respositories\PrestamosRepository.cs
+    startLine: 218
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.Repositories
+  syntax:
+    content: public int CountByCliente(int idCliente)
+    parameters:
+    - id: idCliente
+      type: System.Int32
+    return:
+      type: System.Int32
+    content.vb: Public Function CountByCliente(idCliente As Integer) As Integer
+  overload: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.CountByCliente*
+  nameWithType.vb: PrestamosRepository.CountByCliente(Integer)
+  fullName.vb: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.CountByCliente(Integer)
+  name.vb: CountByCliente(Integer)
+- uid: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.CountByEmpleado(System.Int32)
+  commentId: M:P2526_Irene_Biblioteca.Repositories.PrestamosRepository.CountByEmpleado(System.Int32)
+  id: CountByEmpleado(System.Int32)
+  parent: P2526_Irene_Biblioteca.Repositories.PrestamosRepository
+  langs:
+  - csharp
+  - vb
+  name: CountByEmpleado(int)
+  nameWithType: PrestamosRepository.CountByEmpleado(int)
+  fullName: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.CountByEmpleado(int)
+  type: Method
+  source:
+    id: CountByEmpleado
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\Respositories\PrestamosRepository.cs
+    startLine: 231
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.Repositories
+  syntax:
+    content: public int CountByEmpleado(int idEmpleado)
+    parameters:
+    - id: idEmpleado
+      type: System.Int32
+    return:
+      type: System.Int32
+    content.vb: Public Function CountByEmpleado(idEmpleado As Integer) As Integer
+  overload: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.CountByEmpleado*
+  nameWithType.vb: PrestamosRepository.CountByEmpleado(Integer)
+  fullName.vb: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.CountByEmpleado(Integer)
+  name.vb: CountByEmpleado(Integer)
+- uid: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.CountByLibro(System.Int32)
+  commentId: M:P2526_Irene_Biblioteca.Repositories.PrestamosRepository.CountByLibro(System.Int32)
+  id: CountByLibro(System.Int32)
+  parent: P2526_Irene_Biblioteca.Repositories.PrestamosRepository
+  langs:
+  - csharp
+  - vb
+  name: CountByLibro(int)
+  nameWithType: PrestamosRepository.CountByLibro(int)
+  fullName: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.CountByLibro(int)
+  type: Method
+  source:
+    id: CountByLibro
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\Respositories\PrestamosRepository.cs
+    startLine: 244
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.Repositories
+  syntax:
+    content: public int CountByLibro(int idLibro)
+    parameters:
+    - id: idLibro
+      type: System.Int32
+    return:
+      type: System.Int32
+    content.vb: Public Function CountByLibro(idLibro As Integer) As Integer
+  overload: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.CountByLibro*
+  nameWithType.vb: PrestamosRepository.CountByLibro(Integer)
+  fullName.vb: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.CountByLibro(Integer)
+  name.vb: CountByLibro(Integer)
+references:
+- uid: P2526_Irene_Biblioteca.Repositories
+  commentId: N:P2526_Irene_Biblioteca.Repositories
+  href: P2526_Irene_Biblioteca.html
+  name: P2526_Irene_Biblioteca.Repositories
+  nameWithType: P2526_Irene_Biblioteca.Repositories
+  fullName: P2526_Irene_Biblioteca.Repositories
+  spec.csharp:
+  - uid: P2526_Irene_Biblioteca
+    name: P2526_Irene_Biblioteca
+    href: P2526_Irene_Biblioteca.html
+  - name: .
+  - uid: P2526_Irene_Biblioteca.Repositories
+    name: Repositories
+    href: P2526_Irene_Biblioteca.Repositories.html
+  spec.vb:
+  - uid: P2526_Irene_Biblioteca
+    name: P2526_Irene_Biblioteca
+    href: P2526_Irene_Biblioteca.html
+  - name: .
+  - uid: P2526_Irene_Biblioteca.Repositories
+    name: Repositories
+    href: P2526_Irene_Biblioteca.Repositories.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.#ctor*
+  commentId: Overload:P2526_Irene_Biblioteca.Repositories.PrestamosRepository.#ctor
+  href: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.html#P2526_Irene_Biblioteca_Repositories_PrestamosRepository__ctor
+  name: PrestamosRepository
+  nameWithType: PrestamosRepository.PrestamosRepository
+  fullName: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.PrestamosRepository
+  nameWithType.vb: PrestamosRepository.New
+  fullName.vb: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.New
+  name.vb: New
+- uid: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.GetAll*
+  commentId: Overload:P2526_Irene_Biblioteca.Repositories.PrestamosRepository.GetAll
+  href: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.html#P2526_Irene_Biblioteca_Repositories_PrestamosRepository_GetAll
+  name: GetAll
+  nameWithType: PrestamosRepository.GetAll
+  fullName: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.GetAll
+- uid: System.Collections.Generic.List{P2526_Irene_Biblioteca.Models.Prestamo}
+  commentId: T:System.Collections.Generic.List{P2526_Irene_Biblioteca.Models.Prestamo}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<Prestamo>
+  nameWithType: List<Prestamo>
+  fullName: System.Collections.Generic.List<P2526_Irene_Biblioteca.Models.Prestamo>
+  nameWithType.vb: List(Of Prestamo)
+  fullName.vb: System.Collections.Generic.List(Of P2526_Irene_Biblioteca.Models.Prestamo)
+  name.vb: List(Of Prestamo)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: P2526_Irene_Biblioteca.Models.Prestamo
+    name: Prestamo
+    href: P2526_Irene_Biblioteca.Models.Prestamo.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: P2526_Irene_Biblioteca.Models.Prestamo
+    name: Prestamo
+    href: P2526_Irene_Biblioteca.Models.Prestamo.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.GetAllReport*
+  commentId: Overload:P2526_Irene_Biblioteca.Repositories.PrestamosRepository.GetAllReport
+  href: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.html#P2526_Irene_Biblioteca_Repositories_PrestamosRepository_GetAllReport
+  name: GetAllReport
+  nameWithType: PrestamosRepository.GetAllReport
+  fullName: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.GetAllReport
+- uid: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.GetByClienteReport*
+  commentId: Overload:P2526_Irene_Biblioteca.Repositories.PrestamosRepository.GetByClienteReport
+  href: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.html#P2526_Irene_Biblioteca_Repositories_PrestamosRepository_GetByClienteReport_System_Int32_
+  name: GetByClienteReport
+  nameWithType: PrestamosRepository.GetByClienteReport
+  fullName: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.GetByClienteReport
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.Insert*
+  commentId: Overload:P2526_Irene_Biblioteca.Repositories.PrestamosRepository.Insert
+  href: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.html#P2526_Irene_Biblioteca_Repositories_PrestamosRepository_Insert_P2526_Irene_Biblioteca_Models_Prestamo_
+  name: Insert
+  nameWithType: PrestamosRepository.Insert
+  fullName: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.Insert
+- uid: P2526_Irene_Biblioteca.Models.Prestamo
+  commentId: T:P2526_Irene_Biblioteca.Models.Prestamo
+  parent: P2526_Irene_Biblioteca.Models
+  href: P2526_Irene_Biblioteca.Models.Prestamo.html
+  name: Prestamo
+  nameWithType: Prestamo
+  fullName: P2526_Irene_Biblioteca.Models.Prestamo
+- uid: P2526_Irene_Biblioteca.Models
+  commentId: N:P2526_Irene_Biblioteca.Models
+  href: P2526_Irene_Biblioteca.html
+  name: P2526_Irene_Biblioteca.Models
+  nameWithType: P2526_Irene_Biblioteca.Models
+  fullName: P2526_Irene_Biblioteca.Models
+  spec.csharp:
+  - uid: P2526_Irene_Biblioteca
+    name: P2526_Irene_Biblioteca
+    href: P2526_Irene_Biblioteca.html
+  - name: .
+  - uid: P2526_Irene_Biblioteca.Models
+    name: Models
+    href: P2526_Irene_Biblioteca.Models.html
+  spec.vb:
+  - uid: P2526_Irene_Biblioteca
+    name: P2526_Irene_Biblioteca
+    href: P2526_Irene_Biblioteca.html
+  - name: .
+  - uid: P2526_Irene_Biblioteca.Models
+    name: Models
+    href: P2526_Irene_Biblioteca.Models.html
+- uid: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.Update*
+  commentId: Overload:P2526_Irene_Biblioteca.Repositories.PrestamosRepository.Update
+  href: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.html#P2526_Irene_Biblioteca_Repositories_PrestamosRepository_Update_P2526_Irene_Biblioteca_Models_Prestamo_
+  name: Update
+  nameWithType: PrestamosRepository.Update
+  fullName: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.Update
+- uid: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.Delete*
+  commentId: Overload:P2526_Irene_Biblioteca.Repositories.PrestamosRepository.Delete
+  href: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.html#P2526_Irene_Biblioteca_Repositories_PrestamosRepository_Delete_System_Int32_
+  name: Delete
+  nameWithType: PrestamosRepository.Delete
+  fullName: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.Delete
+- uid: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.CountByCliente*
+  commentId: Overload:P2526_Irene_Biblioteca.Repositories.PrestamosRepository.CountByCliente
+  href: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.html#P2526_Irene_Biblioteca_Repositories_PrestamosRepository_CountByCliente_System_Int32_
+  name: CountByCliente
+  nameWithType: PrestamosRepository.CountByCliente
+  fullName: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.CountByCliente
+- uid: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.CountByEmpleado*
+  commentId: Overload:P2526_Irene_Biblioteca.Repositories.PrestamosRepository.CountByEmpleado
+  href: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.html#P2526_Irene_Biblioteca_Repositories_PrestamosRepository_CountByEmpleado_System_Int32_
+  name: CountByEmpleado
+  nameWithType: PrestamosRepository.CountByEmpleado
+  fullName: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.CountByEmpleado
+- uid: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.CountByLibro*
+  commentId: Overload:P2526_Irene_Biblioteca.Repositories.PrestamosRepository.CountByLibro
+  href: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.html#P2526_Irene_Biblioteca_Repositories_PrestamosRepository_CountByLibro_System_Int32_
+  name: CountByLibro
+  nameWithType: PrestamosRepository.CountByLibro
+  fullName: P2526_Irene_Biblioteca.Repositories.PrestamosRepository.CountByLibro

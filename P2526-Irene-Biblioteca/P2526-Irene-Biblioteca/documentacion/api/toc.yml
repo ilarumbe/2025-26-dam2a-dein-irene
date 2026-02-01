@@ -1,0 +1,180 @@
+### YamlMime:TableOfContent
+items:
+- uid: P2526_Irene_Biblioteca
+  name: P2526_Irene_Biblioteca
+  type: Namespace
+  items:
+  - uid: P2526_Irene_Biblioteca.App
+    name: App
+    type: Class
+- uid: P2526_Irene_Biblioteca.Helpers
+  name: P2526_Irene_Biblioteca.Helpers
+  type: Namespace
+  items:
+  - uid: P2526_Irene_Biblioteca.Helpers.Helper
+    name: Helper
+    type: Class
+  - uid: P2526_Irene_Biblioteca.Helpers.SesionActual
+    name: SesionActual
+    type: Class
+- uid: P2526_Irene_Biblioteca.Models
+  name: P2526_Irene_Biblioteca.Models
+  type: Namespace
+  items:
+  - uid: P2526_Irene_Biblioteca.Models.Autor
+    name: Autor
+    type: Class
+  - uid: P2526_Irene_Biblioteca.Models.Categoria
+    name: Categoria
+    type: Class
+  - uid: P2526_Irene_Biblioteca.Models.Cliente
+    name: Cliente
+    type: Class
+  - uid: P2526_Irene_Biblioteca.Models.Empleado
+    name: Empleado
+    type: Class
+  - uid: P2526_Irene_Biblioteca.Models.Libro
+    name: Libro
+    type: Class
+  - uid: P2526_Irene_Biblioteca.Models.Prestamo
+    name: Prestamo
+    type: Class
+- uid: P2526_Irene_Biblioteca.Repositories
+  name: P2526_Irene_Biblioteca.Repositories
+  type: Namespace
+  items:
+  - uid: P2526_Irene_Biblioteca.Repositories.AutoresRepository
+    name: AutoresRepository
+    type: Class
+  - uid: P2526_Irene_Biblioteca.Repositories.CategoriasRepository
+    name: CategoriasRepository
+    type: Class
+  - uid: P2526_Irene_Biblioteca.Repositories.ClientesRepository
+    name: ClientesRepository
+    type: Class
+  - uid: P2526_Irene_Biblioteca.Repositories.EmpleadosRepository
+    name: EmpleadosRepository
+    type: Class
+  - uid: P2526_Irene_Biblioteca.Repositories.LibrosRepository
+    name: LibrosRepository
+    type: Class
+  - uid: P2526_Irene_Biblioteca.Repositories.PrestamosRepository
+    name: PrestamosRepository
+    type: Class
+- uid: P2526_Irene_Biblioteca.Services
+  name: P2526_Irene_Biblioteca.Services
+  type: Namespace
+  items:
+  - uid: P2526_Irene_Biblioteca.Services.AutoresService
+    name: AutoresService
+    type: Class
+  - uid: P2526_Irene_Biblioteca.Services.CategoriasService
+    name: CategoriasService
+    type: Class
+  - uid: P2526_Irene_Biblioteca.Services.ClientesService
+    name: ClientesService
+    type: Class
+  - uid: P2526_Irene_Biblioteca.Services.EmpleadosService
+    name: EmpleadosService
+    type: Class
+  - uid: P2526_Irene_Biblioteca.Services.IWindowService
+    name: IWindowService
+    type: Interface
+  - uid: P2526_Irene_Biblioteca.Services.LibrosService
+    name: LibrosService
+    type: Class
+  - uid: P2526_Irene_Biblioteca.Services.PrestamosService
+    name: PrestamosService
+    type: Class
+  - uid: P2526_Irene_Biblioteca.Services.WindowService
+    name: WindowService
+    type: Class
+- uid: P2526_Irene_Biblioteca.UserControls
+  name: P2526_Irene_Biblioteca.UserControls
+  type: Namespace
+  items:
+  - uid: P2526_Irene_Biblioteca.UserControls.AutoresView
+    name: AutoresView
+    type: Class
+  - uid: P2526_Irene_Biblioteca.UserControls.CategoriasView
+    name: CategoriasView
+    type: Class
+  - uid: P2526_Irene_Biblioteca.UserControls.ClientesView
+    name: ClientesView
+    type: Class
+  - uid: P2526_Irene_Biblioteca.UserControls.EmpleadosView
+    name: EmpleadosView
+    type: Class
+  - uid: P2526_Irene_Biblioteca.UserControls.LibrosView
+    name: LibrosView
+    type: Class
+  - uid: P2526_Irene_Biblioteca.UserControls.PrestamosView
+    name: PrestamosView
+    type: Class
+- uid: P2526_Irene_Biblioteca.ViewModels
+  name: P2526_Irene_Biblioteca.ViewModels
+  type: Namespace
+  items:
+  - uid: P2526_Irene_Biblioteca.ViewModels.AutoresViewModel
+    name: AutoresViewModel
+    type: Class
+  - uid: P2526_Irene_Biblioteca.ViewModels.BaseViewModel
+    name: BaseViewModel
+    type: Class
+  - uid: P2526_Irene_Biblioteca.ViewModels.CategoriasViewModel
+    name: CategoriasViewModel
+    type: Class
+  - uid: P2526_Irene_Biblioteca.ViewModels.ClientesViewModel
+    name: ClientesViewModel
+    type: Class
+  - uid: P2526_Irene_Biblioteca.ViewModels.EmpleadosViewModel
+    name: EmpleadosViewModel
+    type: Class
+  - uid: P2526_Irene_Biblioteca.ViewModels.LibrosViewModel
+    name: LibrosViewModel
+    type: Class
+  - uid: P2526_Irene_Biblioteca.ViewModels.LoginViewModel
+    name: LoginViewModel
+    type: Class
+  - uid: P2526_Irene_Biblioteca.ViewModels.MainWindowViewModel
+    name: MainWindowViewModel
+    type: Class
+  - uid: P2526_Irene_Biblioteca.ViewModels.PrestamosViewModel
+    name: PrestamosViewModel
+    type: Class
+- uid: P2526_Irene_Biblioteca.Views
+  name: P2526_Irene_Biblioteca.Views
+  type: Namespace
+  items:
+  - uid: P2526_Irene_Biblioteca.Views.HelpWindow
+    name: HelpWindow
+    type: Class
+  - uid: P2526_Irene_Biblioteca.Views.InformesWindow
+    name: InformesWindow
+    type: Class
+  - uid: P2526_Irene_Biblioteca.Views.LoginWindow
+    name: LoginWindow
+    type: Class
+  - uid: P2526_Irene_Biblioteca.Views.MainWindow
+    name: MainWindow
+    type: Class
+  - uid: P2526_Irene_Biblioteca.Views.ReportWindow
+    name: ReportWindow
+    type: Class
+- uid: P2526_Irene_Biblioteca_MSTest
+  name: P2526_Irene_Biblioteca_MSTest
+  type: Namespace
+  items:
+  - uid: P2526_Irene_Biblioteca_MSTest.AutorModelTests
+    name: AutorModelTests
+    type: Class
+  - uid: P2526_Irene_Biblioteca_MSTest.AutoresRepositoryTests
+    name: AutoresRepositoryTests
+    type: Class
+  - uid: P2526_Irene_Biblioteca_MSTest.ClientesRepositoryTests
+    name: ClientesRepositoryTests
+    type: Class
+  - uid: P2526_Irene_Biblioteca_MSTest.HelperTests
+    name: HelperTests
+    type: Class
+memberLayout: SamePage

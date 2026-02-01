@@ -1,0 +1,95 @@
+### YamlMime:ManagedReference
+items:
+- uid: P2526_Irene_Biblioteca.Services
+  commentId: N:P2526_Irene_Biblioteca.Services
+  id: P2526_Irene_Biblioteca.Services
+  children:
+  - P2526_Irene_Biblioteca.Services.AutoresService
+  - P2526_Irene_Biblioteca.Services.CategoriasService
+  - P2526_Irene_Biblioteca.Services.ClientesService
+  - P2526_Irene_Biblioteca.Services.EmpleadosService
+  - P2526_Irene_Biblioteca.Services.IWindowService
+  - P2526_Irene_Biblioteca.Services.LibrosService
+  - P2526_Irene_Biblioteca.Services.PrestamosService
+  - P2526_Irene_Biblioteca.Services.WindowService
+  langs:
+  - csharp
+  - vb
+  name: P2526_Irene_Biblioteca.Services
+  nameWithType: P2526_Irene_Biblioteca.Services
+  fullName: P2526_Irene_Biblioteca.Services
+  type: Namespace
+  assemblies:
+  - P2526-Irene-Biblioteca
+references:
+- uid: P2526_Irene_Biblioteca.Services.AutoresService
+  commentId: T:P2526_Irene_Biblioteca.Services.AutoresService
+  href: P2526_Irene_Biblioteca.Services.AutoresService.html
+  name: AutoresService
+  nameWithType: AutoresService
+  fullName: P2526_Irene_Biblioteca.Services.AutoresService
+- uid: P2526_Irene_Biblioteca.Services.CategoriasService
+  commentId: T:P2526_Irene_Biblioteca.Services.CategoriasService
+  href: P2526_Irene_Biblioteca.Services.CategoriasService.html
+  name: CategoriasService
+  nameWithType: CategoriasService
+  fullName: P2526_Irene_Biblioteca.Services.CategoriasService
+- uid: P2526_Irene_Biblioteca.Services.ClientesService
+  commentId: T:P2526_Irene_Biblioteca.Services.ClientesService
+  href: P2526_Irene_Biblioteca.Services.ClientesService.html
+  name: ClientesService
+  nameWithType: ClientesService
+  fullName: P2526_Irene_Biblioteca.Services.ClientesService
+- uid: P2526_Irene_Biblioteca.Services.EmpleadosService
+  commentId: T:P2526_Irene_Biblioteca.Services.EmpleadosService
+  href: P2526_Irene_Biblioteca.Services.EmpleadosService.html
+  name: EmpleadosService
+  nameWithType: EmpleadosService
+  fullName: P2526_Irene_Biblioteca.Services.EmpleadosService
+- uid: P2526_Irene_Biblioteca.Services.IWindowService
+  commentId: T:P2526_Irene_Biblioteca.Services.IWindowService
+  parent: P2526_Irene_Biblioteca.Services
+  href: P2526_Irene_Biblioteca.Services.IWindowService.html
+  name: IWindowService
+  nameWithType: IWindowService
+  fullName: P2526_Irene_Biblioteca.Services.IWindowService
+- uid: P2526_Irene_Biblioteca.Services.LibrosService
+  commentId: T:P2526_Irene_Biblioteca.Services.LibrosService
+  href: P2526_Irene_Biblioteca.Services.LibrosService.html
+  name: LibrosService
+  nameWithType: LibrosService
+  fullName: P2526_Irene_Biblioteca.Services.LibrosService
+- uid: P2526_Irene_Biblioteca.Services.PrestamosService
+  commentId: T:P2526_Irene_Biblioteca.Services.PrestamosService
+  href: P2526_Irene_Biblioteca.Services.PrestamosService.html
+  name: PrestamosService
+  nameWithType: PrestamosService
+  fullName: P2526_Irene_Biblioteca.Services.PrestamosService
+- uid: P2526_Irene_Biblioteca.Services.WindowService
+  commentId: T:P2526_Irene_Biblioteca.Services.WindowService
+  href: P2526_Irene_Biblioteca.Services.WindowService.html
+  name: WindowService
+  nameWithType: WindowService
+  fullName: P2526_Irene_Biblioteca.Services.WindowService
+- uid: P2526_Irene_Biblioteca.Services
+  commentId: N:P2526_Irene_Biblioteca.Services
+  href: P2526_Irene_Biblioteca.html
+  name: P2526_Irene_Biblioteca.Services
+  nameWithType: P2526_Irene_Biblioteca.Services
+  fullName: P2526_Irene_Biblioteca.Services
+  spec.csharp:
+  - uid: P2526_Irene_Biblioteca
+    name: P2526_Irene_Biblioteca
+    href: P2526_Irene_Biblioteca.html
+  - name: .
+  - uid: P2526_Irene_Biblioteca.Services
+    name: Services
+    href: P2526_Irene_Biblioteca.Services.html
+  spec.vb:
+  - uid: P2526_Irene_Biblioteca
+    name: P2526_Irene_Biblioteca
+    href: P2526_Irene_Biblioteca.html
+  - name: .
+  - uid: P2526_Irene_Biblioteca.Services
+    name: Services
+    href: P2526_Irene_Biblioteca.Services.html

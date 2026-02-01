@@ -1,0 +1,44 @@
+### YamlMime:ManagedReference
+items:
+- uid: P2526_Irene_Biblioteca_MSTest
+  commentId: N:P2526_Irene_Biblioteca_MSTest
+  id: P2526_Irene_Biblioteca_MSTest
+  children:
+  - P2526_Irene_Biblioteca_MSTest.AutorModelTests
+  - P2526_Irene_Biblioteca_MSTest.AutoresRepositoryTests
+  - P2526_Irene_Biblioteca_MSTest.ClientesRepositoryTests
+  - P2526_Irene_Biblioteca_MSTest.HelperTests
+  langs:
+  - csharp
+  - vb
+  name: P2526_Irene_Biblioteca_MSTest
+  nameWithType: P2526_Irene_Biblioteca_MSTest
+  fullName: P2526_Irene_Biblioteca_MSTest
+  type: Namespace
+  assemblies:
+  - P2526_Irene_Biblioteca_MSTest
+references:
+- uid: P2526_Irene_Biblioteca_MSTest.AutoresRepositoryTests
+  commentId: T:P2526_Irene_Biblioteca_MSTest.AutoresRepositoryTests
+  href: P2526_Irene_Biblioteca_MSTest.AutoresRepositoryTests.html
+  name: AutoresRepositoryTests
+  nameWithType: AutoresRepositoryTests
+  fullName: P2526_Irene_Biblioteca_MSTest.AutoresRepositoryTests
+- uid: P2526_Irene_Biblioteca_MSTest.AutorModelTests
+  commentId: T:P2526_Irene_Biblioteca_MSTest.AutorModelTests
+  href: P2526_Irene_Biblioteca_MSTest.AutorModelTests.html
+  name: AutorModelTests
+  nameWithType: AutorModelTests
+  fullName: P2526_Irene_Biblioteca_MSTest.AutorModelTests
+- uid: P2526_Irene_Biblioteca_MSTest.ClientesRepositoryTests
+  commentId: T:P2526_Irene_Biblioteca_MSTest.ClientesRepositoryTests
+  href: P2526_Irene_Biblioteca_MSTest.ClientesRepositoryTests.html
+  name: ClientesRepositoryTests
+  nameWithType: ClientesRepositoryTests
+  fullName: P2526_Irene_Biblioteca_MSTest.ClientesRepositoryTests
+- uid: P2526_Irene_Biblioteca_MSTest.HelperTests
+  commentId: T:P2526_Irene_Biblioteca_MSTest.HelperTests
+  href: P2526_Irene_Biblioteca_MSTest.HelperTests.html
+  name: HelperTests
+  nameWithType: HelperTests
+  fullName: P2526_Irene_Biblioteca_MSTest.HelperTests

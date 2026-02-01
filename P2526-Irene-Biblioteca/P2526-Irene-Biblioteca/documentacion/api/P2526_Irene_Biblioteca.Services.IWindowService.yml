@@ -1,0 +1,76 @@
+### YamlMime:ManagedReference
+items:
+- uid: P2526_Irene_Biblioteca.Services.IWindowService
+  commentId: T:P2526_Irene_Biblioteca.Services.IWindowService
+  id: IWindowService
+  parent: P2526_Irene_Biblioteca.Services
+  children:
+  - P2526_Irene_Biblioteca.Services.IWindowService.Close
+  langs:
+  - csharp
+  - vb
+  name: IWindowService
+  nameWithType: IWindowService
+  fullName: P2526_Irene_Biblioteca.Services.IWindowService
+  type: Interface
+  source:
+    id: IWindowService
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\Services\IWindowService.cs
+    startLine: 8
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.Services
+  syntax:
+    content: public interface IWindowService
+    content.vb: Public Interface IWindowService
+- uid: P2526_Irene_Biblioteca.Services.IWindowService.Close
+  commentId: M:P2526_Irene_Biblioteca.Services.IWindowService.Close
+  id: Close
+  parent: P2526_Irene_Biblioteca.Services.IWindowService
+  langs:
+  - csharp
+  - vb
+  name: Close()
+  nameWithType: IWindowService.Close()
+  fullName: P2526_Irene_Biblioteca.Services.IWindowService.Close()
+  type: Method
+  source:
+    id: Close
+    path: C:\Users\MIPC\Desktop\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\P2526-Irene-Biblioteca\Services\IWindowService.cs
+    startLine: 10
+  assemblies:
+  - P2526-Irene-Biblioteca
+  namespace: P2526_Irene_Biblioteca.Services
+  syntax:
+    content: void Close()
+    content.vb: Sub Close()
+  overload: P2526_Irene_Biblioteca.Services.IWindowService.Close*
+references:
+- uid: P2526_Irene_Biblioteca.Services
+  commentId: N:P2526_Irene_Biblioteca.Services
+  href: P2526_Irene_Biblioteca.html
+  name: P2526_Irene_Biblioteca.Services
+  nameWithType: P2526_Irene_Biblioteca.Services
+  fullName: P2526_Irene_Biblioteca.Services
+  spec.csharp:
+  - uid: P2526_Irene_Biblioteca
+    name: P2526_Irene_Biblioteca
+    href: P2526_Irene_Biblioteca.html
+  - name: .
+  - uid: P2526_Irene_Biblioteca.Services
+    name: Services
+    href: P2526_Irene_Biblioteca.Services.html
+  spec.vb:
+  - uid: P2526_Irene_Biblioteca
+    name: P2526_Irene_Biblioteca
+    href: P2526_Irene_Biblioteca.html
+  - name: .
+  - uid: P2526_Irene_Biblioteca.Services
+    name: Services
+    href: P2526_Irene_Biblioteca.Services.html
+- uid: P2526_Irene_Biblioteca.Services.IWindowService.Close*
+  commentId: Overload:P2526_Irene_Biblioteca.Services.IWindowService.Close
+  href: P2526_Irene_Biblioteca.Services.IWindowService.html#P2526_Irene_Biblioteca_Services_IWindowService_Close
+  name: Close
+  nameWithType: IWindowService.Close
+  fullName: P2526_Irene_Biblioteca.Services.IWindowService.Close
